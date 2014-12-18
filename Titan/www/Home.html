@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+    <title>Home Screen</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>-->
+      <!--Link to the css file -->
+    <link rel="stylesheet" type="text/css" href="css/Home.css">
+     
+    </style>
+    <script type="text/javascript">
+      $(window).load(function(){
+        $("[data-toggle]").click(function() {
+          var toggle_el = $(this).data("toggle");
+          $(toggle_el).toggleClass("open-sidebar");
+        });
+         $("body").swipe({
+              swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                  {
+                      if (phase=="move" && direction =="right") {
+    
+                          // $(".container").addClass("open-sidebar");
+                           //return false;
+                      }
+                      if (phase=="move" && direction =="left") {
+                           $(".container").removeClass("open-sidebar");
+                           return false;
+                      }
+                  }
+
+          }); 
+      });
+      
+    </script>
+  </head>
+  <body id="mainBody">
+    <div class="container">
+      <div id="sidebar">
+          <ul border="20">
+              <!-- <li> <img id="profile" src = "friendSil.jpg"/></li> -->
+              <li><img id="profilePic" src = "img/profileImage.jpg"/></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Friends</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Notifications</a></li>
+              <li><a href="#">Sign Out</a></li>
+          </ul>
+      </div>
+     <!--
+      <div class="swipe-area"></div>
+          <a data-toggle=".container" id="sidebar-toggle">              
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+           
+              </a>
+             -->
+      
+      <div class="main-content">
+          <div class="swipe-area">
+            <p id="screenDescription">Home Screen</p>
+          </div>
+          <a href="#" data-toggle=".container" id="sidebar-toggle">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </a>
+
+          <div class="content">
+                <button type="button" id="quickPlayButton" > QuickPlay </button>
+             
+                <button type="button" id="leaguePlayButton" > LeaguePlay </button>
+              
+                <button type="button" id="privateGameButton">Private Game</button>
+          </div>
+      </div>
+    </div>
+
+    <SCRIPT src="js/Home.js"></SCRIPT>
+
+  </body>
+</html>
