@@ -97,7 +97,8 @@
 }
       /* Space behind the buttons */
       .container {
-          background-color:#E6E6E6;
+          background-color: blue;
+          /*background-color:#E6E6E6; */
           position: relative;
           height: 100%;
           width: 100%;
