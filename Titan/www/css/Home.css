@@ -97,8 +97,7 @@
 }
       /* Space behind the buttons */
       .container {
-          background-color: blue;
-          /*background-color:#E6E6E6; */
+          background-color:#E6E6E6; 
           position: relative;
           height: 100%;
           width: 100%;
@@ -146,17 +145,16 @@
       }
 
             #profilePic {
-        width: 188px; 
+        width: 180px; 
         height: 180px;
-        border-style: solid;
-        border-width: 2px; 
       }
 
       /* Text Boxes*/
-      #sidebar ul li a {
-          padding: 15px 20px;
+      #sidebar ul li a  {
+          padding: 5px 5px;
           font-size: 16px;
           font-weight: bold;
+          text-align: center;
           color: #151515;
           text-decoration: none;
           display: block;
