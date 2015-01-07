@@ -144,10 +144,24 @@
           margin: 0;
       }
 
-            #profilePic {
-        width: 180px; 
-        height: 180px;
+      /* All of the SideBar buttons */
+      #profilePic {
+        width: 150px; 
+        height: 113px;
       }
+      #friendsPic{
+        width: 150px; 
+        height: 113px;
+      }
+      #settingsPic{
+        width: 150px; 
+        height: 113px;
+      }
+      #notificationsPic{
+        width: 150px; 
+        height: 114px;
+      }
+    
 
       /* Text Boxes*/
       #sidebar ul li a  {

@@ -1,11 +1,15 @@
+//Links to all the differnt Pages
 document.getElementById("homeButton").addEventListener("click", homeButtonPress);
-
-//window.location.replace('...');
 function homeButtonPress()
 {
   window.location="Home.html";
 }
 
+document.getElementById("friendsPic").addEventListener("click", friendsPickPress);
+function friendsPicPress()
+{
+  window.location="FriendsPage.html";
+}
 
 //swipe code for moving the menue to the left when swiped
 $(window).load(function(){

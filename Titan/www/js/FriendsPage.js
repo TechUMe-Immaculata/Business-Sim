@@ -1,32 +1,18 @@
-document.getElementById("quickPlayButton").addEventListener("click", quickPlayButtonPress);
-document.getElementById("privateGameButton").addEventListener("click", privateGameB.uttonPress);
+//Links to all the differnt Pages
+document.getElementById("homeButton").addEventListener("click", homeButtonPress);
+function homeButtonPress()
+{
+  window.location="Home.html";
+}
+
 document.getElementById("profilePic").addEventListener("click", profilePicPress);
-document.getElementById("friendsPic").addEventListener("click", friendsPickPress);
-
-
-//window.location.replace('...');
-function quickPlayButtonPress()
-{
-	window.location="GuestGamePage.html";
-}
-
-function privateGameButtonPress()
-{
-  window.location="PrivateGames.html";
-}
-
 function profilePicPress()
 {
   window.location="ProfilePage.html";
 }
 
-/*function friendsPicPress()
-{
-  window.location="ProfilePage.html";
-}
-*/
-//swipe code for moving the menue to the left when swiped
 
+//swipe code for moving the menue to the left when swiped
 $(window).load(function(){
         $("[data-toggle]").click(function() {
           var toggle_el = $(this).data("toggle");
