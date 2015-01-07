@@ -1,22 +1,11 @@
-document.getElementById("quickPlayButton").addEventListener("click", quickPlayButtonPress);
-document.getElementById("privateGameButton").addEventListener("click", privateGameButtonPress);
-document.getElementById("profilePic").addEventListener("click", profilePicPress);
+document.getElementById("homeButton").addEventListener("click", homeButtonPress);
 
 //window.location.replace('...');
-function quickPlayButtonPress()
+function homeButtonPress()
 {
-	window.location="GuestGamePage.html";
+  window.location="Home.html";
 }
 
-function privateGameButtonPress()
-{
-  window.location="PrivateGames.html";
-}
-
-function profilePicPress()
-{
-  window.location="ProfilePage.html";
-}
 
 //swipe code for moving the menue to the left when swiped
 $(window).load(function(){
