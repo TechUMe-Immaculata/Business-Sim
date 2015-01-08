@@ -20,11 +20,6 @@ function profilePicPress()
   window.location="ProfilePage.html";
 }
 
-/*function friendsPicPress()
-{
-  window.location="ProfilePage.html";
-}
-*/
 //swipe code for moving the menue to the left when swiped
 
 $(window).load(function(){
