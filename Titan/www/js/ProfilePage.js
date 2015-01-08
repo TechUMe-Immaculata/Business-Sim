@@ -1,9 +1,14 @@
 document.getElementById("homeButton").addEventListener("click", homeButtonPress);
+document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
 
 //window.location.replace('...');
 function homeButtonPress()
 {
   window.location="Home.html";
+}
+function friendsPicPress()
+{
+  window.location="FriendsPage.html";
 }
 
 

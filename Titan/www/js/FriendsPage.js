@@ -1,26 +1,14 @@
-document.getElementById("quickPlayButton").addEventListener("click", quickPlayButtonPress);
-document.getElementById("privateGameButton").addEventListener("click", privateGameButtonPress);
+document.getElementById("homeButton").addEventListener("click", homeButtonPress);
 document.getElementById("profilePic").addEventListener("click", profilePicPress);
-document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
 
 //window.location.replace('...');
-function quickPlayButtonPress()
+function homeButtonPress()
 {
-	window.location="GuestGamePage.html";
+  window.location="Home.html";
 }
-
-function privateGameButtonPress()
-{
-  window.location="PrivateGames.html";
-}
-
 function profilePicPress()
 {
   window.location="ProfilePage.html";
-}
-function friendsPicPress()
-{
-  window.location="FriendsPage.html";
 }
 
 
