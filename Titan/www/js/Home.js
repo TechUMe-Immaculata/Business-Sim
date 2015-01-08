@@ -1,8 +1,13 @@
+//main container button event listeners
 document.getElementById("quickPlayButton").addEventListener("click", quickPlayButtonPress);
 document.getElementById("privateGameButton").addEventListener("click", privateGameButtonPress);
-document.getElementById("profilePic").addEventListener("click", profilePicPress);
 
-//window.location.replace('...');
+//SideBar Button event listeners
+document.getElementById("profilePic").addEventListener("click", profilePicPress);
+document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
+document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
+
+//Main container Button event listeners
 function quickPlayButtonPress()
 {
 	window.location="GuestGamePage.html";
@@ -13,10 +18,21 @@ function privateGameButtonPress()
   window.location="PrivateGames.html";
 }
 
+//Side Bar Button Links
 function profilePicPress()
 {
   window.location="ProfilePage.html";
 }
+function friendsPicPress()
+{
+  window.location="FriendsPage.html";
+}
+document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
+function settingsPicPress()
+{
+  window.location="SettingsPage.html";
+}
+
 
 //swipe code for moving the menue to the left when swiped
 $(window).load(function(){
