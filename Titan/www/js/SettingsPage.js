@@ -1,7 +1,7 @@
 //SideBar Button event listeners
 document.getElementById("homeButton").addEventListener("click", homeButtonPress);
 document.getElementById("profilePic").addEventListener("click", profilePicPress);
-document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
+document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
 
 //Side Bar Button Links
 function homeButtonPress()
@@ -12,11 +12,10 @@ function profilePicPress()
 {
   window.location="ProfilePage.html";
 }
-function settingsPicPress()
+function friendsPicPress()
 {
-  window.location="SettingsPage.html";
+  window.location="FriendsPage.html";
 }
-
 
 //swipe code for moving the menue to the left when swiped
 $(window).load(function(){
