@@ -67,10 +67,35 @@
           margin: 0;
       }
 
+
+
+
+
+
+      /* Heres the dime4nsions of all the sidebar pictures.  */
       #homeButton {
         width: 180px; 
-        height: 180px;
+        height: 115px;
       }
+      #friendsPic{
+        width: 180px; 
+        height: 115px;
+      }
+      #settingsPic{
+        width: 180px; 
+        height: 115px;
+      }
+      #notificationsPic{
+        width: 180px; 
+        height: 115px;
+      }
+
+
+
+
+
+
+
 
       /* Text Boxes*/
       #sidebar ul li a  {
