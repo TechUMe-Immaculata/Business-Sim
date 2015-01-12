@@ -2,6 +2,7 @@
 document.getElementById("homeButton").addEventListener("click", homeButtonPress);
 document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
 document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
+document.getElementById("notificationsPic").addEventListener("click", notificationsPicPress);
 
 //Side Bar Button Links
 function homeButtonPress()
@@ -15,6 +16,10 @@ function friendsPicPress()
 function settingsPicPress()
 {
   window.location="SettingsPage.html";
+}
+function notificationsPicPress()
+{
+  window.location="NotificationsPage.html";
 }
 
 
