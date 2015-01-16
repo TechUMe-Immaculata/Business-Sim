@@ -7,6 +7,54 @@
           color: black;
       }
 
+/* Unique Settings Page code */ 
+
+#userProfilePicture{
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  width: 35%;
+  height: 15%;
+  border-width: 3.5px;
+  border-style: solid;
+  border color: black;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+}
+
+#editPicButton {
+  position: absolute;
+  font-family: Georgia;
+  color: #050505;
+  font-size: 14px;
+  background: #d99734;
+  text-decoration: none;
+  left: 30%;
+  top: 26%;
+  width: 35%;
+  height: 3%;
+}
+#editPicButton:hover {
+  background: #9ba0a3;
+  text-decoration: none;
+}
+
+#profileInfoName {
+top: 40%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
+
+
+
+
+
+
+
 #screenDescription{
   bottom: -10px;
   position: absolute;
