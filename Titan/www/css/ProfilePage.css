@@ -30,7 +30,7 @@ font-family:serif;
 font-weight: bold;
 }
 
-#profileInfoGamesWon {
+#profileInfoCompanyName {
 top: 50%;
 left: 10%;
 position: absolute; 
@@ -39,8 +39,17 @@ font-family:serif;
 font-weight: bold;
 }
 
-#profileInfoGamesLost {
+#profileInfoGamesWon {
 top: 60%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
+
+#profileInfoGamesLost {
+top: 70%;
 left: 10%;
 position: absolute; 
 font-size: 25px; 
