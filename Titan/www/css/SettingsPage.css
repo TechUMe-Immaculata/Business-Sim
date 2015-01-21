@@ -41,7 +41,7 @@
 }
 
 #profileInfoName {
-top: 40%;
+top: 35%;
 left: 10%;
 position: absolute; 
 font-size: 25px; 
@@ -53,13 +53,13 @@ font-weight: bold;
 font-size: 25px; 
 font-family:serif;
 font-weight: bold;
-top: 50%;
+top: 45%;
 left: 10%;
 position: absolute;
 }
 
 #soundSlider {
-top: 60%;
+top: 55%;
 left: 15%;
 position: absolute; 
 }
@@ -68,26 +68,34 @@ position: absolute;
 font-size: 25px; 
 font-family:serif;
 font-weight: bold;
-top: 62%;
+top: 60%;
 left: 10%;
 position: absolute;
 }
 
-#theBackgroundCheckBox{
-top: 65%;
-left: 2%;
-width: 120%;
-height: 75%;
-position:absolute;
+#NotificationCheckNumber1{
+  width: 30%;
+  height: 10%;
+  position: absolute;
+  top: 72%;
+  left: 20%;
+  background-color: green;
+  border-width: 11px;
+  border-style: solid;
+  border color: black;
+}
+#NotificationCheckNumber2{
+  width: 30%;
+  height: 10%;
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  background-color: gray;
+  border-width: 11px;
+  border-style: solid;
+  border color: black;
 }
 
-#theYesCheckBox{
-top: 80%;
-left: 10%;
-width: 90%;
-height: 60%;
-position:absolute;
-}
 
 /* Slider Colouring */
 input[type=range]{

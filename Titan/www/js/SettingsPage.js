@@ -1,8 +1,14 @@
+//The Variables
+var UncheckedBox1Color = "green"; 
+
+
 //SideBar Button event listeners
 document.getElementById("homeButton").addEventListener("click", homeButtonPress);
 document.getElementById("profilePic").addEventListener("click", profilePicPress);
 document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
 document.getElementById("notificationsPic").addEventListener("click", notificationsPicPress);
+
+
 
 //Side Bar Button Links
 function homeButtonPress()
@@ -44,3 +50,15 @@ $(window).load(function(){
 
           }); 
       });
+
+//Notifications On/Off buttons.
+document.getElementById("NotificationCheckNumber1").addEventListener("click", NotificationCheckNumber1Press);
+function NotificationCheckNumber1Press()
+{
+  document.getElementById("NotificationCheckNumber1").style.color = "gray";
+}
+document.getElementById("NotificationCheckNumber2").addEventListener("click", NotificationCheckNumber2Press);
+function NotificationCheckNumber2Press()
+{
+  
+}
