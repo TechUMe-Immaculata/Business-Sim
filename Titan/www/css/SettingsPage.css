@@ -79,10 +79,13 @@ position: absolute;
   position: absolute;
   top: 72%;
   left: 20%;
-  background-color: green;
+  background-color: #00CC00;
   border-width: 11px;
   border-style: solid;
   border color: black;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
 }
 #NotificationCheckNumber2{
   width: 30%;
@@ -90,10 +93,13 @@ position: absolute;
   position: absolute;
   top: 72%;
   left: 50%;
-  background-color: gray;
+  background-color: #990000;
   border-width: 11px;
   border-style: solid;
   border color: black;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
 }
 
 
