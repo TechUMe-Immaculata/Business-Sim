@@ -11,15 +11,51 @@
 /* Unique Profile Code */ 
 
 #userProfilePicture{
-  width: 70%;
-  height: 70%;
-  margin-top: 20%;
-  margin-left: 0px;
+  position: absolute;
+  left: 17.5%;
+  top: 10%;
+  width: 65%;
+  height: 30%;
   border-width: 5px;
   border-style: solid;
   border color: black;
 }
 
+#profileInfoName {
+top: 40%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
+
+#profileInfoCompanyName {
+top: 50%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
+
+#profileInfoGamesWon {
+top: 60%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
+
+#profileInfoGamesLost {
+top: 70%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
 
 /* General Slider and Container Code (To the bottom) */
 

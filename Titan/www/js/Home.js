@@ -11,7 +11,7 @@ document.getElementById("notificationsPic").addEventListener("click", notificati
 //Main container Button event listeners
 function quickPlayButtonPress()
 {
-	window.location="GuestGamePage.html";
+	window.location="GuestGameSingleOrMultiplayer.html";
 }
 
 function privateGameButtonPress()

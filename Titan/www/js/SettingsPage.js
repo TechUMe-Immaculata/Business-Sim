@@ -1,8 +1,15 @@
+//The Variables
+// 0 = on  1= off
+var NotificationsOnOrOff = 0; 
+
+
 //SideBar Button event listeners
 document.getElementById("homeButton").addEventListener("click", homeButtonPress);
 document.getElementById("profilePic").addEventListener("click", profilePicPress);
 document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
 document.getElementById("notificationsPic").addEventListener("click", notificationsPicPress);
+
+
 
 //Side Bar Button Links
 function homeButtonPress()
@@ -44,3 +51,20 @@ $(window).load(function(){
 
           }); 
       });
+
+//Notifications On/Off buttons.
+document.getElementById("NotificationCheckNumber1").addEventListener("click", NotificationCheckNumber1Press);
+function NotificationCheckNumber1Press()
+{
+  document.getElementById("NotificationCheckNumber1").style.background = "#00CC00"; //Bright Green
+  document.getElementById("NotificationCheckNumber2").style.background = "#990000"; // Dark Red
+  NotificationsOnOrOff = 0;
+}
+
+document.getElementById("NotificationCheckNumber2").addEventListener("click", NotificationCheckNumber2Press);
+function NotificationCheckNumber2Press()
+{
+  document.getElementById("NotificationCheckNumber1").style.background = "#006600"; //Dark Green
+  document.getElementById("NotificationCheckNumber2").style.background = "#FF1919"; //Bright Red
+  NotificationsOnOrOff = 1;
+}

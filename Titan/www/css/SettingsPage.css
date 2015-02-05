@@ -7,6 +7,142 @@
           color: black;
       }
 
+/* Unique Settings Page code */ 
+
+#userProfilePicture{
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  width: 35%;
+  height: 15%;
+  border-width: 3.5px;
+  border-style: solid;
+  border color: black;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+}
+
+#editPicButton {
+  position: absolute;
+  font-family: Georgia;
+  color: #050505;
+  font-size: 14px;
+  background: #d99734;
+  text-decoration: none;
+  left: 30%;
+  top: 26%;
+  width: 35%;
+  height: 3%;
+}
+#editPicButton:hover {
+  background: #9ba0a3;
+  text-decoration: none;
+}
+
+#profileInfoName {
+top: 35%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
+
+#soundCharacters {
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+top: 45%;
+left: 10%;
+position: absolute;
+}
+
+#soundSlider {
+top: 55%;
+left: 15%;
+position: absolute; 
+}
+
+#notificationsOnOff{
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+top: 60%;
+left: 10%;
+position: absolute;
+}
+
+#NotificationCheckNumber1{
+  width: 30%;
+  height: 10%;
+  position: absolute;
+  top: 72%;
+  left: 20%;
+  background-color: #00CC00;
+  border-width: 11px;
+  border-style: solid;
+  border color: black;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+}
+#NotificationCheckNumber2{
+  width: 30%;
+  height: 10%;
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  background-color: #990000;
+  border-width: 11px;
+  border-style: solid;
+  border color: black;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+}
+
+
+/* Slider Colouring */
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    
+    width: 75%;
+    height: 7px;
+    background: #BDBDBD;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: #FF9900;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: blue;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
 #screenDescription{
   bottom: -10px;
   position: absolute;
