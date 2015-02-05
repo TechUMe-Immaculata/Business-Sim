@@ -1,3 +1,75 @@
+ body, html {
+          height: 100%;
+          margin: 0;
+          overflow:hidden;
+          font-family: helvetica;
+          font-weight: 100;
+          color: black;
+      }
+
+
+/* Unique Profile Code */ 
+
+#userProfilePicture{
+  position: absolute;
+  left: 17.5%;
+  top: 10%;
+  width: 65%;
+  height: 30%;
+  border-width: 5px;
+  border-style: solid;
+  border color: black;
+}
+
+#profileInfoName {
+top: 40%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
+
+#profileInfoCompanyName {
+top: 50%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
+
+#profileInfoGamesWon {
+top: 60%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
+
+#profileInfoGamesLost {
+top: 70%;
+left: 10%;
+position: absolute; 
+font-size: 25px; 
+font-family:serif;
+font-weight: bold;
+}
+
+/* General Slider and Container Code (To the bottom) */
+
+#screenDescription{
+  bottom: -10px;
+  position: absolute;
+  left: 35%;
+  color: white;
+  font-size: 22.5px;
+  font-weight: bold;
+
+}
+
+
  /* Space behind the buttons */
       .container {
           background-color:#E6E6E6; 
@@ -47,10 +119,35 @@
           margin: 0;
       }
 
-            #profilePic {
+
+
+
+
+
+      /* Heres the dime4nsions of all the sidebar pictures.  */
+      #homeButton {
         width: 180px; 
-        height: 180px;
+        height: 115px;
       }
+      #friendsPic{
+        width: 180px; 
+        height: 115px;
+      }
+      #settingsPic{
+        width: 180px; 
+        height: 115px;
+      }
+      #notificationsPic{
+        width: 180px; 
+        height: 115px;
+      }
+
+
+
+
+
+
+
 
       /* Text Boxes*/
       #sidebar ul li a  {

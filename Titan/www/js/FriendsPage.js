@@ -1,6 +1,6 @@
 //SideBar Button event listeners
 document.getElementById("homeButton").addEventListener("click", homeButtonPress);
-document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
+document.getElementById("profilePic").addEventListener("click", profilePicPress);
 document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
 document.getElementById("notificationsPic").addEventListener("click", notificationsPicPress);
 
@@ -9,9 +9,9 @@ function homeButtonPress()
 {
   window.location="Home.html";
 }
-function friendsPicPress()
+function profilePicPress()
 {
-  window.location="FriendsPage.html";
+  window.location="ProfilePage.html";
 }
 function settingsPicPress()
 {

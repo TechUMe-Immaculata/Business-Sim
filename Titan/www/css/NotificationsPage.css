@@ -17,85 +17,8 @@
 
 }
 
-#quickPlayButton {
-  position: absolute;
-  background: orange;
- 
-  border-radius: 0px;
-  font-family: Georgia;
-  color: white; 
-  font-size: 23px;
 
-  border: solid #000000 2px;
-  text-decoration: none;
-  width: 90%;
-  height: 10%;
-  top:58%;
-  left: 5%;
-}
-
-#quickPlayButton:hover {
-  background: #f5084b;
-  background-image: -webkit-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -moz-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -ms-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -o-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: linear-gradient(to bottom, #f5084b, #fa9e00);
-  text-decoration: none;
-}
-  #leaguePlayButton {
-  position: absolute;
-  background: orange;
-
-  border-radius: 0px;
-  font-family: Georgia;
-  color: white; 
-  font-size: 23px;
-
-  border: solid #000000 2px;
-  text-decoration: none;
-  width: 90%;
-  height: 10%;
-  top:73%;
-  left: 5%;
-}
-
-#leaguePlayButton:hover {
-  background: #3ce6fc;
-  background-image: -webkit-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: -moz-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: -ms-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: -o-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: linear-gradient(to bottom, #3ce6fc, #bd34d9);
-  text-decoration: none;
-}
-#privateGameButton {
-  position: absolute;
-  background: orange;
- 
-  border-radius: 0px;
-  font-family: Georgia;
-  color: white; 
-  font-size: 23px;
-
-  border: solid #000000 2px;
-  text-decoration: none;
-  width: 90%;
-  height: 10%;
-  top:88%;
-  left: 5%;
-}
-
-#privateGameButton:hover {
-  background: #423cfa;
-  background-image: -webkit-linear-gradient(top, #423cfa, #d93434);
-  background-image: -moz-linear-gradient(top, #423cfa, #d93434);
-  background-image: -ms-linear-gradient(top, #423cfa, #d93434);
-  background-image: -o-linear-gradient(top, #423cfa, #d93434);
-  background-image: linear-gradient(to bottom, #423cfa, #d93434);
-  text-decoration: none;
-}
-      /* Space behind the buttons */
+ /* Space behind the buttons */
       .container {
           background-color:#E6E6E6; 
           position: relative;
@@ -147,12 +70,14 @@
 
 
 
-        /* Heres the dime4nsions of all the sidebar pictures.  */
-      #profilePic {
+
+
+      /* Heres the dime4nsions of all the sidebar pictures.  */
+      #homeButton {
         width: 180px; 
         height: 115px;
       }
-      #friendsPic{
+      #profilePic {
         width: 180px; 
         height: 115px;
       }
@@ -160,10 +85,14 @@
         width: 180px; 
         height: 115px;
       }
-      #notificationsPic{
+      #friendsPic{
         width: 180px; 
         height: 115px;
       }
+
+
+
+
 
 
 

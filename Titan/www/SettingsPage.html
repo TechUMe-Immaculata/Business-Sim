@@ -12,7 +12,7 @@
     <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
       <!--Link to the css file Home.css -->
-    <link rel="stylesheet" type="text/css" href="css/ProfilePage.css"/>
+    <link rel="stylesheet" type="text/css" href="css/SettingsPage.css"/>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 
@@ -22,8 +22,8 @@
       <div id="sidebar">
           <ul>
               <li><a><img id="homeButton" src = "img/homeButton.jpg"/> Home </a></li>
+              <li><a><img id="profilePic" src = "img/profileButton.jpg"/> Profile</a></li>
               <li><a><img id="friendsPic" src = "img/friendsButton.jpg"/> Friends</a></li>
-              <li><a><img id="settingsPic" src = "img/settingsButton.jpg"/> Settings</a></li>
               <li><a><img id="notificationsPic" src = "img/notficationsButton.jpg"/> Notfications</a></li>
               <li><a href="#">Sign Out</a></li>
           </ul>
@@ -31,7 +31,7 @@
       
       <div class="main-content">
           <div class="swipe-area">
-            <p id="screenDescription">Your Profile</p>
+            <p id="screenDescription">Settings</p>
           </div>
           <a href="#" data-toggle=".container" id="sidebar-toggle">
               <span class="bar"></span>
@@ -40,19 +40,26 @@
           </a>
 
           <div class="content">
-            <!-- profilePicture will be a local file that can be changed by the player -->
             <img id="userProfilePicture" src = "localContent/profilePicture.jpg"/>
-            <div> <p id="profileInfoName">Name: Nedard Stark </p> </div>
-            <div> <p id="profileInfoCompanyName">Company: Stark Industries </p> </div>
-            <div> <p id="profileInfoGamesWon"> Games Won: Thrones </p> </div>
-            <div> <p id="profileInfoGamesLost"> Games Lost: My Head </p> </div>
+            <button type="button" id="editPicButton" > Edit </button>
+            <div> <p id="profileInfoName">Name: Nedard Stark </p> 
+              <p id="soundCharacters">Volume: </p>
+              <form id="soundSlider" oninput="amount.value=rangeInput.value">
+                <input type="range" id="rangeInput" name="rangeInput" min="0" max="100">                                                       
+                <output name="amount" for="rangeInput">50</output> </form>
+              <p id="notificationsOnOff">Notifications: (On/Off) </p>
+              <canvas id="NotificationCheckNumber1" ></canvas> 
+              <canvas id="NotificationCheckNumber2" ></canvas>     
+            </div>
           </div>
+      </div>
+    </div>
 
 
   </body>
 
   <head>
-    <script type="text/javascript" src="js/ProfilePage.js"></script>
+    <script type="text/javascript" src="js/SettingsPage.js"></script>
   </head>
   
 </html>

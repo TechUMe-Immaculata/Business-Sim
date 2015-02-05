@@ -1,27 +1,33 @@
+//The Variables
+// 0 = on  1= off
+var NotificationsOnOrOff = 0; 
+
+
 //SideBar Button event listeners
 document.getElementById("homeButton").addEventListener("click", homeButtonPress);
+document.getElementById("profilePic").addEventListener("click", profilePicPress);
 document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
-document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
 document.getElementById("notificationsPic").addEventListener("click", notificationsPicPress);
+
+
 
 //Side Bar Button Links
 function homeButtonPress()
 {
   window.location="Home.html";
 }
+function profilePicPress()
+{
+  window.location="ProfilePage.html";
+}
 function friendsPicPress()
 {
   window.location="FriendsPage.html";
-}
-function settingsPicPress()
-{
-  window.location="SettingsPage.html";
 }
 function notificationsPicPress()
 {
   window.location="NotificationsPage.html";
 }
-
 
 //swipe code for moving the menue to the left when swiped
 $(window).load(function(){
@@ -45,3 +51,20 @@ $(window).load(function(){
 
           }); 
       });
+
+//Notifications On/Off buttons.
+document.getElementById("NotificationCheckNumber1").addEventListener("click", NotificationCheckNumber1Press);
+function NotificationCheckNumber1Press()
+{
+  document.getElementById("NotificationCheckNumber1").style.background = "#00CC00"; //Bright Green
+  document.getElementById("NotificationCheckNumber2").style.background = "#990000"; // Dark Red
+  NotificationsOnOrOff = 0;
+}
+
+document.getElementById("NotificationCheckNumber2").addEventListener("click", NotificationCheckNumber2Press);
+function NotificationCheckNumber2Press()
+{
+  document.getElementById("NotificationCheckNumber1").style.background = "#006600"; //Dark Green
+  document.getElementById("NotificationCheckNumber2").style.background = "#FF1919"; //Bright Red
+  NotificationsOnOrOff = 1;
+}
