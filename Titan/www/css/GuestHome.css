@@ -10,7 +10,7 @@
 #screenDescription{
   bottom: -10px;
   position: absolute;
-  left: 35%;
+  left: 29%;
   color: white;
   font-size: 22.5px;
   font-weight: bold;
@@ -44,11 +44,11 @@
 }
   #leaguePlayButton {
   position: absolute;
-  background: orange;
+  background: gray;
 
   border-radius: 0px;
   font-family: Georgia;
-  color: white; 
+  color: black; 
   font-size: 23px;
 
   border: solid #000000 2px;
@@ -59,22 +59,13 @@
   left: 5%;
 }
 
-#leaguePlayButton:hover {
-  background: #3ce6fc;
-  background-image: -webkit-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: -moz-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: -ms-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: -o-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: linear-gradient(to bottom, #3ce6fc, #bd34d9);
-  text-decoration: none;
-}
 #privateGameButton {
   position: absolute;
-  background: orange;
+  background: gray;
  
   border-radius: 0px;
   font-family: Georgia;
-  color: white; 
+  color: black; 
   font-size: 23px;
 
   border: solid #000000 2px;
@@ -85,15 +76,6 @@
   left: 5%;
 }
 
-#privateGameButton:hover {
-  background: #423cfa;
-  background-image: -webkit-linear-gradient(top, #423cfa, #d93434);
-  background-image: -moz-linear-gradient(top, #423cfa, #d93434);
-  background-image: -ms-linear-gradient(top, #423cfa, #d93434);
-  background-image: -o-linear-gradient(top, #423cfa, #d93434);
-  background-image: linear-gradient(to bottom, #423cfa, #d93434);
-  text-decoration: none;
-}
       /* Space behind the buttons */
       .container {
           background-color:#E6E6E6; 
@@ -147,22 +129,12 @@
 
 
         /* Heres the dime4nsions of all the sidebar pictures.  */
-      #profilePic {
-        width: 180px; 
-        height: 115px;
-      }
-      #friendsPic{
-        width: 180px; 
-        height: 115px;
-      }
+    
       #settingsPic{
         width: 180px; 
         height: 115px;
       }
-      #notificationsPic{
-        width: 180px; 
-        height: 115px;
-      }
+     
 
 
 
