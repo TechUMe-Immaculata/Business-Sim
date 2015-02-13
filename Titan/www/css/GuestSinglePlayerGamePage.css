@@ -2,6 +2,44 @@ body, html {
 background:orange;
 }
 
+#PreviousButton{
+	position: absolute;
+	width: 50%;
+	height: 10%;
+	left: 0%;
+	font-size: 20;
+}
 #NextButton{
-	
+	position: absolute;;
+	width: 50%;
+	height: 10%;
+	left: 50%;
+	font-size: 20;
+}
+#GamePageOne{
+	position: absolute;
+	top: 12%;
+}
+#GamePageTwo{
+	position: absolute;
+	top: 12%;
+}
+#GamePageThree{
+	position: absolute;
+	top: 12%;
+}
+#GamePageFour{
+	position: absolute;
+	top: 12%;
+}
+
+#YourBuisness{
+	position: absolute;
+	top: 15%;
+	left: 10%;
+	width: 344px;
+	height: 285px;
+	border-radius: 8px; 
+	border-style: solid;
+  	border color: black;
 }

@@ -7,7 +7,9 @@ document.getElementById('GamePageThree').style.display='none';
 document.getElementById('GamePageFour').style.display='none';
 
 document.getElementById("NextButton").addEventListener("click", NextButtonPress);
+document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 
+//When the next button is pressed, run this code.
 function NextButtonPress()
 {
 	CurrentPage = CurrentPage + 1; 
@@ -19,7 +21,30 @@ function NextButtonPress()
 		CurrentPage = 1;
 		console.log(CurrentPage);
 	}
-	else if (CurrentPage > 4) {;
+	else if (CurrentPage > 4) {
+		console.log("Number too high")
+		CurrentPage = 4;
+		console.log(CurrentPage);
+	}
+	else{
+		ChangeThePage();
+	}
+	
+}
+
+//when the previous button is pressed, run this code. 
+function PreviousButtonPress()
+{
+	CurrentPage = CurrentPage - 1; 
+	console.log(CurrentPage); 
+	
+	//Error checking for if the game is trying to set the number to high or to low. 
+	if (CurrentPage < 1) {
+		console.log("Number too low")
+		CurrentPage = 1;
+		console.log(CurrentPage);
+	}
+	else if (CurrentPage > 4) {
 		console.log("Number too high")
 		CurrentPage = 4;
 		console.log(CurrentPage);
