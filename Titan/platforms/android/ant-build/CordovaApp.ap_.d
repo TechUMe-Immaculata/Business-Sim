@@ -29,6 +29,7 @@ C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\ant-build\res
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\ant-build\res\drawable-xhdpi\icon.png \
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www \
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\_where-is-www.txt \
+C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\company.html \
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\cordova.js \
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\cordova_plugins.js \
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\css \
@@ -50,6 +51,7 @@ C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\Re
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\ServerLoginPage.html \
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\SettingsPage.html \
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\css\bootstrap.css \
+C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\css\Company.css \
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\css\FriendsPage.css \
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\css\GuestGameSingleOrMultiplayer.css \
 C:\Users\s170759.OCSB\Desktop\Business-Sim\Titan\platforms\android\assets\www\css\GuestSinglePlayerGamePage.css \
