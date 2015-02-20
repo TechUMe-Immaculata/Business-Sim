@@ -1,10 +1,7 @@
 
-var CurrentPage = 1; 
+var CurrentPage = 4; 
+ChangeThePage();
 console.log(CurrentPage);
-
-document.getElementById('GamePageTwo').style.display='none';
-document.getElementById('GamePageThree').style.display='none';
-document.getElementById('GamePageFour').style.display='none';
 
 document.getElementById("NextButton").addEventListener("click", NextButtonPress);
 document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
