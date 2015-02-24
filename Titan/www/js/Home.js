@@ -3,7 +3,7 @@ document.getElementById("quickPlayButton").addEventListener("click", quickPlayBu
 document.getElementById("privateGameButton").addEventListener("click", privateGameButtonPress);
 
 //SideBar Button event listeners
-document.getElementById("profilePic").addEventListener("click", profilePicPress);
+document.getElementById("userProfilePicture").addEventListener("click", profilePicPress);
 document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
 document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
 document.getElementById("notificationsPic").addEventListener("click", notificationsPicPress);
