@@ -34,9 +34,6 @@ background:orange;
 }
 
 #YourBuisness{
-	position: absolute;
-	top: 15%;
-	left: 10%;
 	width: 344px;
 	height: 285px;
 	border-radius: 8px; 
@@ -47,56 +44,34 @@ background:orange;
 /* Code for the sliders on Page Four. */
 /* PRICE */
 #priceCharacters{
-position: absolute;
 font-size: 25px;
 font-weight: bold;
-left: 10%;
+
 }
 #priceSlider{
-position: absolute;
-top: 175%;
-left: 100;
-width: 100%;
+
 }
 /* PRODUCTION */
 #productionCharacters{
-position: absolute;
 font-size: 25px;
 font-weight: bold;
-left: 10%;
-top: 200%;
 }
 #productionSlider{
-position: absolute;
-top: 200%;
-left: 100;
-width: 100%;
+
 }
 /* MARKETING */
 #marketCharacters{
-position: absolute;
 font-size: 25px;
 font-weight: bold;
-left: 10%;
-top: 200%;
 }
 #marketSlider{
-position: absolute;
-top: 1200%;
-left: 100;
-width: 100%;
+
 }
 /* RESEARCH AND DEVELOPEMENT */
 #RAndDCharacters{
-position: absolute;
 font-size: 25px;
 font-weight: bold;
-left: 10%;
-top: 2200%;
 }
 #RAndDSlider{
-position: absolute;
-top: 2600%;
-left: 100;
-width: 200%;
+	
 }
