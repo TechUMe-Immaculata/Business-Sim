@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+document.getElementById("guestPlayButton").addEventListener("click", guestPlayPress);
+document.getElementById("serverLoginButton").addEventListener("click", serverLoginPress);
+document.getElementById("registerButton").addEventListener("click", registerPress);
+document.getElementById("facebookLoginButton").addEventListener("click", facebookLoginPress);
+//window.location.replace('...');
+function guestPlayPress()
+{
+	window.location="GuestGameSingleOrMultiplayer.html";
+}
+
+function serverLoginPress()
+{
+  window.location="ServerLoginPage.html";
+}
+
+function registerPress()
+{
+  window.location="Register.html";
+}
+
+function facebookLoginPress()
+{
+  window.location="Register.html";
+}
+=======
 //main container button event listeners
 document.getElementById("quickPlayButton").addEventListener("click", quickPlayButtonPress);
 document.getElementById("privateGameButton").addEventListener("click", privateGameButtonPress);
@@ -60,3 +86,4 @@ $(window).load(function(){
 
           }); 
       });
+>>>>>>> master

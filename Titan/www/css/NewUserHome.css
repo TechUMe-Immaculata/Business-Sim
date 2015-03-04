@@ -17,7 +17,11 @@
 
 }
 
+<<<<<<< HEAD
+#guestPlayButton {
+=======
 #quickPlayButton {
+>>>>>>> master
   position: absolute;
   background: orange;
  
@@ -43,7 +47,11 @@
   background-image: linear-gradient(to bottom, #f5084b, #fa9e00);
   text-decoration: none;
 }
+<<<<<<< HEAD
+  #serverLoginButton {
+=======
   #leaguePlayButton {
+>>>>>>> master
   position: absolute;
   background: orange;
 
@@ -60,7 +68,11 @@
   left: 5%;
 }
 
+<<<<<<< HEAD
+#serverLoginButton:hover {
+=======
 #leaguePlayButton:hover {
+>>>>>>> master
   background: #3ce6fc;
   background-image: -webkit-linear-gradient(top, #3ce6fc, #bd34d9);
   background-image: -moz-linear-gradient(top, #3ce6fc, #bd34d9);
@@ -69,7 +81,11 @@
   background-image: linear-gradient(to bottom, #3ce6fc, #bd34d9);
   text-decoration: none;
 }
+<<<<<<< HEAD
+#registerButton {
+=======
 #privateGameButton {
+>>>>>>> master
   position: absolute;
   background: orange;
  
@@ -86,7 +102,11 @@
   left: 5%;
 }
 
+<<<<<<< HEAD
+#registerButton:hover {
+=======
 #privateGameButton:hover {
+>>>>>>> master
   background: #423cfa;
   background-image: -webkit-linear-gradient(top, #423cfa, #d93434);
   background-image: -moz-linear-gradient(top, #423cfa, #d93434);
@@ -135,6 +155,9 @@
           box-sizing: border-box;
           -moz-box-sizing: border-box;
       }
+<<<<<<< HEAD
+    
+=======
       #sidebar ul {
           margin: 0;
           padding: 0;
@@ -231,3 +254,4 @@
       .main-content #sidebar-toggle .bar:last-child{
            margin-bottom: 0;   
       }
+>>>>>>> master
