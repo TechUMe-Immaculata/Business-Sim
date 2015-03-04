@@ -80,8 +80,14 @@ Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6Y
   success: function(results) {
   var companyElements = results[0];
   var companyname = companyElements.get("company");
+  var gamesWonNumber = companyElements.get("gamesWon");
+  var gamesLostNumber = companyElements.get("gamesLost");
+ 
   document.getElementById("profileInfoCompanyName").innerHTML ="Company: " + companyname.toString();
-  console.log(companyElements.id);
+  document.getElementById("profileInfoGamesWon").innerHTML ="Games Won: " + gamesWonNumber.toString();
+
+ document.getElementById("profileInfoGamesLost").innerHTML ="Games Lost: " + gamesLostNumber.toString();
+  
 
   },
   error: function(error){
