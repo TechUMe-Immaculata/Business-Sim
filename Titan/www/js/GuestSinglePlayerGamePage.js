@@ -1,10 +1,12 @@
-
 var CurrentPage = 4; 
+document.getElementById('PauseScreen').style.display='none';
 ChangeThePage();
 console.log(CurrentPage);
 
 document.getElementById("NextButton").addEventListener("click", NextButtonPress);
 document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
+document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
+document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
 
 //When the next button is pressed, run this code.
 function NextButtonPress()
@@ -80,3 +82,19 @@ else if (CurrentPage == 4) {
 else {
 	console.log("error");//error
 }}
+
+function pauseGearPress(){
+	document.getElementById('PauseScreen').style.display="block";
+	document.getElementById('NextButton').style.display='none';
+	document.getElementById('PreviousButton').style.display='none';
+	document.getElementById('pauseGear').style.display='none';
+}
+
+
+function ReturnButtonPress(){
+	document.getElementById('PreviousButton').style.display='block';
+	document.getElementById('NextButton').style.display='block';
+	document.getElementById('pauseGear').style.display='block';
+	document.getElementById('PauseScreen').style.display="none";
+
+}

@@ -8,15 +8,22 @@
 </head>
 <body>
 
-	<button type="button" id ="PreviousButton">Previous</button>
+	<button type="button" id ="PreviousButton">Back</button>
 	<button type="button" id ="NextButton">Next</button>
+	<img id="pauseGear" src="img/pauseGear.jpg">
 
 
 <div id="SinglePlayerInGame">
+
+  <!-- PAUSE SCREEN -->
+  <div id="PauseScreen">
+    <button type="button" id="ReturnButton" > Return </button>
+  </div>
+
     <!-- Page One, the In-Game Home Page -->
     <div id="GamePageOne">
-		<img id="YourBuisness" src="img/PlaceHolderNotAvailable.jpg"/>
-	</div>
+		  <img id="YourBuisness" src="img/PlaceHolderNotAvailable.jpg"/>
+	  </div>
 
 		 <!-- Page Two, the In-Game Newspaper -->
     <div id="GamePageTwo">
@@ -39,17 +46,25 @@
 		<p id="productionCharacters">Production: 
               <form id="productionSlider" oninput="amount.value=rangeInput.value">
                 <input type="number" id="rangeInput" name="rangeInput" min="0" max="100">                                                       
-                $<output name="amount" for="rangeInput"></output></form> </p>
-        <!-- Other Other Slider -->
+                <output name="amount" for="rangeInput"></output></form> </p>
+        <!-- Marketing Slider -->
 		<p id="marketCharacters">Marketing: 
               <form id="marketSlider" oninput="amount.value=rangeInput.value">
                 <input type="number" id="rangeInput" name="rangeInput" min="0" max="100">                                                       
                 $<output name="amount" for="rangeInput"></output> </form> </p>
-        <!-- Other Other Slider -->
+        <!-- R & D Slider -->
 		<p id="RAndDCharacters">Research and Development: 
               <form id="RAndDSlider" oninput="amount.value=rangeInput.value">
                 <input type="number" id="rangeInput" name="rangeInput" min="0" max="100">                                                       
                 $<output name="amount" for="rangeInput"></output> </form> </p>
+        <!-- Charity Slider -->
+        <p id="CharityCharacters">Charity: 
+              <form id="CharitySlider" oninput="amount.value=rangeInput.value">
+                <input type="number" id="rangeInput" name="rangeInput" min="0" max="100">                                                       
+                $<output name="amount" for="rangeInput"></output> </form> </p>
+
+                <!-- The Submit to server button, to end and submit your turn -->
+                <button type="button" id="submitToServerButton" > Submit Turn </button>
 	</div>
 
 

@@ -3,34 +3,49 @@ background:orange;
 }
 
 #PreviousButton{
-	position: absolute;
-	width: 50%;
-	height: 10%;
-	left: 0%;
-	font-size: 20;
+	font-size: 40px;
+	width: 140px;
+	height: 60px;
+	border-width: 5px;
 }
 #NextButton{
-	position: absolute;;
-	width: 50%;
-	height: 10%;
-	left: 50%;
-	font-size: 20;
+	font-size: 40px;
+	width: 140px;
+	height: 60px;
+	border-width: 5px;
+}
+#pauseGear{
+	width: 55px;
+	top: 100px;
+}
+#returnButton{
+	width: 150px;
+	height: 50px;
+	font-size: 22px;
+	margin-top: 15px;
+	margin-left: 75px;
+}
+#PauseScreen{
+	width: 300px;
+	height: 200px;
+	margin-left: 10px;
+	margin-top: 35px;
+	border-width: 10px;
+	border-radius: 20px; 
+	border-style: double;
+  	border color: black;
 }
 #GamePageOne{
-	position: absolute;
-	top: 12%;
+
 }
 #GamePageTwo{
-	position: absolute;
-	top: 12%;
+
 }
 #GamePageThree{
-	position: absolute;
-	top: 12%;
+
 }
 #GamePageFour{
-	position: absolute;
-	top: 12%;
+
 }
 
 #YourBuisness{
@@ -41,7 +56,7 @@ background:orange;
   	border color: black;
 }
 
-/* Code for the sliders on Page Four. */
+/* Code for Page Four. */
 /* PRICE */
 #priceCharacters{
 font-size: 25px;
@@ -73,5 +88,20 @@ font-size: 25px;
 font-weight: bold;
 }
 #RAndDSlider{
-	
+
 }
+/* CHAIRTY */
+#CharityCharacters{
+font-size: 25px;
+font-weight: bold;
+}
+#CharitySlider{
+
+}
+
+/* SUBMIT BUTTON */
+#submitToServerButton{
+	margin-top: 10px;
+	font-size: 20px;
+}
+	
