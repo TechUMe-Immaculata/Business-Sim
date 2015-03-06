@@ -60,3 +60,22 @@ $(window).load(function(){
 
           }); 
       });
+
+Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
+    // create company 
+
+    // get user id and company 
+    var currentUser = Parse.User.current();
+    var name = currentUser.get("username");
+    var myUserId = currentUser.id;
+    var profilePic = currentUser.get("profilePicture");
+   
+ 
+   
+
+    $('#userProfilePicture').hide().attr('src', profilePic.url()).show();
+
+  
+
+   
+  
