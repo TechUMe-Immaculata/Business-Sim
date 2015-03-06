@@ -92,9 +92,9 @@ function pauseGearPress(){
 
 
 function ReturnButtonPress(){
-	document.getElementById('PreviousButton').style.display='block';
-	document.getElementById('NextButton').style.display='block';
-	document.getElementById('pauseGear').style.display='block';
+	document.getElementById('PreviousButton').style.display='';
+	document.getElementById('NextButton').style.display='';
+	document.getElementById('pauseGear').style.display='';
 	document.getElementById('PauseScreen').style.display="none";
 
 }
