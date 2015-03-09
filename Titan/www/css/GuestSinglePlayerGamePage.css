@@ -1,3 +1,109 @@
 body, html {
 background:orange;
 }
+
+#PreviousButton{
+	font-size: 40px;
+	width: 140px;
+	height: 60px;
+	border-width: 5px;
+	margin-bottom: 5px;
+}
+#NextButton{
+	font-size: 40px;
+	width: 140px;
+	height: 60px;
+	border-width: 5px;
+}
+#pauseGear{
+	width: 55px;
+	top: 100px;
+}
+#returnButton{
+	width: 150px;
+	height: 50px;
+	font-size: 22px;
+	margin-top: 15px;
+	margin-left: 75px;
+}
+#PauseScreen{
+	width: 300px;
+	height: 570px;
+	margin-left: 10px;
+	margin-top: 35px;
+	border-width: 10px;
+	border-radius: 20px; 
+	border-style: double;
+  	border color: black;
+}
+#GamePageOne{
+
+}
+#GamePageTwo{
+
+}
+#GamePageThree{
+
+}
+#GamePageFour{
+
+}
+
+#YourBuisness{
+	width: 344px;
+	height: 285px;
+	border-radius: 8px; 
+	border-style: solid;
+  	border color: black;
+  	margin-top: 7.5px;
+}
+
+/* Code for Page Four. */
+/* PRICE */
+#priceCharacters{
+font-size: 25px;
+font-weight: bold;
+
+}
+#priceSlider{
+
+}
+/* PRODUCTION */
+#productionCharacters{
+font-size: 25px;
+font-weight: bold;
+}
+#productionSlider{
+
+}
+/* MARKETING */
+#marketCharacters{
+font-size: 25px;
+font-weight: bold;
+}
+#marketSlider{
+
+}
+/* RESEARCH AND DEVELOPEMENT */
+#RAndDCharacters{
+font-size: 25px;
+font-weight: bold;
+}
+#RAndDSlider{
+
+}
+/* CHAIRTY */
+#CharityCharacters{
+font-size: 25px;
+font-weight: bold;
+}
+#CharitySlider{
+
+}
+
+/* SUBMIT BUTTON */
+#submitToServerButton{
+	margin-top: 10px;
+	font-size: 20px;
+}
+	
