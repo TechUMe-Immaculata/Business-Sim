@@ -5,6 +5,7 @@ document.getElementById("privateGameButton").addEventListener("click", privateGa
 //SideBar Button event listeners
 document.getElementById("userProfilePicture").addEventListener("click", profilePicPress);
 document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
+document.getElementById("signOutButton").addEventListener("click", signOutPress);
 document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
 document.getElementById("notificationsPic").addEventListener("click", notificationsPicPress);
 
@@ -27,6 +28,15 @@ function profilePicPress()
 function friendsPicPress()
 {
   window.location="FriendsPage.html";
+}
+function signOutPress()
+{
+  Parse.User.logOut();
+ 
+  var currentUser = Parse.User.current();  // this will now be null
+
+  window.location="NewUserHome.html";
+
 }
 function settingsPicPress()
 {
