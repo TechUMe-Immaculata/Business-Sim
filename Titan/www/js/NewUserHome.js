@@ -5,7 +5,7 @@ document.getElementById("facebookLoginButton").addEventListener("click", faceboo
 //window.location.replace('...');
 function guestPlayPress()
 {
-  window.location="GuestGameSingleOrMultiplayer.html";
+  window.location="GuestHome.html";
 }
 
 function serverLoginPress()
