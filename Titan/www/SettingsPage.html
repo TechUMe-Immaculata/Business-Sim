@@ -4,7 +4,7 @@
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	
+  
     <title>Profile</title>
 
     <!--does not work with internet explorer 6 and 7 for jquery 2.1-->
@@ -43,12 +43,10 @@
             <img id="userProfilePicture" src = "localContent/profilePicture.jpg"/>
             <button type="button" id="editPicButton" > Edit </button>
             <div> <p id="profileInfoName">Name: Nedard Stark </p> 
-              <!-- Slider Code -->
               <p id="soundCharacters">Volume: </p>
               <form id="soundSlider" oninput="amount.value=rangeInput.value">
                 <input type="range" id="rangeInput" name="rangeInput" min="0" max="100">                                                       
                 <output name="amount" for="rangeInput">50</output> </form>
-              <!-- Notifications On/Off -->
               <p id="notificationsOnOff">Notifications: (On/Off) </p>
               <canvas id="NotificationCheckNumber1" ></canvas> 
               <canvas id="NotificationCheckNumber2" ></canvas>     
