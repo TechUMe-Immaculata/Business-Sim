@@ -29,6 +29,8 @@ function friendsPicPress()
 {
   window.location="FriendsPage.html";
 }
+
+//This function signs out the user, and then returns them to the sign in page
 function signOutPress()
 {
   Parse.User.logOut();
