@@ -8,6 +8,17 @@ document.getElementById("PreviousButton").addEventListener("click", PreviousButt
 document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
 
+
+//Code for the info buttons.
+// Create the tooltips only when document ready
+$(document).ready(function () {
+    
+    // This will automatically grab the 'title' attribute and replace
+    // the regular browser tooltips for all <a> elements with a title attribute!
+    $('a[title]').qtip();
+    
+});
+
 //When the next button is pressed, run this code.
 function NextButtonPress()
 {
