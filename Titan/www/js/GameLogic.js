@@ -164,22 +164,22 @@ query.find({
                 var queryCharity = compinfo.get("charity");
                
                  
-var xChapital = document.getElementById("capital");
+var xChapital = document.getElementById("capitalRangeInput");
 xChapital.value = querycapital;
 
 
 
-var xPrice = document.getElementById("price");
+var xPrice = document.getElementById("priceRangeInput");
 xPrice.value = queryPrice;
 
-var xCharity = document.getElementById("charity");
+var xCharity = document.getElementById("charityRangeInput");
 xCharity.value = queryCharity;
 
-var xProduction = document.getElementById("production");
+var xProduction = document.getElementById("productionRangeInput");
 xProduction.value = queryProduction;
 
 
-var xResearchDevelopment = document.getElementById("researchDevelopment");
+var xResearchDevelopment = document.getElementById("RAndDRangeInput");
 xResearchDevelopment.value = queryResearchDevelopment;
 
 
@@ -188,7 +188,7 @@ var xMarketing = document.getElementById("marketing");
 xMarketing.value = queryMarketing;
 
 
- document.getElementById('labelCapital').innerHTML = " Chapital : " + querycapital;
+ document.getElementById('labelCapital').innerHTML = " Capital : " + querycapital;
 
  document.getElementById('labelPrice').innerHTML = " Production :" +queryPrice;
 
