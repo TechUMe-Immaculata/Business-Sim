@@ -1,0 +1,105 @@
+﻿Merge branch 'master' into Dylan
+
+Conflicts:
+	Titan/www/SettingsPage.html
+	Titan/www/js/NewUserHome.js
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch Dylan
+# Your branch is up-to-date with 'remotes/origin/Dylan'.
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   .gitignore
+#	modified:   Titan/platforms/android/CordovaLib/ant-build/AndroidManifest.xml.d
+#	modified:   Titan/platforms/android/CordovaLib/ant-build/build.prop
+#	modified:   Titan/platforms/android/CordovaLib/ant-build/classes.jar
+#	modified:   Titan/platforms/android/ant-build/AndroidManifest.xml.d
+#	modified:   Titan/platforms/android/ant-build/CordovaApp-debug-unaligned.apk
+#	modified:   Titan/platforms/android/ant-build/CordovaApp-debug-unaligned.apk.d
+#	modified:   Titan/platforms/android/ant-build/CordovaApp-debug.apk
+#	modified:   Titan/platforms/android/ant-build/CordovaApp.ap_
+#	modified:   Titan/platforms/android/ant-build/CordovaApp.ap_.d
+#	modified:   Titan/platforms/android/ant-build/build.prop
+#	modified:   Titan/platforms/android/ant-build/classes.dex.d
+#	new file:   Titan/platforms/android/ant-build/dexedLibs/classes-7bcc4a6099be39d4027ea50265666a24.jar
+#	new file:   Titan/platforms/android/assets/www/FriendsPage.html
+#	deleted:    Titan/platforms/android/assets/www/GuestGamePage.html
+#	new file:   Titan/platforms/android/assets/www/GuestGameSingleOrMultiplayer.html
+#	new file:   Titan/platforms/android/assets/www/GuestSinglePlayerGamePage.html
+#	modified:   Titan/platforms/android/assets/www/Home.html
+#	new file:   Titan/platforms/android/assets/www/NewUserHome.html
+#	new file:   Titan/platforms/android/assets/www/NotificationsPage.html
+#	new file:   Titan/platforms/android/assets/www/PrivateGames.html
+#	new file:   Titan/platforms/android/assets/www/ProfilePage.html
+#	new file:   Titan/platforms/android/assets/www/QueuePage.html
+#	new file:   Titan/platforms/android/assets/www/Register.html
+#	new file:   Titan/platforms/android/assets/www/ServerLoginPage.html
+#	new file:   Titan/platforms/android/assets/www/SettingsPage.html
+#	new file:   Titan/platforms/android/assets/www/company.html
+#	new file:   Titan/platforms/android/assets/www/css/Company.css
+#	new file:   Titan/platforms/android/assets/www/css/FriendsPage.css
+#	deleted:    Titan/platforms/android/assets/www/css/GuestGamePage.css
+#	new file:   Titan/platforms/android/assets/www/css/GuestGameSingleOrMultiplayer.css
+#	new file:   Titan/platforms/android/assets/www/css/GuestSinglePlayerGamePage.css
+#	modified:   Titan/platforms/android/assets/www/css/Home.css
+#	new file:   Titan/platforms/android/assets/www/css/NewUserHome.css
+#	new file:   Titan/platforms/android/assets/www/css/NotificationsPage.css
+#	new file:   Titan/platforms/android/assets/www/css/PrivateGames.css
+#	new file:   Titan/platforms/android/assets/www/css/ProfilePage.css
+#	new file:   Titan/platforms/android/assets/www/css/QueuePage.css
+#	new file:   Titan/platforms/android/assets/www/css/Register.css
+#	new file:   Titan/platforms/android/assets/www/css/ServerLoginPage.css
+#	new file:   Titan/platforms/android/assets/www/css/SettingsPage.css
+#	new file:   Titan/platforms/android/assets/www/css/SinglePlayerInGame/Home.css
+#	new file:   Titan/platforms/android/assets/www/css/SinglePlayerInGame/Newspaper.css
+#	new file:   Titan/platforms/android/assets/www/css/bootstrap.css
+#	modified:   Titan/platforms/android/assets/www/img/factory.gif
+#	new file:   Titan/platforms/android/assets/www/img/friendsButton.jpg
+#	new file:   Titan/platforms/android/assets/www/img/homeButton.jpg
+#	new file:   Titan/platforms/android/assets/www/img/notficationsButton.jpg
+#	new file:   Titan/platforms/android/assets/www/img/profileButton.jpg
+#	deleted:    Titan/platforms/android/assets/www/img/profileImage.jpg
+#	new file:   Titan/platforms/android/assets/www/img/settingsButton.jpg
+#	modified:   Titan/platforms/android/assets/www/index.html
+#	new file:   Titan/platforms/android/assets/www/js/FriendsPage.js
+#	new file:   Titan/platforms/android/assets/www/js/GuestGameSingleOrMultiplayer.js
+#	new file:   Titan/platforms/android/assets/www/js/GuestSinglePlayerGamePage.js
+#	modified:   Titan/platforms/android/assets/www/js/Home.js
+#	new file:   Titan/platforms/android/assets/www/js/NewUserHome.js
+#	new file:   Titan/platforms/android/assets/www/js/NotificationsPage.js
+#	new file:   Titan/platforms/android/assets/www/js/PrivateGames.js
+#	new file:   Titan/platforms/android/assets/www/js/ProfilePage.js
+#	renamed:    Titan/platforms/android/assets/www/js/GuestGamePage.js -> Titan/platforms/android/assets/www/js/QueuePage.js
+#	new file:   Titan/platforms/android/assets/www/js/Register.js
+#	new file:   Titan/platforms/android/assets/www/js/ServerLoginPage.js
+#	new file:   Titan/platforms/android/assets/www/js/SettingsPage.js
+#	new file:   Titan/platforms/android/assets/www/js/SinglePlayerInGame/Home.js
+#	new file:   Titan/platforms/android/assets/www/js/SinglePlayerInGame/Newspaper.js
+#	new file:   Titan/platforms/android/assets/www/js/jquery-2.1.3.min.js
+#	new file:   Titan/platforms/android/assets/www/localContent/profilePicture.jpg
+#	renamed:    Titan/platforms/android/assets/www/March of Motherland.mp3 -> Titan/platforms/android/assets/www/music/March of Motherland.mp3
+#	modified:   Titan/www/Home.html
+#	modified:   Titan/www/NewUserHome.html
+#	modified:   Titan/www/ProfilePage.html
+#	modified:   Titan/www/Register.html
+#	modified:   Titan/www/ServerLoginPage.html
+#	modified:   Titan/www/SettingsPage.html
+#	new file:   Titan/www/company.html
+#	new file:   Titan/www/css/Company.css
+#	modified:   Titan/www/css/Home.css
+#	modified:   Titan/www/css/NewUserHome.css
+#	modified:   Titan/www/js/Home.js
+#	modified:   Titan/www/js/NewUserHome.js
+#	modified:   Titan/www/js/ProfilePage.js
+#	renamed:    Titan/platforms/android/assets/www/js/jquery-1.11.1.min.js -> Titan/www/js/jquery-1.11.1.min.js
+#
+

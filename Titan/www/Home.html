@@ -9,35 +9,30 @@
 
     <!--does not work with internet explorer 6 and 7 for jquery 2.1-->
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+  
       <!--Link to the css file Home.css -->
     <link rel="stylesheet" type="text/css" href="css/Home.css"/>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
 
 
   </head>
   <body id="mainBody">
     <div class="container">
       <div id="sidebar">
-          <ul >
-              <!-- <li> <img id="profile" src = "friendSil.jpg"/></li> -->
-              <li><a><img id="profilePic" src = "img/profileImage.jpg"/> Profile</a></li>
-              <li><a href="#">Friends</a></li>
-              <li><a href="#">Settings</a></li>
-              <li><a href="#">Notifications</a></li>
-              <li><a href="#">Sign Out</a></li>
+          <ul>
+              <li><a><img id="userProfilePicture" src = "img/profileButton.jpg"/> Profile</a></li>
+              <li><a><img id="friendsPic" src = "img/friendsButton.jpg"/> Friends</a></li>
+              <li><a><img id="settingsPic" src = "img/settingsButton.jpg"/> Settings</a></li>
+              <li><a><img id="notificationsPic" src = "img/notficationsButton.jpg"/> Notfications</a></li>
+              <li><a id="signOutButton" href="#">Sign Out</a></li>
           </ul>
       </div>
-     <!--
-      <div class="swipe-area"></div>
-          <a data-toggle=".container" id="sidebar-toggle">              
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-           
-              </a>
-             -->
       
       <div class="main-content">
           <div class="swipe-area">
@@ -63,7 +58,8 @@
   </body>
 
   <head>
-    <script type="text/javascript" src="js/Home.js"></script>
+   <script type="text/javascript" src="js/Home.js"></script>
+  
   </head>
   
 </html>

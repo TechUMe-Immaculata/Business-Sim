@@ -1,0 +1,76 @@
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/GuestSinglePlayerGamePage.css">
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	
+</head>
+<body>
+
+	<button type="button" id ="PreviousButton">Back</button>
+	<button type="button" id ="NextButton">Next</button>
+	<img id="pauseGear" src="img/pauseGear.jpg">
+
+
+<div id="SinglePlayerInGame">
+
+  <!-- PAUSE SCREEN -->
+  <div id="PauseScreen">
+    <button type="button" id="ReturnButton" > Return </button>
+  </div>
+
+    <!-- Page One, the In-Game Home Page -->
+    <div id="GamePageOne">
+		  <img id="YourBuisness" src="img/PlaceHolderNotAvailable.jpg"/>
+	  </div>
+
+		 <!-- Page Two, the In-Game Newspaper -->
+    <div id="GamePageTwo">
+    	This is the second title.
+    </div>
+	
+		 <!-- Page Three, the In-Game Graphs Page -->
+	<div id="GamePageThree">
+		This is a third title.
+	</div>
+
+		 <!-- Page Four, the In-Game Submit Page-->
+	<div id="GamePageFour">
+		<!-- Price Slider -->
+		<p id="priceCharacters">Price: 
+              <form id="priceSlider" oninput="amount.value=rangeInput.value">
+                <input type="number" id="rangeInput" name="rangeInput" min="0" max="any">                                                       
+                $<output name="amount" for="rangeInput"></output> </form> </p>
+        <!-- Production Slider -->
+		<p id="productionCharacters">Production: 
+              <form id="productionSlider" oninput="amount.value=rangeInput.value">
+                <input type="number" id="rangeInput" name="rangeInput" min="0" max="any">                                                       
+                <output name="amount" for="rangeInput"></output> units</form> </p>
+        <!-- Marketing Slider -->
+		<p id="marketCharacters">Marketing: 
+              <form id="marketSlider" oninput="amount.value=rangeInput.value">
+                <input type="number" id="rangeInput" name="rangeInput" min="0" max="any">                                                       
+                $<output name="amount" for="rangeInput"></output> </form> </p>
+        <!-- R & D Slider -->
+		<p id="RAndDCharacters">Research and Development: 
+              <form id="RAndDSlider" oninput="amount.value=rangeInput.value">
+                <input type="number" id="rangeInput" name="rangeInput" min="0" max="any">                                                       
+                $<output name="amount" for="rangeInput"></output> </form> </p>
+        <!-- Charity Slider -->
+        <p id="CharityCharacters">Charity: 
+              <form id="CharitySlider" oninput="amount.value=rangeInput.value">
+                <input type="number" id="rangeInput" name="rangeInput" min="0" max="any">                                                       
+                $<output name="amount" for="rangeInput"></output> </form> </p>
+
+                <!-- The Submit to server button, to end and submit your turn -->
+                <button type="button" id="submitToServerButton" > Submit Turn </button>
+	</div>
+
+
+
+
+	<script src="js/GuestSinglePlayerGamePage.js"></script>
+</body>
+
+</html>
