@@ -46,8 +46,8 @@ query.find({
     				{
 
 
-
     			 game1 = findMatch[0];
+                 localStorage.setItem("guestMatch",game1);
     			var usersgame1 = findMatch[0];
     			 game2 = findMatch[1];
     			var usersgame2 = findMatch[1];
@@ -218,7 +218,8 @@ function playerSubmit(){
 
 
 //get the keys to do the search
-var matchid=localStorage.getItem("matchid");
+//var matchid=localStorage.getItem("matchid");
+var matchid=localStorage.getItem("guestMatch");
 var compID = localStorage.getItem("companyId");
 
 
@@ -241,6 +242,8 @@ var query = new Parse.Query("CompMatch");
     var  playerstats = {};
 playerstats.companyId = compID;
 playerstats.matchId= matchid;
+console.log(matchid);
+console.log(compID);
 playerstats.clientProduction=this.$("#production").val();
 playerstats.clientResearchDevelopment=this.$("#researchDevelopment").val();
 playerstats.clientMarketing= this.$("#marketing").val();
