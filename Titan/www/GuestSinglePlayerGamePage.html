@@ -52,8 +52,14 @@ var currentUser = Parse.User.current();
 
 		 <!-- Page Four, the In-Game Submit Page-->
 	<div id="GamePageFour">
+			<!-- Capital Slider -->
+		<p id="priceCharacters">Capital: 
+              <form id="capitalSlider" oninput="amount.value=rangeInput.value">
+                <input type="number" id="txtCapital" name="rangeInput" min="0" max="any">                                                       
+                $<output name="amount" for="rangeInput"></output> </form> </p>
 		<!-- Price Slider -->
 		<p id="priceCharacters">Price: 
+
               <form id="priceSlider" oninput="amount.value=priceRangeInput.value">
                 <input type="number" id="priceRangeInput" name="rangeInput" min="0" max="any">                                                       
                 $<output name="amount" for="priceRangeInput"></output> </form> </p>
@@ -82,6 +88,7 @@ var currentUser = Parse.User.current();
               <form id="capitalSlider" oninput="amount.value=capitalRangeInput.value">
                 <input type="number" id="capitalRangeInput" name="rangeInput" min="0" max="any">                                                       
                 $<output name="amount" for="capitalRangeInput"></output> </form> </p>
+
 
                 <!-- The Submit to server button, to end and submit your turn -->
                 <button type="button" onclick="playerSubmit()" id="submitToServerButton" > Submit Turn </button>

@@ -7,7 +7,40 @@ document.getElementById("NextButton").addEventListener("click", NextButtonPress)
 document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
+document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 
+function SubmitButtonPress()
+{
+  var dataOut = {};
+  dataOut.clientCapital =  document.getElementById("txtCapital");
+  dataOut.clientResearchDevelopment = document.getElementById("txtRnD");
+  dataOut.clientProduction = document.getElementById("txtProduction");
+  dataOut.clientMarketing = document.getElementById("txtMarketing");
+  dataOut.clientPrice = document.getElementById("txtPrice");
+  dataOut.clientCharity = document.getElementById("txtCharity");
+
+  dataOut
+  
+  
+
+  $.ajax({
+  type: "POST",
+  url: "https://api.parse.com/1/functions/submitSolo/",
+  headers: {
+  "X-Parse-Application-Id": "Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci",
+  "X-Parse-REST-API-Key": "GcLEre3e2D25P14Pno5PbQ11YO0rixhvIoBxv2RG",
+  "Content-Type": "application/json"
+  },
+  data: JSON.stringify(clientUser),
+  dataType: "json"
+  
+})
+  .done(function( msg ) {
+  // all code here gets run when the POST was successful
+  // you can do things like update the console, display an alert, etc...
+   console.log(msg.result);
+  });
+}
 //When the next button is pressed, run this code.
 function NextButtonPress()
 {
