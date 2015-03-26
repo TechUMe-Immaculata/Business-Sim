@@ -9,6 +9,23 @@ document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
 document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 
+//Code for the info buttons.
+// Create the tooltips only when document ready
+//$(document).ready(function () {
+    
+    // This will automatically grab the 'title' attribute and replace
+    // the regular browser tooltips for all <a> elements with a title attribute!
+    //$('a[title]').qtip();
+    
+//});
+//$('#myTooltip').qtip({
+    //position: {
+        //my: 'top right',  // Position my top left...
+        //at: 'bottom left', // at the bottom right of...
+        //target: $('.Price') // my target
+    //}
+//});
+
 function SubmitButtonPress()
 {
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
@@ -72,6 +89,7 @@ function SubmitButtonPress()
 	  });
 	}) 
 }
+
 //When the next button is pressed, run this code.
 function NextButtonPress()
 {
