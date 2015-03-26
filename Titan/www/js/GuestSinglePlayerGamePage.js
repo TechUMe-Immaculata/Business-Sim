@@ -7,7 +7,71 @@ document.getElementById("NextButton").addEventListener("click", NextButtonPress)
 document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
+document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 
+function SubmitButtonPress()
+{
+	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
+	Parse.$ = jQuery;
+  
+	var userObjectId = Parse.User.current().id;
+	
+	console.log(userObjectId);
+  
+	var Company = Parse.Object.extend("Company");
+	var queryCompany = new Parse.Query(Company);
+	 
+	queryCompany.equalTo("userId",userObjectId);
+	 
+	queryCompany.first().then(function(company){
+	
+	console.log(company.id);
+	localStorage.setItem("companyId",company.id);
+	 
+	var Match = Parse.Object.extend("Match");
+	var queryMatch = new Parse.Query(Match);
+	
+	queryMatch.equalTo("companyIds" , company.id);
+	 
+	return queryMatch.first();
+	}).then(function(match)
+	{
+	localStorage.setItem("matchId",match.id);
+	return null;
+	}).then(function(sendData)
+	{
+		var dataOut = {};
+		//input does not work with type number thus all these objects are null
+	  dataOut.clientCapital = this.$("#capitalRangeInput").val();
+	  dataOut.clientResearchDevelopment = this.$("#RAndDRangeInput").val();
+	  dataOut.clientProduction = this.$("#productionRangeInput").val();
+	  dataOut.clientMarketing = this.$("#marketRangeInput").val();
+	  dataOut.clientPrice = this.$("#priceRangeInput").val();
+	  dataOut.clientCharity = this.$("#charityRangeInput").val();
+	  
+	  dataOut.companyId = localStorage.getItem("companyId");
+	  dataOut.matchId = localStorage.getItem("matchId");
+
+		console.log(dataOut);
+	  $.ajax({
+	  type: "POST",
+	  url: "https://api.parse.com/1/functions/submitSolo/",
+	  headers: {
+	  "X-Parse-Application-Id": "Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci",
+	  "X-Parse-REST-API-Key": "GcLEre3e2D25P14Pno5PbQ11YO0rixhvIoBxv2RG",
+	  "Content-Type": "application/json"
+	  },
+	  data: JSON.stringify(dataOut),
+	  dataType: "json"
+	  
+	})
+	  .done(function( msg ) {
+	  // all code here gets run when the POST was successful
+	  // you can do things like update the console, display an alert, etc...
+	   console.log(msg.result);
+	  });
+	}) 
+}
 //When the next button is pressed, run this code.
 function NextButtonPress()
 {
