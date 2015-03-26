@@ -42,13 +42,13 @@ function SubmitButtonPress()
 	{
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
-	  dataOut.clientCapital = document.getElementById("txtCapital");
-	  dataOut.clientResearchDevelopment = document.getElementById("txtRnD");
-	  dataOut.clientProduction = document.getElementById("txtProduction");
-	  dataOut.clientMarketing = document.getElementById("txtMarketing");
-	  dataOut.clientPrice = document.getElementById("txtPrice");
-	  dataOut.clientCharity = document.getElementById("txtCharity");
-
+	  dataOut.clientCapital = this.$("#capitalRangeInput").val();
+	  dataOut.clientResearchDevelopment = this.$("#RAndDRangeInput").val();
+	  dataOut.clientProduction = this.$("#productionRangeInput").val();
+	  dataOut.clientMarketing = this.$("#marketRangeInput").val();
+	  dataOut.clientPrice = this.$("#priceRangeInput").val();
+	  dataOut.clientCharity = this.$("#charityRangeInput").val();
+	  
 	  dataOut.companyId = localStorage.getItem("companyId");
 	  dataOut.matchId = localStorage.getItem("matchId");
 
