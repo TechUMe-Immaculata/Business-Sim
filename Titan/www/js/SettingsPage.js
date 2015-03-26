@@ -5,7 +5,7 @@ var NotificationsOnOrOff = 0;
 
 //SideBar Button event listeners
 document.getElementById("homeButton").addEventListener("click", homeButtonPress);
-document.getElementById("profilePic").addEventListener("click", profilePicPress);
+
 document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
 document.getElementById("notificationsPic").addEventListener("click", notificationsPicPress);
 

@@ -28,8 +28,49 @@
           
 
       </div>
- <script>
-function Register(){ 
+
+  
+   <div id="main">
+    <section class="loginform cf">  
+<form id="inputFields" name="login" action="index_submit" method="get" accept-charset="utf-8">  
+    <ul>  
+        <li><label for="userName">Username</label>  
+		<input type="text" id="userName" name="username" placeholder=" E.g. SquriellFoxx" required></li> 
+		<li><label for="myemail">Email</label>
+        <input type="email" id="myemail" name="email" placeholder="yourname@email.com" required></li>  
+        <li><label for="password">Password</label>  
+        <input type="password" id="myPass" name="password" placeholder="password" required></li>  
+         
+        </li>  
+
+    </ul>  
+</form>  
+<button id="enterButton" onclick="Register" type="button" >Sign Up</button>
+</section>  
+  </div>
+	
+	
+  
+ <!--
+<form id="inputFields">
+UserName:<br>
+<input type="text" name="UserName">
+<br>
+Email:<br>
+<input type="text" name="Email">
+<br>
+Password:<br>
+<input type="text" name="Password">
+</form>-->
+
+    </div>
+
+  </body>
+
+  <head>
+    <script>
+    function Register()
+{ 
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
     
 
@@ -59,60 +100,9 @@ Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6Y
   }
 });
   
-};    /*
-    var TestObject = Parse.Object.extend("TestObject");
-    var testObject = new TestObject();
-      testObject.save({foo: "bar"}, {
-      success: function(object) {
-        $(".success").show();
-      },
-      error: function(model, error) {
-        $(".error").show();
-      }
-    });
-  */
-
-  </script>
-  
-   <div id="main">
-    <section class="loginform cf">  
-<form id="inputFields" name="login" action="index_submit" method="get" accept-charset="utf-8">  
-    <ul>  
-        <li><label for="userName">Username</label>  
-		<input type="text" id="userName" name="username" placeholder=" E.g. SquriellFoxx" required></li> 
-		<li><label for="myemail">Email</label>
-        <input type="email" id="myemail" name="email" placeholder="yourname@email.com" required></li>  
-        <li><label for="password">Password</label>  
-        <input type="password" id="myPass" name="password" placeholder="password" required></li>  
-         
-        </li>  
-
-    </ul>  
-</form>  
-<button id="enterButton" type="button" onclick="Register()">Sign Up</button>
-</section>  
-  </div>
-	
-	
-  
- <!--
-<form id="inputFields">
-UserName:<br>
-<input type="text" name="UserName">
-<br>
-Email:<br>
-<input type="text" name="Email">
-<br>
-Password:<br>
-<input type="text" name="Password">
-</form>-->
-
-    </div>
-
-  </body>
-
-  <head>
-    <script type="text/javascript" src=""></script>
+}; 
+    </script>
+    <script type="text/javascript" src="js/Register.js"></script>
   </head>
   
 </html>

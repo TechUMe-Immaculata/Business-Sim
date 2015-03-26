@@ -1,3 +1,4 @@
+Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 document.getElementById("guestPlayButton").addEventListener("click", guestPlayPress);
 document.getElementById("serverLoginButton").addEventListener("click", serverLoginPress);
 document.getElementById("registerButton").addEventListener("click", registerPress);
@@ -5,7 +6,17 @@ document.getElementById("facebookLoginButton").addEventListener("click", faceboo
 //window.location.replace('...');
 function guestPlayPress()
 {
-  window.location="GuestHome.html";
+
+	//need to make a company later
+	
+   Parse.User.logIn("guestUser1337", "1337", {
+  success: function(user) {
+      window.location = "GuestHome.html";
+  },
+  error: function(user, error) {
+     alert("bad monkey");
+  }
+});
 }
 
 function serverLoginPress()

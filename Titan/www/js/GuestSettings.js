@@ -1,25 +1,21 @@
 //main container button event listeners
-document.getElementById("quickPlayButton").addEventListener("click", quickPlayButtonPress);
 
 //SideBar Button event listeners
 document.getElementById("registerPic").addEventListener("click", registerPress);
-document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
+document.getElementById("homeButton").addEventListener("click", homePress);
 
 
 //Main container Button event listeners
-function quickPlayButtonPress()
-{
-	window.location="GuestGameSingleOrMultiplayer.html";
-}
+
 
 //Side Bar Button Links
 function registerPress()
 {
   window.location="Register.html";
 }
-function settingsPicPress()
+function homePress()
 {
-  window.location="GuestSettings.html";
+  window.location="GuestHome.html";
 }
 
 
