@@ -18,6 +18,13 @@ $(document).ready(function () {
     $('a[title]').qtip();
     
 });
+$('#myTooltip').qtip({
+    position: {
+        my: 'top right',  // Position my top left...
+        at: 'bottom left', // at the bottom right of...
+        target: $('.Price') // my target
+    }
+});
 
 //When the next button is pressed, run this code.
 function NextButtonPress()

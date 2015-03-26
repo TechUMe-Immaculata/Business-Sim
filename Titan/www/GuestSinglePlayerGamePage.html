@@ -33,7 +33,7 @@
 		 <!-- Page Two, the In-Game Newspaper -->
     <div id="GamePageTwo">
 
-      <a href="#test" title="Hello friends!">Hover for box pls?</a>
+      <a id="testing" title="Hello friends!">Hover for box pls?</a>
 
     </div>
 	
@@ -45,7 +45,7 @@
 		 <!-- Page Four, the In-Game Submit Page-->
 	<div id="GamePageFour">
 		<!-- Price Slider -->
-		<p id="priceCharacters">Price: 
+		<p id="priceCharacters">Price: <a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>
               <form id="priceSlider" oninput="amount.value=rangeInput.value">
                 <input type="number" id="rangeInput" name="rangeInput" min="0" max="any">                                                       
                 $<output name="amount" for="rangeInput"></output> </form> </p>
@@ -73,9 +73,6 @@
                 <!-- The Submit to server button, to end and submit your turn -->
                 <button type="button" id="submitToServerButton" > Submit Turn </button>
 	</div>
-
-
-
 
 	<script src="js/GuestSinglePlayerGamePage.js"></script>
 </body>
