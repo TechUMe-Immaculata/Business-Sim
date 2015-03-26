@@ -7,6 +7,7 @@ document.getElementById("facebookLoginButton").addEventListener("click", faceboo
 function guestPlayPress()
 {
 
+	//need to make a company later
 	
    Parse.User.logIn("guestUser1337", "1337", {
   success: function(user) {

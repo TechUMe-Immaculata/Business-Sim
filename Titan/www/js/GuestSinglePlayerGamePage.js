@@ -14,7 +14,9 @@ function SubmitButtonPress()
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;
   
-	var userObjectId = Parse.User.current();
+	var userObjectId = Parse.User.current().id;
+	
+	console.log(userObjectId);
   
 	var Company = Parse.Object.extend("Company");
 	var queryCompany = new Parse.Query(Company);
@@ -23,21 +25,23 @@ function SubmitButtonPress()
 	 
 	queryCompany.first().then(function(company){
 	
-	localStorage.setItem("companyId",company.get("objectId"));
+	console.log(company.id);
+	localStorage.setItem("companyId",company.id);
 	 
 	var Match = Parse.Object.extend("Match");
 	var queryMatch = new Parse.Query(Match);
 	
-	queryMatch.equalTo("companyIds" , usercompID);
+	queryMatch.equalTo("companyIds" , company.id);
 	 
 	return queryMatch.first();
 	}).then(function(match)
 	{
-	localStorage.setItem("matchId",match.get(objectId));
+	localStorage.setItem("matchId",match.id);
 	return null;
 	}).then(function(sendData)
 	{
 		var dataOut = {};
+		//input does not work with type number thus all these objects are null
 	  dataOut.clientCapital = document.getElementById("txtCapital");
 	  dataOut.clientResearchDevelopment = document.getElementById("txtRnD");
 	  dataOut.clientProduction = document.getElementById("txtProduction");
@@ -46,11 +50,9 @@ function SubmitButtonPress()
 	  dataOut.clientCharity = document.getElementById("txtCharity");
 
 	  dataOut.companyId = localStorage.getItem("companyId");
-	  daaOut.matchId = localStorage.getItem("matchId");
-	  
-	  var companyId = request.params.companyId; 
-	  var matchId = request.params.matchId;
+	  dataOut.matchId = localStorage.getItem("matchId");
 
+		console.log(dataOut);
 	  $.ajax({
 	  type: "POST",
 	  url: "https://api.parse.com/1/functions/submitSolo/",
