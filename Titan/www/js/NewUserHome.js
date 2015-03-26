@@ -7,16 +7,51 @@ document.getElementById("facebookLoginButton").addEventListener("click", faceboo
 function guestPlayPress()
 {
 
-	
-   Parse.User.logIn("guestUser1337", "1337", {
+     var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 6; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+   
+
+  var username = text+"_guest";
+
+  
+    
+    
+  var user = new Parse.User();
+  user.set("name" , username);
+  user.set("username", username);
+    user.set("password", text);
+  user.set("email", text+"@email.com");
+  
+  user.signUp(null, {
   success: function(user) {
-      window.location = "GuestHome.html";
+var userCompanyName = text+"_guestCompany";
+    var Company = Parse.Object.extend("Company");
+    var mycompany = new Company();
+    mycompany.set("company", userCompanyName);
+
+
+    // get user id and company 
+    var currentUser = Parse.User.current();
+      var myUserId = currentUser.id;
+
+    mycompany.set("userId" , myUserId);
+    console.log(myUserId);
+    mycompany.set("username" , currentUser.get("username"));
+    mycompany.set("isBot" , false);
+    mycompany.save(null, {});
   },
   error: function(user, error) {
-     alert("bad monkey");
+    // Show the error message somewhere and let the user try again.
+    alert("Error: " + error.code + " " + error.message);
   }
 });
-}
+  
+}; 
+
 
 function serverLoginPress()
 {
