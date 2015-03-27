@@ -50,11 +50,13 @@ var userCompanyName = text+"_guestCompany";
     mycompany.save(null, {
 
       success: function(setCompany){
+            window.location="GuestHome.html";
         console.log(mycompany);
 
 
       }, 
       error: function(object, error){
+     
          console.log("Error: " + error.code + " " + error.message);
 
 
