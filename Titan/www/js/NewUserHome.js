@@ -47,7 +47,21 @@ var userCompanyName = text+"_guestCompany";
     console.log(myUserId);
     mycompany.set("username" , currentUser.get("username"));
     mycompany.set("isBot" , false);
-    mycompany.save(null, {});
+    mycompany.save(null, {
+
+      success: function(setCompany){
+            window.location="GuestHome.html";
+        console.log(mycompany);
+
+
+      }, 
+      error: function(object, error){
+     
+         console.log("Error: " + error.code + " " + error.message);
+
+
+      }
+    });
   },
   error: function(user, error) {
     // Show the error message somewhere and let the user try again.
