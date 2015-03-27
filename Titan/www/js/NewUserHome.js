@@ -7,6 +7,7 @@ document.getElementById("facebookLoginButton").addEventListener("click", faceboo
 function guestPlayPress()
 {
 
+
      var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
@@ -27,6 +28,10 @@ function guestPlayPress()
   user.set("email", text+"@email.com");
   
   user.signUp(null, {
+
+	//need to make a company later
+	
+
   success: function(user) {
 var userCompanyName = text+"_guestCompany";
     var Company = Parse.Object.extend("Company");

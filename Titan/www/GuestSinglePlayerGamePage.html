@@ -10,7 +10,7 @@
 
 
 window.onload = function e(){
-  var y = loaduserstats();
+  //var y = loaduserstats();
 }
 
 
@@ -54,9 +54,9 @@ var currentUser = Parse.User.current();
 	<div id="GamePageFour">
 			<!-- Capital Slider -->
 		<p id="priceCharacters">Capital: 
-              <form id="capitalSlider" oninput="amount.value=rangeInput.value">
-                <input type="number" id="txtCapital" name="rangeInput" min="0" max="any">                                                       
-                $<output name="amount" for="rangeInput"></output> </form> </p>
+              <form id="capitalSlider" oninput="amount.value=capitalRangeInput.value">
+                <input type="number" id="capitalRangeInput" name="rangeInput" min="0" max="any">                                                       
+                $<output name="amount" for="capitalRangeInput"></output> </form> </p>
 		<!-- Price Slider -->
 		<p id="priceCharacters">Price: 
 
@@ -83,15 +83,9 @@ var currentUser = Parse.User.current();
               <form id="charitySlider" oninput="amount.value=charityRangeInput.value">
                 <input type="number" id="charityRangeInput" name="rangeInput" min="0" max="any">                                                       
                 $<output name="amount" for="charityRangeInput"></output> </form> </p>
-                
-          <p id="capitolCharacters">Capital: 
-              <form id="capitalSlider" oninput="amount.value=capitalRangeInput.value">
-                <input type="number" id="capitalRangeInput" name="rangeInput" min="0" max="any">                                                       
-                $<output name="amount" for="capitalRangeInput"></output> </form> </p>
-
 
                 <!-- The Submit to server button, to end and submit your turn -->
-                <button type="button" onclick="playerSubmit()" id="submitToServerButton" > Submit Turn </button>
+                <button type="button" id="submitToServerButton" > Submit Turn </button>
 	</div>
 
 
