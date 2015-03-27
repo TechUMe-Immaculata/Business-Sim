@@ -9,6 +9,23 @@ document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
 document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 
+//Code for the info buttons.
+// Create the tooltips only when document ready
+//$(document).ready(function () {
+    
+    // This will automatically grab the 'title' attribute and replace
+    // the regular browser tooltips for all <a> elements with a title attribute!
+    //$('a[title]').qtip();
+    
+//});
+//$('#myTooltip').qtip({
+    //position: {
+        //my: 'top right',  // Position my top left...
+        //at: 'bottom left', // at the bottom right of...
+        //target: $('.Price') // my target
+    //}
+//});
+
 function SubmitButtonPress()
 {
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
@@ -72,6 +89,7 @@ function SubmitButtonPress()
 	  });
 	}) 
 }
+
 //When the next button is pressed, run this code.
 function NextButtonPress()
 {
@@ -136,6 +154,32 @@ else if (CurrentPage == 3) {
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageTwo').style.display='none';
 	document.getElementById('GamePageFour').style.display='none';
+	
+	var data = {};
+		//input does not work with type number thus all these objects are null
+	  data.capital = this.$("#capitalRangeInput").val();
+	  data.researchDevelopment = this.$("#RAndDRangeInput").val();
+	  data.production = this.$("#productionRangeInput").val();
+	  data.marketing = this.$("#marketRangeInput").val();
+	  data.price = this.$("#priceRangeInput").val();
+	  data.charity = this.$("#charityRangeInput").val();
+	  
+	  var expense = 0, resources = 0, result = 0, costPerUnit = 7, utilization = 0;
+	  expense = data.capital + data.researchDevelopment + (data.production * 7) + data.marketing + data.charity;
+	  
+	  document.getElementById("table_1_input_1").innerHTML = "New text!";
+	  document.getElementById("table_1_input_2").innerHTML = "New text!";
+	  document.getElementById("table_1_input_3").innerHTML = "New text!";
+	  document.getElementById("table_1_input_4").innerHTML = "New text!";
+	  document.getElementById("table_1_input_5").innerHTML = "New text!";
+	  document.getElementById("table_1_input_6").innerHTML = "New text!";
+	  document.getElementById("table_1_input_7").innerHTML = "New text!";
+	  document.getElementById("table_1_input_8").innerHTML = "New text!";
+	  document.getElementById("table_1_input_9").innerHTML = "New text!";
+	  document.getElementById("table_1_input_10").innerHTML = "New text!";
+	  document.getElementById("table_1_input_11").innerHTML = "New text!";
+	  document.getElementById("table_1_input_12").innerHTML = "New text!";
+	  document.getElementById("table_1_input_13").innerHTML = "New text!";
 }
 else if (CurrentPage == 4) {
 	document.getElementById('GamePageFour').style.display='block';
@@ -145,7 +189,9 @@ else if (CurrentPage == 4) {
 }
 else {
 	console.log("error");//error
-}}
+}
+
+}
 
 function pauseGearPress(){
 	document.getElementById('PauseScreen').style.display="block";
