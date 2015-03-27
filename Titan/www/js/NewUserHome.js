@@ -84,5 +84,5 @@ function registerPress()
 
 function facebookLoginPress()
 {
-  window.location="Register.html";
+  window.location="Test.html";
 }
