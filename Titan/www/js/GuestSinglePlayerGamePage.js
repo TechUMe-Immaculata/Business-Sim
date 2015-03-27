@@ -1,4 +1,4 @@
-var CurrentPage = 4; 
+var CurrentPage = 1; 
 document.getElementById('PauseScreen').style.display='none';
 ChangeThePage();
 console.log(CurrentPage);
@@ -6,18 +6,18 @@ console.log(CurrentPage);
 document.getElementById("NextButton").addEventListener("click", NextButtonPress);
 document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
-document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
+document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 
 //Code for the info buttons.
 // Create the tooltips only when document ready
-//$(document).ready(function () {
+$(document).ready(function () {
     
     // This will automatically grab the 'title' attribute and replace
     // the regular browser tooltips for all <a> elements with a title attribute!
-    //$('a[title]').qtip();
+    $('a[title]').qtip();
     
-//});
+});
 //$('#myTooltip').qtip({
     //position: {
         //my: 'top right',  // Position my top left...
@@ -201,7 +201,7 @@ function pauseGearPress(){
 }
 
 
-function ReturnButtonPress(){
+function resumeButtonPress(){
 	document.getElementById('PreviousButton').style.display='';
 	document.getElementById('NextButton').style.display='';
 	document.getElementById('pauseGear').style.display='';
