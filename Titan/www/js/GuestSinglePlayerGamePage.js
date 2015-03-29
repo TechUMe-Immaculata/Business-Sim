@@ -26,6 +26,11 @@ document.getElementById("submitToServerButton").addEventListener("click", Submit
     //}
 //});
 
+function Constructor()
+{
+}
+
+
 function SubmitButtonPress()
 {
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
@@ -157,29 +162,37 @@ else if (CurrentPage == 3) {
 	
 	var data = {};
 		//input does not work with type number thus all these objects are null
-	  data.capital = this.$("#capitalRangeInput").val();
-	  data.researchDevelopment = this.$("#RAndDRangeInput").val();
-	  data.production = this.$("#productionRangeInput").val();
-	  data.marketing = this.$("#marketRangeInput").val();
-	  data.price = this.$("#priceRangeInput").val();
-	  data.charity = this.$("#charityRangeInput").val();
+	  data.capital = Number(this.$("#capitalRangeInput").val());
+	  data.researchDevelopment = Number(this.$("#RAndDRangeInput").val());
+	  data.production = Number(this.$("#productionRangeInput").val());
+	  data.marketing = Number(this.$("#marketRangeInput").val());
+	  data.price = Number(this.$("#priceRangeInput").val());
+	  data.charity = Number(this.$("#charityRangeInput").val());
 	  
-	  var expense = 0, resources = 0, result = 0, costPerUnit = 7, utilization = 0;
-	  expense = data.capital + data.researchDevelopment + (data.production * 7) + data.marketing + data.charity;
+	  var expense = 0, resources = 0, result = 0, costPerUnit = 7, utilization = 0, costPerUnit = 7, maxProduction = 1000;
+	  //Price per unit = __________get data
+	  var productionCost = data.production * costPerUnit;
 	  
-	  document.getElementById("table_1_input_1").innerHTML = "New text!";
-	  document.getElementById("table_1_input_2").innerHTML = "New text!";
-	  document.getElementById("table_1_input_3").innerHTML = "New text!";
-	  document.getElementById("table_1_input_4").innerHTML = "New text!";
-	  document.getElementById("table_1_input_5").innerHTML = "New text!";
-	  document.getElementById("table_1_input_6").innerHTML = "New text!";
-	  document.getElementById("table_1_input_7").innerHTML = "New text!";
-	  document.getElementById("table_1_input_8").innerHTML = "New text!";
-	  document.getElementById("table_1_input_9").innerHTML = "New text!";
-	  document.getElementById("table_1_input_10").innerHTML = "New text!";
-	  document.getElementById("table_1_input_11").innerHTML = "New text!";
-	  document.getElementById("table_1_input_12").innerHTML = "New text!";
-	  document.getElementById("table_1_input_13").innerHTML = "New text!";
+	  resources = 50000 + 50000;
+	  expense = data.capital + data.researchDevelopment + productionCost + data.marketing + data.charity;
+	  result = resources - expense; 
+	  
+	  utilization = Math.round(((data.production / maxProduction)*100))*100;
+	  
+	  
+	  document.getElementById("table_1_input_1").innerHTML = 50000;
+	  document.getElementById("table_1_input_2").innerHTML = 50000;
+	  document.getElementById("table_1_input_3").innerHTML = resources;
+	  document.getElementById("table_1_input_4").innerHTML = productionCost;
+	  document.getElementById("table_1_input_5").innerHTML = data.marketing;
+	  document.getElementById("table_1_input_6").innerHTML = data.capital;
+	  document.getElementById("table_1_input_7").innerHTML = data.researchDevelopment;
+	  document.getElementById("table_1_input_8").innerHTML = expense;
+	  document.getElementById("table_1_input_9").innerHTML = resources;
+	  document.getElementById("table_1_input_10").innerHTML = expense;
+	  document.getElementById("table_1_input_11").innerHTML = result;
+	  document.getElementById("table_1_input_12").innerHTML = costPerUnit;
+	  document.getElementById("table_1_input_13").innerHTML = utilization;
 }
 else if (CurrentPage == 4) {
 	document.getElementById('GamePageFour').style.display='block';
