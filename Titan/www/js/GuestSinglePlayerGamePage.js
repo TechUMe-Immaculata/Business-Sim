@@ -92,40 +92,14 @@ document.getElementById("submitToServerButton").addEventListener("click", Submit
 //this can be made more efficient but a lack of security
 function SubmitButtonPress()
 {
-	var userObjectId = Parse.User.current().id;
-	
-	console.log(userObjectId);
-  
-	var Company = Parse.Object.extend("Company");
-	var queryCompany = new Parse.Query(Company);
-	 
-	queryCompany.equalTo("userId",userObjectId);
-	 
-	queryCompany.first().then(function(company){
-	
-	console.log(company.id);
-	localStorage.setItem("companyId",company.id);
-	 
-	var Match = Parse.Object.extend("Match");
-	var queryMatch = new Parse.Query(Match);
-	
-	queryMatch.equalTo("companyIds" , company.id);
-	 
-	return queryMatch.first();
-	}).then(function(match)
-	{
-	localStorage.setItem("matchId",match.id);
-	return null;
-	}).then(function(sendData)
-	{
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
-	  dataOut.clientCapital = this.$("#capitalRangeInput").val();
-	  dataOut.clientResearchDevelopment = this.$("#RAndDRangeInput").val();
-	  dataOut.clientProduction = this.$("#productionRangeInput").val();
-	  dataOut.clientMarketing = this.$("#marketRangeInput").val();
-	  dataOut.clientPrice = this.$("#priceRangeInput").val();
-	  dataOut.clientCharity = this.$("#charityRangeInput").val();
+	  dataOut.clientCapital = document.getElementById("capitalRangeInput").value;
+	  dataOut.clientResearchDevelopment = document.getElementById("RAndDRangeInput").value ;
+	  dataOut.clientProduction = document.getElementById("productionRangeInput").value;
+	  dataOut.clientMarketing = document.getElementById("marketRangeInput").value;
+	  dataOut.clientPrice = document.getElementById("priceRangeInput").value;
+	  dataOut.clientCharity = document.getElementById("charityRangeInput").value;
 	  
 	  dataOut.companyId = localStorage.getItem("companyId");
 	  dataOut.matchId = localStorage.getItem("matchId");
@@ -142,13 +116,11 @@ function SubmitButtonPress()
 	  data: JSON.stringify(dataOut),
 	  dataType: "json"
 	  
-	})
-	  .done(function( msg ) {
+	}).done(function( msg ) {
 	  // all code here gets run when the POST was successful
 	  // you can do things like update the console, display an alert, etc...
 	   console.log(msg.result);
 	  });
-	}) 
 }
 
 //When the next button is pressed, run this code.
@@ -276,22 +248,21 @@ else if (CurrentPage == 3) {
 		}
 	}
 	
-	//____________________________________________________
-	  
-	  document.getElementById("table_1_input_1").innerHTML = cash;
-	  document.getElementById("table_1_input_2").innerHTML = credit;
-	  document.getElementById("table_1_input_3").innerHTML = resources;
-	  document.getElementById("table_1_input_4").innerHTML = productionCost;
-	  document.getElementById("table_1_input_5").innerHTML = data.marketing;
-	  document.getElementById("table_1_input_6").innerHTML = data.capital;
-	  document.getElementById("table_1_input_7").innerHTML = data.researchDevelopment;
-	  document.getElementById("table_1_input_8").innerHTML = expense;
-	  document.getElementById("table_1_input_9").innerHTML = afterCash;
-	  document.getElementById("table_1_input_10").innerHTML = afterCredit;
-	  document.getElementById("table_1_input_11").innerHTML = (afterCredit + afterCash);
-	  document.getElementById("table_1_input_12").innerHTML = costPerUnit;
-	  document.getElementById("table_1_input_13").innerHTML = utilization + "%";
-	  document.getElementById("table_1_input_14").innerHTML = data.charity;
+	//table one data displaying changes made based off their decisions before submit
+	document.getElementById("table_1_input_1").innerHTML = cash;
+    document.getElementById("table_1_input_2").innerHTML = credit; 
+	document.getElementById("table_1_input_3").innerHTML = resources;
+	document.getElementById("table_1_input_4").innerHTML = productionCost;
+	document.getElementById("table_1_input_5").innerHTML = data.marketing;
+	document.getElementById("table_1_input_6").innerHTML = data.capital;
+	document.getElementById("table_1_input_7").innerHTML = data.researchDevelopment;
+	document.getElementById("table_1_input_8").innerHTML = expense;
+	document.getElementById("table_1_input_9").innerHTML = afterCash;
+	document.getElementById("table_1_input_10").innerHTML = afterCredit;
+	document.getElementById("table_1_input_11").innerHTML = (afterCredit + afterCash);
+	document.getElementById("table_1_input_12").innerHTML = costPerUnit;
+	document.getElementById("table_1_input_13").innerHTML = utilization + "%";
+	document.getElementById("table_1_input_14").innerHTML = data.charity;
 }
 else if (CurrentPage == 4) {
 	document.getElementById('GamePageFour').style.display='block';
