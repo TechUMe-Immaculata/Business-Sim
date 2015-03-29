@@ -1,4 +1,13 @@
-var CurrentPage = 4; 
+	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
+	Parse.$ = jQuery;
+
+var CurrentPage = 4;
+
+var maxProduction = 0,
+creditLine = 0,
+avaibleCash= 0,
+unitCost = 0;
+ 
 document.getElementById('PauseScreen').style.display='none';
 ChangeThePage();
 console.log(CurrentPage);
@@ -25,17 +34,64 @@ document.getElementById("submitToServerButton").addEventListener("click", Submit
         //target: $('.Price') // my target
     //}
 //});
+	var userObjectId = Parse.User.current().id;
+	
+	console.log(userObjectId);
+  
+	var Company = Parse.Object.extend("Company");
+	var queryCompany = new Parse.Query(Company);
+	 
+	queryCompany.equalTo("userId",userObjectId);
+	 
+	queryCompany.first().then(function(company){
+	
+	console.log(company.id);
+	localStorage.setItem("companyId",company.id);
+	 
+	var Match = Parse.Object.extend("Match");
+	var queryMatch = new Parse.Query(Match);
+	
+	queryMatch.equalTo("companyIds" , company.id);
+	 
+	return queryMatch.first();
+	}).then(function(match)
+	{
+	localStorage.setItem("matchId",match.id);
+	
+	
+	var CompMatch = Parse.Object.extend("CompMatch");
+	var queryCompMatch = new Parse.Query(CompMatch);
+	
+	queryCompMatch.equalTo("companyId",localStorage.companyId);
+	queryCompMatch.equalTo("matchId",localStorage.matchId);
+	return queryCompMatch.first();
+	}).then(function(compMatch)
+	{
+		console.log(compMatch);
+		
+		var dataOut = {};
+		//input does not work with type number thus all these objects are null
+		document.getElementById("capitalRangeInput").defaultValue = compMatch.get("capital");
+		document.getElementById("RAndDRangeInput").defaultValue = compMatch.get("researchDevelopment");
+		document.getElementById("productionRangeInput").defaultValue = compMatch.get("production");
+		document.getElementById("marketRangeInput").defaultValue = compMatch.get("marketing");
+		document.getElementById("priceRangeInput").defaultValue = compMatch.get("price");
+		document.getElementById("charityRangeInput").defaultValue = compMatch.get("charity");
+		
+		maxProduction = compMatch.get("maxProduction");
+		creditLine = compMatch.get("creditLine");
+		cashAvaible = compMatch.get("cashAvailable");
+		unitCost = 7;
+		console.log(maxProduction);
+		console.log(creditLine);
+		console.log(cashAvaible);
+		
+	})
 
-function Constructor()
-{
-}
 
-
+//this can be made more efficient but a lack of security
 function SubmitButtonPress()
 {
-	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
-	Parse.$ = jQuery;
-  
 	var userObjectId = Parse.User.current().id;
 	
 	console.log(userObjectId);
@@ -169,30 +225,73 @@ else if (CurrentPage == 3) {
 	  data.price = Number(this.$("#priceRangeInput").val());
 	  data.charity = Number(this.$("#charityRangeInput").val());
 	  
-	  var expense = 0, resources = 0, result = 0, costPerUnit = 7, utilization = 0, costPerUnit = 7, maxProduction = 1000;
+	  var expense = 0, 
+	  resources = 0, 
+	  result = 0, 
+	  costPerUnit = 7, 
+	  utilization = 0, 
+	  costPerUnit = unitCost, 
+	  maxProductionlocal = maxProduction, 
+	  cash = cashAvaible, 
+	  credit = creditLine;
+	  
+
 	  //Price per unit = __________get data
 	  var productionCost = data.production * costPerUnit;
 	  
-	  resources = 50000 + 50000;
+	  resources = cash + credit;
 	  expense = data.capital + data.researchDevelopment + productionCost + data.marketing + data.charity;
 	  result = resources - expense; 
+	  console.log(data.production);
+	  console.log(maxProductionlocal);
+	  console.log(data.production / maxProductionlocal);
+	  utilization = Math.round((data.production / maxProductionlocal)*1000)/10;
 	  
-	  utilization = Math.round(((data.production / maxProduction)*100))*100;
+	  //______________________________________________
 	  
+	  var afterCash= cash,
+	  afterCredit = credit;
+	//define varibles
+	const MAX_CREDIT = 50000;
+	var netWorth = resources - expense;
+	//determine users state
+	if(netWorth > MAX_CREDIT)
+	{
+		//adding cash and fill up mac credit
+		afterCash = netWorth - MAX_CREDIT;
+		console.log(netWorth);
+		afterCredit = MAX_CREDIT;
+	}
+	else if ( netWorth <= MAX_CREDIT)
+	{
+		//no cash and subtracting what credit you have left
+		afterCash = 0;
+		afterCredit = MAX_CREDIT - netWorth;
+		
+		//check if player is bankrupt or not then declares bankruptcy
+		if (netWorth < 0 )
+		{
+			afterCash = 0;
+			afterCredit = 0;
+		}
+	}
+	
+	//____________________________________________________
 	  
-	  document.getElementById("table_1_input_1").innerHTML = 50000;
-	  document.getElementById("table_1_input_2").innerHTML = 50000;
+	  document.getElementById("table_1_input_1").innerHTML = cash;
+	  document.getElementById("table_1_input_2").innerHTML = credit;
 	  document.getElementById("table_1_input_3").innerHTML = resources;
 	  document.getElementById("table_1_input_4").innerHTML = productionCost;
 	  document.getElementById("table_1_input_5").innerHTML = data.marketing;
 	  document.getElementById("table_1_input_6").innerHTML = data.capital;
 	  document.getElementById("table_1_input_7").innerHTML = data.researchDevelopment;
 	  document.getElementById("table_1_input_8").innerHTML = expense;
-	  document.getElementById("table_1_input_9").innerHTML = resources;
-	  document.getElementById("table_1_input_10").innerHTML = expense;
-	  document.getElementById("table_1_input_11").innerHTML = result;
+	  document.getElementById("table_1_input_9").innerHTML = afterCash;
+	  document.getElementById("table_1_input_10").innerHTML = afterCredit;
+	  document.getElementById("table_1_input_11").innerHTML = (afterCredit + afterCash);
 	  document.getElementById("table_1_input_12").innerHTML = costPerUnit;
-	  document.getElementById("table_1_input_13").innerHTML = utilization;
+	  document.getElementById("table_1_input_13").innerHTML = utilization + "%";
+	  document.getElementById("table_1_input_14").innerHTML = data.charity;
 }
 else if (CurrentPage == 4) {
 	document.getElementById('GamePageFour').style.display='block';
