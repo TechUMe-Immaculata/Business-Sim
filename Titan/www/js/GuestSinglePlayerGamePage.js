@@ -18,6 +18,7 @@ document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
 document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 
+getDataFromServer();
 //Code for the info buttons.
 // Create the tooltips only when document ready
 //$(document).ready(function () {
@@ -34,6 +35,9 @@ document.getElementById("submitToServerButton").addEventListener("click", Submit
         //target: $('.Price') // my target
     //}
 //});
+
+function getDataFromServer()
+{
 	var userObjectId = Parse.User.current().id;
 	
 	console.log(userObjectId);
@@ -81,13 +85,13 @@ document.getElementById("submitToServerButton").addEventListener("click", Submit
 		maxProduction = compMatch.get("maxProduction");
 		creditLine = compMatch.get("creditLine");
 		cashAvaible = compMatch.get("cashAvailable");
-		unitCost = 7;
+		unitCost = compMatch.get("unitCost");
 		console.log(maxProduction);
 		console.log(creditLine);
 		console.log(cashAvaible);
 		
 	})
-
+}
 
 //this can be made more efficient but a lack of security
 function SubmitButtonPress()
@@ -108,6 +112,23 @@ function SubmitButtonPress()
 	  $.ajax({
 	  type: "POST",
 	  url: "https://api.parse.com/1/functions/submitSolo/",
+	  headers: {
+	  "X-Parse-Application-Id": "Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci",
+	  "X-Parse-REST-API-Key": "GcLEre3e2D25P14Pno5PbQ11YO0rixhvIoBxv2RG",
+	  "Content-Type": "application/json"
+	  },
+	  data: JSON.stringify(dataOut),
+	  dataType: "json"
+	  
+	}).done(function( msg ) {
+	  // all code here gets run when the POST was successful
+	  // you can do things like update the console, display an alert, etc...
+	   console.log(msg.result);
+	  });
+	  
+	  $.ajax({
+	  type: "POST",
+	  url: "https://api.parse.com/1/functions/turn/",
 	  headers: {
 	  "X-Parse-Application-Id": "Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci",
 	  "X-Parse-REST-API-Key": "GcLEre3e2D25P14Pno5PbQ11YO0rixhvIoBxv2RG",
