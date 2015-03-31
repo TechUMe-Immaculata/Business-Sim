@@ -35,7 +35,8 @@ getDataFromServer();
         //target: $('.Price') // my target
     //}
 //});
-
+function edit(){
+console.log("edit");}
 function getDataFromServer()
 {
 	var userObjectId = Parse.User.current().id;
@@ -90,6 +91,13 @@ function getDataFromServer()
 		console.log(creditLine);
 		console.log(cashAvaible);
 		
+		//set max on input boxes
+		document.getElementById("capitalRangeInput").max = 10000;
+		document.getElementById("RAndDRangeInput").max = 10000;
+		document.getElementById("productionRangeInput").max = Math.round(compMatch.get("maxProduction"));
+		document.getElementById("marketRangeInput").max = 10000;
+		document.getElementById("priceRangeInput").max = 100;
+		document.getElementById("charityRangeInput").max = 10000;
 	})
 }
 
@@ -121,12 +129,8 @@ function SubmitButtonPress()
 	  dataType: "json"
 	  
 	}).done(function( msg ) {
-	  // all code here gets run when the POST was successful
-	  // you can do things like update the console, display an alert, etc...
-	   console.log(msg.result);
-	  });
-	  
-	  $.ajax({
+		
+			  $.ajax({
 	  type: "POST",
 	  url: "https://api.parse.com/1/functions/turn/",
 	  headers: {
@@ -140,8 +144,12 @@ function SubmitButtonPress()
 	}).done(function( msg ) {
 	  // all code here gets run when the POST was successful
 	  // you can do things like update the console, display an alert, etc...
+	   getDataFromServer();
 	   console.log(msg.result);
 	  });
+	  });
+	  
+
 }
 
 //When the next button is pressed, run this code.
