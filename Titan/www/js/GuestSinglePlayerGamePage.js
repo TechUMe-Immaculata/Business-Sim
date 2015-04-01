@@ -238,6 +238,7 @@ else if (CurrentPage == 3) {
 	  
 
 	  //Price per unit = __________get data
+	  console.log(data.production +" ____product");
 	  var productionCost = data.production * costPerUnit;
 	  
 	  resources = cash + credit;
@@ -273,7 +274,7 @@ else if (CurrentPage == 3) {
 		if (netWorth < 0 )
 		{
 			afterCash = 0;
-			afterCredit = 0;
+			afterCredit = netWorth;
 		}
 	}
 	
