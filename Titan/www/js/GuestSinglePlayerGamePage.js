@@ -1,4 +1,8 @@
 var CurrentPage = 1; 
+document.getElementById('PauseScreen').style.display='none';
+ChangeThePage();
+console.log(CurrentPage);
+
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;
 
@@ -6,10 +10,6 @@ var maxProduction = 0,
 creditLine = 0,
 avaibleCash= 0,
 unitCost = 0;
- 
-document.getElementById('PauseScreen').style.display='none';
-ChangeThePage();
-console.log(CurrentPage);
 
 document.getElementById("NextButton").addEventListener("click", NextButtonPress);
 document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
