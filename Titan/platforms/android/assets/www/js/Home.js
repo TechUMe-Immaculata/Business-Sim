@@ -3,9 +3,8 @@ document.getElementById("quickPlayButton").addEventListener("click", quickPlayBu
 document.getElementById("privateGameButton").addEventListener("click", privateGameButtonPress);
 
 //SideBar Button event listeners
-document.getElementById("userProfilePicture").addEventListener("click", profilePicPress);
+document.getElementById("profilePic").addEventListener("click", profilePicPress);
 document.getElementById("friendsPic").addEventListener("click", friendsPicPress);
-document.getElementById("signOutButton").addEventListener("click", signOutPress);
 document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
 document.getElementById("notificationsPic").addEventListener("click", notificationsPicPress);
 
@@ -28,17 +27,6 @@ function profilePicPress()
 function friendsPicPress()
 {
   window.location="FriendsPage.html";
-}
-
-//This function signs out the user, and then returns them to the sign in page
-function signOutPress()
-{
-  Parse.User.logOut();
- 
-  var currentUser = Parse.User.current();  // this will now be null
-
-  window.location="NewUserHome.html";
-
 }
 function settingsPicPress()
 {
@@ -72,22 +60,3 @@ $(window).load(function(){
 
           }); 
       });
-
-Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
-    // create company 
-
-    // get user id and company 
-    var currentUser = Parse.User.current();
-    var name = currentUser.get("username");
-    var myUserId = currentUser.id;
-    var profilePic = currentUser.get("profilePicture");
-   
- 
-   
-
-    $('#userProfilePicture').hide().attr('src', profilePic.url()).show();
-
-  
-
-   
-  
