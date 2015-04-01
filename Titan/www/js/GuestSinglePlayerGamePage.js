@@ -1,7 +1,6 @@
-var CurrentPage = 1; 
-	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
-	Parse.$ = jQuery;
-
+Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
+Parse.$ = jQuery;
+var CurrentPage = 1;
 var maxProduction = 0,
 creditLine = 0,
 avaibleCash= 0,
