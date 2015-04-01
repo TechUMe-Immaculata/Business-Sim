@@ -6,6 +6,8 @@ var maxProduction = 0,
 creditLine = 0,
 avaibleCash= 0,
 unitCost = 0;
+
+getDataFromServer();
  
 document.getElementById('PauseScreen').style.display='none';
 ChangeThePage();
@@ -19,22 +21,23 @@ document.getElementById("submitToServerButton").addEventListener("click", Submit
 document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 //Code for the info buttons
 // Create the tooltips only when document ready
-$(document).ready(function () {
+//$(document).ready(function () {
     
     // This will automatically grab the 'title' attribute and replace
     // the regular browser tooltips for all <a> elements with a title attribute!
     //$('a[title]').qtip();
-});
 
-   $('#myTooltip').qtip({
-    position: {
-        my: 'top right',  // Position my top left...
-        at: 'bottom left', // at the bottom right of...
-        target: $('.Price') // my target
-    }
-});
+//}
 
-function SubmitButtonPress()
+   //$('#myTooltip').qtip({
+   // position: {
+   //     my: 'top right',  // Position my top left...
+    //    at: 'bottom left', // at the bottom right of...
+   //    target: $('.Price') // my target
+   // }
+//});
+
+/*function SubmitButtonPress()
 {
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;
@@ -91,7 +94,16 @@ function SubmitButtonPress()
 		console.log(creditLine);
 		console.log(cashAvaible);
 		
-	})
+	})}*/
+    
+//});
+//$('#myTooltip').qtip({
+    //position: {
+        //my: 'top right',  // Position my top left...
+        //at: 'bottom left', // at the bottom right of...
+        //target: $('.Price') // my target
+    //}
+//});
 
 
 //this can be made more efficient but a lack of security
@@ -122,10 +134,27 @@ function SubmitButtonPress()
 	  dataType: "json"
 	  
 	}).done(function( msg ) {
+		
+			  $.ajax({
+	  type: "POST",
+	  url: "https://api.parse.com/1/functions/turn/",
+	  headers: {
+	  "X-Parse-Application-Id": "Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci",
+	  "X-Parse-REST-API-Key": "GcLEre3e2D25P14Pno5PbQ11YO0rixhvIoBxv2RG",
+	  "Content-Type": "application/json"
+	  },
+	  data: JSON.stringify(dataOut),
+	  dataType: "json"
+	  
+	}).done(function( msg ) {
 	  // all code here gets run when the POST was successful
 	  // you can do things like update the console, display an alert, etc...
+	   getDataFromServer();
 	   console.log(msg.result);
 	  });
+	  });
+	  
+
 }
 
 //When the next button is pressed, run this code.
@@ -214,6 +243,7 @@ else if (CurrentPage == 3) {
 	  
 
 	  //Price per unit = __________get data
+	  console.log(data.production +" ____product");
 	  var productionCost = data.production * costPerUnit;
 	  
 	  resources = cash + credit;
@@ -249,7 +279,7 @@ else if (CurrentPage == 3) {
 		if (netWorth < 0 )
 		{
 			afterCash = 0;
-			afterCredit = 0;
+			afterCredit = netWorth;
 		}
 	}
 	
@@ -296,6 +326,71 @@ function resumeButtonPress(){
 	document.getElementById('PauseScreen').style.display="none";
 
 }
-function mainMenuButtonPress(){
-	window.location="Home.html";
+//<<<<<<< HEAD
+//function mainMenuButtonPress(){
+//	window.location="Home.html";
+//=======
+
+function getDataFromServer()
+{
+	var userObjectId = Parse.User.current().id;
+	
+	console.log(userObjectId);
+  
+	var Company = Parse.Object.extend("Company");
+	var queryCompany = new Parse.Query(Company);
+	 
+	queryCompany.equalTo("userId",userObjectId);
+	 
+	queryCompany.first().then(function(company){
+	
+	console.log(company.id);
+	localStorage.setItem("companyId",company.id);
+	 
+	var Match = Parse.Object.extend("Match");
+	var queryMatch = new Parse.Query(Match);
+	
+	queryMatch.equalTo("companyIds" , company.id);
+	 
+	return queryMatch.first();
+	}).then(function(match)
+	{
+	localStorage.setItem("matchId",match.id);
+	
+	
+	var CompMatch = Parse.Object.extend("CompMatch");
+	var queryCompMatch = new Parse.Query(CompMatch);
+	
+	queryCompMatch.equalTo("companyId",localStorage.companyId);
+	queryCompMatch.equalTo("matchId",localStorage.matchId);
+	return queryCompMatch.first();
+	}).then(function(compMatch)
+	{
+		console.log(compMatch);
+		
+		var dataOut = {};
+		//input does not work with type number thus all these objects are null
+		document.getElementById("capitalRangeInput").defaultValue = compMatch.get("capital");
+		document.getElementById("RAndDRangeInput").defaultValue = compMatch.get("researchDevelopment");
+		document.getElementById("productionRangeInput").defaultValue = compMatch.get("production");
+		document.getElementById("marketRangeInput").defaultValue = compMatch.get("marketing");
+		document.getElementById("priceRangeInput").defaultValue = compMatch.get("price");
+		document.getElementById("charityRangeInput").defaultValue = compMatch.get("charity");
+		
+		maxProduction = compMatch.get("maxProduction");
+		creditLine = compMatch.get("creditLine");
+		cashAvaible = compMatch.get("cashAvailable");
+		unitCost = compMatch.get("unitCost");
+		console.log(maxProduction);
+		console.log(creditLine);
+		console.log(cashAvaible);
+		
+		//set max on input boxes
+		document.getElementById("capitalRangeInput").max = 10000;
+		document.getElementById("RAndDRangeInput").max = 10000;
+		document.getElementById("productionRangeInput").max = Math.round(compMatch.get("maxProduction"));
+		document.getElementById("marketRangeInput").max = 10000;
+		document.getElementById("priceRangeInput").max = 100;
+		document.getElementById("charityRangeInput").max = 10000;
+	})
 }
