@@ -8,23 +8,23 @@ document.getElementById("PreviousButton").addEventListener("click", PreviousButt
 document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
-
-//Code for the info buttons.
+document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
+//Code for the info buttons
 // Create the tooltips only when document ready
 $(document).ready(function () {
     
     // This will automatically grab the 'title' attribute and replace
     // the regular browser tooltips for all <a> elements with a title attribute!
-    $('a[title]').qtip();
-    
+    //$('a[title]').qtip();
 });
-//$('#myTooltip').qtip({
-    //position: {
-        //my: 'top right',  // Position my top left...
-        //at: 'bottom left', // at the bottom right of...
-        //target: $('.Price') // my target
-    //}
-//});
+
+   $('#myTooltip').qtip({
+    position: {
+        my: 'top right',  // Position my top left...
+        at: 'bottom left', // at the bottom right of...
+        target: $('.Price') // my target
+    }
+});
 
 function SubmitButtonPress()
 {
@@ -207,4 +207,7 @@ function resumeButtonPress(){
 	document.getElementById('pauseGear').style.display='';
 	document.getElementById('PauseScreen').style.display="none";
 
+}
+function mainMenuButtonPress(){
+	window.location="Home.html";
 }
