@@ -29,9 +29,9 @@ var doughnutData = [
 					highlight: "#616774",
 					label: "Dark Grey"
 				}
-			];
+				
 				var ctx = document.getElementById("chart-area").getContext("2d");
 				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
-			};
+			];
 
 				
