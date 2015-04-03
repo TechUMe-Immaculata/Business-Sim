@@ -1,6 +1,6 @@
-var doughnutData = [
+	var doughnutData = [
 				{
-					value: 10000,
+					value: 300,
 					color:"#F7464A",
 					highlight: "#FF5A5E",
 					label: "Red"
@@ -29,9 +29,8 @@ var doughnutData = [
 					highlight: "#616774",
 					label: "Dark Grey"
 				}
-				
+
+			];
+			
 				var ctx = document.getElementById("chart-area").getContext("2d");
 				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
-			];
-
-				
