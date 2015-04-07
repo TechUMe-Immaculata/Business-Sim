@@ -45,8 +45,18 @@
 				var ctx = document.getElementById("graph").getContext("2d");
 				var myDoughnut = new Chart(ctx).Doughnut(doughnutData, options);
 				
+				  var hitter = [
+				{
+					value: 300,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "green"
+				}];
+				
+				myDoughnut.addData(,hitter);
 				//myDoughnut.doughnutData[0].value = 100;
-				console.log(myDoughnut.segments[0].value);
+				console.log(myDoughnut);
+				
 				//myDoughnut.segments[0].value = 100;
 				//myDoughnut.update();
 				

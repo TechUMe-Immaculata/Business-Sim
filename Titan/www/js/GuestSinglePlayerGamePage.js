@@ -1,5 +1,3 @@
-	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
-	Parse.$ = jQuery;
 var CurrentPage = 4;
 
 var maxProduction = 0,
@@ -7,18 +5,79 @@ creditLine = 0,
 avaibleCash= 0,
 unitCost = 0;
 
-getDataFromServer();
- 
-document.getElementById('PauseScreen').style.display='none';
-ChangeThePage();
-console.log(CurrentPage);
+var doughnutData = [
+				{
+					value: 300,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "Red"
+				},
+				{
+					value: 50,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "Green"
+				},
+				{
+					value: 100,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "Yellow"
+				},
+				{
+					value: 40,
+					color: "#949FB1",
+					highlight: "#A8B3C5",
+					label: "Grey"
+				},
+				{
+					value: 120,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Dark Grey"
+				}
 
-document.getElementById("NextButton").addEventListener("click", NextButtonPress);
-document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
-document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
-document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
-document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
+			];
 
+window.onload = function(){
+
+	var options = 
+	{
+				// Boolean - Whether to animate the chart
+				animation: false,
+				responsive : true
+	};
+	
+	var ctx = document.getElementById("chart-area").getContext("2d");
+	window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, options);
+	
+	/*var hahaJS = [
+				{
+					value: 120,
+					color: "#4E5360",
+					highlight: "#516774",
+					label: "Grey"
+				}
+
+			];
+	
+	myDoughnut.addData(hahaJS);*/
+					
+	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
+	Parse.$ = jQuery;	
+				
+	getDataFromServer();
+	 
+	document.getElementById('PauseScreen').style.display='none';
+	ChangeThePage();
+	console.log(CurrentPage);
+
+	document.getElementById("NextButton").addEventListener("click", NextButtonPress);
+	document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
+	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
+	document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
+	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
+			};
 //Code for the info buttons.
 // Create the tooltips only when document ready
 //$(document).ready(function () {
