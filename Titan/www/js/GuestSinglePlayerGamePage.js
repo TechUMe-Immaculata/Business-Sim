@@ -56,8 +56,11 @@ window.onload = function(){
 				responsive : true
 	};
 	
-	var ctx = document.getElementById("chart-area").getContext("2d");
+	var ctx = document.getElementById("chart-area_1").getContext("2d");
 	window.companyGrossProduct = new Chart(ctx).Doughnut(doughnutData, options);
+	
+	var ctx = document.getElementById("chart-area_2").getContext("2d");
+	window.capitalInvestment = new Chart(ctx).Doughnut(doughnutData, options);
 					
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;	
@@ -406,12 +409,17 @@ query.find().then(function(rankings){
 for(i=0;i < rankings.length;i++)
 {
 console.log("iteration" + i);
-value = rankings[i].get("networth");
-if (value < 0){value = 0;}
-companyGrossProduct.segments[i].value = value;
-companyGrossProduct.segments[i].label = rankings[i].get("companyName");
+networthValue = rankings[i].get("networth");
+capitalInvestmentValue = rankings[i].get("capitalTotal");
+company = rankings[i].get("companyName");
+if (networthValue < 0){networthValue = 0;}else{}
+companyGrossProduct.segments[i].value = networthValue;
+companyGrossProduct.segments[i].label = company;
+capitalInvestment.segments[i].value = capitalInvestmentValue;
+capitalInvestment.segments[i].label = company;
 }
 companyGrossProduct.update();
+capitalInvestment.update();
 
 document.getElementById("company_first").innerHTML = rankings[0].get("companyName");
 document.getElementById("company_second").innerHTML = rankings[1].get("companyName");
