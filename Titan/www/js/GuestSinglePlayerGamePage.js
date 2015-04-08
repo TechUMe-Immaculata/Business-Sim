@@ -39,7 +39,7 @@ var doughnutData = [
 
 			];
 			
-var dataObject={};
+//var dataObject={};
 
 window.onload = function(){
 
@@ -429,9 +429,17 @@ document.getElementById("company_fourth").innerHTML = companyName4;
 document.getElementById("company_fifth").innerHTML = companyName5;
 document.getElementById("company_sixth").innerHTML = companyName6; 
 
-return rankings.save();
+myDoughnut.segments[0].value = 1;
+myDoughnut.segments[1].value = 2;
+myDoughnut.segments[2].value = 3;
+myDoughnut.segments[3].value = 4;
+myDoughnut.segments[4].value = 5;
+myDoughnut.segments[5].value = 6;
+console.log(myDoughnut);
+console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAH");
+myDoughnut.update();
+return null;
 }).then(function(result){
-
 })
 
   };
