@@ -35,6 +35,12 @@ var doughnutData = [
 					color: "#4D5360",
 					highlight: "#616774",
 					label: "Dark Grey"
+				},
+				{
+					value: 120,
+					color: "#4D7360",
+					highlight: "#616774",
+					label: "Orange"
 				}
 
 			];
@@ -51,7 +57,7 @@ window.onload = function(){
 	};
 	
 	var ctx = document.getElementById("chart-area").getContext("2d");
-	window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, options);
+	window.companyGrossProduct = new Chart(ctx).Doughnut(doughnutData, options);
 					
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;	
@@ -396,48 +402,25 @@ query.ascending("rank");
 //query.include("objectId");
 
 query.find().then(function(rankings){
-  
-console.log(rankings);
-var rank1 = rankings[0].get("networth");
-var companyName1 = rankings[0].get("companyName");
-console.log(rank1);
+ 
+for(i=0;i < rankings.length;i++)
+{
+console.log("iteration" + i);
+value = rankings[i].get("networth");
+if (value < 0){value = 0;}
+companyGrossProduct.segments[i].value = value;
+companyGrossProduct.segments[i].label = rankings[i].get("companyName");
+}
+companyGrossProduct.update();
 
-var rank2=rankings[1].get("networth");
-var companyName2 = rankings[1].get("companyName");
-console.log(rank2);
+document.getElementById("company_first").innerHTML = rankings[0].get("companyName");
+document.getElementById("company_second").innerHTML = rankings[1].get("companyName");
+document.getElementById("company_third").innerHTML = rankings[2].get("companyName");
+document.getElementById("company_fourth").innerHTML = rankings[3].get("companyName");
+document.getElementById("company_fifth").innerHTML = rankings[4].get("companyName");
+document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
 
-var rank3=rankings[2].get("networth");
-var companyName3 = rankings[2].get("companyName");
-console.log(rank3);
 
-var rank4= rankings[3].get("networth");
-var companyName4 = rankings[3].get("companyName");
-console.log(rank4);
-
-var rank5= rankings[4].get("networth");
-var companyName5 = rankings[4].get("companyName");
-console.log(rank5);
-
-var rank6= rankings[5].get("networth");
-var companyName6 = rankings[5].get("companyName");
-console.log(rank6);
-
-document.getElementById("company_first").innerHTML = companyName1;
-document.getElementById("company_second").innerHTML = companyName2;
-document.getElementById("company_third").innerHTML = companyName3;
-document.getElementById("company_fourth").innerHTML = companyName4;
-document.getElementById("company_fifth").innerHTML = companyName5;
-document.getElementById("company_sixth").innerHTML = companyName6; 
-
-myDoughnut.segments[0].value = 1;
-myDoughnut.segments[1].value = 2;
-myDoughnut.segments[2].value = 3;
-myDoughnut.segments[3].value = 4;
-myDoughnut.segments[4].value = 5;
-myDoughnut.segments[5].value = 6;
-console.log(myDoughnut);
-console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAH");
-myDoughnut.update();
 return null;
 }).then(function(result){
 })
