@@ -53,7 +53,7 @@
 					label: "green"
 				}];
 				
-				myDoughnut.addData(,hitter);
+				//myDoughnut.addData(,hitter);
 				//myDoughnut.doughnutData[0].value = 100;
 				console.log(myDoughnut);
 				

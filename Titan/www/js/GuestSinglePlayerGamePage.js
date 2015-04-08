@@ -38,6 +38,8 @@ var doughnutData = [
 				}
 
 			];
+			
+var dataObject={};
 
 window.onload = function(){
 
@@ -50,18 +52,6 @@ window.onload = function(){
 	
 	var ctx = document.getElementById("chart-area").getContext("2d");
 	window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, options);
-	
-	/*var hahaJS = [
-				{
-					value: 120,
-					color: "#4E5360",
-					highlight: "#516774",
-					label: "Grey"
-				}
-
-			];
-	
-	myDoughnut.addData(hahaJS);*/
 					
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;	
@@ -319,6 +309,7 @@ function ReturnButtonPress(){
 
 function getDataFromServer()
 {
+	
 	var userObjectId = Parse.User.current().id;
 	
 	console.log(userObjectId);
@@ -334,6 +325,7 @@ function getDataFromServer()
 	localStorage.setItem("companyId",company.id);
 	 
 	var Match = Parse.Object.extend("Match");
+	
 	var queryMatch = new Parse.Query(Match);
 	
 	queryMatch.equalTo("companyIds" , company.id);
@@ -342,7 +334,6 @@ function getDataFromServer()
 	}).then(function(match)
 	{
 	localStorage.setItem("matchId",match.id);
-	
 	
 	var CompMatch = Parse.Object.extend("CompMatch");
 	var queryCompMatch = new Parse.Query(CompMatch);
@@ -353,6 +344,7 @@ function getDataFromServer()
 	}).then(function(compMatch)
 	{
 		console.log(compMatch);
+		
 		
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
