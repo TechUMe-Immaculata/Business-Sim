@@ -66,10 +66,11 @@ window.onload = function(){
 	document.getElementById("NextButton").addEventListener("click", NextButtonPress);
 	document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
-	document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
+	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 	document.getElementById("testNetWorth").addEventListener("click", testNetWorthPress);
+
 			};
 			
 //Code for the info buttons.
@@ -307,7 +308,8 @@ function pauseGearPress(){
 }
 
 
-function ReturnButtonPress(){
+function resumeButtonPress(){
+	console.log("Works");
 	document.getElementById('PreviousButton').style.display='';
 	document.getElementById('NextButton').style.display='';
 	document.getElementById('pauseGear').style.display='';
