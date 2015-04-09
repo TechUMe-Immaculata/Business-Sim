@@ -61,6 +61,9 @@ window.onload = function(){
 	
 	var ctx = document.getElementById("chart-area_2").getContext("2d");
 	window.capitalInvestment = new Chart(ctx).Doughnut(doughnutData, options);
+	
+	var ctx = document.getElementById("chart-area_3").getContext("2d");
+	window.marketshare = new Chart(ctx).Doughnut(doughnutData, options);
 					
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;	
@@ -148,6 +151,7 @@ function SubmitButtonPress()
 	  // all code here gets run when the POST was successful
 	  // you can do things like update the console, display an alert, etc...
 	   getDataFromServer();
+	   testNetworth();
 	   console.log(msg.result);
 	  });
 	  });
@@ -413,15 +417,20 @@ for(i=0;i < rankings.length;i++)
 console.log("iteration" + i);
 networthValue = rankings[i].get("networth");
 capitalInvestmentValue = rankings[i].get("capitalTotal");
+marketShareValue = Math.round(rankings[i].get("marketShare").totalMS * 1000)/10;
 company = rankings[i].get("companyName");
 if (networthValue < 0){networthValue = 0;}else{}
+if (capitalInvestmentValue == 0 ){capitalInvestmentValue = 1;}else{}
 companyGrossProduct.segments[i].value = networthValue;
 companyGrossProduct.segments[i].label = company;
 capitalInvestment.segments[i].value = capitalInvestmentValue;
 capitalInvestment.segments[i].label = company;
+marketshare.segments[i].value = marketShareValue;
+marketshare.segments[i].label = company;
 }
 companyGrossProduct.update();
 capitalInvestment.update();
+marketshare.update();
 
 document.getElementById("company_first").innerHTML = rankings[0].get("companyName");
 document.getElementById("company_second").innerHTML = rankings[1].get("companyName");
