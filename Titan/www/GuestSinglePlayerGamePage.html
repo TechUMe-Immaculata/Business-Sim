@@ -2,9 +2,10 @@
 <head>
    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="css/GuestSinglePlayerGamePage.css">
+	
   <!-- The css for the info cards -->
   <link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css">
+
   <!-- The jquery main file -->
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
@@ -15,9 +16,21 @@
 	
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+
   		<script src="js/Chart.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/GuestSinglePlayerGamePage.css">
 </head>
 <body>
 	<button type="button" id ="PreviousButton">Back</button>
@@ -194,11 +207,33 @@
 		 <!-- Page Four, the In-Game Submit Page-->
 	<div id="GamePageFour">
 			<!-- Capital Slider -->
+  <div class="center">
+    <p>
+      </p><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+           <form id="capitalSlider" oninput="amount.value=capitalRangeInput.value">
+          <input type="number" name="quant[1]" class="form-control input-number" value="1" min="1" max="10" id="capitalRangeInput">
+          $<output name="amount" for="capitalRangeInput"></output> </form>
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+      </div>
+    <p></p>
+   
+
+</div>
+			<!-- New code in the house
 		<p id="priceCharacters">Capital: 
               <form id="capitalSlider" oninput="amount.value=capitalRangeInput.value">
                 <input type="number" id="capitalRangeInput" name="rangeInput" min="0" max="any">                                                       
                 $<output name="amount" for="capitalRangeInput"></output> </form> </p>
-                
+                -->
 		<!-- Price Slider -->
 		<p id="priceCharacters">Price: <a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>
 

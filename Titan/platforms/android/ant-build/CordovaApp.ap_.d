@@ -73,6 +73,7 @@ C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\ServerLoginPage.css \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\SettingsPage.css \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\SinglePlayerInGame \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\style.css \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\SinglePlayerInGame\Home.css \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\SinglePlayerInGame\Newspaper.css \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\factory.gif \
@@ -85,6 +86,7 @@ C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\PlaceHolderNotAvailable.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\profileButton.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\settingsButton.jpg \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\js\Chart.js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\js\FriendsPage.js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\js\GameLogic.js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\js\GuestGameSingleOrMultiplayer.js \
