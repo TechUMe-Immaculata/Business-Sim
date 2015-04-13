@@ -1,23 +1,18 @@
-<<<<<<< HEAD
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;
-=======
->>>>>>> origin/Chris
+
 var CurrentPage = 4;
 
 var maxProduction = 0,
 creditLine = 0,
 avaibleCash= 0,
 unitCost = 0;
-<<<<<<< HEAD
 
 getDataFromServer();
  
 document.getElementById('PauseScreen').style.display='none';
 ChangeThePage();
 console.log(CurrentPage);
-=======
->>>>>>> origin/Chris
 
 var doughnutData = [
 				{
@@ -63,8 +58,6 @@ var doughnutData = [
 
 window.onload = function(){
 
-<<<<<<< HEAD
-=======
 	var options = 
 	{
 				// Boolean - Whether to animate the chart
@@ -101,7 +94,6 @@ window.onload = function(){
 
 			};
 			
->>>>>>> origin/Chris
 //Code for the info buttons.
 // Create the tooltips only when document ready
 //$(document).ready(function () {
@@ -119,13 +111,10 @@ window.onload = function(){
     //}
 //});
 
-<<<<<<< HEAD
-=======
 function testNetWorthPress()
 {
 	testNetworth()
 }
->>>>>>> origin/Chris
 
 //this can be made more efficient but a lack of security
 function SubmitButtonPress()
@@ -352,10 +341,7 @@ function resumeButtonPress(){
 
 function getDataFromServer()
 {
-<<<<<<< HEAD
-=======
-	
->>>>>>> origin/Chris
+
 	var userObjectId = Parse.User.current().id;
 	
 	console.log(userObjectId);
@@ -371,10 +357,7 @@ function getDataFromServer()
 	localStorage.setItem("companyId",company.id);
 	 
 	var Match = Parse.Object.extend("Match");
-<<<<<<< HEAD
-=======
-	
->>>>>>> origin/Chris
+
 	var queryMatch = new Parse.Query(Match);
 	
 	queryMatch.equalTo("companyIds" , company.id);
@@ -384,10 +367,6 @@ function getDataFromServer()
 	{
 	localStorage.setItem("matchId",match.id);
 	
-<<<<<<< HEAD
-	
-=======
->>>>>>> origin/Chris
 	var CompMatch = Parse.Object.extend("CompMatch");
 	var queryCompMatch = new Parse.Query(CompMatch);
 	
@@ -398,10 +377,6 @@ function getDataFromServer()
 	{
 		console.log(compMatch);
 		
-<<<<<<< HEAD
-=======
-		
->>>>>>> origin/Chris
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
 		document.getElementById("capitalRangeInput").defaultValue = compMatch.get("capital");
@@ -428,8 +403,6 @@ function getDataFromServer()
 		document.getElementById("charityRangeInput").max = 10000;
 	})
 }
-<<<<<<< HEAD
-=======
 
 function testNetworth(){
 	console.log("Works")
@@ -480,4 +453,3 @@ return null;
 })
 
   };
->>>>>>> origin/Chris
