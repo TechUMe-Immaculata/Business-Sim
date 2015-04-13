@@ -53,16 +53,22 @@ window.onload = function(){
 	{
 				// Boolean - Whether to animate the chart
 				animation: false,
-				responsive : true
+				responsive : false
 	};
-	
+	console.log($(window).width());
 	var ctx = document.getElementById("chart-area_1").getContext("2d");
+	ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
+	//ctx.canvas.height = $("#table_2_").width()-5;
 	window.companyGrossProduct = new Chart(ctx).Doughnut(doughnutData, options);
 	
 	var ctx = document.getElementById("chart-area_2").getContext("2d");
+		ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
 	window.capitalInvestment = new Chart(ctx).Doughnut(doughnutData, options);
-	
 	var ctx = document.getElementById("chart-area_3").getContext("2d");
+		ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
 	window.marketshare = new Chart(ctx).Doughnut(doughnutData, options);
 					
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
@@ -443,5 +449,4 @@ document.getElementById("company_sixth").innerHTML = rankings[5].get("companyNam
 return null;
 }).then(function(result){
 })
-
-  };
+};
