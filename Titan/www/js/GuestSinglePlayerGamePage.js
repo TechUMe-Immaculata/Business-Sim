@@ -46,7 +46,7 @@ var doughnutData = [
 			];
 
 var barChartData = {
-	labels : ["P1","P2","P3","P4","P5","P6"],
+	labels : ["first","second","third","forth","fifth","sixth"],
 	datasets : [
 		{
 				fillColor : "rgba(220,220,220,0.5)",
