@@ -10,40 +10,52 @@ var doughnutData = [
 					value: 300,
 					color:"#F7464A",
 					highlight: "#FF5A5E",
-					label: "Red"
+					label: "Comp1"
 				},
 				{
 					value: 50,
 					color: "#46BFBD",
 					highlight: "#5AD3D1",
-					label: "Green"
+					label: "Comp2"
 				},
 				{
 					value: 100,
 					color: "#FDB45C",
 					highlight: "#FFC870",
-					label: "Yellow"
+					label: "Comp3"
 				},
 				{
 					value: 40,
 					color: "#949FB1",
 					highlight: "#A8B3C5",
-					label: "Grey"
+					label: "Comp4"
 				},
 				{
 					value: 120,
 					color: "#4D5360",
 					highlight: "#616774",
-					label: "Dark Grey"
+					label: "Comp5"
 				},
 				{
 					value: 120,
 					color: "#4D7360",
 					highlight: "#616774",
-					label: "Orange"
+					label: "Comp6"
 				}
 
 			];
+
+var barChartData = {
+	labels : ["P1","P2","P3","P4","P5","P6"],
+	datasets : [
+		{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,0.8)",
+				highlightFill: "rgba(220,220,220,0.75)",
+				highlightStroke: "rgba(220,220,220,1)",
+				data : [1,2,3,4,5,6]
+		}
+]}
 			
 //var dataObject={};
 
@@ -60,12 +72,12 @@ window.onload = function(){
 	ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
 	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
 	//ctx.canvas.height = $("#table_2_").width()-5;
-	window.companyGrossProduct = new Chart(ctx).Doughnut(doughnutData, options);
+	window.companyGrossProduct = new Chart(ctx).Bar(barChartData, options);
 	
 	var ctx = document.getElementById("chart-area_2").getContext("2d");
 		ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
 	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
-	window.capitalInvestment = new Chart(ctx).Doughnut(doughnutData, options);
+	window.capitalInvestment = new Chart(ctx).Bar(barChartData, options);
 	var ctx = document.getElementById("chart-area_3").getContext("2d");
 		ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
 	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
@@ -417,7 +429,7 @@ query.ascending("rank");
 //query.include("objectId");
 
 query.find().then(function(rankings){
- 
+ 	console.log(companyGrossProduct);
 for(i=0;i < rankings.length;i++)
 {
 console.log("iteration" + i);
@@ -427,12 +439,15 @@ marketShareValue = Math.round(rankings[i].get("marketShare").totalMS * 1000)/10;
 company = rankings[i].get("companyName");
 if (networthValue < 0){networthValue = 0;}else{}
 if (capitalInvestmentValue == 0 ){capitalInvestmentValue = 1;}else{}
-companyGrossProduct.segments[i].value = networthValue;
-companyGrossProduct.segments[i].label = company;
-capitalInvestment.segments[i].value = capitalInvestmentValue;
-capitalInvestment.segments[i].label = company;
+companyGrossProduct.datasets[0].bars[i].value = networthValue;
+companyGrossProduct.datasets[0].bars[i].label = company;
+//companyGrossProduct.datasets[0].bars[i].datasetLabel = company;
+capitalInvestment.datasets[0].bars[i].value = capitalInvestmentValue;
+capitalInvestment.datasets[0].bars[i].label = company;
 marketshare.segments[i].value = marketShareValue;
 marketshare.segments[i].label = company;
+
+//companyGrossProduct.datasets[0].label = ["Comffp1","Coffmp2","Cossmp3","Comaap4","Comp5","Compdd6"];
 }
 companyGrossProduct.update();
 capitalInvestment.update();
