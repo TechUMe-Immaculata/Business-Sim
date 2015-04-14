@@ -1,9 +1,25 @@
+<<<<<<< HEAD
 	var CurrentPage = 4;
+=======
+	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
+	Parse.$ = jQuery;
+
+var CurrentPage = 4;
+>>>>>>> origin/Dylan
 
 var maxProduction = 0,
 creditLine = 0,
 avaibleCash= 0,
 unitCost = 0;
+<<<<<<< HEAD
+=======
+
+getDataFromServer();
+ 
+document.getElementById('PauseScreen').style.display='none';
+ChangeThePage();
+console.log(CurrentPage);
+>>>>>>> origin/Dylan
 
 var doughnutData = [
 				{
@@ -350,7 +366,11 @@ function resumeButtonPress(){
 
 function getDataFromServer()
 {
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> origin/Dylan
 	var userObjectId = Parse.User.current().id;
 	
 	console.log(userObjectId);
@@ -366,7 +386,11 @@ function getDataFromServer()
 	localStorage.setItem("companyId",company.id);
 	 
 	var Match = Parse.Object.extend("Match");
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> origin/Dylan
 	var queryMatch = new Parse.Query(Match);
 	
 	queryMatch.equalTo("companyIds" , company.id);
@@ -386,7 +410,10 @@ function getDataFromServer()
 	{
 		console.log(compMatch);
 		
+<<<<<<< HEAD
 		
+=======
+>>>>>>> origin/Dylan
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
 		document.getElementById("capitalRangeInput").defaultValue = compMatch.get("capital");
@@ -464,4 +491,9 @@ document.getElementById("company_sixth").innerHTML = rankings[5].get("companyNam
 return null;
 }).then(function(result){
 })
+<<<<<<< HEAD
 }
+=======
+
+  };
+>>>>>>> origin/Dylan
