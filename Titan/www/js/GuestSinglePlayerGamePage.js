@@ -449,4 +449,4 @@ document.getElementById("company_sixth").innerHTML = rankings[5].get("companyNam
 return null;
 }).then(function(result){
 })
-};
+}
