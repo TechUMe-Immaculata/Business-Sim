@@ -19,18 +19,36 @@ background:orange;
 	width: 55px;
 	top: 100px;
 }
-#returnButton{
-	width: 150px;
-	height: 50px;
-	font-size: 22px;
-	margin-top: 15px;
-	margin-left: 75px;
+#resumeButton{
+	width: 200px;
+	height: 80px;
+	font-size: 34px;
+	margin-top: 20px;
+	margin-left: 85px;
+	border-radius: 20px;
+	border-color: black;
+	border-width: 5px;
+	background-color: #3D3D29; /* DARK GREY */
+	color: #FFAC30; /* Two shades lighter then the orange */
+}
+#mainMenuButton{
+	width: 200px;
+	height: 80px;
+	font-size: 34px;
+	margin-top: 20px;
+	margin-left: 85px;
+	border-radius: 20px;
+	border-color: black;
+	border-width: 5px;
+	background-color: #3D3D29; /* DARK GREY */
+	color: #FFAC30;
 }
 #PauseScreen{
-	width: 300px;
-	height: 570px;
+	width: 360px;
+	height: 670px;
 	margin-left: 10px;
 	margin-top: 35px;
+	margin-bottom: 20px;
 	border-width: 10px;
 	border-radius: 20px; 
 	border-style: double;
