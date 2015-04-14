@@ -1,7 +1,3 @@
-	var CurrentPage = 4;
-	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
-	Parse.$ = jQuery;
-
 var CurrentPage = 4;
 
 var maxProduction = 0,
@@ -9,11 +5,6 @@ creditLine = 0,
 avaibleCash= 0,
 unitCost = 0;
 
-getDataFromServer();
- 
-document.getElementById('PauseScreen').style.display='none';
-ChangeThePage();
-console.log(CurrentPage);
 
 var doughnutData = [
 				{
@@ -475,6 +466,3 @@ return null;
 }).then(function(result){
 })
 }
-
-  };
-
