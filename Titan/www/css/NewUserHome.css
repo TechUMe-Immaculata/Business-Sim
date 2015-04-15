@@ -16,6 +16,7 @@
 }
 
 #guestPlayButton {
+<<<<<<< HEAD
   background: orange;
  
   border-radius: 0px;
@@ -31,16 +32,16 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+=======
+  position: absolute;
+ 
+  width: 90%;
+  height: 10%;
+  top:44%;
+  left: 5%;
+>>>>>>> origin/NEWT
 }
-#guestPlayButton:hover {
-  background: #f5084b;
-  background-image: -webkit-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -moz-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -ms-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -o-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: linear-gradient(to bottom, #f5084b, #fa9e00);
-  text-decoration: none;
-}
+
   #serverLoginButton {
   /* Locked Colour. */
   background: gray;
