@@ -1,9 +1,10 @@
-	var CurrentPage = 4;
+var CurrentPage = 4;
 
 var maxProduction = 0,
 creditLine = 0,
 avaibleCash= 0,
 unitCost = 0;
+
 
 var doughnutData = [
 				{
@@ -350,7 +351,7 @@ function resumeButtonPress(){
 
 function getDataFromServer()
 {
-	
+
 	var userObjectId = Parse.User.current().id;
 	
 	console.log(userObjectId);
@@ -366,7 +367,7 @@ function getDataFromServer()
 	localStorage.setItem("companyId",company.id);
 	 
 	var Match = Parse.Object.extend("Match");
-	
+
 	var queryMatch = new Parse.Query(Match);
 	
 	queryMatch.equalTo("companyIds" , company.id);
@@ -386,7 +387,7 @@ function getDataFromServer()
 	{
 		console.log(compMatch);
 		
-		
+
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
 		document.getElementById("capitalRangeInput").defaultValue = compMatch.get("capital");
