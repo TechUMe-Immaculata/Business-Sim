@@ -16,31 +16,18 @@
 }
 
 #guestPlayButton {
-<<<<<<< HEAD
-  background: orange;
- 
-  border-radius: 0px;
-  font-family: Georgia;
-  color: white; 
-  font-size: 23px;
 
-  border: solid #000000 2px;
-  text-decoration: none;
+
   width: 350px;
   margin-top: 375px;
   margin-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-=======
-  position: absolute;
+
  
-  width: 90%;
-  height: 10%;
-  top:44%;
-  left: 5%;
->>>>>>> origin/NEWT
-}
+
+
 
   #serverLoginButton {
   /* Locked Colour. */
