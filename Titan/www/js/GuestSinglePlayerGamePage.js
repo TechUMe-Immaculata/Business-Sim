@@ -1,5 +1,3 @@
-	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
-	Parse.$ = jQuery;
 var CurrentPage = 4;
 
 var maxProduction = 0,
@@ -7,18 +5,105 @@ creditLine = 0,
 avaibleCash= 0,
 unitCost = 0;
 
-getDataFromServer();
- 
-document.getElementById('PauseScreen').style.display='none';
-ChangeThePage();
-console.log(CurrentPage);
 
-document.getElementById("NextButton").addEventListener("click", NextButtonPress);
-document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
-document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
-document.getElementById("ReturnButton").addEventListener("click", ReturnButtonPress);
-document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
+var doughnutData = [
+				{
+					value: 300,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "Comp1"
+				},
+				{
+					value: 50,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "Comp2"
+				},
+				{
+					value: 100,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "Comp3"
+				},
+				{
+					value: 40,
+					color: "#949FB1",
+					highlight: "#A8B3C5",
+					label: "Comp4"
+				},
+				{
+					value: 120,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Comp5"
+				},
+				{
+					value: 120,
+					color: "#4D7360",
+					highlight: "#616774",
+					label: "Comp6"
+				}
 
+			];
+
+var barChartData = {
+	labels : ["P1","P2","P3","P4","P5","P6"],
+	datasets : [
+		{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,0.8)",
+				highlightFill: "rgba(220,220,220,0.75)",
+				highlightStroke: "rgba(220,220,220,1)",
+				data : [1,2,3,4,5,6]
+		}
+]}
+			
+//var dataObject={};
+
+window.onload = function(){
+
+	var options = 
+	{
+				// Boolean - Whether to animate the chart
+				animation: false,
+				responsive : false
+	};
+	console.log($(window).width());
+	var ctx = document.getElementById("chart-area_1").getContext("2d");
+	ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
+	//ctx.canvas.height = $("#table_2_").width()-5;
+	window.companyGrossProduct = new Chart(ctx).Bar(barChartData, options);
+	
+	var ctx = document.getElementById("chart-area_2").getContext("2d");
+		ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
+	window.capitalInvestment = new Chart(ctx).Bar(barChartData, options);
+	var ctx = document.getElementById("chart-area_3").getContext("2d");
+		ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
+	window.marketshare = new Chart(ctx).Doughnut(doughnutData, options);
+					
+	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
+	Parse.$ = jQuery;	
+				
+	getDataFromServer();
+	testNetworth();
+	 
+	document.getElementById('PauseScreen').style.display='none';
+	ChangeThePage();
+	console.log(CurrentPage);
+
+	document.getElementById("NextButton").addEventListener("click", NextButtonPress);
+	document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
+	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
+	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
+	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
+	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
+	document.getElementById("testNetWorth").addEventListener("click", testNetWorthPress);
+
+			};
+			
 //Code for the info buttons.
 // Create the tooltips only when document ready
 //$(document).ready(function () {
@@ -36,6 +121,10 @@ document.getElementById("submitToServerButton").addEventListener("click", Submit
     //}
 //});
 
+function testNetWorthPress()
+{
+	testNetworth()
+}
 
 //this can be made more efficient but a lack of security
 function SubmitButtonPress()
@@ -82,6 +171,7 @@ function SubmitButtonPress()
 	  // all code here gets run when the POST was successful
 	  // you can do things like update the console, display an alert, etc...
 	   getDataFromServer();
+	   testNetworth();
 	   console.log(msg.result);
 	  });
 	  });
@@ -281,7 +371,8 @@ function pauseGearPress(){
 }
 
 
-function ReturnButtonPress(){
+function resumeButtonPress(){
+	console.log("Works");
 	document.getElementById('PreviousButton').style.display='';
 	document.getElementById('NextButton').style.display='';
 	document.getElementById('pauseGear').style.display='';
@@ -291,6 +382,7 @@ function ReturnButtonPress(){
 
 function getDataFromServer()
 {
+
 	var userObjectId = Parse.User.current().id;
 	
 	console.log(userObjectId);
@@ -306,6 +398,7 @@ function getDataFromServer()
 	localStorage.setItem("companyId",company.id);
 	 
 	var Match = Parse.Object.extend("Match");
+
 	var queryMatch = new Parse.Query(Match);
 	
 	queryMatch.equalTo("companyIds" , company.id);
@@ -314,7 +407,6 @@ function getDataFromServer()
 	}).then(function(match)
 	{
 	localStorage.setItem("matchId",match.id);
-	
 	
 	var CompMatch = Parse.Object.extend("CompMatch");
 	var queryCompMatch = new Parse.Query(CompMatch);
@@ -326,6 +418,7 @@ function getDataFromServer()
 	{
 		console.log(compMatch);
 		
+
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
 		document.getElementById("capitalRangeInput").defaultValue = compMatch.get("capital");
@@ -353,6 +446,7 @@ function getDataFromServer()
 	})
 }
 
+<<<<<<< HEAD
 function gameOver(cop){
 // game over function , saves the user reusults , and than deletes the match 
 
@@ -569,3 +663,56 @@ return null
 })
 
 };
+=======
+function testNetworth(){
+	console.log("Works")
+//get the keys to do the search
+
+var matchid=localStorage.getItem("matchId");
+console.log(matchid);
+console.log()
+var CompMatch = Parse.Object.extend("CompMatch");
+
+var query = new Parse.Query("CompMatch");
+query.equalTo("matchId" , matchid);
+query.ascending("rank");
+//query.include("objectId");
+
+query.find().then(function(rankings){
+ 	console.log(companyGrossProduct);
+for(i=0;i < rankings.length;i++)
+{
+console.log("iteration" + i);
+networthValue = rankings[i].get("networth");
+capitalInvestmentValue = rankings[i].get("capitalTotal");
+marketShareValue = Math.round(rankings[i].get("marketShare").totalMS * 1000)/10;
+company = rankings[i].get("companyName");
+if (networthValue < 0){networthValue = 0;}else{}
+if (capitalInvestmentValue == 0 ){capitalInvestmentValue = 1;}else{}
+companyGrossProduct.datasets[0].bars[i].value = networthValue;
+companyGrossProduct.datasets[0].bars[i].label = company;
+//companyGrossProduct.datasets[0].bars[i].datasetLabel = company;
+capitalInvestment.datasets[0].bars[i].value = capitalInvestmentValue;
+capitalInvestment.datasets[0].bars[i].label = company;
+marketshare.segments[i].value = marketShareValue;
+marketshare.segments[i].label = company;
+
+//companyGrossProduct.datasets[0].label = ["Comffp1","Coffmp2","Cossmp3","Comaap4","Comp5","Compdd6"];
+}
+companyGrossProduct.update();
+capitalInvestment.update();
+marketshare.update();
+
+document.getElementById("company_first").innerHTML = rankings[0].get("companyName");
+document.getElementById("company_second").innerHTML = rankings[1].get("companyName");
+document.getElementById("company_third").innerHTML = rankings[2].get("companyName");
+document.getElementById("company_fourth").innerHTML = rankings[3].get("companyName");
+document.getElementById("company_fifth").innerHTML = rankings[4].get("companyName");
+document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
+
+
+return null;
+}).then(function(result){
+})
+}
+>>>>>>> FETCH_HEAD
