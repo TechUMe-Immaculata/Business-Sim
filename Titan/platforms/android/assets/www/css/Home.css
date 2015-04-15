@@ -4,19 +4,17 @@
           overflow:hidden;
           font-family: helvetica;
           font-weight: 100;
-      }
-      
-      #profilePic {
-        width: 188px; 
-        height: 180px;
-        border-style: solid;
-        border-width: 2px; 
+          color: black;
       }
 
-#fun{
+#screenDescription{
+  bottom: -10px;
   position: absolute;
-  left: 40%;
-  color: orange;
+  left: 35%;
+  color: white;
+  font-size: 22.5px;
+  font-weight: bold;
+
 }
 
 #quickPlayButton {
@@ -32,7 +30,7 @@
   text-decoration: none;
   width: 90%;
   height: 10%;
-  top:20%;
+  top:58%;
   left: 5%;
 }
 
@@ -58,10 +56,8 @@
   text-decoration: none;
   width: 90%;
   height: 10%;
-  top:40%;
+  top:73%;
   left: 5%;
-
-
 }
 
 #leaguePlayButton:hover {
@@ -86,7 +82,7 @@
   text-decoration: none;
   width: 90%;
   height: 10%;
-  top:60%;
+  top:88%;
   left: 5%;
 }
 
@@ -99,9 +95,9 @@
   background-image: linear-gradient(to bottom, #423cfa, #d93434);
   text-decoration: none;
 }
-
+      /* Space behind the buttons */
       .container {
-          background-color:#D8D8D8;
+          background-color:#E6E6E6; 
           position: relative;
           height: 100%;
           width: 100%;
@@ -120,15 +116,15 @@
       .swipe-area {
           position: absolute;
           width: 100%;
-          height: 7%;
+          height: 8%;
           left: 0;
           top: 0;
-          background: #2E2E2E;
+          background: orange;
           z-index: 0;
       }
       /*The Sidebar*/
       #sidebar {
-          background: orange;
+          background: #585858;
           position: absolute;
           width: 200px;
           height: 100%;
@@ -147,11 +143,38 @@
       #sidebar ul li {
           margin: 0;
       }
-      #sidebar ul li a {
-          padding: 15px 20px;
+
+
+
+
+        /* Heres the dime4nsions of all the sidebar pictures.  */
+      #profilePic {
+        width: 180px; 
+        height: 115px;
+      }
+      #friendsPic{
+        width: 180px; 
+        height: 115px;
+      }
+      #settingsPic{
+        width: 180px; 
+        height: 115px;
+      }
+      #notificationsPic{
+        width: 180px; 
+        height: 115px;
+      }
+
+
+
+
+      /* Text Boxes*/
+      #sidebar ul li a  {
+          padding: 5px 5px;
           font-size: 16px;
-          font-weight: 100;
-          color: white;
+          font-weight: bold;
+          text-align: center;
+          color: #151515;
           text-decoration: none;
           display: block;
           border-bottom: 5px solid black;
@@ -163,7 +186,7 @@
       }
       /* The Colour of the hover for then menus */
       #sidebar ul li:hover a {
-          background: #DF7401;
+          background: #848484;
       }
       .main-content {
           width: 100%;
@@ -193,16 +216,16 @@
           border-radius: 3px;
           display: block;
           position: relative;
-          padding: 8px 7px;
+          padding: 1px 1px;
           float: left;
       }
       .main-content #sidebar-toggle .bar{
           display: block;
-          width: 18px;
+          width: 34px;
           margin-bottom: 3px;
-          height: 2px;
-          background-color: gray;
-          border-radius: 1px;   
+          height: 8px;
+          background-color: white;
+          border-radius: 3px;   
           
       }
       .main-content #sidebar-toggle .bar:last-child{
