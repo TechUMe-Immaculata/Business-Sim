@@ -33,9 +33,12 @@
 <link rel="stylesheet" type="text/css" href="css/GuestSinglePlayerGamePage.css">
 </head>
 <body>
-	<button type="button" id ="PreviousButton">Back</button>
-	<button type="button" id ="NextButton">Next</button>
-	<img id="pauseGear" src="img/pauseGear.jpg">
+	<button type="button" class="btn btn-success" id ="PreviousButton">Back</button>
+	<button type="button" class="btn btn-info" id ="NextButton">Next</button>
+	<!--<img id="pauseGear" src="img/pauseGear.jpg">-->
+	<button type="button" class="btn btn-success btn-number">
+                  <span class="glyphicon glyphicon-cog"></span>
+              </button>
 
 
 <div id="SinglePlayerInGame">
@@ -207,27 +210,24 @@
 		 <!-- Page Four, the In-Game Submit Page-->
 	<div id="GamePageFour">
 			<!-- Capital Slider -->
-  <div class="center">
-    <p>
-      </p><div class="input-group">
+    <div class="center">
+    <p id="priceCharacters">Capital: 
+    <div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                  <span class="glyphicon glyphicon-minus"></span>
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[6]">
+                <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-           <form id="capitalSlider" oninput="amount.value=capitalRangeInput.value">
-          <input type="number" name="quant[1]" class="form-control input-number" value="1" min="1" max="10" id="capitalRangeInput">
-          $<output name="amount" for="capitalRangeInput"></output> </form>
+          <input type="text" name="quant[6]" class="form-control input-number" value="10" min="1" max="100">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[6]">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
       </div>
-    <p></p>
-   
+  </p>
+	
 
-</div>
 			<!-- New code in the house
 		<p id="priceCharacters">Capital: 
               <form id="capitalSlider" oninput="amount.value=capitalRangeInput.value">
@@ -237,32 +237,88 @@
 		<!-- Price Slider -->
 		<p id="priceCharacters">Price: <a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>
 
-              <form id="priceSlider" oninput="amount.value=priceRangeInput.value">
-                <input type="number" id="priceRangeInput" name="rangeInput" min="0" max="any">                                                       
+              <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[1]" class="form-control input-number" value="10" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+      </div>                                                     
                 $<output name="amount" for="priceRangeInput"></output> </form> </p>
         <!-- Production Slider -->
 		<p id="productionCharacters">Production: 
-              <form id="productionSlider" oninput="amount.value=productionRangeInput.value">
-                <input type="number" id="productionRangeInput" name="rangeInput" min="0" max="any">                                                       
+             <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+      </div>
                 <output name="amount" for="productionRangeInput"onchange="edit()"></output> units</form> </p>
         <!-- Marketing Slider -->
 		<p id="marketCharacters">Marketing: 
-              <form id="marketSlider" oninput="amount.value=marketRangeInput.value">
-                <input type="number" id="marketRangeInput" name="rangeInput" min="0" max="any">                                                       
+              <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[3]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[3]" class="form-control input-number" value="10" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[3]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+      </div>                                                    
                 $<output name="amount" for="marketRangeInput"></output> </form> </p>
         <!-- R & D Slider -->
 		<p id="RAndDCharacters">Research and Development: 
-              <form id="RAndDSlider" oninput="amount.value=RAndDRangeInput.value">
-                <input type="number" id="RAndDRangeInput" name="rangeInput" min="0" max="any">                                                       
+              <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[4]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[4]" class="form-control input-number" value="10" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[4]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+      </div>                                                      
                 $<output name="amount" for="RAndDRangeInput"></output> </form> </p>
         <!-- Charity Slider -->
         <p id="charityCharacters">Charity: 
-              <form id="charitySlider" oninput="amount.value=charityRangeInput.value">
-                <input type="number" id="charityRangeInput" name="rangeInput" min="0" max="any">                                                       
+             <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[5]" class="form-control input-number" value="10" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[5]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+      </div>                                                      
                 $<output name="amount" for="charityRangeInput"></output> </form> </p>
 
                 <!-- The Submit to server button, to end and submit your turn -->
-                <button type="button" id="submitToServerButton" > Submit Turn </button>
+                <button type="button" class="btn btn-primary" id="submitToServerButton" > Submit Turn </button>
+	</div>
 	</div>
 	<script src="js/GuestSinglePlayerGamePage.js"></script>
   <script type="text/javascript" src="js/GameLogic.js"></script>
