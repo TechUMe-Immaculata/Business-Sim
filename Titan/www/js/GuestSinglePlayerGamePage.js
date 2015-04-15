@@ -446,7 +446,6 @@ function getDataFromServer()
 	})
 }
 
-<<<<<<< HEAD
 function gameOver(cop){
 // game over function , saves the user reusults , and than deletes the match 
 
@@ -663,7 +662,6 @@ return null
 })
 
 };
-=======
 function testNetworth(){
 	console.log("Works")
 //get the keys to do the search
@@ -715,4 +713,3 @@ return null;
 }).then(function(result){
 })
 }
->>>>>>> FETCH_HEAD
