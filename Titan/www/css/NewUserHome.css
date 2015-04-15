@@ -8,9 +8,7 @@
       }
 
 #screenDescription{
-  bottom: -10px;
-  position: absolute;
-  left: 35%;
+  margin-left: 150px;
   color: white;
   font-size: 22.5px;
   font-weight: bold;
@@ -18,7 +16,6 @@
 }
 
 #guestPlayButton {
-  position: absolute;
   background: orange;
  
   border-radius: 0px;
@@ -28,10 +25,12 @@
 
   border: solid #000000 2px;
   text-decoration: none;
-  width: 90%;
-  height: 10%;
-  top:44%;
-  left: 5%;
+  width: 350px;
+  margin-top: 375px;
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 }
 #guestPlayButton:hover {
   background: #f5084b;
@@ -43,21 +42,30 @@
   text-decoration: none;
 }
   #serverLoginButton {
-  position: absolute;
+  /* Locked Colour. */
+  background: gray;
+  /* THIS IS THE PROPER BUTTON COLOUR!
   background: orange;
-
+  */
   border-radius: 0px;
   font-family: Georgia;
-  color: white; 
+  
+  /* LOCKED FONT COLOUR */
+  color: black; 
+  /* THIS IS THE PROPER FONT COLOUR!
+  color: white;
+  */
   font-size: 23px;
-
   border: solid #000000 2px;
   text-decoration: none;
-  width: 90%;
-  height: 10%;
-  top:58%;
-  left: 5%;
+  width: 350px;
+  margin-top: 50px;
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
+/* UNCOMMENT THIS TO RE-ADD HOVER'S IN FULL VERSION
 
 #serverLoginButton:hover {
   background: #3ce6fc;
@@ -69,22 +77,35 @@
   text-decoration: none;
 }
 
+*/
+
 #registerButton {
-  position: absolute;
+   /* Locked Colour. */
+  background: gray;
+  /* THIS IS THE PROPER BUTTON COLOUR!
   background: orange;
- 
+  */
   border-radius: 0px;
   font-family: Georgia;
-  color: white; 
-  font-size: 23px;
+  
+  /* LOCKED FONT COLOUR */
+  color: black; 
+  /* THIS IS THE PROPER FONT COLOUR!
+  color: white;
+  */
 
+  font-size: 23px;
   border: solid #000000 2px;
   text-decoration: none;
-  width: 90%;
-  height: 10%;
-  top:72%;
-  left: 5%;
+  width: 350px;
+  margin-top: 50px;
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
+/*  UNCOMMENT THIS TO RE-ADD HOVER'S IN FULL VERSION
+
 #registerButton:hover {
   background: #423cfa;
   background-image: -webkit-linear-gradient(top, #423cfa, #d93434);
@@ -95,8 +116,9 @@
   text-decoration: none;
 }
 
+*/
+
 #facebookLoginButton {
-  position: absolute;
   background: orange;
  
   border-radius: 0px;
@@ -106,10 +128,11 @@
 
   border: solid #000000 2px;
   text-decoration: none;
-  width: 90%;
-  height: 10%;
-  top:86%;
-  left: 5%;
+  width: 350px;
+  margin-top: 20px;
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #facebookLoginButton:hover {
