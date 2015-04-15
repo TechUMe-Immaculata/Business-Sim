@@ -16,31 +16,19 @@
 }
 
 #guestPlayButton {
-  background: orange;
- 
-  border-radius: 0px;
-  font-family: Georgia;
-  color: white; 
-  font-size: 23px;
 
-  border: solid #000000 2px;
-  text-decoration: none;
+
   width: 350px;
   margin-top: 375px;
   margin-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-}
-#guestPlayButton:hover {
-  background: #f5084b;
-  background-image: -webkit-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -moz-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -ms-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -o-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: linear-gradient(to bottom, #f5084b, #fa9e00);
-  text-decoration: none;
-}
+
+ 
+
+
+
   #serverLoginButton {
   /* Locked Colour. */
   background: gray;
