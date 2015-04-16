@@ -5,6 +5,8 @@ creditLine = 0,
 avaibleCash= 0,
 unitCost = 0;
 
+var news = '';
+
 
 var doughnutData = [
 				{
@@ -461,8 +463,46 @@ document.getElementById("company_fourth").innerHTML = rankings[3].get("companyNa
 document.getElementById("company_fifth").innerHTML = rankings[4].get("companyName");
 document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
 
+newsfeed(rankings);
 
 return null;
 }).then(function(result){
 })
+}
+
+function newsfeed(players){
+
+var player1 = players[0];
+var player2= players[1] ;
+var player3= players[2];
+var player4= players[3];
+var player5= players[4];
+var player6= players[5];
+
+news1(player1);
+news2(player2);
+
+
+function news1(cat){
+
+
+var feed1 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
+var feed2 = "The new leader in the indrsutry is" + cat.get("companyName") + "." + "They made $" + cat.get("revenue")+ "revenue. The market seems to love thier price point of $" + cat.get("price");
+var feed3 = "Wow" + cat.get("companyName") +" has just taken first play in the indrustry with a revenue of $" + cat.get("stats").revenue + "";
+var feed4 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
+var feed5 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
+var feed6 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
+var feeds
+news = news + feed1;
+document.getElementById("newspaper").innerHTML = news;
+}
+
+function news2(cat){
+
+var feed2 = " Runner up is " + cat.get("companyName") + "." + " They had a modest $" + cat.get("stats").profit + " profit. "; 
+news = news + feed2;
+document.getElementById("newspaper").innerHTML = news;
+}
+
+
 }
