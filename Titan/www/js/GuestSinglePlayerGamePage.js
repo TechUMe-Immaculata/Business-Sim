@@ -784,3 +784,25 @@ return null;
 }).then(function(result){
 })
 }
+
+$(function(){
+  // Bind the swipeHandler callback function to the swipe event on div.box
+	$( "body" ).on( "swipe", swipeHandler );
+	$.event.special.swipe.scrollSupressionThreshold = 30;
+	$.event.special.swipe.horizontalDistanceThreshold =100;
+	
+  // Callback function references the event target and adds the 'swipe' class to it
+  function swipeHandler( event ){
+  var x1 = event.swipestart.coords[0];
+  var x2 = event.swipestop.coords[0];
+  var dif = x2 - x1;
+  if (dif > 0)
+  {
+  PreviousButtonPress()
+  }
+  else if (dif < 0)
+  {
+  NextButtonPress();
+  }
+  }
+});
