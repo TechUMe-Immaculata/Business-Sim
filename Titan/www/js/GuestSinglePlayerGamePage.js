@@ -23,6 +23,7 @@ $('.btn-number').click(function(e){
 
         } else if(type == 'plus') {
 
+
             if(currentVal < input.attr('max')) {
                 input.val(currentVal + 1).change();
             }
@@ -75,45 +76,58 @@ $(".input-number").keydown(function (e) {
             e.preventDefault();
         }
     });
+
 var doughnutData = [
 				{
 					value: 300,
 					color:"#F7464A",
 					highlight: "#FF5A5E",
-					label: "Red"
+					label: "Comp1"
 				},
 				{
 					value: 50,
 					color: "#46BFBD",
 					highlight: "#5AD3D1",
-					label: "Green"
+					label: "Comp2"
 				},
 				{
 					value: 100,
 					color: "#FDB45C",
 					highlight: "#FFC870",
-					label: "Yellow"
+					label: "Comp3"
 				},
 				{
 					value: 40,
 					color: "#949FB1",
 					highlight: "#A8B3C5",
-					label: "Grey"
+					label: "Comp4"
 				},
 				{
 					value: 120,
 					color: "#4D5360",
 					highlight: "#616774",
-					label: "Dark Grey"
+					label: "Comp5"
 				},
 				{
 					value: 120,
 					color: "#4D7360",
 					highlight: "#616774",
-					label: "Orange"
+					label: "Comp6"
 				}
 
 			];
+
+var barChartData = {
+	labels : ["P1","P2","P3","P4","P5","P6"],
+	datasets : [
+		{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,0.8)",
+				highlightFill: "rgba(220,220,220,0.75)",
+				highlightStroke: "rgba(220,220,220,1)",
+				data : [1,2,3,4,5,6]
+		}
+]}
 			
 //var dataObject={};
 
@@ -123,16 +137,22 @@ window.onload = function(){
 	{
 				// Boolean - Whether to animate the chart
 				animation: false,
-				responsive : true
+				responsive : false
 	};
-	
+	console.log($(window).width());
 	var ctx = document.getElementById("chart-area_1").getContext("2d");
-	window.companyGrossProduct = new Chart(ctx).Doughnut(doughnutData, options);
+	ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
+	//ctx.canvas.height = $("#table_2_").width()-5;
+	window.companyGrossProduct = new Chart(ctx).Bar(barChartData, options);
 	
 	var ctx = document.getElementById("chart-area_2").getContext("2d");
-	window.capitalInvestment = new Chart(ctx).Doughnut(doughnutData, options);
-	
+		ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
+	window.capitalInvestment = new Chart(ctx).Bar(barChartData, options);
 	var ctx = document.getElementById("chart-area_3").getContext("2d");
+		ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
 	window.marketshare = new Chart(ctx).Doughnut(doughnutData, options);
 					
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
@@ -179,7 +199,8 @@ function testNetWorthPress()
 
 //this can be made more efficient but a lack of security
 function SubmitButtonPress()
-{
+{		
+
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
 	  dataOut.clientCapital = document.getElementById("capitalRangeInput").value;
@@ -225,6 +246,36 @@ function SubmitButtonPress()
 	   console.log(msg.result);
 	  });
 	  });
+var matchid=localStorage.getItem("matchId");
+var Match = Parse.Object.extend("Match");
+var matchquery = new Parse.Query("Match");
+matchquery.equalTo("objectId" , matchid);
+matchquery.find({
+
+success: function(match){
+var turns = match[0].get("turn");
+console.log("yop : "+turns);
+
+if (turns>= 5){
+
+	gameOver(matchid);
+}
+else if (turns < 5){
+	console.log("not yet");
+}
+
+
+},
+error: function(error){
+    console.log("not working");
+}
+
+});
+
+
+
+
+
 	  
 
 }
@@ -402,7 +453,7 @@ function resumeButtonPress(){
 
 function getDataFromServer()
 {
-	
+
 	var userObjectId = Parse.User.current().id;
 	
 	console.log(userObjectId);
@@ -418,7 +469,7 @@ function getDataFromServer()
 	localStorage.setItem("companyId",company.id);
 	 
 	var Match = Parse.Object.extend("Match");
-	
+
 	var queryMatch = new Parse.Query(Match);
 	
 	queryMatch.equalTo("companyIds" , company.id);
@@ -438,7 +489,7 @@ function getDataFromServer()
 	{
 		console.log(compMatch);
 		
-		
+
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
 		document.getElementById("capitalRangeInput").defaultValue = compMatch.get("capital");
@@ -466,6 +517,222 @@ function getDataFromServer()
 	})
 }
 
+function gameOver(cop){
+// game over function , saves the user reusults , and than deletes the match 
+
+// this can be replaced with the match query which is done at the bottom..
+
+
+
+var matchid=cop;
+
+var CompMatch = Parse.Object.extend("CompMatch");
+
+// query to get the place of the users 
+var query = new Parse.Query("CompMatch");
+query.equalTo("matchId" , matchid);
+query.descending("networth");
+
+ 
+query.find().then(function(rankings){
+  
+//get the winner
+
+var rank1 = rankings[0].get("networth");
+company1 = rankings[0].get("companyName");
+companyId1 = rankings[0].get("companyId");
+console.log(companyId1);
+var Company = Parse.Object.extend("Company");
+var query1 = new Parse.Query("Company");
+query1.equalTo("objectId" , rankings[0].get("companyId"));
+
+query1.find({
+
+    success: function(usercompany) {
+      //increase the users win loss record
+       
+    usercompany[0].increment("gamesTotal");
+    usercompany[0].increment("gamesWon");
+   console.log(usercompany[0]);
+   
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+
+//get the second place 
+var rank2 = rankings[1].get("networth");
+company2 = rankings[1].get("companyName");
+companyId2 = rankings[1].get("companyId");
+var query2 = new Parse.Query("Company");
+query2.equalTo("objectId" , rankings[1].get("companyId"));
+query2.find({
+
+    success: function(usercompany) {
+//increase the users win loss record
+    usercompany[0].increment("gamesTotal");
+    usercompany[0].increment("gamesWon");
+   usercompany[0].save();
+   
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+//get third place 
+var rank3 = rankings[2].get("networth");
+company3 = rankings[2].get("companyName");
+var query3 = new Parse.Query("Company");
+companyId3 = rankings[2].get("companyId");
+query3.equalTo("objectId" , rankings[2].get("companyId"));
+query3.find({
+
+    success: function(usercompany) {
+ //increase the users win loss record
+    usercompany[0].increment("gamesTotal");
+    
+    usercompany[0].increment("gameslost");
+   usercompany[0].save();
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+// get four place
+var rank4 = rankings[3].get("networth");
+company4 = rankings[3].get("companyName");
+var query4 = new Parse.Query("Company");
+companyId4 = rankings[3].get("companyId");
+query4.equalTo("objectId" , rankings[3].get("companyId"));
+query4.find({
+
+    success: function(usercompany) {
+ //increase the users win loss record
+    usercompany[0].increment("gamesTotal");
+    
+    usercompany[0].increment("gameslost");
+   usercompany[0].save();
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+//get fith place
+var rank5 = rankings[4].get("networth");
+company5 = rankings[4].get("companyName");
+companyId5 = rankings[4].get("companyId");
+var query5 = new Parse.Query("Company");
+query5.equalTo("objectId" , rankings[4].get("companyId"));
+query5.find({
+
+    success: function(usercompany) {
+ //increase the users win loss record
+    usercompany[0].increment("gamesTotal");
+   
+    usercompany[0].increment("gamesLost");
+   usercompany[0].save();
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+//get sixth place 
+var rank6 = rankings[5].get("networth");
+company6 = rankings[5].get("companyName");
+companyId6 = rankings[5].get("companyId");
+var query6 = new Parse.Query("Company");
+query6.equalTo("objectId" , rankings[5].get("companyId"));
+query6.find({
+ 
+    success: function(usercompany) {
+//increase the users win loss record
+    usercompany[0].increment("gamesTotal");
+    
+    usercompany[0].increment("gameslost");
+   usercompany[0].save();
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+
+
+// contains the company names
+
+var company1;
+var company2;
+var company3;
+var company4;
+var company5;
+var company6;
+// get winnner var for console log
+var winner1 = company1;
+var winner2 = company2;
+var winner3 = company3;
+var winner4 = company4;
+var winner5 = company5;
+var winner6 = company6;
+
+
+
+
+
+alert("The winner is " + winner1 + "Second place : "+ winner2 + " third winner is : " + winner3 + " fourth place is : " + winner4 + "Fith place is : " + winner5 + "last place is :" + winner6);
+var retVal = confirm("Do you want to play again?");
+   if( retVal == true ){
+     window.location = " GuestGameSingleOrMultiplayer.html"; 
+	 
+   }else{
+
+      window.location= "NewUserHome.html";
+	 
+	}
+
+//alert("The winner is " + winner1 + " : second place"+ winner2 + " third winner is : " + winner3 + " : fourth place is " + winner4 + "fourth place is " + winner5 + "last place is :" + winner6);
+var Match = Parse.Object.extend("Match");
+var matchquery = new Parse.Query("Match");
+matchquery.equalTo("objectId" , matchid);
+matchquery.find({
+
+success: function(match){
+var matchname = match.id;
+match[0].destroy({
+  success: function(match) {
+    // The object was deleted from the Parse Cloud.
+    console.log("match : " + matchname + " is deleted" );
+  },
+  error: function(match, error) {
+    // The delete failed.
+    // error is a Parse.Error with an error code and message.
+  }
+});
+
+},
+error: function(error){
+    console.log("not working");
+}
+
+});
+
+return null
+}).then(function(result){
+
+
+})
+
+};
 function testNetworth(){
 	console.log("Works")
 //get the keys to do the search
@@ -481,7 +748,7 @@ query.ascending("rank");
 //query.include("objectId");
 
 query.find().then(function(rankings){
- 
+ 	console.log(companyGrossProduct);
 for(i=0;i < rankings.length;i++)
 {
 console.log("iteration" + i);
@@ -491,12 +758,15 @@ marketShareValue = Math.round(rankings[i].get("marketShare").totalMS * 1000)/10;
 company = rankings[i].get("companyName");
 if (networthValue < 0){networthValue = 0;}else{}
 if (capitalInvestmentValue == 0 ){capitalInvestmentValue = 1;}else{}
-companyGrossProduct.segments[i].value = networthValue;
-companyGrossProduct.segments[i].label = company;
-capitalInvestment.segments[i].value = capitalInvestmentValue;
-capitalInvestment.segments[i].label = company;
+companyGrossProduct.datasets[0].bars[i].value = networthValue;
+companyGrossProduct.datasets[0].bars[i].label = company;
+//companyGrossProduct.datasets[0].bars[i].datasetLabel = company;
+capitalInvestment.datasets[0].bars[i].value = capitalInvestmentValue;
+capitalInvestment.datasets[0].bars[i].label = company;
 marketshare.segments[i].value = marketShareValue;
 marketshare.segments[i].label = company;
+
+//companyGrossProduct.datasets[0].label = ["Comffp1","Coffmp2","Cossmp3","Comaap4","Comp5","Compdd6"];
 }
 companyGrossProduct.update();
 capitalInvestment.update();
@@ -513,5 +783,4 @@ document.getElementById("company_sixth").innerHTML = rankings[5].get("companyNam
 return null;
 }).then(function(result){
 })
-
-  };
+}

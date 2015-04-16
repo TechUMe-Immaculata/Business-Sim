@@ -11,39 +11,47 @@
 /* Unique Profile Code */ 
 
 #userProfilePicture{
-  width: 275px;
-  height: 200px;
-  margin-right: 70px;
-  margin-top: 50px;
+  position: absolute;
+  left: 17.5%;
+  top: 10%;
+  width: 65%;
+  height: 30%;
   border-width: 5px;
   border-style: solid;
   border color: black;
 }
 
-#matchHistory{
-  margin-top: 10px;
-  
-}
-
 #profileInfoName {
+top: 40%;
+left: 10%;
+position: absolute; 
 font-size: 25px; 
 font-family:serif;
 font-weight: bold;
 }
 
 #profileInfoCompanyName {
+top: 50%;
+left: 10%;
+position: absolute; 
 font-size: 25px; 
 font-family:serif;
 font-weight: bold;
 }
 
-#profileInfoGamesWon { 
+#profileInfoGamesWon {
+top: 60%;
+left: 10%;
+position: absolute; 
 font-size: 25px; 
 font-family:serif;
 font-weight: bold;
 }
 
 #profileInfoGamesLost {
+top: 70%;
+left: 10%;
+position: absolute; 
 font-size: 25px; 
 font-family:serif;
 font-weight: bold;
@@ -168,7 +176,7 @@ font-weight: bold;
           top: 0px;
           box-sizing: border-box;
           -moz-box-sizing: border-box;
-          
+          position: absolute;
       }
       .main-content .content{
           box-sizing: border-box;

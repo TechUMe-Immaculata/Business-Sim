@@ -1,26 +1,21 @@
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 document.getElementById("guestPlayButton").addEventListener("click", guestPlayPress);
+/* THIS CODE IS LOCKED UNTIL AFTER APP JAM
 document.getElementById("serverLoginButton").addEventListener("click", serverLoginPress);
 document.getElementById("registerButton").addEventListener("click", registerPress);
 document.getElementById("facebookLoginButton").addEventListener("click", facebookLoginPress);
+*/
 //window.location.replace('...');
 function guestPlayPress()
 {
-
-
      var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
     for( var i=0; i < 6; i++ )
         text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-   
-
   var username = text+"_guest";
 
-  
-    
-    
   var user = new Parse.User();
   user.set("name" , username);
   user.set("username", username);
@@ -31,7 +26,6 @@ function guestPlayPress()
 
 	//need to make a company later
 	
-
   success: function(user) {
 var userCompanyName = text+"_guestCompany";
     var Company = Parse.Object.extend("Company");
@@ -84,5 +78,5 @@ function registerPress()
 
 function facebookLoginPress()
 {
-  window.location="Test.html";
+  window.location="Register.html";
 }

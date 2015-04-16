@@ -1,6 +1,8 @@
 document.getElementById("backButton").addEventListener("click", backButton);
 document.getElementById("singlePlayerButton").addEventListener("click", CreateMatch);
-document.getElementById("multiPlayerButton").addEventListener("click", multiPlayerButton);
+
+//Un comment for multiplayer play!
+//document.getElementById("multiPlayerButton").addEventListener("click", multiPlayerButton);
 
 function backButton()
 {
@@ -9,7 +11,8 @@ function backButton()
 
 function multiPlayerButton()
 {
-	window.location.replace('Home.html');
+	//no valid value.
+	//window.location.replace('');
 }
 function CreateMatch(){
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
