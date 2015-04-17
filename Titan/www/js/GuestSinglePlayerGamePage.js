@@ -1,4 +1,4 @@
-var CurrentPage = 4;
+var CurrentPage = 1;
 var matchId = "",companyId= "",playerId = "";
 var maxProduction = 0,creditLine = 0,avaibleCash= 0,unitCost = 0;
 var news = "";
@@ -132,6 +132,9 @@ var barChartData = {
 			
 //var dataObject={};
 
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchend', handleTouchMove, false);
+
 window.onload = function(){
 
 	var options = 
@@ -159,12 +162,8 @@ window.onload = function(){
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;	
 				
-	console.log('a');
 	getDataFromServer();
-	console.log('b');
 	ChangeThePage();
-	console.log('c');
-	console.log('d');
 	
 	document.getElementById('PauseScreen').style.display='none';
 
@@ -174,7 +173,7 @@ window.onload = function(){
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
-	document.getElementById("testNetWorth").addEventListener("click", testNetWorthPress);
+
 
 			};
 			
@@ -194,11 +193,6 @@ window.onload = function(){
         //target: $('.Price') // my target
     //}
 //});
-
-function testNetWorthPress()
-{
-	testNetworth()
-}
 
 //this can be made more efficient but a lack of security
 function SubmitButtonPress()
@@ -793,27 +787,41 @@ return null;
 })
 }
 
-$(function(){
-  // Bind the swipeHandler callback function to the swipe event on div.box
-	$( "body" ).on( "swipe", swipeHandler );
-	$.event.special.swipe.scrollSupressionThreshold = 30;
-	$.event.special.swipe.horizontalDistanceThreshold =100;
+var xDown = null;                                                        
+var yDown = null;                                                        
+
+function handleTouchStart(evt) {                                         
+    xDown = evt.touches[0].clientX;                                      
+    yDown = evt.touches[0].clientY;                                      
+};                                                
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
 	
-  // Callback function references the event target and adds the 'swipe' class to it
-  function swipeHandler( event ){
-  var x1 = event.swipestart.coords[0];
-  var x2 = event.swipestop.coords[0];
-  var dif = x2 - x1;
-  if (dif > 0)
-  {
-  PreviousButtonPress()
-  }
-  else if (dif < 0)
-  {
-  NextButtonPress();
-  }
-  }
-});
+    var xUp = evt.changedTouches[0].clientX;                                      
+    var yUp = evt.changedTouches[0].clientY; 
+    //var yUp = evt.touches[0].clientY;
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) 
+	{/*most significant*/
+        if ( xDiff > 100 ) {
+            /* left swipe */ 
+			console.log("left");
+			NextButtonPress()
+        } else if(xDiff < 100) {
+		console.log("right");
+            /* right swipe */
+		PreviousButtonPress();
+        }                       
+    } 
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
 function newsfeed(players){
 
 var player1 = players[0];
