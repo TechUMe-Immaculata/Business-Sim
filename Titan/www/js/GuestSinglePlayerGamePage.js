@@ -1,9 +1,7 @@
 var CurrentPage = 4;
+var matchId = "",companyId= "",playerId = "";
+var maxProduction = 0,creditLine = 0,avaibleCash= 0,unitCost = 0;
 
-var maxProduction = 0,
-creditLine = 0,
-avaibleCash= 0,
-unitCost = 0;
 $('.btn-number').click(function(e){
     e.preventDefault();
     
@@ -141,29 +139,31 @@ window.onload = function(){
 	};
 	console.log($(window).width());
 	var ctx = document.getElementById("chart-area_1").getContext("2d");
-	ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
-	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
+	ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
 	//ctx.canvas.height = $("#table_2_").width()-5;
 	window.companyGrossProduct = new Chart(ctx).Bar(barChartData, options);
 	
 	var ctx = document.getElementById("chart-area_2").getContext("2d");
-		ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
-	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
+		ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
 	window.capitalInvestment = new Chart(ctx).Bar(barChartData, options);
 	var ctx = document.getElementById("chart-area_3").getContext("2d");
-		ctx.canvas.width = $(window).width()-($(window).width())*(6/100);
-	ctx.canvas.height = $(window).width()-($(window).width())*(6/100);
+		ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
 	window.marketshare = new Chart(ctx).Doughnut(doughnutData, options);
 					
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;	
 				
+	console.log('a');
 	getDataFromServer();
-	testNetworth();
-	 
-	document.getElementById('PauseScreen').style.display='none';
+	console.log('b');
 	ChangeThePage();
-	console.log(CurrentPage);
+	console.log('c');
+	console.log('d');
+	
+	document.getElementById('PauseScreen').style.display='none';
 
 	document.getElementById("NextButton").addEventListener("click", NextButtonPress);
 	document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
@@ -210,8 +210,10 @@ function SubmitButtonPress()
 	  dataOut.clientPrice = document.getElementById("priceRangeInput").value;
 	  dataOut.clientCharity = document.getElementById("charityRangeInput").value;
 	  
-	  dataOut.companyId = localStorage.getItem("companyId");
-	  dataOut.matchId = localStorage.getItem("matchId");
+	  dataOut.companyId = companyId;//localStorage.getItem("companyId");
+	  dataOut.matchId = matchId;//localStorage.getItem("matchId");
+	  console.log("matchId submit");
+	  console.log(matchId);
 
 		console.log(dataOut);
 	  $.ajax({
@@ -242,11 +244,11 @@ function SubmitButtonPress()
 	  // all code here gets run when the POST was successful
 	  // you can do things like update the console, display an alert, etc...
 	   getDataFromServer();
-	   testNetworth();
-	   console.log(msg.result);
+	   CurrentPage = 1;
+	   ChangeThePage();
 	  });
 	  });
-var matchid=localStorage.getItem("matchId");
+var matchid=matchId;//localStorage.getItem("matchId");
 var Match = Parse.Object.extend("Match");
 var matchquery = new Parse.Query("Match");
 matchquery.equalTo("objectId" , matchid);
@@ -456,7 +458,7 @@ function getDataFromServer()
 
 	var userObjectId = Parse.User.current().id;
 	
-	console.log(userObjectId);
+	console.log("_______"+userObjectId);
   
 	var Company = Parse.Object.extend("Company");
 	var queryCompany = new Parse.Query(Company);
@@ -466,7 +468,7 @@ function getDataFromServer()
 	queryCompany.first().then(function(company){
 	
 	console.log(company.id);
-	localStorage.setItem("companyId",company.id);
+	companyId = company.id;//localStorage.setItem("companyId",company.id);
 	 
 	var Match = Parse.Object.extend("Match");
 
@@ -477,13 +479,16 @@ function getDataFromServer()
 	return queryMatch.first();
 	}).then(function(match)
 	{
-	localStorage.setItem("matchId",match.id);
+	matchId = match.id;//localStorage.setItem("matchId",match.id);
+	
+	console.log("get data from sever");
+	console.log(matchId);
 	
 	var CompMatch = Parse.Object.extend("CompMatch");
 	var queryCompMatch = new Parse.Query(CompMatch);
 	
-	queryCompMatch.equalTo("companyId",localStorage.companyId);
-	queryCompMatch.equalTo("matchId",localStorage.matchId);
+	queryCompMatch.equalTo("companyId",companyId);
+	queryCompMatch.equalTo("matchId",matchId);
 	return queryCompMatch.first();
 	}).then(function(compMatch)
 	{
@@ -503,9 +508,6 @@ function getDataFromServer()
 		creditLine = compMatch.get("creditLine");
 		cashAvaible = compMatch.get("cashAvailable");
 		unitCost = compMatch.get("unitCost");
-		console.log(maxProduction);
-		console.log(creditLine);
-		console.log(cashAvaible);
 		
 		//set max on input boxes
 		document.getElementById("capitalRangeInput").max = 10000;
@@ -514,6 +516,8 @@ function getDataFromServer()
 		document.getElementById("marketRangeInput").max = 10000;
 		document.getElementById("priceRangeInput").max = 100;
 		document.getElementById("charityRangeInput").max = 10000;
+		
+		testNetworth();
 	})
 }
 
@@ -737,7 +741,8 @@ function testNetworth(){
 	console.log("Works")
 //get the keys to do the search
 
-var matchid=localStorage.getItem("matchId");
+var matchid=matchId;//localStorage.getItem("matchId");
+console.log("test networth");
 console.log(matchid);
 console.log()
 var CompMatch = Parse.Object.extend("CompMatch");
