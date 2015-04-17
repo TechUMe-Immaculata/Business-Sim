@@ -19,29 +19,13 @@
 
 #guestPlayButton {
   position: absolute;
-  background: orange;
  
-  border-radius: 0px;
-  font-family: Georgia;
-  color: white; 
-  font-size: 23px;
-
-  border: solid #000000 2px;
-  text-decoration: none;
   width: 90%;
   height: 10%;
   top:44%;
   left: 5%;
 }
-#guestPlayButton:hover {
-  background: #f5084b;
-  background-image: -webkit-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -moz-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -ms-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -o-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: linear-gradient(to bottom, #f5084b, #fa9e00);
-  text-decoration: none;
-}
+
   #serverLoginButton {
   position: absolute;
   background: orange;

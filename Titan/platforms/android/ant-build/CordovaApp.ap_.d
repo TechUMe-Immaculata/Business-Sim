@@ -29,6 +29,7 @@ C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\ant-bu
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\ant-build\res\drawable-xhdpi\icon.png \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\_where-is-www.txt \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\audio \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\company.html \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\cordova.js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\cordova_plugins.js \
@@ -43,7 +44,6 @@ C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\index.html \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\localContent \
-C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\music \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\NewUserHome.html \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\NotificationsPage.html \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\plugins \
@@ -54,6 +54,7 @@ C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\ServerLoginPage.html \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\SettingsPage.html \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Test.html \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\audio\March of Motherland.mp3 \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\bootstrap.css \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\Company.css \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\FriendsPage.css \
@@ -110,7 +111,6 @@ C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\js\SinglePlayerInGame\Home.js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\js\SinglePlayerInGame\Newspaper.js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\localContent\profilePicture.jpg \
-C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\music\March of Motherland.mp3 \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\plugins\org.apache.cordova.dialogs \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\plugins\org.apache.cordova.vibration \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www \

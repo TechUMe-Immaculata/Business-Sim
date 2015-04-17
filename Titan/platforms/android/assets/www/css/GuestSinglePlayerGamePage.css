@@ -4,16 +4,16 @@ background:orange;
 
 #PreviousButton{
 	font-size: 40px;
-	width: 140px;
-	height: 60px;
-	border-width: 5px;
-	margin-bottom: 5px;
+
 }
 #NextButton{
 	font-size: 40px;
-	width: 140px;
-	height: 60px;
-	border-width: 5px;
+
+	
+}
+.center{
+width: 150px;
+  
 }
 #pauseGear{
 	width: 55px;
@@ -26,10 +26,9 @@ background:orange;
 	margin-top: 20px;
 	margin-left: 85px;
 	border-radius: 20px;
-	border-color: black;
+
 	border-width: 5px;
-	background-color: #3D3D29; /* DARK GREY */
-	color: #FFAC30; /* Two shades lighter then the orange */
+
 }
 #mainMenuButton{
 	width: 200px;
@@ -38,10 +37,8 @@ background:orange;
 	margin-top: 20px;
 	margin-left: 85px;
 	border-radius: 20px;
-	border-color: black;
 	border-width: 5px;
-	background-color: #3D3D29; /* DARK GREY */
-	color: #FFAC30;
+
 }
 #PauseScreen{
 	width: 360px;
