@@ -178,6 +178,11 @@ function SubmitButtonPress()
 	  });
 	  
 
+
+
+
+
+
 }
 
 //When the next button is pressed, run this code.
@@ -481,19 +486,24 @@ var player6= players[5];
 
 news1(player1);
 news2(player2);
-
+news = "";
 
 function news1(cat){
 
 
 var feed1 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
-var feed2 = "The new leader in the indrsutry is" + cat.get("companyName") + "." + "They made $" + cat.get("revenue")+ "revenue. The market seems to love thier price point of $" + cat.get("price");
+var feed2 = "The new leader in the indrustry is" + cat.get("companyName") + "." + "They made $" + cat.get("revenue")+ "revenue. The market seems to love thier price point of $" + cat.get("price");
 var feed3 = "Wow" + cat.get("companyName") +" has just taken first play in the indrustry with a revenue of $" + cat.get("stats").revenue + "";
-var feed4 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
-var feed5 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
-var feed6 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
-var feeds
-news = news + feed1;
+var feed4 = "Amazingly " + cat.get("companyName") + " is the leader with a record $" + cat.get("networth")+ " in newtworth";
+var feed5 = cat.get("companyName") + " is now in first place. " + "Their smart investments have earned them top stop with  $" + cat.get("stats").profit + " in profit";
+var feed6 = " Now this is a surprise  " + cat.get("companyName") + " has the top place in the market." + " Their donations of $" + cat.get("charity") + " has really earned them love from thier community";
+var feeds = [
+feed1,feed2 , feed3 , feed4, feed5 , feed6
+];
+
+var todaysfeed =feeds[Math.floor(Math.random() * feeds.length)];
+
+news = news + todaysfeed;
 document.getElementById("newspaper").innerHTML = news;
 }
 
