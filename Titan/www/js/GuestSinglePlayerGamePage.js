@@ -1,6 +1,9 @@
 var CurrentPage = 4;
 var matchId = "",companyId= "",playerId = "";
 var maxProduction = 0,creditLine = 0,avaibleCash= 0,unitCost = 0;
+var news = "";
+// add the indrustry 
+var gametype;
 
 $('.btn-number').click(function(e){
     e.preventDefault();
@@ -258,11 +261,11 @@ success: function(match){
 var turns = match[0].get("turn");
 console.log("yop : "+turns);
 
-if (turns>= 5){
+if (turns>= 10){
 
 	gameOver(matchid);
 }
-else if (turns < 5){
+else if (turns < 10){
 	console.log("not yet");
 }
 
@@ -822,6 +825,7 @@ var player6= players[5];
 
 news1(player1);
 news2(player2);
+news3(player6);
 news = "";
 
 function news1(cat){
@@ -848,9 +852,9 @@ function news2(cat){
 var feed1 = " Runner up is " + cat.get("companyName") + "." + " They had a modest $" + cat.get("stats").profit + " profit. ";
 var feed2 = " On the rise is " + cat.get("companyName") + "." + " They are doing well with $" + cat.get("stats").profit + " in profit. ";
 var feed3 = " Don't sleep on " + cat.get("companyName") + "." + " They are the rise with a networth of $" + cat.get("networth");
-var feed4 = " Runner up is " + cat.get("companyName") + "." + " They had a modest $" + cat.get("stats").profit + " profit. ";
+var feed4 = " Looks like" + cat.get("companyName") + " is set make a big splash." + " There popularity with teens has earned" + cat.get("stats").profit + " profit. ";
 var feed5 = " Runner up is " + cat.get("companyName") + "." + " They had a modest $" + cat.get("stats").profit + " profit. ";
-var feed2 = " Runner up is " + cat.get("companyName") + "." + " They had a modest $" + cat.get("stats").profit + " profit. ";
+var feed6 = " Second in marketshare is " + cat.get("companyName") + "." + " They are close to being in first place. Thier impressive revenue of $" + cat.get("revenue") + " has many anaylsts excited.";
 var feeds = [
 feed1,feed2 , feed3 , feed4, feed5 , feed6
 ];
@@ -862,6 +866,25 @@ news = news + todaysfeed;
 document.getElementById("newspaper").innerHTML = news;
 }
 
+
+function news3(cat){
+
+var feed1 =  cat.get("companyName") + "is terrible." + "They don't donation enough" + cat.get("charity") + " Some call them greedy ";
+var feed2 = " This is unexpected" + cat.get("companyName") + " is last in marketshare" + " Their profit of $" + cat.get("stats").profit + " is awful ";
+var feed3 = " Don't sleep on " + cat.get("companyName") + "." + " They are on the rise with a networth of $" + cat.get("networth");
+var feed4 = " "+ cat.get("companyName") + " clearly needs more business lessions" + " There popularity with adults has puplmited";
+var feed5 = " Do not invest in " + cat.get("companyName") + "."+ "They are last in marketshare" + "If they don't do something drastic soon they will face bankruptcy";
+var feed6 = " Poor investments has lead " + cat.get("companyName") + " to last place in marketshare." + " The community thinks that they are too greedy with profits and  there total dotations of " + cat.get("charity")+ "not enough";
+var feeds = [
+feed1,feed2 , feed3 , feed4, feed5 , feed6
+];
+
+var todaysfeed =feeds[Math.floor(Math.random() * feeds.length)];
+
+
+news = news + todaysfeed;
+document.getElementById("newspaper").innerHTML = news;
+}
 
 }
 
