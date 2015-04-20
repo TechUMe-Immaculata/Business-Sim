@@ -477,7 +477,9 @@ function getDataFromServer()
 	}).then(function(match)
 	{
 	matchId = match.id;//localStorage.setItem("matchId",match.id);
-	
+	//pageOneQuater+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	console.log(match.get("turn"));
+	document.getElementById("pageOneQuater").innerHTML = "Quarter " + match.get("turn");
 	console.log("get data from sever");
 	console.log(matchId);
 	
