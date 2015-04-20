@@ -808,11 +808,11 @@ function handleTouchMove(evt) {
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) 
 	{/*most significant*/
-        if ( xDiff > 100 ) {
+        if ( xDiff > 200 ) {
             /* left swipe */ 
 			console.log("left");
 			NextButtonPress()
-        } else if(xDiff < 100) {
+        } else if(xDiff < 200) {
 		console.log("right");
             /* right swipe */
 		PreviousButtonPress();
