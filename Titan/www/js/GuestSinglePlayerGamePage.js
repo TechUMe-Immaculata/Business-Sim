@@ -167,8 +167,8 @@ window.onload = function(){
 	
 	document.getElementById('PauseScreen').style.display='none';
 
-	document.getElementById("NextButton").addEventListener("click", NextButtonPress);
-	document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
+	//document.getElementById("NextButton").addEventListener("click", NextButtonPress);
+	//document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
@@ -435,16 +435,16 @@ else {
 
 function pauseGearPress(){
 	document.getElementById('PauseScreen').style.display="block";
-	document.getElementById('NextButton').style.display='none';
-	document.getElementById('PreviousButton').style.display='none';
+	//document.getElementById('NextButton').style.display='none';
+	//document.getElementById('PreviousButton').style.display='none';
 	document.getElementById('pauseGear').style.display='none';
 }
 
 
 function resumeButtonPress(){
 	console.log("Works");
-	document.getElementById('PreviousButton').style.display='';
-	document.getElementById('NextButton').style.display='';
+	//document.getElementById('PreviousButton').style.display='';
+	//document.getElementById('NextButton').style.display='';
 	document.getElementById('pauseGear').style.display='';
 	document.getElementById('PauseScreen').style.display="none";
 
