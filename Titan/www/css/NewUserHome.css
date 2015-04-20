@@ -8,7 +8,6 @@
       }
 
 #screenDescription{
-  margin-left: 150px;
   color: white;
   font-size: 22.5px;
   font-weight: bold;
@@ -17,12 +16,12 @@
 
 #guestPlayButton {
 
-
-  width: 350px;
+  font-size: 23px;
+  width: 310px;
   margin-top: 375px;
-  margin-left: 30px;
+ /* margin-left: 30px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 20px;*/
 }
 
  
@@ -46,26 +45,14 @@
   font-size: 23px;
   border: solid #000000 2px;
   text-decoration: none;
-  width: 350px;
+  width: 310px;
   margin-top: 50px;
-  margin-left: 30px;
+/*margin-left: 30px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 20px;*/
 }
 
-/* UNCOMMENT THIS TO RE-ADD HOVER'S IN FULL VERSION
 
-#serverLoginButton:hover {
-  background: #3ce6fc;
-  background-image: -webkit-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: -moz-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: -ms-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: -o-linear-gradient(top, #3ce6fc, #bd34d9);
-  background-image: linear-gradient(to bottom, #3ce6fc, #bd34d9);
-  text-decoration: none;
-}
-
-*/
 
 #registerButton {
    /* Locked Colour. */
@@ -85,26 +72,14 @@
   font-size: 23px;
   border: solid #000000 2px;
   text-decoration: none;
-  width: 350px;
+  width: 310px;
   margin-top: 50px;
-  margin-left: 30px;
+/*margin-left: 30px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 20px;*/
 }
 
-/*  UNCOMMENT THIS TO RE-ADD HOVER'S IN FULL VERSION
 
-#registerButton:hover {
-  background: #423cfa;
-  background-image: -webkit-linear-gradient(top, #423cfa, #d93434);
-  background-image: -moz-linear-gradient(top, #423cfa, #d93434);
-  background-image: -ms-linear-gradient(top, #423cfa, #d93434);
-  background-image: -o-linear-gradient(top, #423cfa, #d93434);
-  background-image: linear-gradient(to bottom, #423cfa, #d93434);
-  text-decoration: none;
-}
-
-*/
 
 #facebookLoginButton {
   background: orange;
@@ -123,52 +98,26 @@
   padding-bottom: 20px;
 }
 
-#facebookLoginButton:hover {
-  background: #423cfa;
-  background-image: -webkit-linear-gradient(top, #423cfa, #d93434);
-  background-image: -moz-linear-gradient(top, #423cfa, #d93434);
-  background-image: -ms-linear-gradient(top, #423cfa, #d93434);
-  background-image: -o-linear-gradient(top, #423cfa, #d93434);
-  background-image: linear-gradient(to bottom, #423cfa, #d93434);
-  text-decoration: none;
-}
+
       /* Space behind the buttons */
       .container {
-          background-color:#E6E6E6; 
+           
           position: relative;
           height: 100%;
           width: 100%;
           left: 0;
-          -webkit-transition:  left 0.4s ease-in-out;
-          -moz-transition:  left 0.4s ease-in-out;
-          -ms-transition:  left 0.4s ease-in-out;
-          -o-transition:  left 0.4s ease-in-out;
-          transition:  left 0.4s ease-in-out;
+
       }
-      .container.open-sidebar {
-          left: 200px;
-      }
+
       
       /* The bar you can swipe */
-      .swipe-area {
+      #banner{
           position: absolute;
           width: 100%;
           height: 8%;
           left: 0;
           top: 0;
-          background: orange;
+          background: #dd4814;
           z-index: 0;
       }
       /*The Sidebar*/
-      #sidebar {
-          background: #585858;
-          position: absolute;
-          width: 200px;
-          height: 100%;
-          left: -200px;
-          border-width: 5px;
-          border-style: solid;
-          border color: black;
-          box-sizing: border-box;
-          -moz-box-sizing: border-box;
-      }
