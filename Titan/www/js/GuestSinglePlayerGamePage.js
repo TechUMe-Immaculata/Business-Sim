@@ -842,7 +842,7 @@ function news1(cat){
 
 
 var feed1 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
-var feed2 = "The new leader in the indrustry is" + cat.get("companyName") + "." + "They made $" + cat.get("revenue")+ "revenue. The market seems to love thier price point of $" + cat.get("price");
+var feed2 = "The new leader in the industry is" + cat.get("companyName") + "." + "They made $" + cat.get("stats").revenue+ "revenue. The market seems to love thier price point of $" + cat.get("price");
 var feed3 = "Wow" + cat.get("companyName") +" has just taken first play in the indrustry with a revenue of $" + cat.get("stats").revenue + "";
 var feed4 = "Amazingly " + cat.get("companyName") + " is the leader with a record $" + cat.get("networth")+ " in newtworth";
 var feed5 = cat.get("companyName") + " is now in first place. " + "Their smart investments have earned them top stop with  $" + cat.get("stats").profit + " in profit";
