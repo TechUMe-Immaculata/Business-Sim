@@ -1,6 +1,9 @@
-var CurrentPage = 4;
+var CurrentPage = 1;
 var matchId = "",companyId= "",playerId = "";
 var maxProduction = 0,creditLine = 0,avaibleCash= 0,unitCost = 0;
+var news = "";
+// add the indrustry 
+var gametype;
 
 $('.btn-number').click(function(e){
     e.preventDefault();
@@ -116,7 +119,7 @@ var doughnutData = [
 			];
 
 var barChartData = {
-	labels : ["first","second","third","forth","fifth","sixth"],
+	labels : ["","","","","",""],
 	datasets : [
 		{
 				fillColor : "rgba(220,220,220,0.5)",
@@ -128,6 +131,9 @@ var barChartData = {
 ]}
 			
 //var dataObject={};
+
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchend', handleTouchMove, false);
 
 window.onload = function(){
 
@@ -156,12 +162,8 @@ window.onload = function(){
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;	
 				
-	console.log('a');
 	getDataFromServer();
-	console.log('b');
 	ChangeThePage();
-	console.log('c');
-	console.log('d');
 	
 	document.getElementById('PauseScreen').style.display='none';
 
@@ -171,7 +173,7 @@ window.onload = function(){
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
-	document.getElementById("testNetWorth").addEventListener("click", testNetWorthPress);
+
 
 			};
 			
@@ -191,11 +193,6 @@ window.onload = function(){
         //target: $('.Price') // my target
     //}
 //});
-
-function testNetWorthPress()
-{
-	testNetworth()
-}
 
 //this can be made more efficient but a lack of security
 function SubmitButtonPress()
@@ -258,11 +255,11 @@ success: function(match){
 var turns = match[0].get("turn");
 console.log("yop : "+turns);
 
-if (turns>= 5){
+if (turns>= 10){
 
 	gameOver(matchid);
 }
-else if (turns < 5){
+else if (turns < 10){
 	console.log("not yet");
 }
 
@@ -409,20 +406,20 @@ else if (CurrentPage == 3) {
 	}
 	
 	//table one data displaying changes made based off their decisions before submit
-	document.getElementById("table_1_input_1").innerHTML = cash;
-    document.getElementById("table_1_input_2").innerHTML = credit; 
-	document.getElementById("table_1_input_3").innerHTML = resources;
-	document.getElementById("table_1_input_4").innerHTML = productionCost;
-	document.getElementById("table_1_input_5").innerHTML = data.marketing;
-	document.getElementById("table_1_input_6").innerHTML = data.capital;
-	document.getElementById("table_1_input_7").innerHTML = data.researchDevelopment;
-	document.getElementById("table_1_input_8").innerHTML = expense;
-	document.getElementById("table_1_input_9").innerHTML = afterCash;
-	document.getElementById("table_1_input_10").innerHTML = afterCredit;
-	document.getElementById("table_1_input_11").innerHTML = (afterCredit + afterCash);
-	document.getElementById("table_1_input_12").innerHTML = costPerUnit;
-	document.getElementById("table_1_input_13").innerHTML = utilization + "%";
-	document.getElementById("table_1_input_14").innerHTML = data.charity;
+	document.getElementById("table_1_input_1").innerHTML = cash + " $";
+    document.getElementById("table_1_input_2").innerHTML = credit+ " $"; 
+	document.getElementById("table_1_input_3").innerHTML = resources+ " $";
+	document.getElementById("table_1_input_4").innerHTML = productionCost+ " $";
+	document.getElementById("table_1_input_5").innerHTML = data.marketing+ " $";
+	document.getElementById("table_1_input_6").innerHTML = data.capital+ " $";
+	document.getElementById("table_1_input_7").innerHTML = data.researchDevelopment+ " $";
+	document.getElementById("table_1_input_8").innerHTML = expense+ " $";
+	document.getElementById("table_1_input_9").innerHTML = afterCash+ " $";
+	document.getElementById("table_1_input_10").innerHTML = afterCredit+ " $";
+	document.getElementById("table_1_input_11").innerHTML = (afterCredit + afterCash)+ " $";
+	document.getElementById("table_1_input_12").innerHTML = costPerUnit+ " $";
+	document.getElementById("table_1_input_13").innerHTML = utilization + " %";
+	document.getElementById("table_1_input_14").innerHTML = data.charity+ " $";
 }
 else if (CurrentPage == 4) {
 	document.getElementById('GamePageFour').style.display='block';
@@ -783,31 +780,120 @@ document.getElementById("company_third").innerHTML = rankings[2].get("companyNam
 document.getElementById("company_fourth").innerHTML = rankings[3].get("companyName");
 document.getElementById("company_fifth").innerHTML = rankings[4].get("companyName");
 document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
-
+newsfeed(rankings);
 
 return null;
 }).then(function(result){
 })
 }
 
-$(function(){
-  // Bind the swipeHandler callback function to the swipe event on div.box
-	$( "body" ).on( "swipe", swipeHandler );
-	$.event.special.swipe.scrollSupressionThreshold = 30;
-	$.event.special.swipe.horizontalDistanceThreshold =100;
+var xDown = null;                                                        
+var yDown = null;                                                        
+
+function handleTouchStart(evt) {                                         
+    xDown = evt.touches[0].clientX;                                      
+    yDown = evt.touches[0].clientY;                                      
+};                                                
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
 	
-  // Callback function references the event target and adds the 'swipe' class to it
-  function swipeHandler( event ){
-  var x1 = event.swipestart.coords[0];
-  var x2 = event.swipestop.coords[0];
-  var dif = x2 - x1;
-  if (dif > 0)
-  {
-  PreviousButtonPress()
-  }
-  else if (dif < 0)
-  {
-  NextButtonPress();
-  }
-  }
-});
+    var xUp = evt.changedTouches[0].clientX;                                      
+    var yUp = evt.changedTouches[0].clientY; 
+    //var yUp = evt.touches[0].clientY;
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) 
+	{/*most significant*/
+        if ( xDiff > 200 ) {
+            /* left swipe */ 
+			console.log("left");
+			NextButtonPress()
+        } else if(xDiff < 200) {
+		console.log("right");
+            /* right swipe */
+		PreviousButtonPress();
+        }                       
+    } 
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
+function newsfeed(players){
+
+var player1 = players[0];
+var player2= players[1] ;
+var player3= players[2];
+var player4= players[3];
+var player5= players[4];
+var player6= players[5];
+
+news1(player1);
+news2(player2);
+news3(player6);
+news = "";
+
+function news1(cat){
+
+
+var feed1 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
+var feed2 = "The new leader in the indrustry is" + cat.get("companyName") + "." + "They made $" + cat.get("revenue")+ "revenue. The market seems to love thier price point of $" + cat.get("price");
+var feed3 = "Wow" + cat.get("companyName") +" has just taken first play in the indrustry with a revenue of $" + cat.get("stats").revenue + "";
+var feed4 = "Amazingly " + cat.get("companyName") + " is the leader with a record $" + cat.get("networth")+ " in newtworth";
+var feed5 = cat.get("companyName") + " is now in first place. " + "Their smart investments have earned them top stop with  $" + cat.get("stats").profit + " in profit";
+var feed6 = " Now this is a surprise  " + cat.get("companyName") + " has the top place in the market." + " Their donations of $" + cat.get("charity") + " has really earned them love from thier community";
+var feeds = [
+feed1,feed2 , feed3 , feed4, feed5 , feed6
+];
+
+var todaysfeed =feeds[Math.floor(Math.random() * feeds.length)];
+
+news = news + todaysfeed;
+document.getElementById("newspaper").innerHTML = news;
+}
+
+function news2(cat){
+
+var feed1 = " Runner up is " + cat.get("companyName") + "." + " They had a modest $" + cat.get("stats").profit + " profit. ";
+var feed2 = " On the rise is " + cat.get("companyName") + "." + " They are doing well with $" + cat.get("stats").profit + " in profit. ";
+var feed3 = " Don't sleep on " + cat.get("companyName") + "." + " They are the rise with a networth of $" + cat.get("networth");
+var feed4 = " Looks like" + cat.get("companyName") + " is set make a big splash." + " There popularity with teens has earned" + cat.get("stats").profit + " profit. ";
+var feed5 = " Runner up is " + cat.get("companyName") + "." + " They had a modest $" + cat.get("stats").profit + " profit. ";
+var feed6 = " Second in marketshare is " + cat.get("companyName") + "." + " They are close to being in first place. Thier impressive revenue of $" + cat.get("revenue") + " has many anaylsts excited.";
+var feeds = [
+feed1,feed2 , feed3 , feed4, feed5 , feed6
+];
+
+var todaysfeed =feeds[Math.floor(Math.random() * feeds.length)];
+
+
+news = news + todaysfeed;
+document.getElementById("newspaper").innerHTML = news;
+}
+
+
+function news3(cat){
+
+var feed1 =  cat.get("companyName") + "is terrible." + "They don't donation enough" + cat.get("charity") + " Some call them greedy ";
+var feed2 = " This is unexpected" + cat.get("companyName") + " is last in marketshare" + " Their profit of $" + cat.get("stats").profit + " is awful ";
+var feed3 = " Don't sleep on " + cat.get("companyName") + "." + " They are on the rise with a networth of $" + cat.get("networth");
+var feed4 = " "+ cat.get("companyName") + " clearly needs more business lessions" + " There popularity with adults has puplmited";
+var feed5 = " Do not invest in " + cat.get("companyName") + "."+ "They are last in marketshare" + "If they don't do something drastic soon they will face bankruptcy";
+var feed6 = " Poor investments has lead " + cat.get("companyName") + " to last place in marketshare." + " The community thinks that they are too greedy with profits and  there total dotations of " + cat.get("charity")+ "not enough";
+var feeds = [
+feed1,feed2 , feed3 , feed4, feed5 , feed6
+];
+
+var todaysfeed =feeds[Math.floor(Math.random() * feeds.length)];
+
+
+news = news + todaysfeed;
+document.getElementById("newspaper").innerHTML = news;
+}
+
+}
+
+
