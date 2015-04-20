@@ -62,7 +62,7 @@
 
 
 		 <!-- Page Two, the In-Game Newspaper -->
-    <div id="GamePageTwo">
+    <div id="GamePageTwo" style="background-color: #EFEFEF;">
 
      <table  style="width:75%;border-width:3px;background-color: #EFEFEF; border-style:dotted;border-color:black;border-radius:1.5px;">
 	  <tr>
@@ -96,7 +96,7 @@
 		<td><p id="company_sixth"> Company 6 (Player Name 6)</p></td>
 	  </tr>
      </table>
-	 <div>
+	 <div >
 	 <br></br>
      <label id="New and Noteworthy" for="newspaper">News and Noteworthy</label> 
 	 <br></br>
@@ -223,7 +223,7 @@
 	<div id="GamePageFour">
 			<!-- Capital Slider -->
     <div class="center">
-    <p id="priceCharacters">Capital: 
+    <p id="priceCharacters">Capital($): 
     <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[6]">
@@ -247,7 +247,7 @@
                 
                 -->
 		<!-- Price Slider -->
-		<p id="priceCharacters">Price: <a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>
+		<p id="priceCharacters">Price($): <!--<a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>-->
 
               <div class="input-group">
           <span class="input-group-btn">
@@ -261,10 +261,10 @@
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
-      </div>                                                     
-                $<output name="amount" for="priceRangeInput"></output> </form> </p>
+      </div>                                                   
+                <output name="amount" for="priceRangeInput"></output> </form> </p>
         <!-- Production Slider -->
-		<p id="productionCharacters">Production: 
+		<p id="productionCharacters">Production(units): 
              <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
@@ -278,9 +278,9 @@
               </button>
           </span>
       </div>
-                <output name="amount" for="productionRangeInput"onchange="edit()"></output> units</form> </p>
+                <output name="amount" for="productionRangeInput"onchange="edit()"></output> </form> </p>
         <!-- Marketing Slider -->
-		<p id="marketCharacters">Marketing: 
+		<p id="marketCharacters">Marketing($): 
               <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[3]">
@@ -294,9 +294,9 @@
               </button>
           </span>
       </div>                                                    
-                $<output name="amount" for="marketRangeInput"></output> </form> </p>
+                <output name="amount" for="marketRangeInput"></output> </form> </p>
         <!-- R & D Slider -->
-		<p id="RAndDCharacters">Research: 
+		<p id="RAndDCharacters">Research($): 
               <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[4]">
@@ -310,9 +310,9 @@
               </button>
           </span>
       </div>                                                      
-                $<output name="amount" for="RAndDRangeInput"></output> </form> </p>
+                <output name="amount" for="RAndDRangeInput"></output> </form> </p>
         <!-- Charity Slider -->
-        <p id="charityCharacters">Charity: 
+        <p id="charityCharacters">Charity($): 
              <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
@@ -326,7 +326,7 @@
               </button>
           </span>
       </div>                                                      
-                $<output name="amount" for="charityRangeInput"></output> </form> </p>
+                <output name="amount" for="charityRangeInput"></output> </form> </p>
 
                 <!-- The Submit to server button, to end and submit your turn -->
                 <button type="button" class="btn btn-primary" id="submitToServerButton" > Submit Turn </button>

@@ -119,7 +119,7 @@ var doughnutData = [
 			];
 
 var barChartData = {
-	labels : ["first","second","third","forth","fifth","sixth"],
+	labels : ["","","","","",""],
 	datasets : [
 		{
 				fillColor : "rgba(220,220,220,0.5)",
@@ -406,20 +406,20 @@ else if (CurrentPage == 3) {
 	}
 	
 	//table one data displaying changes made based off their decisions before submit
-	document.getElementById("table_1_input_1").innerHTML = cash;
-    document.getElementById("table_1_input_2").innerHTML = credit; 
-	document.getElementById("table_1_input_3").innerHTML = resources;
-	document.getElementById("table_1_input_4").innerHTML = productionCost;
-	document.getElementById("table_1_input_5").innerHTML = data.marketing;
-	document.getElementById("table_1_input_6").innerHTML = data.capital;
-	document.getElementById("table_1_input_7").innerHTML = data.researchDevelopment;
-	document.getElementById("table_1_input_8").innerHTML = expense;
-	document.getElementById("table_1_input_9").innerHTML = afterCash;
-	document.getElementById("table_1_input_10").innerHTML = afterCredit;
-	document.getElementById("table_1_input_11").innerHTML = (afterCredit + afterCash);
-	document.getElementById("table_1_input_12").innerHTML = costPerUnit;
-	document.getElementById("table_1_input_13").innerHTML = utilization + "%";
-	document.getElementById("table_1_input_14").innerHTML = data.charity;
+	document.getElementById("table_1_input_1").innerHTML = cash + " $";
+    document.getElementById("table_1_input_2").innerHTML = credit+ " $"; 
+	document.getElementById("table_1_input_3").innerHTML = resources+ " $";
+	document.getElementById("table_1_input_4").innerHTML = productionCost+ " $";
+	document.getElementById("table_1_input_5").innerHTML = data.marketing+ " $";
+	document.getElementById("table_1_input_6").innerHTML = data.capital+ " $";
+	document.getElementById("table_1_input_7").innerHTML = data.researchDevelopment+ " $";
+	document.getElementById("table_1_input_8").innerHTML = expense+ " $";
+	document.getElementById("table_1_input_9").innerHTML = afterCash+ " $";
+	document.getElementById("table_1_input_10").innerHTML = afterCredit+ " $";
+	document.getElementById("table_1_input_11").innerHTML = (afterCredit + afterCash)+ " $";
+	document.getElementById("table_1_input_12").innerHTML = costPerUnit+ " $";
+	document.getElementById("table_1_input_13").innerHTML = utilization + " %";
+	document.getElementById("table_1_input_14").innerHTML = data.charity+ " $";
 }
 else if (CurrentPage == 4) {
 	document.getElementById('GamePageFour').style.display='block';
