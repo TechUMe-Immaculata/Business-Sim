@@ -1,93 +1,80 @@
-body, html {
-background:orange;
-}
+ body, html {
+          height: 100%;
+          margin: 0;
+          overflow:hidden;
+          font-family: helvetica;
+          font-weight: 100;
+          color: black;
+      }
 
-#backButton{
-position: absolute;
-top: 80%;
-font-size: 25px;
-background-color: gray; 
-color: black;
-border-color: black;
-margin-left:47.5%;
-left: -20%;
-width: 50%;
-height: 10%;
+#screenDescription{
+  color: white;
+  font-size: 22.5px;
+  font-weight: bold;
+
 }
 
 #singlePlayerButton {
-  position: absolute;
-  width: 98%;
-  left: 1%;
-  top: 10%;	
-  height: 30%;
-  background: #ed3615;
-  background-image: -webkit-linear-gradient(top, #ed3615, #f57608);
-  background-image: -moz-linear-gradient(top, #ed3615, #f57608);
-  background-image: -ms-linear-gradient(top, #ed3615, #f57608);
-  background-image: -o-linear-gradient(top, #ed3615, #f57608);
-  background-image: linear-gradient(to bottom, #ed3615, #f57608);
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-color: black;
-  border-radius: 0px;
-  text-shadow: 0px 2px 0px #08f0dd;
-  font-family: Courier New;
-  color: #3821e8;
-  font-size: 40px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-}
-#singlePlayerButton:hover {
-  background: #ff5900;
-  background-image: -webkit-linear-gradient(top, #ff5900, #ff0900);
-  background-image: -moz-linear-gradient(top, #ff5900, #ff0900);
-  background-image: -ms-linear-gradient(top, #ff5900, #ff0900);
-  background-image: -o-linear-gradient(top, #ff5900, #ff0900);
-  background-image: linear-gradient(to bottom, #ff5900, #ff0900);
-  text-decoration: none;
+
+  font-size: 23px;
+  width: 310px;
+  margin-top: 375px;
+ /* margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;*/
 }
 
+ 
 
-#multiPlayerButton {
-  position: absolute;
-  width: 98%;
-  left: 1%;
-  top: 42%;	
-  height: 30%;
-  /* LOCKED BACKGROUND COLOUR */
+
+
+  #multiPlayerButton {
+  /* Locked Colour. */
   background: gray;
-  /* PROPER BACKGROUND COLOUR 
-  background: #ed3615;
-  background-image: -webkit-linear-gradient(top, #ed3615, #f57608);
-  background-image: -moz-linear-gradient(top, #ed3615, #f57608);
-  background-image: -ms-linear-gradient(top, #ed3615, #f57608);
-  background-image: -o-linear-gradient(top, #ed3615, #f57608);
-  background-image: linear-gradient(to bottom, #ed3615, #f57608);
-   */
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-color: black;
-  border-radius: 0px;
-  font-family: Courier New;
-  /*  THE LOCKED TEXT COLOUR */
-  color: black;
-  /* The Font colour
-  color: #3821e8;
-  text-shadow: 0px 2px 0px #08f0dd;
+  /* THIS IS THE PROPER BUTTON COLOUR!
+  background: orange;
   */
-  font-size: 40px;
-  padding: 10px 20px 10px 20px;
+
+  /* LOCKED FONT COLOUR */
+  color: black; 
+  /* THIS IS THE PROPER FONT COLOUR!
+  color: white;
+  */
+  font-size: 20px;
+
   text-decoration: none;
+  width: 310px;
+  margin-top: 50px;
+/*margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;*/
 }
-/*
-#multiPlayerButton:hover {
-  background: #ff5900;
-  background-image: -webkit-linear-gradient(top, #ff5900, #ff0900);
-  background-image: -moz-linear-gradient(top, #ff5900, #ff0900);
-  background-image: -ms-linear-gradient(top, #ff5900, #ff0900);
-  background-image: -o-linear-gradient(top, #ff5900, #ff0900);
-  background-image: linear-gradient(to bottom, #ff5900, #ff0900);
-  text-decoration: none;
-}
-*/
+
+
+
+
+
+
+
+      /* Space behind the buttons */
+      .container {
+           
+          position: relative;
+          height: 100%;
+          width: 100%;
+          left: 0;
+
+      }
+
+      
+      /* The bar you can swipe */
+      #banner{
+          position: absolute;
+          width: 100%;
+          height: 8%;
+          left: 0;
+          top: 0;
+          background: #dd4814;
+          z-index: 0;
+      }
+      /*The Sidebar*/

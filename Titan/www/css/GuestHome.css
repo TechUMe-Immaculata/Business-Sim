@@ -17,63 +17,65 @@
 }
 
 #quickPlayButton {
-  position: absolute;
-  background: orange;
- 
-  border-radius: 0px;
-  font-family: Georgia;
-  color: white; 
+
   font-size: 23px;
-
-  border: solid #000000 2px;
-  text-decoration: none;
-  width: 90%;
-  height: 10%;
-  top:58%;
-  left: 5%;
+  width: 310px;
+  margin-top: 375px;
+ /* margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;*/
 }
 
-#quickPlayButton:hover {
-  background: #f5084b;
-  background-image: -webkit-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -moz-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -ms-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: -o-linear-gradient(top, #f5084b, #fa9e00);
-  background-image: linear-gradient(to bottom, #f5084b, #fa9e00);
-  text-decoration: none;
-}
+
+
   #leaguePlayButton {
-  position: absolute;
+  /* Locked Colour. */
   background: gray;
-
+  /* THIS IS THE PROPER BUTTON COLOUR!
+  background: orange;
+  */
   border-radius: 0px;
   font-family: Georgia;
+  
+  /* LOCKED FONT COLOUR */
   color: black; 
+  /* THIS IS THE PROPER FONT COLOUR!
+  color: white;
+  */
   font-size: 23px;
-
   border: solid #000000 2px;
   text-decoration: none;
-  width: 90%;
-  height: 10%;
-  top:73%;
-  left: 5%;
+  width: 310px;
+  margin-top: 50px;
+/*margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;*/
 }
+
 
 #privateGameButton {
-  position: absolute;
+   /* Locked Colour. */
   background: gray;
- 
+  /* THIS IS THE PROPER BUTTON COLOUR!
+  background: orange;
+  */
   border-radius: 0px;
   font-family: Georgia;
+  
+  /* LOCKED FONT COLOUR */
   color: black; 
-  font-size: 23px;
+  /* THIS IS THE PROPER FONT COLOUR!
+  color: white;
+  */
 
+  font-size: 23px;
   border: solid #000000 2px;
   text-decoration: none;
-  width: 90%;
-  height: 10%;
-  top:88%;
-  left: 5%;
+  width: 310px;
+  margin-top: 50px;
+/*margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;*/
 }
 
       /* Space behind the buttons */
@@ -83,6 +85,8 @@
           height: 100%;
           width: 100%;
           left: 0;
+          padding-left: 0px;
+          margin-right: 0;
           -webkit-transition:  left 0.4s ease-in-out;
           -moz-transition:  left 0.4s ease-in-out;
           -ms-transition:  left 0.4s ease-in-out;
@@ -100,7 +104,7 @@
           height: 8%;
           left: 0;
           top: 0;
-          background: orange;
+          background: #dd4814;
           z-index: 0;
       }
       /*The Sidebar*/
@@ -183,7 +187,7 @@
       .main-content .content{
           box-sizing: border-box;
           -moz-box-sizing: border-box;
-      padding-left: 60px;
+      
       width: 100%;
       }
       .main-content .content h1{
@@ -195,7 +199,7 @@
       }
       /*Hamburger Button Bar*/
       .main-content #sidebar-toggle {
-          background:orange;
+          background:#dd4814;
           border-radius: 3px;
           display: block;
           position: relative;
@@ -214,3 +218,12 @@
       .main-content #sidebar-toggle .bar:last-child{
            margin-bottom: 0;   
       }
+#banner{
+          position: absolute;
+          width: 100%;
+          height: 8%;
+          left: 0;
+          top: 0;
+          background: #dd4814;
+          z-index: 0;
+      } 
