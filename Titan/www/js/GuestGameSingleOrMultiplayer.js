@@ -1,7 +1,7 @@
 document.getElementById("backButton").addEventListener("click", backButton);
 
 //Un comment for multiplayer play!
-//document.getElementById("multiPlayerButton").addEventListener("click", multiPlayerButton);
+document.getElementById("multiPlayerButton").addEventListener("click", multiPlayerButton);
 
 function backButton()
 {
@@ -11,7 +11,7 @@ function backButton()
 function multiPlayerButton()
 {
 	//no valid value.
-	//window.location.replace('');
+	window.location.replace('GuestMultiplayerGamePage');
 }
 
 
