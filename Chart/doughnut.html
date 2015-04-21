@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<!--<script type="text/javascript" src="jquery.jqplot.min.css"></script> -->
+<link rel="stylesheet" type="text/css" href="jquery.jqplot.min.css" />
+<script src="jquery.min.js" ></script>
+<script src="jquery.jqplot.min.js" ></script>    
+<script src="jqplot.pieRenderer.min.js"></script>
+<script src="jqplot.donutRenderer.min.js"></script>
+<script src="jqplot.categoryAxisRenderer.min.js"></script>
+<script src="jqplot.barRenderer.min.js"></script>
+<script type="text/javascript">
+function drawChart() {
+  var slice_1 = ['Company A', 10];
+  var slice_2 = ['Company B', 50];
+  var slice_3 =['Company C', 50];
+  var slice_4 = ['Company D', 50];
+  var slice_5 =['Company E', 20];
+  var slice_6 = ['Company F', 90];
+  var series = [slice_1, slice_2,slice_3,slice_4,slice_5,slice_6];
+  var data = [series];
+  
+  var s1 = [200], s2 = [460], s3 = [260],s4 = [260],s5 = [260],s6 = [260];
+  var ticks = [""];
+ 
+  var options1 = {
+    title: 'Pie',
+    seriesDefaults: {
+      renderer: jQuery.jqplot.PieRenderer,
+	  rendererOptions: { 
+          startAngle: 180, 
+          showDataLabels: true } 
+    },
+    legend: { show:true, location: 'e' }
+  };
+    var options2 = {
+    title: 'Pie Update',
+    seriesDefaults: {
+      renderer: jQuery.jqplot.DonutRenderer,
+	  	  rendererOptions: { 
+          startAngle: 180, 
+          showDataLabels: true } 
+    },
+    legend: { show:true, location: 'e' }
+  }; 
+      var options3 = {
+	      title: 'Bar',
+        seriesDefaults:{
+            renderer:$.jqplot.BarRenderer,
+            rendererOptions: {fillToZero: true}
+        },
+        // Custom labels for the series are specified with the "label"
+        // option on the series option.  Here a series option object
+        // is specified for each series.
+        series:[
+            {label:'Company A'},
+            {label:'Company B'},
+            {label:'Company C'},
+			{label:'Company D'},
+            {label:'Company E'},
+            {label:'Company F'}
+        ],
+        // Show the legend and put it outside the grid, but inside the
+        // plot container, shrinking the grid to accomodate the legend.
+        // A value of "outside" would not shrink the grid and allow
+        // the legend to overflow the container.
+        legend: {
+            show: true,
+            placement: 'outsideGrid'
+        },
+        axes: {
+            // Use a category axis on the x axis and use our custom ticks.
+            xaxis: {
+                renderer: $.jqplot.CategoryAxisRenderer,
+                ticks: ticks
+            },
+            // Pad the y axis just a little so bars can get close to, but
+            // not touch, the grid boundaries.  1.2 is the default padding.
+            yaxis: {
+                pad: 1.05,
+                tickOptions: {formatString: '$%d'}
+            }
+        }
+  }; 
+  $.jqplot('chart_1', data, options1);
+  
+  $.jqplot('chart_2', data, options2);
+  
+  $.jqplot('chart_3', [s1, s2, s3,s4,s5,s6],options3);
+  
+  var slice_1 = ['Company A', 300];
+  var slice_2 = ['Company B', 50];
+  var slice_3 =['Company C', 50];
+  var slice_4 = ['Company D', 50];
+  var slice_5 =['Company E', 20];
+  var slice_6 = ['Company F', 90];
+  var series = [slice_1, slice_2,slice_3,slice_4,slice_5,slice_6];
+  var data = [series];
+  
+  $.jqplot('chart_2', data, options2);
+}
+</script>
+</head>
+<body onload='drawChart()'>
+   <div id="chart_1" style="margin-top:20px; margin-left:20px; width:600px; height:300px;"></div>
+   <div id="chart_2" style="margin-top:20px; margin-left:20px; width:600px; height:300px;"></div>
+   <div id="chart_3" style="margin-top:20px; margin-left:20px; width:600px; height:300px;"></div>
+   <div id="chart_4" style="margin-top:20px; margin-left:20px; width:600px; height:300px;"></div>
+</body>
+
+
+</html>
