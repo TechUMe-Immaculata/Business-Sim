@@ -1,18 +1,9 @@
 body, html {
 background:orange;
 }
-
-#PreviousButton{
-	font-size: 40px;
-
-}
-#NextButton{
-	font-size: 40px;
-
-	
 }
 .center{
-width: 150px;
+width: 50%
   
 }
 #pauseGear{

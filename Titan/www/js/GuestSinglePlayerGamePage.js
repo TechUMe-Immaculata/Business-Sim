@@ -167,8 +167,8 @@ window.onload = function(){
 	
 	document.getElementById('PauseScreen').style.display='none';
 
-	document.getElementById("NextButton").addEventListener("click", NextButtonPress);
-	document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
+	//document.getElementById("NextButton").addEventListener("click", NextButtonPress);
+	//document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
@@ -435,16 +435,16 @@ else {
 
 function pauseGearPress(){
 	document.getElementById('PauseScreen').style.display="block";
-	document.getElementById('NextButton').style.display='none';
-	document.getElementById('PreviousButton').style.display='none';
+	//document.getElementById('NextButton').style.display='none';
+	//document.getElementById('PreviousButton').style.display='none';
 	document.getElementById('pauseGear').style.display='none';
 }
 
 
 function resumeButtonPress(){
 	console.log("Works");
-	document.getElementById('PreviousButton').style.display='';
-	document.getElementById('NextButton').style.display='';
+	//document.getElementById('PreviousButton').style.display='';
+	//document.getElementById('NextButton').style.display='';
 	document.getElementById('pauseGear').style.display='';
 	document.getElementById('PauseScreen').style.display="none";
 
@@ -477,8 +477,6 @@ function getDataFromServer()
 	}).then(function(match)
 	{
 	matchId = match.id;//localStorage.setItem("matchId",match.id);
-	//pageOneQuater+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	console.log(match.get("turn"));
 	document.getElementById("pageOneQuater").innerHTML = "Quarter " + match.get("turn");
 	console.log("get data from sever");
 	console.log(matchId);
@@ -841,12 +839,12 @@ news = "";
 function news1(cat){
 
 
-var feed1 = "The leader is " + cat.get("companyName") + "." + "They broke records with " + cat.get("stats").profit + "profit.";
-var feed2 = "The new leader in the industry is" + cat.get("companyName") + "." + "They made $" + cat.get("stats").revenue+ "revenue. The market seems to love thier price point of $" + cat.get("price");
-var feed3 = "Wow" + cat.get("companyName") +" has just taken first play in the indrustry with a revenue of $" + cat.get("stats").revenue + "";
-var feed4 = "Amazingly " + cat.get("companyName") + " is the leader with a record $" + cat.get("networth")+ " in newtworth";
-var feed5 = cat.get("companyName") + " is now in first place. " + "Their smart investments have earned them top stop with  $" + cat.get("stats").profit + " in profit";
-var feed6 = " Now this is a surprise  " + cat.get("companyName") + " has the top place in the market." + " Their donations of $" + cat.get("charity") + " has really earned them love from thier community";
+var feed1 = "The leader is " + cat.get("companyName") + ". " + "They broke records with " + cat.get("stats").profit + "$ profit. ";
+var feed2 = "The new leader in the industry is " + cat.get("companyName") + ". " + "They made " + cat.get("stats").revenue+ "$ revenue. The market seems to love their price point of " + cat.get("price")+" $. ";
+var feed3 = "Wow " + cat.get("companyName") +" has just taken first play in the industry with a revenue of " + cat.get("stats").revenue + "$. ";
+var feed4 = "Amazingly " + cat.get("companyName") + " is the leader with a record " + cat.get("networth")+ "$ in net worth. ";
+var feed5 = cat.get("companyName") + " is now in first place. " + "Their smart investments have earned them top stop with " + cat.get("stats").profit + "$ in profit. ";
+var feed6 = " Now this is a surprise  " + cat.get("companyName") + " has the top place in the market. " + " Their donations of " + cat.get("charity") + " $ has really earned them love from their community. ";
 var feeds = [
 feed1,feed2 , feed3 , feed4, feed5 , feed6
 ];
@@ -859,14 +857,14 @@ document.getElementById("newspaper").innerHTML = news;
 
 function news2(cat){
 
-var feed1 = " Runner up is " + cat.get("companyName") + "." + " They had a modest $" + cat.get("stats").profit + " profit. ";
-var feed2 = " On the rise is " + cat.get("companyName") + "." + " They are doing well with $" + cat.get("stats").profit + " in profit. ";
-var feed3 = " Don't sleep on " + cat.get("companyName") + "." + " They are the rise with a networth of $" + cat.get("networth");
-var feed4 = " Looks like" + cat.get("companyName") + " is set make a big splash." + " There popularity with teens has earned" + cat.get("stats").profit + " profit. ";
+var feed1 = " Runner up is " + cat.get("companyName") + ". " + "They had a modest " + cat.get("stats").profit + " $ profit. ";
+var feed2 = " On the rise is " + cat.get("companyName") + ". " + "They are doing well with " + cat.get("stats").profit + " $ in profit. ";
+var feed3 = " Don't sleep on " + cat.get("companyName") + ". " + "They are the rise with a net worth of " + cat.get("networth") + " $. ";
+var feed4 = " Looks like " + cat.get("companyName") + " is set make a big splash. " + " There popularity with teens has earned " + cat.get("stats").profit + " $ profit. ";
 var feed5 = " Runner up is " + cat.get("companyName") + "." + " They had a modest $" + cat.get("stats").profit + " profit. ";
-var feed6 = " Second in marketshare is " + cat.get("companyName") + "." + " They are close to being in first place. Thier impressive revenue of $" + cat.get("revenue") + " has many anaylsts excited.";
+var feed6 = " Second in market-share is " + cat.get("companyName") + ". " + " They are close to being in first place. Their impressive revenue of " + cat.get("stats").revenue + " $ has many analysts excited. ";
 var feeds = [
-feed1,feed2 , feed3 , feed4, feed5 , feed6
+feed1, feed2 , feed3 , feed4, feed5 , feed6
 ];
 
 var todaysfeed =feeds[Math.floor(Math.random() * feeds.length)];
@@ -879,12 +877,12 @@ document.getElementById("newspaper").innerHTML = news;
 
 function news3(cat){
 
-var feed1 =  cat.get("companyName") + "is terrible." + "They don't donation enough" + cat.get("charity") + " Some call them greedy ";
-var feed2 = " This is unexpected" + cat.get("companyName") + " is last in marketshare" + " Their profit of $" + cat.get("stats").profit + " is awful ";
-var feed3 = " Don't sleep on " + cat.get("companyName") + "." + " They are on the rise with a networth of $" + cat.get("networth");
-var feed4 = " "+ cat.get("companyName") + " clearly needs more business lessions" + " There popularity with adults has puplmited";
-var feed5 = " Do not invest in " + cat.get("companyName") + "."+ "They are last in marketshare" + "If they don't do something drastic soon they will face bankruptcy";
-var feed6 = " Poor investments has lead " + cat.get("companyName") + " to last place in marketshare." + " The community thinks that they are too greedy with profits and  there total dotations of " + cat.get("charity")+ "not enough";
+var feed1 =  cat.get("companyName") + " is terrible. " + "They only donate " + cat.get("charity") + " $. Some call them greedy. ";
+var feed2 = "This is unexpected " + cat.get("companyName") + " is last in market-share. " + "Their profit of " + cat.get("stats").profit + "$ is unlawful.";
+var feed3 = "Don't sleep on " + cat.get("companyName") + ". " + "They are on the rise with a net worth of " + cat.get("networth")+" $. " ;
+var feed4 = cat.get("companyName") + " clearly needs more business lessons. " + "There popularity with adults has plummeted. ";
+var feed5 = "Do not invest in " + cat.get("companyName") + ". "+ "They are last in market-share. " + "If they don't do something drastic soon they will face bankruptcy. ";
+var feed6 = "Poor investments has lead " + cat.get("companyName") + " to last place in market-share. " + "The community thinks that they are too greedy with profits and there total donations of " + cat.get("charity")+ " $ not enough";
 var feeds = [
 feed1,feed2 , feed3 , feed4, feed5 , feed6
 ];
