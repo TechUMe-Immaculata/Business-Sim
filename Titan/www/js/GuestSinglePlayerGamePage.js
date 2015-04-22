@@ -132,8 +132,8 @@ var barChartData = {
 			
 //var dataObject={};
 
-document.addEventListener('touchstart', handleTouchStart, false);        
-document.addEventListener('touchend', handleTouchMove, false);
+//document.addEventListener('touchstart', handleTouchStart, false);        
+//document.addEventListener('touchend', handleTouchMove, false);
 
 window.onload = function(){
 
@@ -786,7 +786,7 @@ return null;
 }).then(function(result){
 })
 }
-
+/*
 var xDown = null;                                                        
 var yDown = null;                                                        
 
@@ -807,21 +807,21 @@ function handleTouchMove(evt) {
     var yDiff = yDown - yUp;
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) 
-	{/*most significant*/
+	{/*most significant
         if ( xDiff > 200 ) {
-            /* left swipe */ 
+            /* left swipe  
 			console.log("left");
 			NextButtonPress()
         } else if(xDiff < 200) {
 		console.log("right");
-            /* right swipe */
+            /* right swipe 
 		PreviousButtonPress();
         }                       
     } 
-    /* reset values */
+    /* reset values 
     xDown = null;
     yDown = null;                                             
-};
+};*/
 function newsfeed(players){
 
 var player1 = players[0];
@@ -895,5 +895,27 @@ document.getElementById("newspaper").innerHTML = news;
 }
 
 }
+
+$(function(){
+  // Bind the swipeHandler callback function to the swipe event on div.box
+	$( "body" ).on( "swipe", swipeHandler );
+	$.event.special.swipe.scrollSupressionThreshold = 30;
+	$.event.special.swipe.horizontalDistanceThreshold =100;
+	
+  // Callback function references the event target and adds the 'swipe' class to it
+  function swipeHandler( event ){
+  var x1 = event.swipestart.coords[0];
+  var x2 = event.swipestop.coords[0];
+  var dif = x2 - x1;
+  if (dif > 0)
+  {
+  PreviousButtonPress()
+  }
+  else if (dif < 0)
+  {
+  NextButtonPress();
+  }
+  }
+});
 
 
