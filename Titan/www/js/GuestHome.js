@@ -1,16 +1,12 @@
-//main container button event listeners
-document.getElementById("quickPlayButton").addEventListener("click", quickPlayButtonPress);
+
 
 //SideBar Button event listeners
-document.getElementById("registerPic").addEventListener("click", registerPress);
+// ****disabled for app jam****
+// document.getElementById("registerPic").addEventListener("click", registerPress);
 document.getElementById("settingsPic").addEventListener("click", settingsPicPress);
 
 
-//Main container Button event listeners
-function quickPlayButtonPress()
-{
-	window.location="GuestGameSingleOrMultiplayer.html";
-}
+
 
 //Side Bar Button Links
 function registerPress()
@@ -30,6 +26,7 @@ $(window).load(function(){
           var toggle_el = $(this).data("toggle");
           $(toggle_el).toggleClass("open-sidebar");
         });
+        /*
          $("body").swipe({
               swipeStatus:function(event, phase, direction, distance, duration, fingers)
                   {
@@ -44,5 +41,5 @@ $(window).load(function(){
                       }
                   }
 
-          }); 
+          }); */
       });
