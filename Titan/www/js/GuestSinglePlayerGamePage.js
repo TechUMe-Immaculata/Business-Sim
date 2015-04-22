@@ -172,7 +172,7 @@ window.onload = function(){
 	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
-	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
+
 
 
 			};
