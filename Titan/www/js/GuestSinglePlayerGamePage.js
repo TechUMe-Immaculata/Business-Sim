@@ -171,6 +171,7 @@ window.onload = function(){
 	//document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
+	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 
 
@@ -278,6 +279,9 @@ error: function(error){
 	  
 
 }
+
+
+
 
 //When the next button is pressed, run this code.
 function NextButtonPress()
@@ -447,6 +451,14 @@ function resumeButtonPress(){
 	//document.getElementById('NextButton').style.display='';
 	document.getElementById('pauseGear').style.display='';
 	document.getElementById('PauseScreen').style.display="none";
+
+}
+
+function mainMenuButtonPress(){
+document.getElementById('pauseGear').style.display='';
+document.getElementById('PauseScreen').style.display="none";
+
+window.location = "GuestHome.html";
 
 }
 
