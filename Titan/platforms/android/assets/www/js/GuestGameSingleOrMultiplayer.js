@@ -1,16 +1,27 @@
 document.getElementById("backButton").addEventListener("click", backButton);
-document.getElementById("singlePlayerButton").addEventListener("click", singlePlayerButton);
-document.getElementById("multiPlayerButton").addEventListener("click", multiPlayerButton);
+
+//Un comment for multiplayer play!
+//document.getElementById("multiPlayerButton").addEventListener("click", multiPlayerButton);
 
 function backButton()
 {
-	window.location.replace('Home.html');
+	window.location.replace('GuestHome.html');
 }
-function singlePlayerButton()
-{
-	window.location.replace('GuestSinglePlayerGamePage.html');
-}
+
 function multiPlayerButton()
 {
-	window.location.replace('Home.html');
+	//no valid value.
+	//window.location.replace('');
+}
+
+
+function makeMatchId()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 6; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text=text+"_guest";
 }
