@@ -355,6 +355,7 @@ else if (CurrentPage == 3) {
 	  data.marketing = Number(this.$("#marketRangeInput").val());
 	  data.price = Number(this.$("#priceRangeInput").val());
 	  data.charity = Number(this.$("#charityRangeInput").val());
+	  console.log(' C = ' + Number(this.$("#charityRangeInput").val()));
 	  
 	  var expense = 0, 
 	  resources = 0, 
