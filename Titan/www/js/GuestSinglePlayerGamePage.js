@@ -2,7 +2,7 @@ var CurrentPage = 1;
 var matchId = "",companyId= "",playerId = "";
 var maxProduction = 0,creditLine = 0,avaibleCash= 0,unitCost = 0;
 var news = "";
-// add the indrustry 
+// add the industry 
 var gametype;
 
 $('.btn-number').click(function(e){
@@ -143,7 +143,6 @@ window.onload = function(){
 				animation: false,
 				responsive : false
 	};
-	console.log($(window).width());
 	var ctx = document.getElementById("chart-area_1").getContext("2d");
 	ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
 	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
@@ -442,6 +441,7 @@ function pauseGearPress(){
 	//document.getElementById('NextButton').style.display='none';
 	//document.getElementById('PreviousButton').style.display='none';
 	document.getElementById('pauseGear').style.display='none';
+	console.log('charity Range' + document.getElementById("charityRangeInput").max);
 }
 
 
