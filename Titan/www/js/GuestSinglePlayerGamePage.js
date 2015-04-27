@@ -172,10 +172,20 @@ window.onload = function(){
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
+/* check if this works
+	if (navigator.notification) { // Override default HTML alert with native dialog
+      window.alert = function (message) {
+          navigator.notification.alert(
+              message,    // message
+              null,       // callback
+              "Workshop", // title
+              'OK'        // buttonName
+          );
+      };
+  }
 
-
-
-			};
+*/
+			}
 			
 //Code for the info buttons.
 // Create the tooltips only when document ready
