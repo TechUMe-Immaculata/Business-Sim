@@ -122,10 +122,10 @@ var barChartData = {
 	labels : ["","","","","",""],
 	datasets : [
 		{
-				fillColor : "rgba(220,220,220,0.5)",
-				strokeColor : "rgba(220,220,220,0.8)",
-				highlightFill: "rgba(220,220,220,0.75)",
-				highlightStroke: "rgba(220,220,220,1)",
+				fillColor : "rgba(242,0,0,0.5)",
+				strokeColor : "rgba(242,0,0,0.8)",
+				highlightFill: "rgba(242,0,0,0.75)",
+				highlightStroke: "rgba(242,0,0,1)",
 				data : [1,2,3,4,5,6]
 		}
 ]}
