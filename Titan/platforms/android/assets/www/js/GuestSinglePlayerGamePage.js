@@ -2,7 +2,7 @@ var CurrentPage = 1;
 var matchId = "",companyId= "",playerId = "";
 var maxProduction = 0,creditLine = 0,avaibleCash= 0,unitCost = 0;
 var news = "";
-// add the indrustry 
+// add the industry 
 var gametype;
 
 $('.btn-number').click(function(e){
@@ -143,7 +143,6 @@ window.onload = function(){
 				animation: false,
 				responsive : false
 	};
-	console.log($(window).width());
 	var ctx = document.getElementById("chart-area_1").getContext("2d");
 	ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
 	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
@@ -171,11 +170,22 @@ window.onload = function(){
 	//document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
+	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
+/* check if this works*/
+	if (navigator.notification) { // Override default HTML alert with native dialog
+      window.alert = function (message) {
+          navigator.notification.alert(
+              message,    // message
+              null,       // callback
+              "Workshop", // title
+              'OK'        // buttonName
+          );
+      };
+  }
 
 
-
-			};
+			}
 			
 //Code for the info buttons.
 // Create the tooltips only when document ready
@@ -279,6 +289,9 @@ error: function(error){
 
 }
 
+
+
+
 //When the next button is pressed, run this code.
 function NextButtonPress()
 {
@@ -352,6 +365,7 @@ else if (CurrentPage == 3) {
 	  data.marketing = Number(this.$("#marketRangeInput").val());
 	  data.price = Number(this.$("#priceRangeInput").val());
 	  data.charity = Number(this.$("#charityRangeInput").val());
+	  console.log(' C = ' + Number(this.$("#charityRangeInput").val()));
 	  
 	  var expense = 0, 
 	  resources = 0, 
@@ -438,6 +452,7 @@ function pauseGearPress(){
 	//document.getElementById('NextButton').style.display='none';
 	//document.getElementById('PreviousButton').style.display='none';
 	document.getElementById('pauseGear').style.display='none';
+	console.log('charity Range' + document.getElementById("charityRangeInput").max);
 }
 
 
@@ -447,6 +462,14 @@ function resumeButtonPress(){
 	//document.getElementById('NextButton').style.display='';
 	document.getElementById('pauseGear').style.display='';
 	document.getElementById('PauseScreen').style.display="none";
+
+}
+
+function mainMenuButtonPress(){
+document.getElementById('pauseGear').style.display='';
+document.getElementById('PauseScreen').style.display="none";
+
+window.location = "GuestHome.html";
 
 }
 

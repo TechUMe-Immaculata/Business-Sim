@@ -16,9 +16,10 @@
 
 #guestPlayButton {
 
-  font-size: 23px;
-  width: 310px;
-  margin-top: 375px;
+
+
+
+    margin-top: 25%;
  /* margin-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;*/
@@ -31,22 +32,8 @@
   #serverLoginButton {
   /* Locked Colour. */
   background: gray;
-  /* THIS IS THE PROPER BUTTON COLOUR!
-  background: orange;
-  */
-  border-radius: 0px;
-  font-family: Georgia;
-  
-  /* LOCKED FONT COLOUR */
-  color: black; 
-  /* THIS IS THE PROPER FONT COLOUR!
-  color: white;
-  */
-  font-size: 23px;
-  border: solid #000000 2px;
-  text-decoration: none;
-  width: 310px;
-  margin-top: 50px;
+
+  margin-top: 25%;
 /*margin-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;*/
@@ -57,23 +44,7 @@
 #registerButton {
    /* Locked Colour. */
   background: gray;
-  /* THIS IS THE PROPER BUTTON COLOUR!
-  background: orange;
-  */
-  border-radius: 0px;
-  font-family: Georgia;
-  
-  /* LOCKED FONT COLOUR */
-  color: black; 
-  /* THIS IS THE PROPER FONT COLOUR!
-  color: white;
-  */
-
-  font-size: 23px;
-  border: solid #000000 2px;
-  text-decoration: none;
-  width: 310px;
-  margin-top: 50px;
+  margin-top: 25%;
 /*margin-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;*/
@@ -114,7 +85,7 @@
       #banner{
           position: absolute;
           width: 100%;
-          height: 8%;
+          height: 30px;
           left: 0;
           top: 0;
           background: #dd4814;

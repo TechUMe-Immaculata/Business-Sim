@@ -1,0 +1,2 @@
+
+"C:\Program Files\Java\jdk1.8.0_20\bin\jarsigner" -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore "C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\-my-release-key.keystore" "C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\ant-build\CordovaApp-release-unsigned.apk" alias_name

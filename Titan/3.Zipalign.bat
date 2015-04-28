@@ -1,0 +1,1 @@
+"C:\android\A-SDK\sdk\build-tools\22.0.1\zipalign" -v 4 "C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\ant-build\CordovaApp-release-unsigned.apk" "C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\ant-build\CordovaApp-release-signed-zipped.apk"
