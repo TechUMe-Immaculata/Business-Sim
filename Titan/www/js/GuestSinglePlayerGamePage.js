@@ -41,25 +41,31 @@ $('.input-number').focusin(function(){
    $(this).data('oldValue', $(this).val());
 });
 $('.input-number').change(function() {
-    
+    var a = false;
     minValue =  parseInt($(this).attr('min'));
     maxValue =  parseInt($(this).attr('max'));
     valueCurrent = parseInt($(this).val());
     
     name = $(this).attr('name');
+	
+	
     if(valueCurrent >= minValue) {
         $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
     } else {
         alert('Sorry, the minimum value was reached');
         $(this).val(minValue);
+		a = true;
     }
+	
+	if (a == false)
+	{
     if(valueCurrent <= maxValue) {
         $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
     } else {
         alert('Sorry, the maximum value was reached');
         $(this).val(maxValue);
     }
-    
+    }
     
 });
 $(".input-number").keydown(function (e) {
