@@ -377,7 +377,6 @@ else if (CurrentPage == 3) {
 	  cash = cashAvaible, 
 	  credit = creditLine;
 	  
-
 	  //Price per unit = __________get data
 	  console.log(data.production +" ____product");
 	  var productionCost = data.production * costPerUnit;
@@ -440,6 +439,9 @@ else if (CurrentPage == 4) {
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageTwo').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
+	
+	
+	document.getElementById("productionCharacters").innerHTML = "Production(max "+maxProduction+" units):";
 }
 else {
 	console.log("error");//error
