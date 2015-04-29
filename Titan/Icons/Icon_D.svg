@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px"
+	 height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g id="Layer_1">
+	<path fill="#BCBEC0" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M508.5,439.686
+		c0,38.098-30.882,68.981-68.975,68.981H72.975C34.88,508.667,4,477.783,4,439.686V73.097C4,34.999,34.88,4.115,72.975,4.115
+		h366.551c38.093,0,68.975,30.884,68.975,68.982V439.686z"/>
+	<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M509,440.57c0,38.098-30.882,68.982-68.975,68.982
+		H73.475C35.38,509.553,4.5,478.668,4.5,440.57V73.982C4.5,35.884,35.38,5,73.475,5h366.551C478.118,5,509,35.884,509,73.982V440.57
+		z"/>
+</g>
+<g id="Layer_2">
+	<polyline fill="none" stroke="#BE1E2D" stroke-width="11" stroke-miterlimit="10" points="507.5,142.639 479.304,96.639 
+		438.353,244.639 424.254,189.972 399.416,217.305 383.974,174.639 328.254,308.639 310.128,257.972 272.533,380.972 
+		242.994,308.639 198.688,343.972 175.19,303.362 102.015,401.306 74.49,360.639 4,433.306 	"/>
+</g>
+<g id="Layer_3">
+	<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M508.5,440.019
+		c0,38.098-30.881,68.981-68.975,68.981H72.975C34.88,509,4,478.116,4,440.019V73.43C4,35.332,34.88,4.448,72.975,4.448h366.55
+		c38.094,0,68.975,30.884,68.975,68.982V440.019z"/>
+</g>
+</svg>
