@@ -2,8 +2,9 @@ var CurrentPage = 1;
 var matchId = "",companyId= "",playerId = "";
 var maxProduction = 0,creditLine = 0,avaibleCash= 0,unitCost = 0;
 var news = "";
-// add the indrustry 
+// add the industry 
 var gametype;
+var plot1;
 
 $('.btn-number').click(function(e){
     e.preventDefault();
@@ -135,6 +136,8 @@ var barChartData = {
 //document.addEventListener('touchstart', handleTouchStart, false);        
 //document.addEventListener('touchend', handleTouchMove, false);
 
+
+
 window.onload = function(){
 
 	var options = 
@@ -158,26 +161,88 @@ window.onload = function(){
 		ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
 	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
 	window.marketshare = new Chart(ctx).Doughnut(doughnutData, options);
+	
+	doUpdate();
 					
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;	
-				
+	doUpdate();
 	getDataFromServer();
+	doUpdate();
 	ChangeThePage();
-	
 	document.getElementById('PauseScreen').style.display='none';
-
+	
 	//document.getElementById("NextButton").addEventListener("click", NextButtonPress);
 	//document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
-
-
-
+	
 			};
 			
+function renderGraph(options,a,b,c,d,e,f) {
+	
+		if (plot1) {
+			plot1.destroy();
+		}
+		plot1 = $.jqplot('chart_1', [a,b,c,d,e,f], options);
+		console.log("plot1");
+		console.log(plot1);
+	}
+	
+	function doUpdate() {
+			$("#chart_1").width($(window).width());
+			$("#chart_1").height($(window).width());
+					var options = {
+						  title: 'Bar',
+						seriesDefaults:{
+							renderer:$.jqplot.BarRenderer,
+							rendererOptions: {fillToZero: true}
+						},
+						// Custom labels for the series are specified with the "label"
+						// option on the series option.  Here a series option object
+						// is specified for each series.
+						series:[
+							{label:'Company A'},
+							{label:'Company B'},
+							{label:'Company C'},
+							{label:'Company D'},
+							{label:'Company E'},
+							{label:'Company F'}
+						],
+						// Show the legend and put it outside the grid, but inside the
+						// plot container, shrinking the grid to accomodate the legend.
+						// A value of "outside" would not shrink the grid and allow
+						// the legend to overflow the container.
+						axes: {
+							// Use a category axis on the x axis and use our custom ticks.
+							xaxis: {
+								renderer: $.jqplot.CategoryAxisRenderer,
+								ticks: [""]
+							},
+							// Pad the y axis just a little so bars can get close to, but
+							// not touch, the grid boundaries.  1.2 is the default padding.
+							yaxis: {
+								pad: 1.05,
+								tickOptions: {formatString: '$%d'},
+								min:0
+							}
+						},
+						
+							legend: 
+						{
+							show: true,
+							placement:"outsideGrid",
+							location: 'e'
+						}
+				  }; 
+	
+				var s1 = [200], s2 = [460], s3 = [260],s4 = [260],s5 = [260],s6 = [260];
+				s1 = [500];
+				renderGraph(options,s1,s2,s3,s4,s5,s6);
+	}
+
 //Code for the info buttons.
 // Create the tooltips only when document ready
 //$(document).ready(function () {
@@ -330,6 +395,7 @@ function PreviousButtonPress()
 }
 function ChangeThePage()
 {
+doUpdate();
 if (CurrentPage == 1) {
 	document.getElementById('GamePageOne').style.display='block';
 	document.getElementById('GamePageTwo').style.display='none';
@@ -794,6 +860,7 @@ document.getElementById("company_fifth").innerHTML = rankings[4].get("companyNam
 document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
 newsfeed(rankings);
 
+//doUpdate();
 return null;
 }).then(function(result){
 })
