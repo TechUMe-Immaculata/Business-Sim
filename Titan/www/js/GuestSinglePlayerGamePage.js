@@ -51,13 +51,13 @@ $('.input-number').change(function() {
         $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
     } else {
         alert('Sorry, the minimum value was reached');
-        $(this).val($(this).data('oldValue'));
+        $(this).val(minValue);
     }
     if(valueCurrent <= maxValue) {
         $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
     } else {
         alert('Sorry, the maximum value was reached');
-        $(this).val($(this).data('oldValue'));
+        $(this).val(maxValue);
     }
     
     
