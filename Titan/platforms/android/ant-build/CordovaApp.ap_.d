@@ -30,6 +30,7 @@ C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\ant-bu
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\_where-is-www.txt \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\audio \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Chart \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\company.html \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\cordova.js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\cordova_plugins.js \
@@ -56,6 +57,15 @@ C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\ServerLoginPage.html \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\SettingsPage.html \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\audio\March of Motherland.mp3 \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Chart\doughnut.html \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Chart\jqplot.barRenderer.min.js \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Chart\jqplot.categoryAxisRenderer.min.js \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Chart\jqplot.donutRenderer.min.js \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Chart\jqplot.highlighter.min.js \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Chart\jqplot.pieRenderer.min.js \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Chart\jquery.jqplot.min.css \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Chart\jquery.jqplot.min.js \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\Chart\jquery.min.js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\bootstrap.css \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\Company.css \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\css\FriendsPage.css \
