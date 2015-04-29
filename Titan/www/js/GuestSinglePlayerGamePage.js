@@ -1,5 +1,6 @@
 // Page zero is the tutorial page, 1 is the landing page. 
 var CurrentPage = 0;
+document.getElementById('PauseScreen').style.display='none';
 var matchId = "",companyId= "",playerId = "";
 var maxProduction = 0,creditLine = 0,avaibleCash= 0,unitCost = 0;
 var news = "";
@@ -143,6 +144,7 @@ window.onload = function(){
 				// Boolean - Whether to animate the chart
 				animation: false,
 				responsive : false
+
 	};
 	var ctx = document.getElementById("chart-area_1").getContext("2d");
 	ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
@@ -164,8 +166,6 @@ window.onload = function(){
 				
 	getDataFromServer();
 	ChangeThePage();
-	
-	document.getElementById('PauseScreen').style.display='none';
 
     // These buttons have become obsolite 
 	//document.getElementById("NextButton").addEventListener("click", NextButtonPress);
@@ -331,6 +331,8 @@ function PreviousButtonPress()
 }
 function ChangeThePage()
 {
+	console.log(CurrentPage);
+
 if (CurrentPage == 0) {
 	document.getElementById('Tutorial').style.display='block';
 	document.getElementById('GamePageOne').style.display='none';

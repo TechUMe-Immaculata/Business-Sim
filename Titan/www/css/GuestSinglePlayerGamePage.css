@@ -3,7 +3,7 @@ background: white;
 }
 
 .center{
-width: 50%
+width: 50%;
   
 }
 #screenDescription{
@@ -11,36 +11,28 @@ width: 50%
   font-size: 22.5px;
   font-weight: bold;
 }
-#Tutorial				
+#Tutorial{
+	color: black;
+	margin-top: 10%;
+}
+#TutGreetingMessage{
+	word-wrap: break-word;
+}			
 #pauseGear{
 	width: 20%;
 	top: 50%;
 }
 #resumeButton{
-	width: 200px;
-	height: 80px;
-	font-size: 34px;
-	margin-top: 20px;
-	margin-left: 85px;
-	border-radius: 20px;
-	border-width: 5px;
 
 }
 #mainMenuButton{
-	width: 200px;
-	height: 80px;
-	font-size: 34px;
-	margin-top: 20px;
-	margin-left: 85px;
-	border-radius: 20px;
-	border-width: 5px;
-
+margin-top: 10%;
 }
 #PauseScreen{
-	width: 360px;
-	height: 670px;
-	margin-left: 10px;
-	margin-top: 35px;
+	width: 80%;
+	height: 80%;
+	margin-left: 10%;
+	margin-top: 10%;
 	margin-bottom: 20px;
 	border-width: 10px;
 	border-radius: 20px; 
