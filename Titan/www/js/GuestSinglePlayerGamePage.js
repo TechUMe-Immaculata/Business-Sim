@@ -858,7 +858,11 @@ document.getElementById("company_third").innerHTML = rankings[2].get("companyNam
 document.getElementById("company_fourth").innerHTML = rankings[3].get("companyName");
 document.getElementById("company_fifth").innerHTML = rankings[4].get("companyName");
 document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
+
+
+//Marco code addd rankings here 
 newsfeed(rankings);
+
 
 //doUpdate();
 return null;
