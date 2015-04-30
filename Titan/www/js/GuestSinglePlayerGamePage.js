@@ -805,12 +805,12 @@ companyGrossProduct.update();
 capitalInvestment.update();
 marketshare.update();
 
-document.getElementById("company_first").innerHTML = rankings[0].get("companyName");
-document.getElementById("company_second").innerHTML = rankings[1].get("companyName");
-document.getElementById("company_third").innerHTML = rankings[2].get("companyName");
-document.getElementById("company_fourth").innerHTML = rankings[3].get("companyName");
-document.getElementById("company_fifth").innerHTML = rankings[4].get("companyName");
-document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
+document.getElementById("company_first").innerHTML = "#1  " + rankings[0].get("companyName");
+document.getElementById("company_second").innerHTML ="#2  " + rankings[1].get("companyName");
+document.getElementById("company_third").innerHTML = "#3  " +rankings[2].get("companyName");
+document.getElementById("company_fourth").innerHTML = "#4  " +rankings[3].get("companyName");
+document.getElementById("company_fifth").innerHTML = "#5  " +rankings[4].get("companyName");
+document.getElementById("company_sixth").innerHTML = "#6  " +rankings[5].get("companyName"); 
 newsfeed(rankings);
 
 return null;
