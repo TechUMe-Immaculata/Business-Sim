@@ -88,7 +88,8 @@
 
 	 <!-- Page Three, the In-Game Graphs Page -->
 	<div id="GamePageThree">
-	<table  style="width:100%;border-width:1px; border-style:solid;border-color:grey;border-radius:1px;">
+	<div class="center center-block">
+	<table style="width:100%;border-width:1px; border-style:solid;border-color:grey;border-radius:1px;">
 	  <tr>
 		<th class="text-center" colspan="2">Financial Performance Estimate </th>
 	  </tr>
@@ -162,14 +163,15 @@
 		<td><p id="table_1_input_13">25%</p></td>
 	  </tr>
 	</table>
+	</div>
 	<br/>
-	<table id="table_2_"style="width:100%;border-width:1px; border-style:solid;border-color:grey;border-radius:1px;">
+	<div id="plotHolder" class="center center-block">
+	<table class="text-center" id="table_2_"style="width:100%;">
 	<tr><td>Net Worth</td></tr>
 	<tr><td>
 		<div id="canvas-holder">
-			<canvas id="chart-area_1"style="text-align:center;" />
+			<canvas id="chart-area_1"style="text-align:center;" class="center-block" />
 		</div>
-	<br/>
 		<tr>
 			<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
 		</tr>
@@ -177,9 +179,8 @@
 	<tr><td>Investment Amount</td></tr>
 	<tr><td>
 		<div id="canvas-holder">
-			<canvas id="chart-area_2"style="text-align:center;" />
+			<canvas id="chart-area_2"style="text-align:center;"/>
 		</div>
-	<br/>
 		<tr>
 			<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
 		</tr>
@@ -189,12 +190,12 @@
 		<div id="canvas-holder">
 			<canvas id="chart-area_3" style="text-align:center;"/>
 		</div>
-	<br/>
 	</td></tr>
 		<tr>
 			<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
 		</tr>
 	</table>
+	</div>
 </div>
 	<div class="text-center" id="GamePageFour">
 			<!-- Capital Slider -->

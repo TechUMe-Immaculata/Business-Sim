@@ -150,18 +150,18 @@ window.onload = function(){
 				responsive : false
 	};
 	var ctx = document.getElementById("chart-area_1").getContext("2d");
-	ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
-	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
+	ctx.canvas.width = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
+	ctx.canvas.height = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
 	//ctx.canvas.height = $("#table_2_").width()-5;
 	window.companyGrossProduct = new Chart(ctx).Bar(barChartData, options);
 	
 	var ctx = document.getElementById("chart-area_2").getContext("2d");
-		ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
-	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
+		ctx.canvas.width = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
+	ctx.canvas.height = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
 	window.capitalInvestment = new Chart(ctx).Bar(barChartData, options);
 	var ctx = document.getElementById("chart-area_3").getContext("2d");
-		ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
-	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
+		ctx.canvas.width = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
+	ctx.canvas.height = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
 	window.marketshare = new Chart(ctx).Doughnut(doughnutData, options);
 					
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
