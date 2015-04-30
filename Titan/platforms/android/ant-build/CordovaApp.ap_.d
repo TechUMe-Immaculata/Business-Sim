@@ -97,19 +97,20 @@ C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\loader.gif \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\logo.png \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\notficationsButton.jpg \
-C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\pauseGear.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\PlaceHolderNotAvailable.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\profileButton.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\settingsButton.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\Capital.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\CompanyStanding.jpg \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\input.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\InvestmentChart.jpg \
-C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\Learder Board.jpg \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\Leader Board.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\MarketShare.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\NetWorthChart.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\News.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\settings.jpg \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\submit.jpg \
+C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\img\Help Images\swiping.png \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\js\Chart.js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\js\FriendsPage.js \
 C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\assets\www\js\GuestGameSingleOrMultiplayer.js \

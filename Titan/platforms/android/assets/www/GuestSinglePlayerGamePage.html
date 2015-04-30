@@ -14,22 +14,109 @@
 	<!--
 	<button type="button" class="btn btn-success" id ="PreviousButton">Back</button>
 	<button type="button" class="btn btn-info" id ="NextButton">Next</button>
-    --> <div id="banner">
-            <p class="text-center"id="screenDescription">BusinessPalooza</p>
+    --> <div id="banner" style="position: fixed;">
+            <p class="text-center" id="screenDescription">BusinessPalooza</p>
           </div>
 
 	<button type="button"  id="pauseGear">
                   <span class="glyphicon glyphicon-cog"></span>
               </button>
 <!-- Tutorial Screen --> 
-<div id="Tutorial Page One">
+<div id="Tutorial">
+	<p id="TutGreetingMessage"style="font-size: 25px" class="text-center"> Welcome to Buisness Palooza!</p>
 
+<div id="TutorialPageOne">
+	<p> 
+		<u><b>Goal:</b></u> This game is designed to teach you the core values behind a successful business.. 
+	</p>
+	<p> 
+		The objective of this game is to earn the highest network within the given time.
+		In the business world  time is broken into Quarters. These quarters represent one turn. You're playing an alpha version of our game. This does not represent our final vision.
+	</p>
+	<p style="word-wrap: break-word;"> 
+		<u><b>Input money: </b></u> These input buttons are for changing 
+	</p>
+	<img id="inputPicture" src="img/Help Images/input.jpg"></img>
+	<p style="margin-top: -2.5%;">
+		your production values. You decide on how to spend your company’s money on different values.
+	</p>
+
+	<!-- The Submit button part -->
+	<p> 
+		<u><b> Submit: </b></u> When you are done making changes to your
+	</p>
+	<img id="submitPicture" src="img/Help Images/submit.jpg"></img>
+	<p style="margin-top: -2.5%; word-wrap: break-word;">
+		 production values. You press the submit button , to end your turn. 	After this your current marketplace position will  be calculated.
+	</p>
+	<p> 
+		<u><b> Company Standing(Leaderboard): </b></u> This where you can see what marketplace position your in. 
+	</p>
+	<img id="leaderBoardPicture" src="img/Help Images/Leader Board.jpg">
+
+	<img id="newsInfoPicture" src="img/Help Images/News.jpg">
+	<p>
+		Here you’ll find the current news. It contains insight into what's happening in the market. Read it and stay up to date on your competitors.
+	</p>
+	<img id="marketSharePicture" src="img/Help Images/MarketShare.jpg">
+	<p>
+		<u><b>Charts: </b></u> These charts graphs will you show you how you're doing compared to the rest of your competitors. The bar growth is telling you your network (highest network wins). The pie graphs give your marketshare. Which basically means out of 100 people, how many are using your product, compared to using your competitor's product. The investments chart, tells you how your self investment towards your company, compares to your competitors.
+	</p>
+	<img id="netWorthPicture" src="img/Help Images/NetWorthChart.jpg">
+	<img id="investmentPicture" src="img/Help Images/InvestmentChart.jpg">
+	<p>
+		The more you invest in improving your own company , the better your overall profits will be.
+	</p>
+	<p>
+		<u><b>Capital: </b></u>This is how much you invest in your company. The more capital you invest in yourself , the more options and cheaper your products will be. Think about this way. Your mom gives you $10 to start a lemonade stand. After you make some profit , you can take that profit and add to your initial $10. This allows you to spend more money on other materials.
+	</p>
+	<img id="capitalPicture" src="img/Help Images/Capital.jpg">
+	<p>
+		<u><b>Marketing: </b></u>Alright so you have your product , and all that other jazz , but its useless unless you have marketing. Marketing is what puts your product in front of consumers. The more you spend on it , the more people will see your product. 
+
+	</p>
+	<p>
+		<u><b>Price:</b></u> Set the price for your product. Lower prices mean less profits , but more customers may consider buying. Higher prices mean less customers , but more profits depending on how much you sell. Its up to you to find the perfect balance for your  company.
+	</p>
+	<p>
+		<u><b>Charity:</b></u> Life isn’t all about money. Give back to the community , and they’ll give back to you. Donate money , and earn good will among the public , which can lead to sales.
+	</p>
+	<p>
+		<u><b>Production:</b></u> What good is demand for a product , if you can’t meet supply ?  This is the rate at which you manufacture your products. the more you spend on this , the more products you’ll be able to sell. Careful thought ! Overspend on production and you’ll be left with a saturated market.
+	</p>
+	<p>
+		<u><b>But what is a saturated market?</b></u>
+	</p>
+	<p>
+		Imagine there is 5 copies of a video game. You and 20 other people really want that game. The price of the game would be really high , and it would go to the person willing to pay the most. Now if suddenly 50 more copies of that game were made available. The price would be lowered are as supply would be much higher than demand , aka Market saturation. 
+	</p>
+	<p>
+		<u><b>Research:</b></u> Research development , commonly known as (R&D). Is the research thats done to improve products. Everything from the device that you're playing this on , to your favorite product , has had research development. The more you spend on this , the more features your product has. You wouldn’t want a phone with no ability to use the internet. Likewise customers won’t want your product , if you're not spending to improve the quality of it.
+	</p>
+	<img id="settingsPicture" src="img/Help Images/settings.jpg">
+	<p>
+		<i> Click the gear icon on the banner to access settings , and leave the game. If you ever need to return to the tutorial, you can find it in the settings screen. </i>
+
+	</p>
+	<p>
+		<u><b>Naviagation:</b></u> Swipe left and right to navigate in between menus
+	</p>
+	<img src="img/Help Images/swiping.png">
+	<p>
+		<i><b>Well , Good luck , and enjoy. May the best  business win.</b></i>
+	</p>
+	<p>
+		<i> Swipe right to start the game! </i>
+	</p>
+</div>
 </div>
 
   <!-- PAUSE SCREEN -->
   <div id="PauseScreen">
-    <button type="button" class="btn btn-primary" id="resumeButton" > Resume</button>
-     <a href="NewUserHome.html" id="mainMenuButton" class="btn btn-primary" > Exit</a>
+    <button type="button" class="btn btn-primary btn-block" id="resumeButton" > Resume</button>
+    <button type="button" class="btn btn-primary btn-block" id="tutorial_MenuButton">Tutorial</button>
+     <a href="NewUserHome.html" id="mainMenuButton" class="btn btn-primary btn-block" > Exit</a>
+
   </div>
 
 
@@ -45,7 +132,7 @@
 		 <!-- Page Two, the In-Game Newspaper -->
     <div id="GamePageTwo" style="background-color: #EFEFEF;">
 
-	 <div style="margin-left:10px;margin-right:10px;">
+	 <div id="News">
      <label id="New and Noteworthy" for="newspaper">News and Noteworthy</label> 
 	 <br></br>
 	 <p id="newspaper"></p>
