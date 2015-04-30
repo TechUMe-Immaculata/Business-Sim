@@ -180,6 +180,7 @@ window.onload = function(){
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
+	document.getElementById("tutorial_MenuButton").addEventListener("click", tutorial_MenuButtonPress);
 /* check if this works*/
 	if (navigator.notification) { // Override default HTML alert with native dialog
       window.alert = function (message) {
@@ -358,6 +359,7 @@ if (CurrentPage == 0) {
 	document.getElementById('pauseGear').style.display='none';
 }
 else if (CurrentPage == 1) {
+	document.getElementById('pauseGear').style.display='';
 	document.getElementById('Tutorial').style.display='none';
 	document.getElementById('GamePageOne').style.display='block';
 	document.getElementById('GamePageTwo').style.display='none';
@@ -471,12 +473,17 @@ else {
 function pauseGearPress(){
 	document.getElementById('PauseScreen').style.display="block";
 	document.getElementById('pauseGear').style.display='none';
+	document.getElementById('GamePageFour').style.display='none';
+	document.getElementById('GamePageOne').style.display='none';
+	document.getElementById('GamePageTwo').style.display='none';
+	document.getElementById('GamePageThree').style.display='none';
 }
 
 
 function resumeButtonPress(){
 	document.getElementById('pauseGear').style.display='';
 	document.getElementById('PauseScreen').style.display="none";
+	ChangeThePage();
 
 }
 
@@ -956,4 +963,10 @@ $(function(){
   }
 });
 
+function tutorial_MenuButtonPress() {
+	document.getElementById('pauseGear').style.display='';
+	document.getElementById('PauseScreen').style.display="none";
+	CurrentPage = 0;
+	ChangeThePage();
+}
 

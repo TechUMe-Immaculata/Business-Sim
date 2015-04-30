@@ -15,7 +15,7 @@ width: 50%;
 }
 #Tutorial{
 	color: black;
-	margin-top: 10%;
+	margin-top: 15%;
 }
 #TutGreetingMessage{
 	word-wrap: break-word;
@@ -45,21 +45,75 @@ width: 50%;
 	margin-right: 2%;
 	margin-left: 10%;
 }
+#newsInfoPicture{
+	float: left;
+	width: 80%;
+    height: auto;
+	border-width: 4px; 
+	border-style: solid;
+	margin-right: 2%;
+	margin-left: 10%;
+	margin-bottom: 2%;
+}
+#capitalPicture{
+	width: 60%;
+    height: auto;
+	border-width: 4px; 
+	border-style: solid;
+	margin-right: 2%;
+	margin-left: 15%;
+	margin-bottom: 2%;
+}
+#settingsPicture{
+	border-width: 4px; 
+	border-style: solid;
+	border-top: 6%;
+	width: 80%;
+    height: auto;
+    margin-left: 10%;
+}
+#marketSharePicture{
+	border-width: 4px; 
+	border-style: solid;
+	border-top: 6%;
+	width: 80%;
+    height: auto;
+    margin-left: 10%;
+}
+#netWorthPicture{
+	border-width: 4px; 
+	border-style: solid;
+	border-top: 6%;
+	width: 80%;
+    height: auto;
+    margin-left: 10%;
+}
+#investmentPicture{
+	border-width: 4px; 
+	border-style: solid;
+	border-top: 6%;
+	width: 80%;
+    height: auto;
+    margin-left: 10%;
+}
 #pauseGear{
 	width: 20%;
-	top: 50%;
+	height: 7%;
 }
 #resumeButton{
-
+margin-top: 2%;
 }
 #mainMenuButton{
-margin-top: 10%;
+margin-top: 8%;
+}
+#tutorial_MenuButton{
+	margin-top: 8%;
 }
 #PauseScreen{
 	width: 80%;
 	height: 80%;
 	margin-left: 10%;
-	margin-top: 10%;
+	margin-top: 20%;
 	margin-bottom: 20px;
 	border-width: 10px;
 	border-radius: 20px; 
