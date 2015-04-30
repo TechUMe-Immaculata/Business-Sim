@@ -355,6 +355,7 @@ if (CurrentPage == 0) {
 	document.getElementById('GamePageTwo').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
 	document.getElementById('GamePageFour').style.display='none';
+	document.getElementById('pauseGear').style.display='none';
 }
 else if (CurrentPage == 1) {
 	document.getElementById('Tutorial').style.display='none';
