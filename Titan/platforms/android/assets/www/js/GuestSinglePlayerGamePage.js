@@ -41,25 +41,31 @@ $('.input-number').focusin(function(){
    $(this).data('oldValue', $(this).val());
 });
 $('.input-number').change(function() {
-    
+    var a = false;
     minValue =  parseInt($(this).attr('min'));
     maxValue =  parseInt($(this).attr('max'));
     valueCurrent = parseInt($(this).val());
     
     name = $(this).attr('name');
+	
+	
     if(valueCurrent >= minValue) {
         $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
     } else {
         alert('Sorry, the minimum value was reached');
-        $(this).val($(this).data('oldValue'));
+        $(this).val(minValue);
+		a = true;
     }
+	
+	if (a == false)
+	{
     if(valueCurrent <= maxValue) {
         $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
     } else {
         alert('Sorry, the maximum value was reached');
-        $(this).val($(this).data('oldValue'));
+        $(this).val(maxValue);
     }
-    
+    }
     
 });
 $(".input-number").keydown(function (e) {
@@ -122,10 +128,10 @@ var barChartData = {
 	labels : ["","","","","",""],
 	datasets : [
 		{
-				fillColor : "rgba(220,220,220,0.5)",
-				strokeColor : "rgba(220,220,220,0.8)",
-				highlightFill: "rgba(220,220,220,0.75)",
-				highlightStroke: "rgba(220,220,220,1)",
+				fillColor : "rgba(242,0,0,0.5)",
+				strokeColor : "rgba(242,0,0,0.8)",
+				highlightFill: "rgba(242,0,0,0.75)",
+				highlightStroke: "rgba(242,0,0,1)",
 				data : [1,2,3,4,5,6]
 		}
 ]}
@@ -377,7 +383,6 @@ else if (CurrentPage == 3) {
 	  cash = cashAvaible, 
 	  credit = creditLine;
 	  
-
 	  //Price per unit = __________get data
 	  console.log(data.production +" ____product");
 	  var productionCost = data.production * costPerUnit;
@@ -440,6 +445,9 @@ else if (CurrentPage == 4) {
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageTwo').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
+	
+	
+	document.getElementById("productionCharacters").innerHTML = "Production(max "+maxProduction+" units):";
 }
 else {
 	console.log("error");//error
