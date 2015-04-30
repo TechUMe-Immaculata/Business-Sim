@@ -499,6 +499,10 @@ function getDataFromServer()
 {
 
 	var userObjectId = Parse.User.current().id;
+	var player = Parse.User.current();
+
+
+	document.getElementById("displayCompany").innerHTML = " Your company is : " + player.get("username")+"Company";
 	
 	console.log("_______"+userObjectId);
   
@@ -560,6 +564,8 @@ function getDataFromServer()
 		document.getElementById("charityRangeInput").max = 10000;
 		
 		testNetworth();
+
+
 	})
 }
 
@@ -825,6 +831,42 @@ document.getElementById("company_third").innerHTML = rankings[2].get("companyNam
 document.getElementById("company_fourth").innerHTML = rankings[3].get("companyName");
 document.getElementById("company_fifth").innerHTML = rankings[4].get("companyName");
 document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
+
+// find out if the user has gone bankrupt , and if the game if nessary
+for (i = 0; 6 < rankings[i].length; i++) {
+
+if (rankings[i].get("isBot") = true){
+
+return null	
+}
+else if (rankings[i].get("isBot") = false){
+
+	if(rankings[i].get("isBankrupt") = true){
+
+	alert("You went bankrupt");
+	gameOver(matchid);
+
+
+	}
+	else if (rankings[i].get("isBankrupt") = false){
+
+		return null;
+}
+
+
+
+}
+
+
+
+
+
+
+}
+
+
+
+
 newsfeed(rankings);
 
 return null;
