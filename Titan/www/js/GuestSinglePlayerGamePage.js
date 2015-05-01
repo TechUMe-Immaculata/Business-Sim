@@ -565,6 +565,16 @@ function getDataFromServer()
 		
 		testNetworth();
 
+			if (compMatch.get("isBankrupt") ==true){
+
+			window.alert("Your bankrupt");
+				gameOver(matchId);
+			}
+			else if ( compMatch.get("isBankrupt")==false){
+				console.log("not hotty");
+				return null
+			}
+
 
 	})
 }
@@ -744,7 +754,7 @@ var winner6 = company6;
 alert("The winner is " + winner1 + "Second place : "+ winner2 + " third winner is : " + winner3 + " fourth place is : " + winner4 + "Fith place is : " + winner5 + "last place is :" + winner6);
 var retVal = confirm("Do you want to play again?");
    if( retVal == true ){
-     window.location = " GuestGameSingleOrMultiplayer.html"; 
+     window.location = " NewUserHome.html"; 
 	 
    }else{
 
@@ -831,39 +841,6 @@ document.getElementById("company_third").innerHTML = rankings[2].get("companyNam
 document.getElementById("company_fourth").innerHTML = rankings[3].get("companyName");
 document.getElementById("company_fifth").innerHTML = rankings[4].get("companyName");
 document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
-
-// find out if the user has gone bankrupt , and if the game if nessary
-for (i = 0; 6 < rankings[i].length; i++) {
-
-if (rankings[i].get("isBot") = true){
-
-return null	
-}
-else if (rankings[i].get("isBot") = false){
-
-	if(rankings[i].get("isBankrupt") = true){
-
-	alert("You went bankrupt");
-	gameOver(matchid);
-
-
-	}
-	else if (rankings[i].get("isBankrupt") = false){
-
-		return null;
-}
-
-
-
-}
-
-
-
-
-
-
-}
-
 
 
 
