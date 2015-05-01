@@ -349,6 +349,10 @@ function PreviousButtonPress()
 function ChangeThePage()
 {
 	console.log(CurrentPage);
+	
+	//if (document.getElementById('Tutorial').style.display == 'block')
+	//{document.getElementById('Tutorial').style.display = 'none'
+	//console.log("woking on thekPHSDfuisadelgf")}
 
 if (CurrentPage == 0) {
 	document.getElementById('Tutorial').style.display='block';

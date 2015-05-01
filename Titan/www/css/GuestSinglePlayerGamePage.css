@@ -45,6 +45,9 @@ width: 90%;
 	margin-right: 2%;
 	margin-left: 10%;
 }
+#news{
+	font-size: 3.0vh;
+}
 #newsInfoPicture{
 	float: left;
 	width: 80%;

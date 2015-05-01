@@ -1,4 +1,6 @@
-var CurrentPage = 1;
+// Page zero is the tutorial page, 1 is the landing page. 
+var CurrentPage = 0;
+document.getElementById('PauseScreen').style.display='none';
 var matchId = "",companyId= "",playerId = "";
 var maxProduction = 0,creditLine = 0,avaibleCash= 0,unitCost = 0;
 var news = "";
@@ -148,6 +150,7 @@ window.onload = function(){
 				// Boolean - Whether to animate the chart
 				animation: false,
 				responsive : false
+
 	};
 	var ctx = document.getElementById("chart-area_1").getContext("2d");
 	ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
@@ -169,15 +172,15 @@ window.onload = function(){
 				
 	getDataFromServer();
 	ChangeThePage();
-	
-	document.getElementById('PauseScreen').style.display='none';
 
+    // These buttons have become obsolite 
 	//document.getElementById("NextButton").addEventListener("click", NextButtonPress);
 	//document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
 	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
+	document.getElementById("tutorial_MenuButton").addEventListener("click", tutorial_MenuButtonPress);
 /* check if this works*/
 	if (navigator.notification) { // Override default HTML alert with native dialog
       window.alert = function (message) {
@@ -298,7 +301,7 @@ error: function(error){
 
 
 
-//When the next button is pressed, run this code.
+//When the next button is pressed, run this code. now also runs when the page is swiped** 
 function NextButtonPress()
 {
 	CurrentPage = CurrentPage + 1; 
@@ -321,7 +324,7 @@ function NextButtonPress()
 	
 }
 
-//when the previous button is pressed, run this code. 
+//when the previous button is pressed, run this code, now also runs when the page is swiped** 
 function PreviousButtonPress()
 {
 	CurrentPage = CurrentPage - 1; 
@@ -345,7 +348,19 @@ function PreviousButtonPress()
 }
 function ChangeThePage()
 {
-if (CurrentPage == 1) {
+	console.log(CurrentPage);
+
+if (CurrentPage == 0) {
+	document.getElementById('Tutorial').style.display='block';
+	document.getElementById('GamePageOne').style.display='none';
+	document.getElementById('GamePageTwo').style.display='none';
+	document.getElementById('GamePageThree').style.display='none';
+	document.getElementById('GamePageFour').style.display='none';
+	document.getElementById('pauseGear').style.display='none';
+}
+else if (CurrentPage == 1) {
+	document.getElementById('pauseGear').style.display='';
+	document.getElementById('Tutorial').style.display='none';
 	document.getElementById('GamePageOne').style.display='block';
 	document.getElementById('GamePageTwo').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
@@ -457,19 +472,18 @@ else {
 
 function pauseGearPress(){
 	document.getElementById('PauseScreen').style.display="block";
-	//document.getElementById('NextButton').style.display='none';
-	//document.getElementById('PreviousButton').style.display='none';
 	document.getElementById('pauseGear').style.display='none';
-	console.log('charity Range' + document.getElementById("charityRangeInput").max);
+	document.getElementById('GamePageFour').style.display='none';
+	document.getElementById('GamePageOne').style.display='none';
+	document.getElementById('GamePageTwo').style.display='none';
+	document.getElementById('GamePageThree').style.display='none';
 }
 
 
 function resumeButtonPress(){
-	console.log("Works");
-	//document.getElementById('PreviousButton').style.display='';
-	//document.getElementById('NextButton').style.display='';
 	document.getElementById('pauseGear').style.display='';
 	document.getElementById('PauseScreen').style.display="none";
+	ChangeThePage();
 
 }
 
@@ -949,4 +963,10 @@ $(function(){
   }
 });
 
+function tutorial_MenuButtonPress() {
+	document.getElementById('pauseGear').style.display='';
+	document.getElementById('PauseScreen').style.display="none";
+	CurrentPage = 0;
+	ChangeThePage();
+}
 

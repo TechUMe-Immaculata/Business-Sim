@@ -1,0 +1,1 @@
+del "C:\Users\s170759.OCSB\Desktop\GitHub\Business-Sim\Titan\platforms\android\ant-build\CordovaApp-release-signed-zipped.apk"
