@@ -296,17 +296,17 @@
 	<div class="text-center" id="GamePageFour">
 			<!-- Capital Slider -->
     <div class="center center-block">
-    <p id="priceCharacters">Capital(max 10000 $): 
+    <p id="priceCharacters">Capital(max $10000): 
     <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[6]">
-                <span class="glyphicon glyphicon-minus"></span> 1
+                <span class="glyphicon glyphicon-minus"></span> 10
               </button>
           </span>
           <input type="text" name="quant[6]" class="form-control input-number" value="10" min="0" max="10000" id="capitalRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[6]">
-                  <span class="glyphicon glyphicon-plus"></span> 1
+                  <span class="glyphicon glyphicon-plus"></span> 10
               </button>
           </span>
           </div>    
@@ -320,18 +320,18 @@
                 
                 -->
 		<!-- Price Slider -->
-		<p id="priceCharacters">Price(max 100 $): <!--<a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>-->
+		<p id="priceCharacters">Price(max $100): <!--<a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>-->
 
               <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
-                <span class="glyphicon glyphicon-minus"></span> 1
+                <span class="glyphicon glyphicon-minus"></span> 10
               </button>
           </span>
           <input type="text" name="quant[1]" class="form-control input-number" value="10" min="0" max="100" id="priceRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
-                  <span class="glyphicon glyphicon-plus"></span> 1
+                  <span class="glyphicon glyphicon-plus"></span> 10
               </button>
           </span>
       </div>                                                   
@@ -341,69 +341,95 @@
              <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-                <span class="glyphicon glyphicon-minus"></span> 1
+                <span class="glyphicon glyphicon-minus"></span> 10
               </button>
           </span>
           <input type="text" name="quant[2]" class="form-control input-number" value="10" min="0" max="10000" id="productionRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-                  <span class="glyphicon glyphicon-plus"></span> 1
+                  <span class="glyphicon glyphicon-plus"></span> 10
               </button>
           </span>
       </div>
                 <output name="amount" for="productionRangeInput"onchange="edit()"></output> </form> </p>
         <!-- Marketing Slider -->
-		<p id="marketCharacters">Marketing(max 10000 $): 
+		<p id="marketCharacters">Marketing(max $10000): 
               <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[3]">
-                <span class="glyphicon glyphicon-minus"></span> 1
+                <span class="glyphicon glyphicon-minus"></span> 10
               </button>
           </span>
           <input type="text" name="quant[3]" class="form-control input-number" value="10" min="0" max="10000" id="marketRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[3]">
-                  <span class="glyphicon glyphicon-plus"></span> 1
+                  <span class="glyphicon glyphicon-plus"></span> 10
               </button>
           </span>
       </div>                                                    
                 <output name="amount" for="marketRangeInput"></output> </form> </p>
         <!-- R & D Slider -->
-		<p id="RAndDCharacters">Research(max 10000 $): 
+		<p id="RAndDCharacters">Research(max $10000): 
               <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[4]">
-                <span class="glyphicon glyphicon-minus"></span> 1
+                <span class="glyphicon glyphicon-minus"></span> 10
               </button>
           </span>
           <input type="text" name="quant[4]" class="form-control input-number" value="10" min="0" max="10000" id="RAndDRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[4]">
-                  <span class="glyphicon glyphicon-plus"></span> 1
+                  <span class="glyphicon glyphicon-plus"></span> 10
               </button>
           </span>
       </div>                                                      
                 <output name="amount" for="RAndDRangeInput"></output> </form> </p>
         <!-- Charity Slider -->
-        <p id="charityCharacters">Charity(max 10000 $): 
+        <p id="charityCharacters">Charity(max $10000): 
              <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
-                <span class="glyphicon glyphicon-minus"></span> 1
+                <span class="glyphicon glyphicon-minus"></span> 10
               </button>
           </span>
           <input type="text" name="quant[5]" class="form-control input-number" value="10" min="0" max="10000" id="charityRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[5]" >
-                  <span class="glyphicon glyphicon-plus"></span> 1
+                  <span class="glyphicon glyphicon-plus"></span> 10
               </button>
           </span>
-      </div>                                                      
-                <output name="amount" for="charityRangeInput"></output> </form> </p>
-
-                <!-- The Submit to server button, to end and submit your turn -->
-                <button type="button" class="btn btn-primary" id="submitToServerButton" > Submit Turn </button>
-	</div>
+      </div>                                                     
+	    <output name="amount" for="charityRangeInput"></output> </form> </p>
+		
+		<table class="center center-block">	
+			<tr>
+				<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+			</tr>
+			<tr>
+				<td>Cash</td>
+				<td>
+					<p id="table_2_input_1">50,000</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Credit</td>
+				<td>
+					<p id="table_2_input_2">50,000</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Result</td>
+				<td>
+					<p id="table_2_input_3">100,000</p>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+			</tr>
+		</table>
+		
+		<!-- The Submit to server button, to end and submit your turn -->
+		<button type="button" class="btn btn-primary" id="submitToServerButton" > Submit Turn </button>
 	</div>
 	</div>
 
