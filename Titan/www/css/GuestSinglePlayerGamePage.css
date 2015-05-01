@@ -102,11 +102,10 @@ width: 90%;
 #pauseGear{
 
 	height: 30px;
-	background-color:#dd4814;
-	border:0px;
-	position:fixed;
-	top:0px;
-	left:0px;
+	position: fixed;
+	top: 0;
+	z-index: 4;
+	
 
 }
 #resumeButton{
@@ -219,5 +218,5 @@ font-weight: bold;
           left: 0;
           top: 0;
           background: #dd4814;
-          z-index: 1s;
+          z-index: 3;
       }
