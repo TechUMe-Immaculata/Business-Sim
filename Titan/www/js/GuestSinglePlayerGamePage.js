@@ -18,7 +18,7 @@ $('.btn-number').click(function(e){
         if(type == 'minus') {
             
             if(currentVal > input.attr('min')) {
-                input.val(currentVal - 1).change();
+                input.val(currentVal - 10).change();
             } 
             if(parseInt(input.val()) == input.attr('min')) {
                 $(this).attr('disabled', true);
@@ -28,7 +28,7 @@ $('.btn-number').click(function(e){
 
 
             if(currentVal < input.attr('max')) {
-                input.val(currentVal + 1).change();
+                input.val(currentVal + 10).change();
             }
             if(parseInt(input.val()) == input.attr('max')) {
                 $(this).attr('disabled', true);
@@ -68,6 +68,7 @@ $('.input-number').change(function() {
         $(this).val(maxValue);
     }
     }
+	updatePageFour();
     
 });
 $(".input-number").keydown(function (e) {
@@ -192,6 +193,7 @@ window.onload = function(){
           );
       };
   }
+  
 
 
 			}
@@ -392,7 +394,6 @@ else if (CurrentPage == 3) {
 	  data.marketing = Number(this.$("#marketRangeInput").val());
 	  data.price = Number(this.$("#priceRangeInput").val());
 	  data.charity = Number(this.$("#charityRangeInput").val());
-	  console.log(' C = ' + Number(this.$("#charityRangeInput").val()));
 	  
 	  var expense = 0, 
 	  resources = 0, 
@@ -421,7 +422,7 @@ else if (CurrentPage == 3) {
 	  var afterCash= cash,
 	  afterCredit = credit;
 	//define varibles
-	const MAX_CREDIT = 50000;
+	const MAX_CREDIT = 25000;
 	var netWorth = resources - expense;
 	//determine users state
 	if(netWorth > MAX_CREDIT)
@@ -446,26 +447,28 @@ else if (CurrentPage == 3) {
 	}
 	
 	//table one data displaying changes made based off their decisions before submit
-	document.getElementById("table_1_input_1").innerHTML = cash + " $";
-    document.getElementById("table_1_input_2").innerHTML = credit+ " $"; 
-	document.getElementById("table_1_input_3").innerHTML = resources+ " $";
-	document.getElementById("table_1_input_4").innerHTML = productionCost+ " $";
-	document.getElementById("table_1_input_5").innerHTML = data.marketing+ " $";
-	document.getElementById("table_1_input_6").innerHTML = data.capital+ " $";
-	document.getElementById("table_1_input_7").innerHTML = data.researchDevelopment+ " $";
-	document.getElementById("table_1_input_8").innerHTML = expense+ " $";
-	document.getElementById("table_1_input_9").innerHTML = afterCash+ " $";
-	document.getElementById("table_1_input_10").innerHTML = afterCredit+ " $";
-	document.getElementById("table_1_input_11").innerHTML = (afterCredit + afterCash)+ " $";
-	document.getElementById("table_1_input_12").innerHTML = costPerUnit+ " $";
+	document.getElementById("table_1_input_1").innerHTML = " $"+cash;
+    document.getElementById("table_1_input_2").innerHTML = " $"+credit; 
+	document.getElementById("table_1_input_3").innerHTML = " $"+resources;
+	document.getElementById("table_1_input_4").innerHTML = " $"+productionCost;
+	document.getElementById("table_1_input_5").innerHTML = " $"+data.marketing;
+	document.getElementById("table_1_input_6").innerHTML = " $"+data.capital;
+	document.getElementById("table_1_input_7").innerHTML = " $"+data.researchDevelopment;
+	document.getElementById("table_1_input_8").innerHTML = " $"+expense;
+	document.getElementById("table_1_input_9").innerHTML = " $"+afterCash;
+	document.getElementById("table_1_input_10").innerHTML = " $"+afterCredit;
+	document.getElementById("table_1_input_11").innerHTML = " $"+(afterCredit + afterCash);
+	document.getElementById("table_1_input_12").innerHTML = " $"+costPerUnit;
 	document.getElementById("table_1_input_13").innerHTML = utilization + " %";
-	document.getElementById("table_1_input_14").innerHTML = data.charity+ " $";
+	document.getElementById("table_1_input_14").innerHTML = " $"+data.charity;
 }
 else if (CurrentPage == 4) {
 	document.getElementById('GamePageFour').style.display='block';
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageTwo').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
+	
+	updatePageFour();
 	
 	
 	document.getElementById("productionCharacters").innerHTML = "Production(max "+maxProduction+"u):";
@@ -974,5 +977,60 @@ function tutorial_MenuButtonPress() {
 	document.getElementById('PauseScreen').style.display="none";
 	CurrentPage = 0;
 	ChangeThePage();
+}
+
+function updatePageFour()
+{
+	  //+++++++++++++++++++++++ a 
+	  
+		var data = {},
+		cash = cashAvaible, 
+		credit = creditLine;
+	  
+		data.capital = Number(this.$("#capitalRangeInput").val());
+		data.researchDevelopment = Number(this.$("#RAndDRangeInput").val());
+		data.production = Number(this.$("#productionRangeInput").val());
+		data.marketing = Number(this.$("#marketRangeInput").val());
+		data.price = Number(this.$("#priceRangeInput").val());
+		data.charity = Number(this.$("#charityRangeInput").val());
+		
+		var productionCost = data.production * unitCost;
+			  
+		expense = data.capital + data.researchDevelopment + productionCost + data.marketing + data.charity;
+		resources = cash + credit;
+	  
+	  
+		var afterCash= cash,
+		afterCredit = credit;
+		//define variables
+		const MAX_CREDIT = 25000;
+		var netWorth = resources - expense;
+		//determine users state
+		if(netWorth > MAX_CREDIT)
+		{
+		//adding cash and fill up mac credit
+		afterCash = netWorth - MAX_CREDIT;
+		console.log(netWorth);
+		afterCredit = MAX_CREDIT;
+		}
+		else if ( netWorth <= MAX_CREDIT)
+		{
+		//no cash and subtracting what credit you have left
+		afterCash = 0;
+		afterCredit = MAX_CREDIT - netWorth;
+				
+		//check if player is bankrupt or not then declares bankruptcy
+		if (netWorth < 0 )
+		{
+		afterCash = 0;
+		afterCredit = netWorth;
+		}
+		}
+		
+		document.getElementById("table_2_input_1").innerHTML = "$"+(afterCash);
+		document.getElementById("table_2_input_2").innerHTML = "$"+afterCredit ;
+		document.getElementById("table_2_input_3").innerHTML = "$"+(afterCredit + afterCash);
+	  
+	  //+++++++++++++++++++++++ b
 }
 
