@@ -367,12 +367,14 @@ else if (CurrentPage == 1) {
 	document.getElementById('GamePageFour').style.display='none';
 }
 else if (CurrentPage == 2) {
+	document.getElementById('Tutorial').style.display='none';
 	document.getElementById('GamePageTwo').style.display='block';
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
 	document.getElementById('GamePageFour').style.display='none';
 }
 else if (CurrentPage == 3) {
+	document.getElementById('Tutorial').style.display='none';
 	document.getElementById('GamePageThree').style.display='block';
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageTwo').style.display='none';
@@ -462,7 +464,7 @@ else if (CurrentPage == 4) {
 	document.getElementById('GamePageThree').style.display='none';
 	
 	
-	document.getElementById("productionCharacters").innerHTML = "Production(max "+maxProduction+" units):";
+	document.getElementById("productionCharacters").innerHTML = "Production(max "+maxProduction+"u):";
 }
 else {
 	console.log("error");//error
@@ -945,7 +947,7 @@ $(function(){
   // Bind the swipeHandler callback function to the swipe event on div.box
 	$( "body" ).on( "swipe", swipeHandler );
 	$.event.special.swipe.scrollSupressionThreshold = 30;
-	$.event.special.swipe.horizontalDistanceThreshold =100;
+	$.event.special.swipe.horizontalDistanceThreshold =60;
 	
   // Callback function references the event target and adds the 'swipe' class to it
   function swipeHandler( event ){

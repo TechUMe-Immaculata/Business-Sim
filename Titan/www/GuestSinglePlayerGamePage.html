@@ -15,12 +15,14 @@
 	<button type="button" class="btn btn-success" id ="PreviousButton">Back</button>
 	<button type="button" class="btn btn-info" id ="NextButton">Next</button>
     --> <div id="banner" style="position: fixed;">
+			
             <p class="text-center" id="screenDescription">BusinessPalooza</p>
           </div>
+		  <button type="button"  id="pauseGear">
+                <span class="glyphicon glyphicon-cog"></span>
+            </button>
 
-	<button type="button"  id="pauseGear">
-                  <span class="glyphicon glyphicon-cog"></span>
-              </button>
+
 <!-- Tutorial Screen --> 
 <div id="Tutorial">
 	<p id="TutGreetingMessage"style="font-size: 25px" class="text-center"> Welcome to Buisness Palooza!</p>
@@ -137,7 +139,7 @@
 	 <br></br>
 	 <p id="newspaper"></p>
 	 <br>
-			  <table  style="width:75%;border-width:3px;background-color: #EFEFEF; border-style:dotted;border-color:black;border-radius:1.5px;">
+			  <table  style="width:100%;border-width:3px;background-color: #EFEFEF; border-style:dotted;border-color:black;border-radius:1.5px;">
 		  <tr>
 			<th class="text-center"colspan="2">Top Grossing Companies!</th>
 		  </tr>
@@ -176,7 +178,7 @@
 	 <!-- Page Three, the In-Game Graphs Page -->
 	<div id="GamePageThree">
 	<div class="center center-block">
-	<table style="width:100%;border-width:1px; border-style:solid;border-color:grey;border-radius:1px;">
+	<table style="width:100%;">
 	  <tr>
 		<th class="text-center" colspan="2">Financial Performance Estimate </th>
 	  </tr>
@@ -254,7 +256,14 @@
 	<br/>
 	<div id="plotHolder" class="center center-block">
 	<table class="text-center" id="table_2_"style="width:100%;">
-	<tr><td>Net Worth</td></tr>
+		<tr>
+			<td>
+				<tr>
+					<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+				</tr>
+			</td>
+		</tr>
+	<tr><th class="text-center">Net Worth</th></tr>
 	<tr><td>
 		<div id="canvas-holder">
 			<canvas id="chart-area_1"style="text-align:center;" class="center-block" />
@@ -263,7 +272,7 @@
 			<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
 		</tr>
 	</td></tr>
-	<tr><td>Investment Amount</td></tr>
+	<tr><th class="text-center" >Investment Amount</th></tr>
 	<tr><td>
 		<div id="canvas-holder">
 			<canvas id="chart-area_2"style="text-align:center;"/>
@@ -272,7 +281,7 @@
 			<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
 		</tr>
 	</td></tr>
-	<tr><td>Market Share</td></tr>
+	<tr><th class="text-center">Market Share</th></tr>
 	<tr><td>
 		<div id="canvas-holder">
 			<canvas id="chart-area_3" style="text-align:center;"/>
@@ -328,7 +337,7 @@
       </div>                                                   
                 <output name="amount" for="priceRangeInput"></output> </form> </p>
         <!-- Production Slider -->
-		<p id="productionCharacters">Production(max 500 units): 
+		<p id="productionCharacters">Production(max 500u): 
              <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">

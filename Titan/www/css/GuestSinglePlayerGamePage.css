@@ -4,12 +4,10 @@ margin-left: 2%;
 margin-right: 1%;
 
 }
-
 .center{
-
 width: 90%;
-
 }
+
 #screenDescription{
   color: white;
   font-size: 22.5px;
@@ -101,6 +99,11 @@ width: 90%;
 #pauseGear{
 
 	height: 30px;
+	background-color:#dd4814;
+	border:0px;
+	position:fixed;
+	top:0px;
+	left:0px;
 
 }
 #resumeButton{
@@ -121,13 +124,13 @@ margin-top: 8%;
 	border-width: 10px;
 	border-radius: 20px; 
 	border-style: double;
-  	border color: black;
+  	border-color: black;
 }
 #GamePageOne{
-margin-top:20px;
+margin-top:40px;
 }
 #GamePageTwo{
-margin-top:20px;
+margin-top:40px;
 }
 #priceInfo{
 	margin-left: 220px;
@@ -143,10 +146,10 @@ margin-top:20px;
 }
 
 #GamePageThree{
-margin-top:20px;
+margin-top:40px;
 }
 #GamePageFour{
-margin-top:20px;
+margin-top:40px;
 }
 
 #YourBuisness{
@@ -213,5 +216,5 @@ font-weight: bold;
           left: 0;
           top: 0;
           background: #dd4814;
-          z-index: 0;
+          z-index: 1s;
       }
