@@ -153,18 +153,18 @@ window.onload = function(){
 
 	};
 	var ctx = document.getElementById("chart-area_1").getContext("2d");
-	ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
-	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
+	ctx.canvas.width = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
+	ctx.canvas.height = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
 	//ctx.canvas.height = $("#table_2_").width()-5;
 	window.companyGrossProduct = new Chart(ctx).Bar(barChartData, options);
 	
 	var ctx = document.getElementById("chart-area_2").getContext("2d");
-		ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
-	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
+		ctx.canvas.width = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
+	ctx.canvas.height = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
 	window.capitalInvestment = new Chart(ctx).Bar(barChartData, options);
 	var ctx = document.getElementById("chart-area_3").getContext("2d");
-		ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
-	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
+		ctx.canvas.width = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
+	ctx.canvas.height = $("#plotHolder").width()-($("#plotHolder").width())*(15/100);
 	window.marketshare = new Chart(ctx).Doughnut(doughnutData, options);
 					
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
@@ -349,6 +349,10 @@ function PreviousButtonPress()
 function ChangeThePage()
 {
 	console.log(CurrentPage);
+	
+	//if (document.getElementById('Tutorial').style.display == 'block')
+	//{document.getElementById('Tutorial').style.display = 'none'
+	//console.log("woking on thekPHSDfuisadelgf")}
 
 if (CurrentPage == 0) {
 	document.getElementById('Tutorial').style.display='block';
@@ -367,12 +371,14 @@ else if (CurrentPage == 1) {
 	document.getElementById('GamePageFour').style.display='none';
 }
 else if (CurrentPage == 2) {
+	document.getElementById('Tutorial').style.display='none';
 	document.getElementById('GamePageTwo').style.display='block';
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
 	document.getElementById('GamePageFour').style.display='none';
 }
 else if (CurrentPage == 3) {
+	document.getElementById('Tutorial').style.display='none';
 	document.getElementById('GamePageThree').style.display='block';
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageTwo').style.display='none';
@@ -462,7 +468,7 @@ else if (CurrentPage == 4) {
 	document.getElementById('GamePageThree').style.display='none';
 	
 	
-	document.getElementById("productionCharacters").innerHTML = "Production(max "+maxProduction+" units):";
+	document.getElementById("productionCharacters").innerHTML = "Production(max "+maxProduction+"u):";
 }
 else {
 	console.log("error");//error
@@ -819,12 +825,12 @@ companyGrossProduct.update();
 capitalInvestment.update();
 marketshare.update();
 
-document.getElementById("company_first").innerHTML = rankings[0].get("companyName");
-document.getElementById("company_second").innerHTML = rankings[1].get("companyName");
-document.getElementById("company_third").innerHTML = rankings[2].get("companyName");
-document.getElementById("company_fourth").innerHTML = rankings[3].get("companyName");
-document.getElementById("company_fifth").innerHTML = rankings[4].get("companyName");
-document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
+document.getElementById("company_first").innerHTML = "#1  " + rankings[0].get("companyName");
+document.getElementById("company_second").innerHTML ="#2  " + rankings[1].get("companyName");
+document.getElementById("company_third").innerHTML = "#3  " +rankings[2].get("companyName");
+document.getElementById("company_fourth").innerHTML = "#4  " +rankings[3].get("companyName");
+document.getElementById("company_fifth").innerHTML = "#5  " +rankings[4].get("companyName");
+document.getElementById("company_sixth").innerHTML = "#6  " +rankings[5].get("companyName"); 
 newsfeed(rankings);
 
 return null;
@@ -945,7 +951,7 @@ $(function(){
   // Bind the swipeHandler callback function to the swipe event on div.box
 	$( "body" ).on( "swipe", swipeHandler );
 	$.event.special.swipe.scrollSupressionThreshold = 30;
-	$.event.special.swipe.horizontalDistanceThreshold =100;
+	$.event.special.swipe.horizontalDistanceThreshold =60;
 	
   // Callback function references the event target and adds the 'swipe' class to it
   function swipeHandler( event ){

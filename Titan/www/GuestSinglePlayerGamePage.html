@@ -18,13 +18,16 @@
 			
             <p class="text-center" id="screenDescription">BusinessPalooza</p>
           </div>
+
 		  <button type="button"  class="btn btn-danger" id="pauseGear">
+
                 <span class="glyphicon glyphicon-cog"></span>
             </button>
 
 
 <!-- Tutorial Screen --> 
 <div id="Tutorial">
+
 	<p id="TutGreetingMessage"style="font-size: 25px" class="text-center"> Welcome to Business Palooza!</p>
 
 <div id="TutorialPageOne">
@@ -34,13 +37,15 @@
 	<p> 
 		The objective of this game is to earn the highest net worth within the given time.
 		In the business world  time is broken into quarters. These quarters represent one turn. You are playing an alpha version of our game. This does not represent our final verison.
-	</p>
+
 	<p style="word-wrap: break-word;"> 
 		<u><b>Input money: </b></u> These input buttons are for changing 
 	</p>
 	<img id="inputPicture" src="img/Help Images/input.jpg"></img>
 	<p style="margin-top: -2.5%;">
+
 		your company production values. You decide on how to spend your company’s money by clicking the plus, minus, or directly on the number.
+
 	</p>
 
 	<!-- The Submit button part -->
@@ -53,17 +58,20 @@
 	</p>
 	<p> 
 		<u><b> Leaderboard / News: </b></u> This is where you can see what marketplace position you are in. 
+
 	</p>
 	<img id="leaderBoardPicture" src="img/Help Images/Leader Board.jpg">
 
 	<img id="newsInfoPicture" src="img/Help Images/News.jpg">
 	<p>
+
 		Here you will find the current news. It contains insight into what is happening in the market. Read it and stay up-to-date on your competitors.
 	</p>
 	<img id="marketSharePicture" src="img/Help Images/MarketShare.jpg"></img>
 	<p> </p>
 	<p>
 		<u><b>Charts: </b></u> These chart graphs will show you how you are doing compared to the rest of your competitors. Click on the graphs to reveal which company is being represented. The net worth graphs display your net worth compared to your competitors. The pie graphs give your marketshare. This basically means that out of 100 people, how many are using your product, compared to using your competitor's product? The investments graph tells you how much you are spending on self investment towards your company compared to your competitors.
+
 	</p>
 	<img id="netWorthPicture" src="img/Help Images/NetWorthChart.jpg">
 	<img id="investmentPicture" src="img/Help Images/InvestmentChart.jpg">
@@ -133,6 +141,7 @@
 
 		  </div>
 		
+
 
 	  </div>
 
@@ -302,17 +311,21 @@
 	<div class="text-center" id="GamePageFour">
 			<!-- Capital Slider -->
     <div class="center center-block">
+
     <p id="priceCharacters">Capital(max $10000): 
     <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[6]">
                 <span class="glyphicon glyphicon-minus"></span> 10
+
               </button>
           </span>
           <input type="text" name="quant[6]" class="form-control input-number" value="10" min="0" max="10000" id="capitalRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[6]">
+
                   <span class="glyphicon glyphicon-plus"></span> 10
+
               </button>
           </span>
           </div>    
@@ -326,18 +339,24 @@
                 
                 -->
 		<!-- Price Slider -->
+
 		<p id="priceCharacters">Price(max $100): <!--<a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>-->
+
 
               <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
+
                 <span class="glyphicon glyphicon-minus"></span> 10
+
               </button>
           </span>
           <input type="text" name="quant[1]" class="form-control input-number" value="10" min="0" max="100" id="priceRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
+
                   <span class="glyphicon glyphicon-plus"></span> 10
+
               </button>
           </span>
       </div>                                                   
@@ -347,60 +366,76 @@
              <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+
                 <span class="glyphicon glyphicon-minus"></span> 10
+
               </button>
           </span>
           <input type="text" name="quant[2]" class="form-control input-number" value="10" min="0" max="10000" id="productionRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+
                   <span class="glyphicon glyphicon-plus"></span> 10
+
               </button>
           </span>
       </div>
                 <output name="amount" for="productionRangeInput"onchange="edit()"></output> </form> </p>
         <!-- Marketing Slider -->
+
 		<p id="marketCharacters">Marketing(max $10000): 
               <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[3]">
                 <span class="glyphicon glyphicon-minus"></span> 10
+
               </button>
           </span>
           <input type="text" name="quant[3]" class="form-control input-number" value="10" min="0" max="10000" id="marketRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[3]">
+
                   <span class="glyphicon glyphicon-plus"></span> 10
+
               </button>
           </span>
-      </div>                                                    
+      </div>                                                     
                 <output name="amount" for="marketRangeInput"></output> </form> </p>
         <!-- R & D Slider -->
+ 
 		<p id="RAndDCharacters">Research(max $10000): 
               <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[4]">
                 <span class="glyphicon glyphicon-minus"></span> 10
+
               </button>
           </span>
           <input type="text" name="quant[4]" class="form-control input-number" value="10" min="0" max="10000" id="RAndDRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[4]">
+
                   <span class="glyphicon glyphicon-plus"></span> 10
+
               </button>
           </span>
-      </div>                                                      
+      </div>  
+                                                          
                 <output name="amount" for="RAndDRangeInput"></output> </form> </p>
         <!-- Charity Slider -->
+
         <p id="charityCharacters">Charity(max $10000): 
              <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
                 <span class="glyphicon glyphicon-minus"></span> 10
+
               </button>
           </span>
           <input type="text" name="quant[5]" class="form-control input-number" value="10" min="0" max="10000" id="charityRangeInput">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[5]" >
+
                   <span class="glyphicon glyphicon-plus"></span> 10
               </button>
           </span>
@@ -436,6 +471,7 @@
 		
 		<!-- The Submit to server button, to end and submit your turn -->
 		<button type="button" class="btn btn-primary" id="submitToServerButton" > Submit Turn </button>
+
 	</div>
 	</div>
 
