@@ -216,6 +216,7 @@ window.onload = function(){
 //this can be made more efficient but a lack of security
 function SubmitButtonPress()
 {		
+	document.getElementById('submitToServerButton').style.display='none';
 
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
@@ -288,14 +289,8 @@ error: function(error){
     console.log("not working");
 }
 
+
 });
-
-
-
-
-
-	  
-
 }
 
 
@@ -460,6 +455,7 @@ else if (CurrentPage == 4) {
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageTwo').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
+	document.getElementById('submitToServerButton').style.display='';
 	
 	
 	document.getElementById("productionCharacters").innerHTML = "Production(max "+maxProduction+" units):";
