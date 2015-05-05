@@ -182,6 +182,8 @@ window.onload = function(){
 	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 	document.getElementById("tutorial_MenuButton").addEventListener("click", tutorial_MenuButtonPress);
+
+	document.getElementById('LoadingNotifier').style.display="none";
 /* check if this works*/
 	if (navigator.notification) { // Override default HTML alert with native dialog
       window.alert = function (message) {
@@ -219,6 +221,7 @@ window.onload = function(){
 function SubmitButtonPress()
 {		
 	document.getElementById('submitToServerButton').style.display='none';
+	document.getElementById('LoadingNotifier').style.display="";
 
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
