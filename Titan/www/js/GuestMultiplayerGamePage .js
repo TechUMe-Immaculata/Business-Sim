@@ -216,7 +216,7 @@ window.onload = function(){
 //this can be made more efficient but a lack of security
 function SubmitButtonPress()
 {		
-
+		document.getElementById('submitToServerButton').style.display='none';
 		var dataOut = {};
 		//input does not work with type number thus all these objects are null
 	  dataOut.clientCapital = document.getElementById("capitalRangeInput").value;
@@ -291,7 +291,7 @@ error: function(error){
 });
 
 
-document.getElementById("submitToServerButton").disabled = true;
+
 
 
 
