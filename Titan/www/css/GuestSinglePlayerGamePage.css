@@ -12,6 +12,14 @@ width: 90%;
   color: white;
   font-size: 22.5px;
   font-weight: bold;
+  height: 8%;
+}
+#LoadingNotifier{
+	height: 5%;
+	position: fixed;
+	top: 0;
+	z-index: 4;
+	right:  2%;
 }
 #Tutorial{
 	color: black;
