@@ -9,8 +9,9 @@
  
     <title>Home Screen</title>
 
+   
+    <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css"> 
     <link rel="stylesheet" type="text/css" href="css/GuestGameSingleOrMultiplayer.css"/>
-    <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
     <!--does not work with internet explorer 6 and 7 for jquery 2.1-->
     
   
@@ -32,7 +33,16 @@
 
           <div>
                 <a href="GuestSinglePlayerLoading.html" class="btn btn-info btn-block center-block" id="singlePlayerButton" > Single Player </a>          
-                <a  class="btn btn-info btn-block center-block"  id="multiPlayerButton" ><span class="glyphicon glyphicon-lock"></span>Multiplayer (Full Game Only) </a>
+               
+                <div class="btn-group">
+  <button type="button" class="btn btn-info dropdown-toggle" id="multiPlayerButton" data-toggle="dropdown" aria-expanded="false">
+    Multiplayer <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Create Game</a></li>
+    <li><a href="#">Join Game</a></li>
+  </ul>
+</div>
               
                 
 
