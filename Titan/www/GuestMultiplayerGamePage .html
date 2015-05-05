@@ -1,0 +1,487 @@
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+<link rel="stylesheet" type="text/css" href="css/GuestSinglePlayerGamePage.css">
+<link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.css">
+
+
+</head>
+
+
+<body>
+	<!--
+	<button type="button" class="btn btn-success" id ="PreviousButton">Back</button>
+	<button type="button" class="btn btn-info" id ="NextButton">Next</button>
+    --> <div id="banner" style="position: fixed;">
+			
+            <p class="text-center" id="screenDescription">BusinessPalooza</p>
+          </div>
+
+		  <button type="button"  class="btn btn-danger" id="pauseGear">
+
+                <span class="glyphicon glyphicon-cog"></span>
+            </button>
+
+
+<!-- Tutorial Screen --> 
+<div id="Tutorial">
+
+	<p id="TutGreetingMessage"style="font-size: 25px" class="text-center"> Welcome to Business Palooza!</p>
+
+<div id="TutorialPageOne">
+	<p> 
+		<u><b>Goal:</b></u> This game is designed to teach you the core values behind a successful business.
+	</p>
+	<p> 
+		The objective of this game is to earn the highest net worth within the given time.
+		In the business world  time is broken into quarters. These quarters represent one turn. You are playing an alpha version of our game. This does not represent our final verison.
+
+	<p style="word-wrap: break-word;"> 
+		<u><b>Input money: </b></u> These input buttons are for changing 
+	</p>
+	<img id="inputPicture" src="img/Help Images/input.jpg"></img>
+	<p style="margin-top: -2.5%;">
+
+		your company production values. You decide on how to spend your company’s money by clicking the plus, minus, or directly on the number.
+
+	</p>
+
+	<!-- The Submit button part -->
+	<p> 
+		<u><b> Submit: </b></u> When you are done making changes to your
+	</p>
+	<img id="submitPicture" src="img/Help Images/submit.jpg"></img>
+	<p style="margin-top: -2.5%; word-wrap: break-word;">
+		 production values, click on the submit button to end your turn. After this your current marketplace position will be calculated.
+	</p>
+	<p> 
+		<u><b> Leaderboard / News: </b></u> This is where you can see what marketplace position you are in. 
+
+	</p>
+	<img id="leaderBoardPicture" src="img/Help Images/Leader Board.jpg">
+
+	<img id="newsInfoPicture" src="img/Help Images/News.jpg">
+	<p>
+
+		Here you will find the current news. It contains insight into what is happening in the market. Read it and stay up-to-date on your competitors.
+	</p>
+	<img id="marketSharePicture" src="img/Help Images/MarketShare.jpg"></img>
+	<p> </p>
+	<p>
+		<u><b>Charts: </b></u> These chart graphs will show you how you are doing compared to the rest of your competitors. Click on the graphs to reveal which company is being represented. The net worth graphs display your net worth compared to your competitors. The pie graphs give your marketshare. This basically means that out of 100 people, how many are using your product, compared to using your competitor's product? The investments graph tells you how much you are spending on self investment towards your company compared to your competitors.
+
+	</p>
+	<img id="netWorthPicture" src="img/Help Images/NetWorthChart.jpg">
+	<img id="investmentPicture" src="img/Help Images/InvestmentChart.jpg">
+	<p>
+		The more you invest in improving your own company, the better your overall profits will be.
+	</p>
+	<p>
+		<u><b>Capital: </b></u>This is how much you invest in your company. The more capital you invest in yourself, the more options and cheaper your products will be. Think about it this way. Your mom gives you $10 to start a lemonade stand. After you make some profit, you can take that profit and add to your initial $10. This allows you to spend more money on other materials.
+	</p>
+	<img id="capitalPicture" src="img/Help Images/Capital.jpg">
+	<p>
+		<u><b>Marketing: </b></u>Alright, so you have your product and all that other jazz, but it is useless unless you have marketing. Marketing is what puts your product in front of consumers. The more you spend on it, the more people will see your product. 
+
+	</p>
+	<p>
+		<u><b>Price:</b></u> Set the price for your product. Lower prices mean less profits but more customers may consider buying at lower prices. Higher prices mean less customers but more profits depending on how much you sell. It is up to you to find the perfect balance for your company.
+	</p>
+	<p>
+		<u><b>Charity:</b></u> Life is not all about money. Give back to the community and they will give back to you. Donate money and earn good will among the public, which can lead to sales.
+	</p>
+	<p>
+		<u><b>Production:</b></u> What good is demand for a product if you cannot meet supply? This is the rate at which you manufacture your products. The more you spend on this, the more products you will be able to sell. Careful though! Overspend on production and you will be left with a saturated market.
+	</p>
+	<p>
+		<u><b>But what is a saturated market?</b></u>
+	</p>
+	<p>
+		Imagine there are 5 copies of a video game. You and 20 other people really want that game. The price of the game would be really high and it would go to the person willing to pay the most. Now if suddenly 50 more copies of that game were made available, the price would be lowered as supply would be much higher than demand, therefore creating market saturation. 
+	</p>
+	<p>
+		<u><b>Research:</b></u> Research and development, commonly known as R&D, is the research that is done to improve products. Everything from the device on which you are playing this game, to your favorite product, has been through research and development. The more you spend on this, the more features your product will have. You would not want a phone with no ability to use the Internet. Likewise customers will not want your product, if you are not spending enough money to improve its quality.
+	</p>
+	<img id="settingsPicture" src="img/Help Images/settings.jpg">
+	<p>
+		<i> Click the gear icon on the banner to access settings and leave the game. If you ever need to return to the tutorial, you can find it on the Settings screen. </i>
+
+	</p>
+	<p>
+		<u><b>Navigation:</b></u> Swipe left and right to navigate in between menus.
+	</p>
+	<img src="img/Help Images/swiping.png">
+	<p>
+		<i><b>Well, good luck and enjoy! May the best business win.</b></i>
+	</p>
+	<p>
+		<i> Swipe right to start the game! </i>
+	</p>
+</div>
+</div>
+
+  <!-- PAUSE SCREEN -->
+  <div id="PauseScreen">
+    <button type="button" class="btn btn-primary btn-block" id="resumeButton" > Resume</button>
+    <button type="button" class="btn btn-primary btn-block" id="tutorial_MenuButton">Tutorial</button>
+     <a href="NewUserHome.html" id="mainMenuButton" class="btn btn-primary btn-block" > Exit</a>
+
+  </div>
+
+
+    <!-- Page One, the In-Game Home Page -->
+    <div id="GamePageOne">
+		  <img class="center-block"id="YourBuisness" src="img/Factory.svg"/>
+		  <div>
+			<p id="pageOneQuater"></p>
+
+			<p id="displayCompany">Your company Name :</p>
+
+		  </div>
+		
+
+
+	  </div>
+
+
+		 <!-- Page Two, the In-Game Newspaper -->
+    <div id="GamePageTwo" style="background-color: #EFEFEF;">
+
+	 <div id="News">
+     <label id="New and Noteworthy" for="newspaper">News and Noteworthy</label> 
+	 <br></br>
+	 <p id="newspaper"></p>
+	 <br>
+			  <table  style="width:100%;border-width:3px;background-color: #EFEFEF; border-style:dotted;border-color:black;border-radius:1.5px;">
+		  <tr>
+			<th class="text-center"colspan="2">Top Grossing Companies!</th>
+		  </tr>
+		  <tr>
+			<th colspan="2"><hr style="width:100%;border-width:1px; border-style:dashed;border-color:#3D3D29;"></hr></th>
+		  </tr>
+		  <tr>
+			<td></td>
+			<td id="company_first"><p> Company 1 (Player Name 1)</p></td>
+		  </tr>
+		   <tr>
+			<td></td>
+			<td><p id="company_second"> Company 2 (Player Name 2)</p></td>
+		  </tr>
+		   <tr>
+			<td></td>
+			<td><p id="company_third"> Company 3 (Player Name 3)</p></td>
+		  </tr>
+		   <tr>
+			<td></td>
+			<td><p id="company_fourth"> Company 4 (Player Name 4)</p></td>
+		  </tr>
+		   <tr>
+			<td></td>
+			<td><p id="company_fifth"> Company 5 (Player Name 5)</p></td>
+		  </tr>
+		   <tr>
+			<td></td>
+			<td><p id="company_sixth"> Company 6 (Player Name 6)</p></td>
+		  </tr>
+		 </table>
+	 </div>
+     
+    	</div>
+
+	 <!-- Page Three, the In-Game Graphs Page -->
+	<div id="GamePageThree">
+	<div class="center center-block">
+	<table style="width:100%;">
+	  <tr>
+		<th class="text-center" colspan="2">Financial Performance Estimate </th>
+	  </tr>
+	  <tr>
+		<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+	  </tr>
+	  <tr>
+		<td>Available Cash</td>
+		<td><p id="table_1_input_1">50,000</p></td>
+	  </tr>
+	  <tr>
+		<td>Credit Line</td>
+		<td><p id="table_1_input_2">50,000</p></td>
+	  </tr>
+	  	<tr>
+		<td>Resources</td>
+		<td><p id="table_1_input_3">100,000</p></td>
+		</tr>
+	  <tr>
+		<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+	  </tr>
+	  </tr>
+	  	<tr>
+		<td>Production</td>
+		<td><p id="table_1_input_4">50,000</p></td>
+	  </tr>
+	  <tr>
+		<td>Marketing</td>
+		<td><p id="table_1_input_5">50,000</p></td>
+	  </tr>
+	  	<tr>
+		<td>Capital</td>
+		<td><p id="table_1_input_6">100,000</p></td>
+	  </tr>
+	  	<tr>
+		<td>R and D</td>
+		<td><p id="table_1_input_7">50,000</p></td>
+	  </tr>
+	  	<tr>
+		<td>Charity</td>
+		<td><p id="table_1_input_14">50,000</p></td>
+	  </tr>
+	  	<tr>
+		<td>Expenses</td>
+		<td><p id="table_1_input_8">250,000</p></td>
+	  </tr>
+	  <tr>
+		<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+	  </tr>
+	  <td>Cash</td>
+		<td><p id="table_1_input_9">100,000</p></td>
+	  </tr>
+	  	<tr>
+		<td>Credit</td>
+		<td><p id="table_1_input_10">250,000</p></td>
+	  </tr>
+	  	<tr>
+		<td>Result</td>
+		<td><p id="table_1_input_11">-150,000</p></td>
+	  </tr>
+	  <tr>
+		<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+	  </tr>
+	  </tr>
+	  	<tr>
+		<td>Cost / Unit</td>
+		<td><p id="table_1_input_12">7</p></td>
+	  </tr>
+	  	<tr>
+		<td>Utilization</td>
+		<td><p id="table_1_input_13">25%</p></td>
+	  </tr>
+	</table>
+	</div>
+	<br/>
+	<div id="plotHolder" class="center center-block">
+	<table class="text-center" id="table_2_"style="width:100%;">
+		<tr>
+			<td>
+				<tr>
+					<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+				</tr>
+			</td>
+		</tr>
+	<tr><th class="text-center">Net Worth</th></tr>
+	<tr><td>
+		<div id="canvas-holder">
+			<canvas id="chart-area_1"style="text-align:center;" class="center-block" />
+		</div>
+		<tr>
+			<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+		</tr>
+	</td></tr>
+	<tr><th class="text-center" >Investment Amount</th></tr>
+	<tr><td>
+		<div id="canvas-holder">
+			<canvas id="chart-area_2"style="text-align:center;"/>
+		</div>
+		<tr>
+			<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+		</tr>
+	</td></tr>
+	<tr><th class="text-center">Market Share</th></tr>
+	<tr><td>
+		<div id="canvas-holder">
+			<canvas id="chart-area_3" style="text-align:center;"/>
+		</div>
+	</td></tr>
+		<tr>
+			<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+		</tr>
+	</table>
+	</div>
+</div>
+	<div class="text-center" id="GamePageFour">
+			<!-- Capital Slider -->
+    <div class="center center-block">
+
+    <p id="priceCharacters">Capital(max $10000): 
+    <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[6]">
+                <span class="glyphicon glyphicon-minus"></span> 10
+
+              </button>
+          </span>
+          <input type="text" name="quant[6]" class="form-control input-number" value="10" min="0" max="10000" id="capitalRangeInput">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[6]">
+
+                  <span class="glyphicon glyphicon-plus"></span> 10
+
+              </button>
+          </span>
+          </div>    
+  </p>
+	
+
+			<!-- New code in the house
+		<p id="priceCharacters">Capital: 
+              <form id="capitalSlider" oninput="amount.value=capitalRangeInput.value">
+                <input type="number" id="capitalRangeInput" name="rangeInput" min="0" max="any">                                                       
+                
+                -->
+		<!-- Price Slider -->
+
+		<p id="priceCharacters">Price(max $100): <!--<a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>-->
+
+
+              <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
+
+                <span class="glyphicon glyphicon-minus"></span> 10
+
+              </button>
+          </span>
+          <input type="text" name="quant[1]" class="form-control input-number" value="10" min="0" max="100" id="priceRangeInput">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
+
+                  <span class="glyphicon glyphicon-plus"></span> 10
+
+              </button>
+          </span>
+      </div>                                                   
+                <output name="amount" for="priceRangeInput"></output> </form> </p>
+        <!-- Production Slider -->
+		<p id="productionCharacters">Production(max 500u): 
+             <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+
+                <span class="glyphicon glyphicon-minus"></span> 10
+
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="form-control input-number" value="10" min="0" max="10000" id="productionRangeInput">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+
+                  <span class="glyphicon glyphicon-plus"></span> 10
+
+              </button>
+          </span>
+      </div>
+                <output name="amount" for="productionRangeInput"onchange="edit()"></output> </form> </p>
+        <!-- Marketing Slider -->
+
+		<p id="marketCharacters">Marketing(max $10000): 
+              <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[3]">
+                <span class="glyphicon glyphicon-minus"></span> 10
+
+              </button>
+          </span>
+          <input type="text" name="quant[3]" class="form-control input-number" value="10" min="0" max="10000" id="marketRangeInput">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[3]">
+
+                  <span class="glyphicon glyphicon-plus"></span> 10
+
+              </button>
+          </span>
+      </div>                                                     
+                <output name="amount" for="marketRangeInput"></output> </form> </p>
+        <!-- R & D Slider -->
+ 
+		<p id="RAndDCharacters">Research(max $10000): 
+              <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[4]">
+                <span class="glyphicon glyphicon-minus"></span> 10
+
+              </button>
+          </span>
+          <input type="text" name="quant[4]" class="form-control input-number" value="10" min="0" max="10000" id="RAndDRangeInput">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[4]">
+
+                  <span class="glyphicon glyphicon-plus"></span> 10
+
+              </button>
+          </span>
+      </div>  
+                                                          
+                <output name="amount" for="RAndDRangeInput"></output> </form> </p>
+        <!-- Charity Slider -->
+
+        <p id="charityCharacters">Charity(max $10000): 
+             <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
+                <span class="glyphicon glyphicon-minus"></span> 10
+
+              </button>
+          </span>
+          <input type="text" name="quant[5]" class="form-control input-number" value="10" min="0" max="10000" id="charityRangeInput">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[5]" >
+
+                  <span class="glyphicon glyphicon-plus"></span> 10
+              </button>
+          </span>
+      </div>                                                     
+	    <output name="amount" for="charityRangeInput"></output> </form> </p>
+		
+		<table class="center center-block">	
+			<tr>
+				<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+			</tr>
+			<tr>
+				<td>Cash</td>
+				<td>
+					<p id="table_2_input_1">50,000</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Credit</td>
+				<td>
+					<p id="table_2_input_2">50,000</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Result</td>
+				<td>
+					<p id="table_2_input_3">100,000</p>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2"><hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr></th>
+			</tr>
+		</table>
+		
+		<!-- The Submit to server button, to end and submit your turn -->
+		<button type="button" class="btn btn-primary" id="submitToServerButton" > Submit Turn </button>
+
+	</div>
+	</div>
+
+</body>
+	 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="cordova.js"></script>
+	<script src="js/GuestSinglePlayerGamePage.js" defer></script> 
+
+</html>
