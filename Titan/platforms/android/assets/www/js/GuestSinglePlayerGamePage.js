@@ -18,7 +18,7 @@ $('.btn-number').click(function(e){
         if(type == 'minus') {
             
             if(currentVal > input.attr('min')) {
-                input.val(currentVal - 1).change();
+                input.val(currentVal - 10).change();
             } 
             if(parseInt(input.val()) == input.attr('min')) {
                 $(this).attr('disabled', true);
@@ -28,7 +28,7 @@ $('.btn-number').click(function(e){
 
 
             if(currentVal < input.attr('max')) {
-                input.val(currentVal + 1).change();
+                input.val(currentVal + 10).change();
             }
             if(parseInt(input.val()) == input.attr('max')) {
                 $(this).attr('disabled', true);
@@ -68,6 +68,7 @@ $('.input-number').change(function() {
         $(this).val(maxValue);
     }
     }
+	updatePageFour();
     
 });
 $(".input-number").keydown(function (e) {
@@ -192,6 +193,7 @@ window.onload = function(){
           );
       };
   }
+  
 
 
 			}
@@ -392,7 +394,6 @@ else if (CurrentPage == 3) {
 	  data.marketing = Number(this.$("#marketRangeInput").val());
 	  data.price = Number(this.$("#priceRangeInput").val());
 	  data.charity = Number(this.$("#charityRangeInput").val());
-	  console.log(' C = ' + Number(this.$("#charityRangeInput").val()));
 	  
 	  var expense = 0, 
 	  resources = 0, 
@@ -421,7 +422,7 @@ else if (CurrentPage == 3) {
 	  var afterCash= cash,
 	  afterCredit = credit;
 	//define varibles
-	const MAX_CREDIT = 50000;
+	const MAX_CREDIT = 25000;
 	var netWorth = resources - expense;
 	//determine users state
 	if(netWorth > MAX_CREDIT)
@@ -446,26 +447,28 @@ else if (CurrentPage == 3) {
 	}
 	
 	//table one data displaying changes made based off their decisions before submit
-	document.getElementById("table_1_input_1").innerHTML = cash + " $";
-    document.getElementById("table_1_input_2").innerHTML = credit+ " $"; 
-	document.getElementById("table_1_input_3").innerHTML = resources+ " $";
-	document.getElementById("table_1_input_4").innerHTML = productionCost+ " $";
-	document.getElementById("table_1_input_5").innerHTML = data.marketing+ " $";
-	document.getElementById("table_1_input_6").innerHTML = data.capital+ " $";
-	document.getElementById("table_1_input_7").innerHTML = data.researchDevelopment+ " $";
-	document.getElementById("table_1_input_8").innerHTML = expense+ " $";
-	document.getElementById("table_1_input_9").innerHTML = afterCash+ " $";
-	document.getElementById("table_1_input_10").innerHTML = afterCredit+ " $";
-	document.getElementById("table_1_input_11").innerHTML = (afterCredit + afterCash)+ " $";
-	document.getElementById("table_1_input_12").innerHTML = costPerUnit+ " $";
+	document.getElementById("table_1_input_1").innerHTML = " $"+cash;
+    document.getElementById("table_1_input_2").innerHTML = " $"+credit; 
+	document.getElementById("table_1_input_3").innerHTML = " $"+resources;
+	document.getElementById("table_1_input_4").innerHTML = " $"+productionCost;
+	document.getElementById("table_1_input_5").innerHTML = " $"+data.marketing;
+	document.getElementById("table_1_input_6").innerHTML = " $"+data.capital;
+	document.getElementById("table_1_input_7").innerHTML = " $"+data.researchDevelopment;
+	document.getElementById("table_1_input_8").innerHTML = " $"+expense;
+	document.getElementById("table_1_input_9").innerHTML = " $"+afterCash;
+	document.getElementById("table_1_input_10").innerHTML = " $"+afterCredit;
+	document.getElementById("table_1_input_11").innerHTML = " $"+(afterCredit + afterCash);
+	document.getElementById("table_1_input_12").innerHTML = " $"+costPerUnit;
 	document.getElementById("table_1_input_13").innerHTML = utilization + " %";
-	document.getElementById("table_1_input_14").innerHTML = data.charity+ " $";
+	document.getElementById("table_1_input_14").innerHTML = " $"+data.charity;
 }
 else if (CurrentPage == 4) {
 	document.getElementById('GamePageFour').style.display='block';
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageTwo').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
+	
+	updatePageFour();
 	
 	
 	document.getElementById("productionCharacters").innerHTML = "Production(max "+maxProduction+"u):";
@@ -505,6 +508,10 @@ function getDataFromServer()
 {
 
 	var userObjectId = Parse.User.current().id;
+	var player = Parse.User.current();
+
+
+	document.getElementById("displayCompany").innerHTML = " Your company is : " + player.get("username")+"Company";
 	
 	console.log("_______"+userObjectId);
   
@@ -566,6 +573,18 @@ function getDataFromServer()
 		document.getElementById("charityRangeInput").max = 10000;
 		
 		testNetworth();
+
+			if (compMatch.get("isBankrupt") ==true){
+
+			window.alert("Your bankrupt");
+				gameOver(matchId);
+			}
+			else if ( compMatch.get("isBankrupt")==false){
+				console.log("not hotty");
+				return null
+			}
+
+
 	})
 }
 
@@ -744,7 +763,7 @@ var winner6 = company6;
 alert("The winner is " + winner1 + "Second place : "+ winner2 + " third winner is : " + winner3 + " fourth place is : " + winner4 + "Fith place is : " + winner5 + "last place is :" + winner6);
 var retVal = confirm("Do you want to play again?");
    if( retVal == true ){
-     window.location = " GuestGameSingleOrMultiplayer.html"; 
+     window.location = " NewUserHome.html"; 
 	 
    }else{
 
@@ -825,6 +844,7 @@ companyGrossProduct.update();
 capitalInvestment.update();
 marketshare.update();
 
+
 document.getElementById("company_first").innerHTML = "#1  " + rankings[0].get("companyName");
 document.getElementById("company_second").innerHTML ="#2  " + rankings[1].get("companyName");
 document.getElementById("company_third").innerHTML = "#3  " +rankings[2].get("companyName");
@@ -837,7 +857,7 @@ return null;
 }).then(function(result){
 })
 }
-/*
+/* 
 var xDown = null;                                                        
 var yDown = null;                                                        
 
@@ -890,12 +910,12 @@ news = "";
 function news1(cat){
 
 
-var feed1 = "The leader is " + cat.get("companyName") + ". " + "They broke records with " + cat.get("stats").profit + "$ profit. ";
-var feed2 = "The new leader in the industry is " + cat.get("companyName") + ". " + "They made " + cat.get("stats").revenue+ "$ revenue. The market seems to love their price point of " + cat.get("price")+" $. ";
-var feed3 = "Wow " + cat.get("companyName") +" has just taken first play in the industry with a revenue of " + cat.get("stats").revenue + "$. ";
-var feed4 = "Amazingly " + cat.get("companyName") + " is the leader with a record " + cat.get("networth")+ "$ in net worth. ";
-var feed5 = cat.get("companyName") + " is now in first place. " + "Their smart investments have earned them top stop with " + cat.get("stats").profit + "$ in profit. ";
-var feed6 = " Now this is a surprise  " + cat.get("companyName") + " has the top place in the market. " + " Their donations of " + cat.get("charity") + " $ has really earned them love from their community. ";
+var feed1 = "The leader is " + cat.get("companyName") + ". " + "They broke records with $" + cat.get("stats").profit + " in profits.";
+var feed2 = "The new leader in the industry is " + cat.get("companyName") + ". " + "They made $" + cat.get("stats").revenue+ " in revenue. The market seems to love their price point of $" + cat.get("price")+". ";
+var feed3 = "Wow " + cat.get("companyName") +" has just taken first place in the industry with a revenue of $" + cat.get("stats").revenue + ".";
+var feed4 = "Amazingly " + cat.get("companyName") + " is the leader with a record $" + cat.get("networth")+ " in net worth. ";
+var feed5 = cat.get("companyName") + " is now in first place. " + "Their smart investments have earned them top stop with $" + cat.get("stats").profit + " in profit. ";
+var feed6 = " Now this is a surprise  " + cat.get("companyName") + " has the top place in the market. " + " Their donations of $" + cat.get("charity") + " has really earned them love from their community. ";
 var feeds = [
 feed1,feed2 , feed3 , feed4, feed5 , feed6
 ];
@@ -908,12 +928,12 @@ document.getElementById("newspaper").innerHTML = news;
 
 function news2(cat){
 
-var feed1 = " Runner up is " + cat.get("companyName") + ". " + "They had a modest " + cat.get("stats").profit + " $ profit. ";
-var feed2 = " On the rise is " + cat.get("companyName") + ". " + "They are doing well with " + cat.get("stats").profit + " $ in profit. ";
-var feed3 = " Don't sleep on " + cat.get("companyName") + ". " + "They are the rise with a net worth of " + cat.get("networth") + " $. ";
-var feed4 = " Looks like " + cat.get("companyName") + " is set make a big splash. " + " There popularity with teens has earned " + cat.get("stats").profit + " $ profit. ";
+var feed1 = " Runner up is " + cat.get("companyName") + ". " + "They had a modest $" + cat.get("stats").profit + " in profit. ";
+var feed2 = " On the rise is " + cat.get("companyName") + ". " + "They are doing well with $" + cat.get("stats").profit + "in profit. ";
+var feed3 = " Don't sleep on " + cat.get("companyName") + ". " + "They are the rise with a net worth of $" + cat.get("networth") + ". ";
+var feed4 = " Looks like " + cat.get("companyName") + " is set make a big splash. " + " Their popularity with teens has earned $" + cat.get("stats").profit + " profit. ";
 var feed5 = " Runner up is " + cat.get("companyName") + "." + " They had a modest $" + cat.get("stats").profit + " profit. ";
-var feed6 = " Second in market-share is " + cat.get("companyName") + ". " + " They are close to being in first place. Their impressive revenue of " + cat.get("stats").revenue + " $ has many analysts excited. ";
+var feed6 = " Second in market-share is " + cat.get("companyName") + ". " + " They are close to being in first place. Their impressive revenue of $" + cat.get("stats").revenue + " has many analysts excited. ";
 var feeds = [
 feed1, feed2 , feed3 , feed4, feed5 , feed6
 ];
@@ -928,12 +948,12 @@ document.getElementById("newspaper").innerHTML = news;
 
 function news3(cat){
 
-var feed1 =  cat.get("companyName") + " is terrible. " + "They only donate " + cat.get("charity") + " $. Some call them greedy. ";
-var feed2 = "This is unexpected " + cat.get("companyName") + " is last in market-share. " + "Their profit of " + cat.get("stats").profit + "$ is unlawful.";
-var feed3 = "Don't sleep on " + cat.get("companyName") + ". " + "They are on the rise with a net worth of " + cat.get("networth")+" $. " ;
-var feed4 = cat.get("companyName") + " clearly needs more business lessons. " + "There popularity with adults has plummeted. ";
+var feed1 =  cat.get("companyName") + " is terrible. " + "They only donate $" + cat.get("charity") + ". Some are calling them greedy. ";
+var feed2 = "This is unexpected " + cat.get("companyName") + " is last in market-share. " + "Their profit of $" + cat.get("stats").profit + "is awful.";
+var feed3 = " Things are looking grim for " + cat.get("companyName") + ". " + " Their net worth is the lowest of all companies , with $" + cat.get("networth")+"." ;
+var feed4 = cat.get("companyName") + " clearly needs more business lessons. " + "Their popularity with adults has plummeted. ";
 var feed5 = "Do not invest in " + cat.get("companyName") + ". "+ "They are last in market-share. " + "If they don't do something drastic soon they will face bankruptcy. ";
-var feed6 = "Poor investments has lead " + cat.get("companyName") + " to last place in market-share. " + "The community thinks that they are too greedy with profits and there total donations of " + cat.get("charity")+ " $ not enough";
+var feed6 = "Poor investments has lead " + cat.get("companyName") + " to last place in market-share. " + "The community thinks that they are too greedy with profits and their total donations of $" + cat.get("charity")+ " not enough";
 var feeds = [
 feed1,feed2 , feed3 , feed4, feed5 , feed6
 ];
@@ -974,5 +994,60 @@ function tutorial_MenuButtonPress() {
 	document.getElementById('PauseScreen').style.display="none";
 	CurrentPage = 0;
 	ChangeThePage();
+}
+
+function updatePageFour()
+{
+	  //+++++++++++++++++++++++ a 
+	  
+		var data = {},
+		cash = cashAvaible, 
+		credit = creditLine;
+	  
+		data.capital = Number(this.$("#capitalRangeInput").val());
+		data.researchDevelopment = Number(this.$("#RAndDRangeInput").val());
+		data.production = Number(this.$("#productionRangeInput").val());
+		data.marketing = Number(this.$("#marketRangeInput").val());
+		data.price = Number(this.$("#priceRangeInput").val());
+		data.charity = Number(this.$("#charityRangeInput").val());
+		
+		var productionCost = data.production * unitCost;
+			  
+		expense = data.capital + data.researchDevelopment + productionCost + data.marketing + data.charity;
+		resources = cash + credit;
+	  
+	  
+		var afterCash= cash,
+		afterCredit = credit;
+		//define variables
+		const MAX_CREDIT = 25000;
+		var netWorth = resources - expense;
+		//determine users state
+		if(netWorth > MAX_CREDIT)
+		{
+		//adding cash and fill up mac credit
+		afterCash = netWorth - MAX_CREDIT;
+		console.log(netWorth);
+		afterCredit = MAX_CREDIT;
+		}
+		else if ( netWorth <= MAX_CREDIT)
+		{
+		//no cash and subtracting what credit you have left
+		afterCash = 0;
+		afterCredit = MAX_CREDIT - netWorth;
+				
+		//check if player is bankrupt or not then declares bankruptcy
+		if (netWorth < 0 )
+		{
+		afterCash = 0;
+		afterCredit = netWorth;
+		}
+		}
+		
+		document.getElementById("table_2_input_1").innerHTML = "$"+(afterCash);
+		document.getElementById("table_2_input_2").innerHTML = "$"+afterCredit ;
+		document.getElementById("table_2_input_3").innerHTML = "$"+(afterCredit + afterCash);
+	  
+	  //+++++++++++++++++++++++ b
 }
 
