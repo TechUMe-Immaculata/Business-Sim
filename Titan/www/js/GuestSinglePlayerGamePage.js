@@ -182,7 +182,6 @@ window.onload = function(){
 	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 	document.getElementById("tutorial_MenuButton").addEventListener("click", tutorial_MenuButtonPress);
-
 	document.getElementById('LoadingNotifier').style.display="none";
 /* check if this works*/
 	if (navigator.notification) { // Override default HTML alert with native dialog
@@ -823,6 +822,9 @@ query.find().then(function(rankings){
 for(i=0;i < rankings.length;i++)
 {
 console.log("iteration" + i);
+
+document.getElementById('LoadingNotifier').style.display="none";
+
 networthValue = rankings[i].get("networth");
 capitalInvestmentValue = rankings[i].get("capitalTotal");
 marketShareValue = Math.round(rankings[i].get("marketShare").totalMS * 1000)/10;
