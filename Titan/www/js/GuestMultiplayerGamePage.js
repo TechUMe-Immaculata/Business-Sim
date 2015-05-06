@@ -462,7 +462,7 @@ else if (CurrentPage == 4) {
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageTwo').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
-	document.getElementById('submitToServerButton').style.display='';
+	//document.getElementById('submitToServerButton').style.display='';
 	
 	updatePageFour();
 	
@@ -1046,4 +1046,38 @@ function updatePageFour()
 	  
 	  //+++++++++++++++++++++++ b
 }
+//multiplayer turns 
+setInterval(function MultiplayerTurns(){
+
+var CompMatch = Parse.Object.extend("CompMatch");
+console.log(matchId);
+console.log(companyId);
+query = new Parse.Query("CompMatch");
+
+query.equalTo("matchId", matchId);
+query.equalTo("companyId", companyId);
+query.find({
+   
+   //find the Active Turns in the match 
+    success: function(CompMatch) {
+    	console.log(CompMatch);
+
+		if (CompMatch[0].get("isSubbed") == false){
+		document.getElementById('submitToServerButton').style.display='';
+		console.log("button should be back");
+		}
+		else if ( CompMatch[0].get("isSubbed") == true){
+			return null;
+		}	
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+
+} , 10000);
+
 
