@@ -15,10 +15,11 @@
 }
 
 #singlePlayerButton {
-
+ margin-top: 25%;
+  width: 90vw;
   
 
-  margin-top: 25%;
+
  /* margin-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;*/
@@ -27,7 +28,8 @@
  
 .btn-group
 {
-  display: block;
+  
+  
 }
 
 
@@ -35,6 +37,8 @@
 
 
   margin-top: 25%;
+  width: 90vw;
+
 /*margin-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;*/
