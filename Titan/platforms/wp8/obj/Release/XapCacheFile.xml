@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\CordovaAppProj_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2015-05-06 9:47:11 PM">
-  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Release\com.QMDC.blackwidow.dll" archivePath="com.QMDC.blackwidow.dll" lastWriteTime="2015-05-06 9:47:05 PM" />
+﻿<xapCache source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\CordovaAppProj_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2015-05-06 10:27:29 PM">
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Release\com.QMDC.blackwidow.dll" archivePath="com.QMDC.blackwidow.dll" lastWriteTime="2015-05-06 10:27:22 PM" />
   <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\config.xml" archivePath="config.xml" lastWriteTime="2015-05-06 9:46:59 PM" />
   <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\audio\March of Motherland.mp3" archivePath="www\audio\March of Motherland.mp3" lastWriteTime="2015-05-06 9:46:58 PM" />
   <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Chart\doughnut.html" archivePath="www\Chart\doughnut.html" lastWriteTime="2015-05-06 9:46:58 PM" />
@@ -119,8 +119,8 @@
   <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\VERSION" archivePath="VERSION" lastWriteTime="2015-05-06 9:43:18 PM" />
   <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="2015-05-06 9:43:18 PM" />
   <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Plugins\org.apache.cordova.dialogs\notification-beep.wav" archivePath="Plugins\org.apache.cordova.dialogs\notification-beep.wav" lastWriteTime="2015-05-06 9:43:21 PM" />
-  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2015-05-06 9:46:44 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2015-05-06 10:10:37 PM" />
   <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="2015-05-06 9:43:18 PM" />
   <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\Background.png" archivePath="Background.png" lastWriteTime="2015-05-06 9:43:18 PM" />
-  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2015-05-06 9:46:45 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2015-05-06 10:10:37 PM" />
 </xapCache>
