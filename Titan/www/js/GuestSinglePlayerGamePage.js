@@ -1055,10 +1055,11 @@ function updatePageFour()
 	  
 	  //+++++++++++++++++++++++ b
 }
+
 // Fancy Fancy Fancy
 function priceButtonsPressed(){
 	//checks to see if the price is less then the cost per unit
-	if (document.getElementById("priceRangeInput").value < unitCost) 
+	if (document.getElementById("priceRangeInput").value <= unitCost) 
 	{
 		//displays the warning if lower then the cost per unit.
 		document.getElementById("priceWarning").style.display = ""; 
