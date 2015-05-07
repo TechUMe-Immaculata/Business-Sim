@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"wp-package\" value=\"Notification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"wp-package\" value=\"Vibration\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "{700f4380-f45a-11e4-be85-9d66e7b6a4cb}"
+        },
+        "org.apache.cordova.vibration": {
+            "PACKAGE_NAME": "{700f4380-f45a-11e4-be85-9d66e7b6a4cb}"
+        }
+    },
+    "dependent_plugins": {}
+}
