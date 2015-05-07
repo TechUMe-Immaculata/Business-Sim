@@ -1,0 +1,126 @@
+﻿<xapCache source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\CordovaAppProj_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2015-05-06 10:27:29 PM">
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Release\com.QMDC.blackwidow.dll" archivePath="com.QMDC.blackwidow.dll" lastWriteTime="2015-05-06 10:27:22 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\config.xml" archivePath="config.xml" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\audio\March of Motherland.mp3" archivePath="www\audio\March of Motherland.mp3" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Chart\doughnut.html" archivePath="www\Chart\doughnut.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Chart\jqplot.barRenderer.min.js" archivePath="www\Chart\jqplot.barRenderer.min.js" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Chart\jqplot.categoryAxisRenderer.min.js" archivePath="www\Chart\jqplot.categoryAxisRenderer.min.js" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Chart\jqplot.donutRenderer.min.js" archivePath="www\Chart\jqplot.donutRenderer.min.js" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Chart\jqplot.highlighter.min.js" archivePath="www\Chart\jqplot.highlighter.min.js" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Chart\jqplot.pieRenderer.min.js" archivePath="www\Chart\jqplot.pieRenderer.min.js" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Chart\jquery.jqplot.min.css" archivePath="www\Chart\jquery.jqplot.min.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Chart\jquery.jqplot.min.js" archivePath="www\Chart\jquery.jqplot.min.js" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Chart\jquery.min.js" archivePath="www\Chart\jquery.min.js" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\company.html" archivePath="www\company.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\cordova.js" archivePath="www\cordova.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\cordova_plugins.js" archivePath="www\cordova_plugins.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\CreateMultiplayerMatch.html" archivePath="www\CreateMultiplayerMatch.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\bootstrap.css" archivePath="www\css\bootstrap.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\Company.css" archivePath="www\css\Company.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\CreateMultiplayerMatch.css" archivePath="www\css\CreateMultiplayerMatch.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\FriendsPage.css" archivePath="www\css\FriendsPage.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\GuestGameSingleOrMultiplayer.css" archivePath="www\css\GuestGameSingleOrMultiplayer.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\GuestHome.css" archivePath="www\css\GuestHome.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\GuestLoadingPage.css" archivePath="www\css\GuestLoadingPage.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\GuestSettings.css" archivePath="www\css\GuestSettings.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\GuestSinglePlayerGamePage.css" archivePath="www\css\GuestSinglePlayerGamePage.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\Home.css" archivePath="www\css\Home.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\index.css" archivePath="www\css\index.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\jquery.qtip.min.css" archivePath="www\css\jquery.qtip.min.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\NewUserHome.css" archivePath="www\css\NewUserHome.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\NotificationsPage.css" archivePath="www\css\NotificationsPage.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\PrivateGames.css" archivePath="www\css\PrivateGames.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\ProfilePage.css" archivePath="www\css\ProfilePage.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\QueuePage.css" archivePath="www\css\QueuePage.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\Register.css" archivePath="www\css\Register.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\ServerLoginPage.css" archivePath="www\css\ServerLoginPage.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\SettingsPage.css" archivePath="www\css\SettingsPage.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\SinglePlayerInGame\Home.css" archivePath="www\css\SinglePlayerInGame\Home.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\css\SinglePlayerInGame\Newspaper.css" archivePath="www\css\SinglePlayerInGame\Newspaper.css" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\FriendsPage.html" archivePath="www\FriendsPage.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\GuestGameSingleOrMultiplayer.html" archivePath="www\GuestGameSingleOrMultiplayer.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\GuestHome.html" archivePath="www\GuestHome.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\GuestLoadingPage.html" archivePath="www\GuestLoadingPage.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\GuestSettings.html" archivePath="www\GuestSettings.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\GuestSinglePlayerGamePage.html" archivePath="www\GuestSinglePlayerGamePage.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\GuestSinglePlayerLoading.html" archivePath="www\GuestSinglePlayerLoading.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Home.html" archivePath="www\Home.html" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\factory.gif" archivePath="www\img\factory.gif" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Factory.svg" archivePath="www\img\Factory.svg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\friendsButton.jpg" archivePath="www\img\friendsButton.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Grey.jpg" archivePath="www\img\Grey.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\Capital.jpg" archivePath="www\img\Help Images\Capital.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\CompanyStanding.jpg" archivePath="www\img\Help Images\CompanyStanding.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\input.jpg" archivePath="www\img\Help Images\input.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\InvestmentChart.jpg" archivePath="www\img\Help Images\InvestmentChart.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\Leader Board.jpg" archivePath="www\img\Help Images\Leader Board.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\MarketShare.jpg" archivePath="www\img\Help Images\MarketShare.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\NetWorthChart.jpg" archivePath="www\img\Help Images\NetWorthChart.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\News.jpg" archivePath="www\img\Help Images\News.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\settings.jpg" archivePath="www\img\Help Images\settings.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\submit.jpg" archivePath="www\img\Help Images\submit.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Help Images\swiping.png" archivePath="www\img\Help Images\swiping.png" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\homeButton.jpg" archivePath="www\img\homeButton.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\loader.gif" archivePath="www\img\loader.gif" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\LoadingNotifier.gif" archivePath="www\img\LoadingNotifier.gif" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\logo.png" archivePath="www\img\logo.png" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\notficationsButton.jpg" archivePath="www\img\notficationsButton.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\PlaceHolderNotAvailable.jpg" archivePath="www\img\PlaceHolderNotAvailable.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\profileButton.jpg" archivePath="www\img\profileButton.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\settingsButton.jpg" archivePath="www\img\settingsButton.jpg" lastWriteTime="2015-05-06 9:46:58 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Unconfirmed 942115.crdownload" archivePath="www\img\Unconfirmed 942115.crdownload" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\img\Whiskey.gif" archivePath="www\img\Whiskey.gif" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\index.html" archivePath="www\index.html" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\JoinMultiplayerMatch.html" archivePath="www\JoinMultiplayerMatch.html" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\Chart.js" archivePath="www\js\Chart.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\dropdowns-enhancement.js" archivePath="www\js\dropdowns-enhancement.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\FriendsPage.js" archivePath="www\js\FriendsPage.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\GuestGameSingleOrMultiplayer.js" archivePath="www\js\GuestGameSingleOrMultiplayer.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\GuestHome.js" archivePath="www\js\GuestHome.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\GuestLoadingPage.js" archivePath="www\js\GuestLoadingPage.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\GuestSettings.js" archivePath="www\js\GuestSettings.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\GuestSinglePlayerGamePage.js" archivePath="www\js\GuestSinglePlayerGamePage.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\GuestSinglePlayerKahootCreate.js" archivePath="www\js\GuestSinglePlayerKahootCreate.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\GuestSinglePlayerKahootJoin.js" archivePath="www\js\GuestSinglePlayerKahootJoin.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\GuestSinglePlayerLoadingPage.js" archivePath="www\js\GuestSinglePlayerLoadingPage.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\Home.js" archivePath="www\js\Home.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\jquery-1.11.1.min.js" archivePath="www\js\jquery-1.11.1.min.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\jquery-2.1.3.min.js" archivePath="www\js\jquery-2.1.3.min.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\jquery.mobile.js" archivePath="www\js\jquery.mobile.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\jquery.qtip.min.js" archivePath="www\js\jquery.qtip.min.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\jquery.touchSwipe.min.js" archivePath="www\js\jquery.touchSwipe.min.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\NewUserHome.js" archivePath="www\js\NewUserHome.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\NotificationsPage.js" archivePath="www\js\NotificationsPage.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\PrivateGames.js" archivePath="www\js\PrivateGames.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\ProfilePage.js" archivePath="www\js\ProfilePage.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\QueuePage.js" archivePath="www\js\QueuePage.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\Register.js" archivePath="www\js\Register.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\ServerLoginPage.js" archivePath="www\js\ServerLoginPage.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\SettingsPage.js" archivePath="www\js\SettingsPage.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\SinglePlayerInGame\Home.js" archivePath="www\js\SinglePlayerInGame\Home.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\js\SinglePlayerInGame\Newspaper.js" archivePath="www\js\SinglePlayerInGame\Newspaper.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\localContent\profilePicture.jpg" archivePath="www\localContent\profilePicture.jpg" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\NewUserHome.html" archivePath="www\NewUserHome.html" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\NotificationsPage.html" archivePath="www\NotificationsPage.html" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\plugins\org.apache.cordova.dialogs\www\notification.js" archivePath="www\plugins\org.apache.cordova.dialogs\www\notification.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\plugins\org.apache.cordova.vibration\www\vibration.js" archivePath="www\plugins\org.apache.cordova.vibration\www\vibration.js" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\PrivateGames.html" archivePath="www\PrivateGames.html" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\ProfilePage.html" archivePath="www\ProfilePage.html" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\QueuePage.html" archivePath="www\QueuePage.html" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\Register.html" archivePath="www\Register.html" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\ServerLoginPage.html" archivePath="www\ServerLoginPage.html" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\www\SettingsPage.html" archivePath="www\SettingsPage.html" lastWriteTime="2015-05-06 9:46:59 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Images\appbar.back.rest.png" archivePath="Images\appbar.back.rest.png" lastWriteTime="2015-05-06 9:43:18 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Images\appbar.close.rest.png" archivePath="Images\appbar.close.rest.png" lastWriteTime="2015-05-06 9:43:18 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Images\appbar.feature.video.rest.png" archivePath="Images\appbar.feature.video.rest.png" lastWriteTime="2015-05-06 9:43:18 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Images\appbar.next.rest.png" archivePath="Images\appbar.next.rest.png" lastWriteTime="2015-05-06 9:43:18 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Images\appbar.save.rest.png" archivePath="Images\appbar.save.rest.png" lastWriteTime="2015-05-06 9:43:18 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Images\appbar.stop.rest.png" archivePath="Images\appbar.stop.rest.png" lastWriteTime="2015-05-06 9:43:18 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\VERSION" archivePath="VERSION" lastWriteTime="2015-05-06 9:43:18 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="2015-05-06 9:43:18 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Plugins\org.apache.cordova.dialogs\notification-beep.wav" archivePath="Plugins\org.apache.cordova.dialogs\notification-beep.wav" lastWriteTime="2015-05-06 9:43:21 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2015-05-06 10:10:37 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="2015-05-06 9:43:18 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\Background.png" archivePath="Background.png" lastWriteTime="2015-05-06 9:43:18 PM" />
+  <file source="C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2015-05-06 10:10:37 PM" />
+</xapCache>

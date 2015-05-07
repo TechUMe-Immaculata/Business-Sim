@@ -1,0 +1,15 @@
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Debug\ApplicationIcon.png
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Debug\Background.png
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Debug\com.QMDC.blackwidow.dll
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Debug\com.QMDC.blackwidow.pdb
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Debug\AppManifest.xaml
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Debug\App.g.cs
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Debug\Plugins\org.apache.cordova.dialogs\NotificationBox.g.cs
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Debug\cordovalib\CordovaView.g.cs
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Debug\MainPage.g.cs
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Debug\com.QMDC.blackwidow.g.resources
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Debug\com.QMDC.blackwidow.dll
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Debug\com.QMDC.blackwidow.pdb
+C:\Users\NAFC\Documents\GitHub\Business-Sim\Titan\platforms\wp8\obj\Debug\XapCacheFile.xml
