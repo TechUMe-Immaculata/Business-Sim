@@ -1,5 +1,5 @@
-CreateMatch();
 
+document.getElementById("createMatch").addEventListener("click", CreateMatch);;
 function CreateMatch(){
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 /*
@@ -28,12 +28,13 @@ Parse.Cloud.run('createMatch_Multi', running, {
 	success: function(works){
 	
 	//window.location = "GuestSinglePlayerGamePage.html";
-	console.log(works);
+	document.getElementById("password").innerHTML = running.matchName;
+	;
 		
 	},
 	error:function(error){
 
-		console.log("Nah boi");
+		console.log("");
 	}
 });
 
@@ -49,5 +50,5 @@ function makeMatchId()
     for( var i=0; i < 6; i++ )
         text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-    return text=text+"_guest";
+    return text=text+"_game";
 }

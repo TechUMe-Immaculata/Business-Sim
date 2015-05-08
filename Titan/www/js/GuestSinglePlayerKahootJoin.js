@@ -1,7 +1,8 @@
-CreateMatch();
-
-function CreateMatch(){
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
+document.getElementById("btnJoin").addEventListener("click", joinMatch);
+
+function joinMatch(){
+
 /*
 var rowCount = $('#matchlist tr').length;
 console.log(rowCount);
