@@ -17,7 +17,11 @@ else if ( rowCount <4)
 */
 
  var currentUser = Parse.User.current();
-var password = $('#password').val();
+
+ var password = document.getElementById("password").value;
+console.log(password);
+
+
 	var  running = {};
 running.objectId = currentUser.id;
 running.password = password;
@@ -66,25 +70,26 @@ nquery.find({
 // code for user to check when hes ready 
 setInterval(function MultiplayerTurns(){
 
-var CompMatch = Parse.Object.extend("CompMatch");
+var Match = Parse.Object.extend("Match");
 
 
-query = new Parse.Query("CompMatch");
+query = new Parse.Query("Match");
 
 query.equalTo("password", password);
-query.equalTo("companyId", companyId);
+
 query.find({
    
    //find the Active Turns in the match 
-    success: function(CompMatch) {
-    	console.log(CompMatch);
-
-		if (CompMatch[0].get("isSubbed") == false){
-
-			window.location = "GuestMultiplayerGamePage.html";
+    success: function(Match) {
+    	
+console.log(Match);
+		if (Match[0].get("isReady") == false){
+			console.log("is not ready yet");
+			return null;
 		
 		}
-		else if (CompMatch[0].get("isSubbed") == true ){
+		else if (Match[0].get("isReady") == true ){
+			window.location = "GuestMultiplayerGamePage.html";
 			
 		}	
 
@@ -96,35 +101,7 @@ query.find({
   }
 });
 ///
-var CompMatch = Parse.Object.extend("CompMatch");
 
-
-query = new Parse.Query("CompMatch");
-
-query.equalTo("password", password);
-query.equalTo("companyId", companyId);
-query.find({
-   
-   //find the Active Turns in the match 
-    success: function(CompMatch) {
-    	console.log(CompMatch);
-
-		if (CompMatch[0].get("isSubbed") == false){
-
-			window.location = "GuestMultiplayerGamePage.html";
-		
-		}
-		else if (CompMatch[0].get("isSubbed") == true ){
-			
-		}	
-
-
-  },
-  error: function(error) {
-    alert("Error: " + error.code + " " + error.message);
-    console.log("not working for the CompMatch Turns");
-  }
-});
 
 } , 10000);
 
