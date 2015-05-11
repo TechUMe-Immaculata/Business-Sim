@@ -1,7 +1,8 @@
-
-document.getElementById("createMatch").addEventListener("click", CreateMatch);;
-function CreateMatch(){
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
+document.getElementById("createMatch").addEventListener("click", CreateMatch);;
+var matchId;
+function CreateMatch(){
+
 /*
 var rowCount = $('#matchlist tr').length;
 console.log(rowCount);
@@ -38,7 +39,7 @@ Parse.Cloud.run('createMatch_Multi', running, {
 	}
 });
 
-
+window.location = "GuestMultiplayerGamePage.html";
 
 
 };
@@ -52,3 +53,29 @@ function makeMatchId()
 
     return text=text+"_game";
 }
+setInterval(function Match(){
+
+query = new Parse.Query("Match");
+
+query.equalTo("objectId", matchId);
+
+query.find({
+   
+   //find the Active Turns in the match 
+    success: function(Match) {
+    	
+    	Match.get("companyIds");
+			
+		}	
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+    console.log("not working for the CompMatch Turns");
+  }
+});
+
+}
+	, 1000)
+
