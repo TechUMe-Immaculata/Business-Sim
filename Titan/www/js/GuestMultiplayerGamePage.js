@@ -239,7 +239,7 @@ function SubmitButtonPress()
 		console.log(dataOut);
 	  $.ajax({
 	  type: "POST",
-	  url: "https://api.parse.com/1/functions/submitSolo/",
+	  url: "https://api.parse.com/1/functions/submitMulti/",
 	  headers: {
 	  "X-Parse-Application-Id": "Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci",
 	  "X-Parse-REST-API-Key": "GcLEre3e2D25P14Pno5PbQ11YO0rixhvIoBxv2RG",
@@ -249,7 +249,7 @@ function SubmitButtonPress()
 	  dataType: "json"
 	  
 	}).done(function( msg ) {
-		
+		/*
 			  $.ajax({
 	  type: "POST",
 	  url: "https://api.parse.com/1/functions/turn/",
@@ -260,22 +260,27 @@ function SubmitButtonPress()
 	  },
 	  data: JSON.stringify(dataOut),
 	  dataType: "json"
-	  
+  
 	}).done(function( msg ) {
+	*/	
 	  // all code here gets run when the POST was successful
 	  // you can do things like update the console, display an alert, etc...
 	   getDataFromServer();
 	   CurrentPage = 1;
 	   ChangeThePage();
 	  });
-	  });
+	//  });
 var matchid=matchId;//localStorage.getItem("matchId");
 var Match = Parse.Object.extend("Match");
 var matchquery = new Parse.Query("Match");
 matchquery.equalTo("objectId" , matchid);
 matchquery.find({
 
+
+
 success: function(match){
+matchq[0].increment("ActiveTurns");
+
 var turns = match[0].get("turn");
 console.log("yop : "+turns);
 
