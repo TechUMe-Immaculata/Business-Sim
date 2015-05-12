@@ -29,7 +29,7 @@ Parse.Cloud.run('createMatch_Multi', running, {
 
 	success: function(works){
 	
-	//window.location = "GuestSinglePlayerGamePage.html";
+	
 	document.getElementById("password").innerHTML = running.matchName;
 	console.log(works);
 	;
@@ -41,7 +41,7 @@ Parse.Cloud.run('createMatch_Multi', running, {
 	}
 });
 
-//window.location = "GuestMultiplayerGamePage.html";
+
 
 
 };
@@ -68,10 +68,12 @@ query.equalTo("objectId", matchId);
 
 query.find({
    
-   //find the Active Turns in the match 
+
     success: function(Match) {
-    	
-    	Match.get("companyIds");
+    	console.log(Match);
+    	var companies = Match[0].get("companyIds").length;
+    	document.getElementById("playersInMatch").innerHTML = companies -1;
+
 			
 		
 
