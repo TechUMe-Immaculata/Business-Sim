@@ -1,8 +1,8 @@
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
-document.getElementById("createMatch").addEventListener("click", readyToPlay);
+
+document.getElementById("createMatch").addEventListener("click", joinMatch);
 var matchId;
 CreateMatch();
-
 function CreateMatch(){
 
 /*
@@ -31,8 +31,14 @@ Parse.Cloud.run('createMatch_Multi', running, {
 	success: function(works){
 	
 	//window.location = "GuestSinglePlayerGamePage.html";
+<<<<<<< HEAD
 	console.log(works);
 	matchId = works.clientMatchId;
+=======
+	document.getElementById("password").innerHTML = running.matchName;
+	console.log(works);
+	;
+>>>>>>> origin/Marcio(current-Branch)
 		
 	},
 	error:function(error){
@@ -41,10 +47,15 @@ Parse.Cloud.run('createMatch_Multi', running, {
 	}
 });
 
-
+//window.location = "GuestMultiplayerGamePage.html";
 
 
 };
+
+function joinMatch()
+{
+window.location = "GuestMultiplayerGamePage.html";
+}
 function makeMatchId()
 {
 
@@ -54,6 +65,7 @@ function makeMatchId()
     for( var i=0; i < 6; i++ )
         text += possible.charAt(Math.floor(Math.random() * possible.length));
 
+<<<<<<< HEAD
     return text=text+"_guest";
 }
 function readyToPlay()
@@ -83,3 +95,34 @@ console.log(matchId);
 	});
 
 }
+=======
+    return text=text+"_game";
+}
+setInterval(function Match(){
+
+query = new Parse.Query("Match");
+
+query.equalTo("objectId", matchId);
+
+query.find({
+   
+   //find the Active Turns in the match 
+    success: function(Match) {
+    	
+    	Match.get("companyIds");
+			
+		
+
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+    console.log("not working for the CompMatch Turns");
+  }
+});
+
+}
+	, 1000)
+
+>>>>>>> origin/Marcio(current-Branch)
