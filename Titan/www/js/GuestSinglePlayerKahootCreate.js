@@ -1,6 +1,7 @@
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
-document.getElementById("createMatch").addEventListener("click", CreateMatch);;
+document.getElementById("createMatch").addEventListener("click", joinMatch);
 var matchId;
+CreateMatch();
 function CreateMatch(){
 
 /*
@@ -30,6 +31,7 @@ Parse.Cloud.run('createMatch_Multi', running, {
 	
 	//window.location = "GuestSinglePlayerGamePage.html";
 	document.getElementById("password").innerHTML = running.matchName;
+	console.log(works);
 	;
 		
 	},
@@ -39,10 +41,15 @@ Parse.Cloud.run('createMatch_Multi', running, {
 	}
 });
 
-window.location = "GuestMultiplayerGamePage.html";
+//window.location = "GuestMultiplayerGamePage.html";
 
 
 };
+
+function joinMatch()
+{
+window.location = "GuestMultiplayerGamePage.html";
+}
 function makeMatchId()
 {
     var text = "";
@@ -66,7 +73,8 @@ query.find({
     	
     	Match.get("companyIds");
 			
-		}	
+		
+
 
 
   },
