@@ -2,7 +2,6 @@ body, html {
 
 margin-left: 2%;
 margin-right: 1%;
-
 }
 .center{
 width: 90%;
@@ -13,7 +12,6 @@ width: 90%;
 	-webkit-user-select: none; 
 	-o-user-select: none; 
 }
-
 #screenDescription{
   color: white;
   font-size: 22.5px;
@@ -183,6 +181,9 @@ margin-top:40px;
 font-size: 25px;
 font-weight: bold;
 
+}
+#priceWarning{
+	color: red;
 }
 #priceSlider{
 

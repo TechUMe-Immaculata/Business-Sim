@@ -356,7 +356,7 @@
           </span>
           <input type="tel" name="quant[1]" class="form-control input-number" value="10" min="0" max="100" id="priceRangeInput">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
+              <button id="pricePlus" type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
 
                   <span class="glyphicon glyphicon-plus"></span> 10
 
@@ -364,11 +364,13 @@
           </span>
       </div>                                                   
                 <output name="amount" for="priceRangeInput"></output> </form> </p>
+
+         <p id="priceWarning"> Warning: The current price of your product is less then the cost per unit! </p>
         <!-- Production Slider -->
 		<p id="productionCharacters">Production(max 500u): 
              <div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+              <button id"priceMinus" type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
 
                 <span class="glyphicon glyphicon-minus"></span> 10
 
