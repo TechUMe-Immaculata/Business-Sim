@@ -171,6 +171,9 @@ window.onload = function(){
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;	
 				
+	matchId = localStorage.getItem("matchId");
+	console.log("ahhhhhhahhhahhahahahhhahhhhahhhahahhhh = "+ matchId);
+
 	getDataFromServer();
 	ChangeThePage();
 
