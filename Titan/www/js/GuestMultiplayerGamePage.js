@@ -282,7 +282,7 @@ matchquery.find({
 
 
 success: function(match){
-matchq[0].increment("ActiveTurns");
+match[0].increment("ActiveTurns");
 
 var turns = match[0].get("turn");
 console.log("yop : "+turns);
@@ -503,8 +503,10 @@ function resumeButtonPress(){
 }
 
 function mainMenuButtonPress(){
+exit();	
 document.getElementById('pauseGear').style.display='';
 document.getElementById('PauseScreen').style.display="none";
+
 
 window.location = "GuestHome.html";
 
@@ -1093,3 +1095,75 @@ query.find({
 
 
 } , 10000);
+
+
+function bankrupt(){
+
+var CompMatch = Parse.Object.extend("CompMatch");
+console.log(matchId);
+console.log(companyId);
+query = new Parse.Query("CompMatch");
+
+query.equalTo("matchId", matchId);
+query.equalTo("companyId", companyId);
+query.find({
+   
+   //find the Active Turns in the match 
+    success: function(CompMatch) {
+    	
+	
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+	alert("YOu went bankrupt");
+
+
+
+}
+
+function exit(){
+
+var names= ["Floyd Inc" , "Matt Inc" , "Tom Inc" , "Marcio Inc", "Stan Lee Inc"];
+var name = names.pop(); 
+
+var CompMatch = Parse.Object.extend("CompMatch");
+console.log(matchId);
+console.log(companyId);
+query = new Parse.Query("CompMatch");
+
+query.equalTo("matchId", matchId);
+query.equalTo("companyId", companyId);
+query.first({
+   
+   //find the Active Turns in the match 
+    success: function(CompMatch) {
+    	console.log(CompMatch);
+    	CompMatch.set("isBot",true);
+    	CompMatch.set("companyName",name);
+    	CompMatch.set("isSubbed" , true);
+
+
+
+    	CompMatch.save();
+
+
+
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+
+
+
+
+}
+
