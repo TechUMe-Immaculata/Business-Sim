@@ -452,9 +452,9 @@ else if (CurrentPage == 3) {
 	document.getElementById("table_1_input_6").innerHTML = " $"+data.capital;
 	document.getElementById("table_1_input_7").innerHTML = " $"+data.researchDevelopment;
 	document.getElementById("table_1_input_8").innerHTML = " $"+expense;
-	document.getElementById("table_1_input_9").innerHTML = " $"+afterCash;
-	document.getElementById("table_1_input_10").innerHTML = " $"+afterCredit;
-	document.getElementById("table_1_input_11").innerHTML = " $"+(afterCredit + afterCash);
+	document.getElementById("table_1_input_9").innerHTML = " $"+resources;
+	document.getElementById("table_1_input_10").innerHTML = " $"+(-expense);
+	document.getElementById("table_1_input_11").innerHTML = " $"+(resources-expense);
 	document.getElementById("table_1_input_12").innerHTML = " $"+costPerUnit;
 	document.getElementById("table_1_input_13").innerHTML = utilization + " %";
 	document.getElementById("table_1_input_14").innerHTML = " $"+data.charity;
@@ -1001,6 +1001,8 @@ function updatePageFour()
 {
 	  //+++++++++++++++++++++++ a 
 	  
+	  //+++++++++++++++++++++++ a 
+	  
 		var data = {},
 		cash = cashAvaible, 
 		credit = creditLine;
@@ -1016,38 +1018,12 @@ function updatePageFour()
 			  
 		expense = data.capital + data.researchDevelopment + productionCost + data.marketing + data.charity;
 		resources = cash + credit;
-	  
-	  
-		var afterCash= cash,
-		afterCredit = credit;
-		//define variables
-		const MAX_CREDIT = 25000;
+
 		var netWorth = resources - expense;
-		//determine users state
-		if(netWorth > MAX_CREDIT)
-		{
-		//adding cash and fill up mac credit
-		afterCash = netWorth - MAX_CREDIT;
-		console.log(netWorth);
-		afterCredit = MAX_CREDIT;
-		}
-		else if ( netWorth <= MAX_CREDIT)
-		{
-		//no cash and subtracting what credit you have left
-		afterCash = 0;
-		afterCredit = MAX_CREDIT - netWorth;
-				
-		//check if player is bankrupt or not then declares bankruptcy
-		if (netWorth < 0 )
-		{
-		afterCash = 0;
-		afterCredit = netWorth;
-		}
-		}
-		
-		document.getElementById("table_2_input_1").innerHTML = "$"+(afterCash);
-		document.getElementById("table_2_input_2").innerHTML = "$"+afterCredit ;
-		document.getElementById("table_2_input_3").innerHTML = "$"+(afterCredit + afterCash);
+
+		document.getElementById("table_2_input_1").innerHTML = "$"+(cash + credit);
+		document.getElementById("table_2_input_2").innerHTML = "$"+(-expense);
+		document.getElementById("table_2_input_3").innerHTML = "$"+(netWorth);
 	  
 	  //+++++++++++++++++++++++ b
 }
