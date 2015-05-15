@@ -303,8 +303,48 @@ error: function(error){
 
 
 });
+
+/*
+setInterval(function MultiplayerTurns(){
+ if( document.getElementById('submitToServerButton').style.display =="none"){
+var CompMatch = Parse.Object.extend("CompMatch");
+console.log(matchId);
+console.log(companyId);
+query = new Parse.Query("CompMatch");
+
+query.equalTo("matchId", matchId);
+query.equalTo("companyId", companyId);
+query.find({
+   
+   //find the Active Turns in the match 
+    success: function(CompMatch) {
+    	console.log(CompMatch);
+
+		if (CompMatch[0].get("isSubbed") == false){
+			
+		document.getElementById('submitToServerButton').style.display='';
+		alert("Submit button is back");
+		}
+		else if ( CompMatch[0].get("isSubbed") == true){
+			return null;
+		}	
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
 }
 
+			else(){
+				console.log("nothing to see here");
+				return null;
+			}
+
+} , 10000);
+*/
+}
 
 
 
@@ -1061,10 +1101,8 @@ function updatePageFour()
 	  
 	  //+++++++++++++++++++++++ b
 }
-
-//multiplayer turns 
 setInterval(function MultiplayerTurns(){
-
+ if( document.getElementById('submitToServerButton').style.display =="none"){
 var CompMatch = Parse.Object.extend("CompMatch");
 console.log(matchId);
 console.log(companyId);
@@ -1079,8 +1117,13 @@ query.find({
     	console.log(CompMatch);
 
 		if (CompMatch[0].get("isSubbed") == false){
+			
 		document.getElementById('submitToServerButton').style.display='';
-		console.log("button should be back");
+		alert("Submit button is back");
+		getDataFromServer();
+		CurrentPage=1;
+		ChangeThePage();
+
 		}
 		else if ( CompMatch[0].get("isSubbed") == true){
 			return null;
@@ -1092,9 +1135,16 @@ query.find({
     alert("Error: " + error.code + " " + error.message);
   }
 });
+}
 
+			else if (document.getElementById('submitToServerButton').style.display ==""){
+				console.log("nothing to see here");
+				return null;
+			}
 
 } , 10000);
+
+
 
 
 function bankrupt(){
