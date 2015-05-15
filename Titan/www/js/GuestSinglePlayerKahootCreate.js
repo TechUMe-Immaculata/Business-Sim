@@ -31,12 +31,15 @@ Parse.Cloud.run('createMatch_Multi', running, {
 	success: function(works){
 	
 	
-	document.getElementById("password").innerHTML = running.matchName;
+
 	matchId = works.clientMatchId; 
 	console.log(works);
 	console.log(matchId);
 	localStorage.setItem("matchId",matchId);
 	console.log(localStorage.getItem("matchId"));
+
+	var password = works.password;
+	document.getElementById("password").innerHTML = "Match id : " + password;
 	},
 	error:function(error){
 
@@ -58,6 +61,10 @@ running.matchId = matchId;
 Parse.Cloud.run('createMatch_Multi_Ready', running, {
 	success: function(works)
 	{
+
+
+
+
 	console.log("works");
 	window.location = "GuestMultiplayerGamePage.html";
 	},
@@ -91,7 +98,7 @@ query.find({
     success: function(Match) {
     	console.log(Match);
     	var companies = Match[0].get("companyIds").length;
-    	document.getElementById("playersInMatch").innerHTML = companies;
+    	document.getElementById("playersInMatch").innerHTML = " Players in game : " + companies;
 
 			
 		

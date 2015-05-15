@@ -1,6 +1,6 @@
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 document.getElementById("btnJoin").addEventListener("click", joinMatch);
-
+var matchId;
 function joinMatch(){
 
 /*
@@ -32,8 +32,9 @@ Parse.Cloud.run('createMatch_Multi_Join', running, {
 
 	success: function(works){
 	
-	//window.location = "GuestSinglePlayerGamePage.html";
-	console.log(works);
+		matchId = works.clientMatchId; 
+		console.log(works);
+	localStorage.setItem("matchId",works);
 		
 	},
 	error:function(error){
