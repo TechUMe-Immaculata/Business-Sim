@@ -1,8 +1,8 @@
+
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
-document.getElementById("createMatch").addEventListener("click", readyToPlay);
+document.getElementById("createMatch").addEventListener("click", joinMatch);
 var matchId;
 CreateMatch();
-
 function CreateMatch(){
 
 /*
@@ -30,14 +30,20 @@ Parse.Cloud.run('createMatch_Multi', running, {
 
 	success: function(works){
 	
-	//window.location = "GuestSinglePlayerGamePage.html";
+	
+
+	matchId = works.clientMatchId; 
 	console.log(works);
-	matchId = works.clientMatchId;
-		
+	console.log(matchId);
+	localStorage.setItem("matchId",matchId);
+	console.log(localStorage.getItem("matchId"));
+
+	var password = works.password;
+	document.getElementById("password").innerHTML = "Match id : " + password;
 	},
 	error:function(error){
 
-		console.log("Nah boi");
+		console.log("");
 	}
 });
 
@@ -45,41 +51,67 @@ Parse.Cloud.run('createMatch_Multi', running, {
 
 
 };
-function makeMatchId()
+
+function joinMatch()
 {
 
+var  running = {};
+running.matchId = matchId;
+
+Parse.Cloud.run('createMatch_Multi_Ready', running, {
+	success: function(works)
+	{
+
+
+
+
+	console.log("works");
+	window.location = "GuestMultiplayerGamePage.html";
+	},
+	error:function(error){
+
+		console.log("");
+	}
+});
+
+
+}
+function makeMatchId()
+{
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
     for( var i=0; i < 6; i++ )
         text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-    return text=text+"_guest";
+    return text=text+"_game";
 }
-function readyToPlay()
-{
-console.log(matchId);
-	 var currentUser = Parse.User.current();
+setInterval(function Match(){
 
-	var  running = {};
-	//running.objectId = currentUser.id;
-	running.matchId = matchId;
+query = new Parse.Query("Match");
 
+query.equalTo("objectId", matchId);
 
+query.find({
+   
 
-	Parse.Cloud.run('createMatch_Multi_Ready', running, {
+    success: function(Match) {
+    	console.log(Match);
+    	var companies = Match[0].get("companyIds").length;
+    	document.getElementById("playersInMatch").innerHTML = " Players in game : " + companies;
 
-		success: function(works)
-		{
-		//window.location = "GuestSinglePlayerGamePage.html";
-		console.log(works);
-		matchId = works.clientMatchId;
 			
-		},
-		error:function(error){
+		
 
-			console.log("Nah boi");
-		}
-	});
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+    console.log("not working for the CompMatch Turns");
+  }
+});
 
 }
+	, 1000);
+

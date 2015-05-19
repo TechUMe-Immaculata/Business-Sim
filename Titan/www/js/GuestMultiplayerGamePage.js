@@ -2,7 +2,7 @@
 var CurrentPage = 0;
 document.getElementById('PauseScreen').style.display='none';
 var matchId = "",companyId= "",playerId = "";
-var maxProduction = 0,creditLine = 0,avaibleCash= 0,unitCost = 0;
+var maxProduction = 0,creditLine = 0,cashAvaible= 0,unitCost = 0;
 var news = "";
 // add the industry 
 var gametype;
@@ -171,6 +171,9 @@ window.onload = function(){
 	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 	Parse.$ = jQuery;	
 				
+	matchId = localStorage.getItem("matchId");
+	console.log("ahhhhhhahhhahhahahahhhahhhhahhhahahhhh = "+ matchId);
+
 	getDataFromServer();
 	ChangeThePage();
 
@@ -239,7 +242,7 @@ function SubmitButtonPress()
 		console.log(dataOut);
 	  $.ajax({
 	  type: "POST",
-	  url: "https://api.parse.com/1/functions/submitSolo/",
+	  url: "https://api.parse.com/1/functions/submitMulti/",
 	  headers: {
 	  "X-Parse-Application-Id": "Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci",
 	  "X-Parse-REST-API-Key": "GcLEre3e2D25P14Pno5PbQ11YO0rixhvIoBxv2RG",
@@ -249,7 +252,7 @@ function SubmitButtonPress()
 	  dataType: "json"
 	  
 	}).done(function( msg ) {
-		
+		/*
 			  $.ajax({
 	  type: "POST",
 	  url: "https://api.parse.com/1/functions/turn/",
@@ -260,22 +263,27 @@ function SubmitButtonPress()
 	  },
 	  data: JSON.stringify(dataOut),
 	  dataType: "json"
-	  
+  
 	}).done(function( msg ) {
+	*/	
 	  // all code here gets run when the POST was successful
 	  // you can do things like update the console, display an alert, etc...
 	   getDataFromServer();
 	   CurrentPage = 1;
 	   ChangeThePage();
 	  });
-	  });
+	//  });
 var matchid=matchId;//localStorage.getItem("matchId");
 var Match = Parse.Object.extend("Match");
 var matchquery = new Parse.Query("Match");
 matchquery.equalTo("objectId" , matchid);
 matchquery.find({
 
+
+
 success: function(match){
+match[0].increment("ActiveTurns");
+
 var turns = match[0].get("turn");
 console.log("yop : "+turns);
 
@@ -295,8 +303,48 @@ error: function(error){
 
 
 });
+
+/*
+setInterval(function MultiplayerTurns(){
+ if( document.getElementById('submitToServerButton').style.display =="none"){
+var CompMatch = Parse.Object.extend("CompMatch");
+console.log(matchId);
+console.log(companyId);
+query = new Parse.Query("CompMatch");
+
+query.equalTo("matchId", matchId);
+query.equalTo("companyId", companyId);
+query.find({
+   
+   //find the Active Turns in the match 
+    success: function(CompMatch) {
+    	console.log(CompMatch);
+
+		if (CompMatch[0].get("isSubbed") == false){
+			
+		document.getElementById('submitToServerButton').style.display='';
+		alert("Submit button is back");
+		}
+		else if ( CompMatch[0].get("isSubbed") == true){
+			return null;
+		}	
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
 }
 
+			else(){
+				console.log("nothing to see here");
+				return null;
+			}
+
+} , 10000);
+*/
+}
 
 
 
@@ -454,7 +502,7 @@ else if (CurrentPage == 3) {
 	document.getElementById("table_1_input_8").innerHTML = " $"+expense;
 	document.getElementById("table_1_input_9").innerHTML = " $"+resources;
 	document.getElementById("table_1_input_10").innerHTML = " $"+(-expense);
-	document.getElementById("table_1_input_11").innerHTML = " $"+(resources-expense);
+	document.getElementById("table_1_input_11").innerHTML = " $"+(afterCredit + afterCash);
 	document.getElementById("table_1_input_12").innerHTML = " $"+costPerUnit;
 	document.getElementById("table_1_input_13").innerHTML = utilization + " %";
 	document.getElementById("table_1_input_14").innerHTML = " $"+data.charity;
@@ -464,7 +512,7 @@ else if (CurrentPage == 4) {
 	document.getElementById('GamePageOne').style.display='none';
 	document.getElementById('GamePageTwo').style.display='none';
 	document.getElementById('GamePageThree').style.display='none';
-	document.getElementById('submitToServerButton').style.display='';
+	
 	
 	updatePageFour();
 	
@@ -495,8 +543,10 @@ function resumeButtonPress(){
 }
 
 function mainMenuButtonPress(){
+exit();	
 document.getElementById('pauseGear').style.display='';
 document.getElementById('PauseScreen').style.display="none";
+
 
 window.location = "GuestHome.html";
 
@@ -561,7 +611,7 @@ function getDataFromServer()
 		creditLine = compMatch.get("creditLine");
 		cashAvaible = compMatch.get("cashAvailable");
 		unitCost = compMatch.get("unitCost");
-		
+
 		//set max on input boxes
 		document.getElementById("capitalRangeInput").max = 10000;
 		document.getElementById("RAndDRangeInput").max = 10000;
@@ -1001,8 +1051,6 @@ function updatePageFour()
 {
 	  //+++++++++++++++++++++++ a 
 	  
-	  //+++++++++++++++++++++++ a 
-	  
 		var data = {},
 		cash = cashAvaible, 
 		credit = creditLine;
@@ -1026,5 +1074,120 @@ function updatePageFour()
 		document.getElementById("table_2_input_3").innerHTML = "$"+(netWorth);
 	  
 	  //+++++++++++++++++++++++ b
+}
+setInterval(function MultiplayerTurns(){
+ if( document.getElementById('submitToServerButton').style.display =="none"){
+var CompMatch = Parse.Object.extend("CompMatch");
+console.log(matchId);
+console.log(companyId);
+query = new Parse.Query("CompMatch");
+
+query.equalTo("matchId", matchId);
+query.equalTo("companyId", companyId);
+query.find({
+   
+   //find the Active Turns in the match 
+    success: function(CompMatch) {
+    	console.log(CompMatch);
+
+		if (CompMatch[0].get("isSubbed") == false){
+			
+		document.getElementById('submitToServerButton').style.display='';
+		alert("Submit button is back");
+		getDataFromServer();
+		CurrentPage=1;
+		ChangeThePage();
+
+		}
+		else if ( CompMatch[0].get("isSubbed") == true){
+			return null;
+		}	
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+}
+
+			else if (document.getElementById('submitToServerButton').style.display ==""){
+				console.log("nothing to see here");
+				return null;
+			}
+
+} , 10000);
+
+
+
+
+function bankrupt(){
+
+var CompMatch = Parse.Object.extend("CompMatch");
+console.log(matchId);
+console.log(companyId);
+query = new Parse.Query("CompMatch");
+
+query.equalTo("matchId", matchId);
+query.equalTo("companyId", companyId);
+query.find({
+   
+   //find the Active Turns in the match 
+    success: function(CompMatch) {
+    	
+	
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+	alert("YOu went bankrupt");
+
+
+
+}
+
+function exit(){
+
+var names= ["Floyd Inc" , "Matt Inc" , "Tom Inc" , "Marcio Inc", "Stan Lee Inc"];
+var name = names.pop(); 
+
+var CompMatch = Parse.Object.extend("CompMatch");
+console.log(matchId);
+console.log(companyId);
+query = new Parse.Query("CompMatch");
+
+query.equalTo("matchId", matchId);
+query.equalTo("companyId", companyId);
+query.first({
+   
+   //find the Active Turns in the match 
+    success: function(CompMatch) {
+    	console.log(CompMatch);
+    	CompMatch.set("isBot",true);
+    	CompMatch.set("companyName",name);
+    	CompMatch.set("isSubbed" , true);
+
+
+
+    	CompMatch.save();
+
+
+
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+
+
+
+
 }
 
