@@ -651,13 +651,15 @@ console.log("////////////////////////////yop 2A ");
 var matchid=cop;
 
 var doesItExist =false;
+
+/*
 var Match = Parse.Object.extend("Match");
 var Matchquery = new Parse.Query("Match");
 Matchquery.equalTo("objectId" , matchid);
 Matchquery.find({
 success : function(match){
-match[0].get("turn");
-doesItExist = true;
+ var doesItExist=match[0].get("gameTime");
+
 console.log("works 2A" + match.length);
 },
 error:function(error){
@@ -668,6 +670,8 @@ console.log("////////////////////////////yop 2B ");
 }
 
 })
+
+*/
 console.log("////////////////////////////yop 2C " + doesItExist);
 if(doesItExist==true){
 
@@ -695,8 +699,10 @@ var retVal = confirm("Do you want to play again?");
 	}
 
 //alert("The winner is " + winner1 + " : second place"+ winner2 + " third winner is : " + winner3 + " : fourth place is " + winner4 + "fourth place is " + winner5 + "last place is :" + winner6);
+
 var Match = Parse.Object.extend("Match");
 var matchquery = new Parse.Query("Match");
+/*
 matchquery.equalTo("objectId" , matchid);
 matchquery.find({
 
@@ -719,7 +725,7 @@ error: function(error){
 }
 
 });
-
+*/
 return null
 }).then(function(result){
 
