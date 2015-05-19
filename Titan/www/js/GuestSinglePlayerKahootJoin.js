@@ -1,6 +1,7 @@
 Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 document.getElementById("btnJoin").addEventListener("click", joinMatch);
 var matchId;
+var ableToJoin = false;
 function joinMatch(){
 
 /*
@@ -32,10 +33,18 @@ Parse.Cloud.run('createMatch_Multi_Join', running, {
 
 	success: function(works){
 	
+	if (works == false)
+	{
+		console.log(works + "works");
+		ableToJoin = false;
+	}
+	else
+	{
+		ableToJoin = true;
 		matchId = works.clientMatchId; 
 		console.log(works);
-	localStorage.setItem("matchId",works);
-		
+		localStorage.setItem("matchId",works);
+	}
 	},
 	error:function(error){
 
@@ -83,17 +92,21 @@ query.find({
    //find the Active Turns in the match 
     success: function(Match) {
     	
-console.log(Match);
-		if (Match[0].get("isReady") == false){
+	console.log(Match);
+	if (ableToJoin == true)
+	{
+		if (Match[0].get("isReady") == false)
+		{
 			console.log("is not ready yet");
 			return null;
 		
 		}
-		else if (Match[0].get("isReady") == true ){
+		else if (Match[0].get("isReady") == true )
+		{
 			window.location = "GuestMultiplayerGamePage.html";
 			
 		}	
-
+	}
 
   },
   error: function(error) {
