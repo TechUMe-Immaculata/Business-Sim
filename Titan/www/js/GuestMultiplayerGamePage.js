@@ -650,7 +650,7 @@ console.log("////////////////////////////yop 2A ");
 
 var matchid=cop;
 
-var doesItExist =false;
+var doesItExist =true;
 
 /*
 var Match = Parse.Object.extend("Match");
