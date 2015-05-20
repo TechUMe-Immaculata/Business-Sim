@@ -198,6 +198,7 @@ window.onload = function(){
       };
   }
   
+  timePerTurn();
 
 
 			}
@@ -221,7 +222,9 @@ window.onload = function(){
 
 //this can be made more efficient but a lack of security
 function SubmitButtonPress()
-{		
+{	
+	deleteTimeout();
+	
 	document.getElementById('submitToServerButton').style.display='none';
 	document.getElementById('LoadingNotifier').style.display="";
 
@@ -1021,6 +1024,7 @@ query.find({
 		getDataFromServer();
 		CurrentPage=1;
 		ChangeThePage();
+		timePerTurn();
 
 		}
 		else if ( CompMatch[0].get("isSubbed") == true){
@@ -1108,10 +1112,23 @@ query.first({
     alert("Error: " + error.code + " " + error.message);
   }
 });
+}
+//variable for a time-out
+var aTurnTime;
 
-
-
-
-
+//function for timing a turn using a timeout
+function timePerTurn() {
+    aTurnTime= setTimeout(function(){ endTime(); }, 3000);
 }
 
+//function that 
+function endTime(){
+
+SubmitButtonPress();
+alert("Turn is Over")
+}
+
+function deleteTimeout()
+{
+	clearTimeout(aTurnTime);
+}
