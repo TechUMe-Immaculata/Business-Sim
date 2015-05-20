@@ -744,10 +744,11 @@ query.find().then(function(rankings){
 alert("The winner is " + rankings[0].get("companyName") + ". Second place is : "+ rankings[1].get("companyName")  + ". Third winner is : " + rankings[2].get("companyName") + ". Fourth place is : " + rankings[3].get("companyName")  + ". Fith place is : " + rankings[4].get("companyName")  + ". Last place is : " + rankings[5].get("companyName") + "." );
 var retVal = confirm("Do you want to play again?");
    if( retVal == true ){
+   	localStorage.clear();
      window.location = " NewUserHome.html"; 
 	 
    }else{
-
+   		localStorage.clear();
       window.location= "NewUserHome.html";
 	 
 	}
