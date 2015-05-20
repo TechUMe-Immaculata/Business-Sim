@@ -311,7 +311,14 @@
 	</table>
 	</div>
 </div>
+
+<!-- Page Four, the adjustments screen -->
 	<div class="text-center" id="GamePageFour">
+
+   <div id="MarketingDiv"class="collapse"> 
+        	<p> basdhsibnafbfugv </p>
+        </div>
+
 			<!-- Capital Slider -->
     <div class="center center-block">
 
@@ -335,12 +342,6 @@
   </p>
 	
 
-			<!-- New code in the house
-		<p id="priceCharacters">Capital: 
-              <form id="capitalSlider" oninput="amount.value=capitalRangeInput.value">
-                <input type="number" id="capitalRangeInput" name="rangeInput" min="0" max="any">                                                       
-                
-                -->
 		<!-- Price Slider -->
 
 		<p id="priceCharacters">Price(max $100): <!--<a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>-->
@@ -366,6 +367,7 @@
                 <output name="amount" for="priceRangeInput"></output> </form> </p>
 
          <p id="priceWarning"> Warning: The current price of your product is less then the cost per unit! </p>
+
         <!-- Production Slider -->
 		<p id="productionCharacters">Production(max 500u): 
              <div class="input-group">
@@ -386,7 +388,7 @@
           </span>
       </div>
                 <output name="amount" for="productionRangeInput"onchange="edit()"></output> </form> </p>
-        <!-- Marketing Slider -->
+        <!-- Marketing Slider 
 
 		<p id="marketCharacters">Marketing(max $10000): 
               <div class="input-group">
@@ -406,8 +408,14 @@
           </span>
       </div>                                                     
                 <output name="amount" for="marketRangeInput"></output> </form> </p>
-        <!-- R & D Slider -->
- 
+
+        -->
+
+        <!--  THE NEW MARKETING SYSTEM  -->
+
+        <button data-toggle="collapse" data-target="#MarketingDiv">Marketing</button>
+
+ 		<!-- R & D Slider -->
 		<p id="RAndDCharacters">Research(max $10000): 
               <div class="input-group">
           <span class="input-group-btn">
