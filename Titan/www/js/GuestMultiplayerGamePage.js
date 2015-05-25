@@ -925,7 +925,7 @@ document.getElementById("newspaper").innerHTML = news;
 function news3(cat){
 
 var feed1 =  cat.get("companyName") + " is terrible. " + "They only donate $" + cat.get("charity") + ". Some are calling them greedy. ";
-var feed2 = "This is unexpected " + cat.get("companyName") + " is last in market-share. " + "Their profit of $" + cat.get("stats").profit + "is awful.";
+var feed2 = "This is unexpected " + cat.get("companyName") + " is last in market-share. " + "Their profit of $" + cat.get("stats").profit + " is awful.";
 var feed3 = " Things are looking grim for " + cat.get("companyName") + ". " + " Their net worth is the lowest of all companies , with $" + cat.get("networth")+"." ;
 var feed4 = cat.get("companyName") + " clearly needs more business lessons. " + "Their popularity with adults has plummeted. ";
 var feed5 = "Do not invest in " + cat.get("companyName") + ". "+ "They are last in market-share. " + "If they don't do something drastic soon they will face bankruptcy. ";
