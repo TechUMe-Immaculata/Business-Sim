@@ -279,11 +279,11 @@ success: function(match){
 var turns = match[0].get("turn");
 console.log("yop : "+turns);
 
-if (turns>= 10){
+if (turns>= 5){
 
 	gameOver(matchid);
 }
-else if (turns < 10){
+else if (turns < 5){
 	console.log("not yet");
 }
 
