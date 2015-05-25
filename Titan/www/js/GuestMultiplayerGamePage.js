@@ -1118,14 +1118,14 @@ var aTurnTime;
 
 //function for timing a turn using a timeout
 function timePerTurn() {
-    aTurnTime= setTimeout(function(){ endTime(); }, 3000);
+    aTurnTime= setTimeout(function(){ endTime(); },60000);
 }
 
 //function that 
 function endTime(){
 
 SubmitButtonPress();
-alert("Turn is Over")
+alert("Turn is Over");
 }
 
 function deleteTimeout()
