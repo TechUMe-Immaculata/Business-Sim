@@ -44,11 +44,13 @@ Parse.Cloud.run('createMatch_Multi_Join', running, {
 		matchId = works.clientMatchId; 
 		console.log(works);
 		localStorage.setItem("matchId",works);
+
 	}
 	},
 	error:function(error){
 
 		console.log("Nah boi");
+		 document.getElementById("joinMatch1").innerHTML = "There was an issue with your Code. Please enter it again.";
 	}
 });
 // get the companyId so you can use it later for the query
