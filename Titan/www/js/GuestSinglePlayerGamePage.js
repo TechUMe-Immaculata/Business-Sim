@@ -444,20 +444,20 @@ else if (CurrentPage == 3) {
 	}
 	
 	//table one data displaying changes made based off their decisions before submit
-	document.getElementById("table_1_input_1").innerHTML = " $"+cash;
-    document.getElementById("table_1_input_2").innerHTML = " $"+credit; 
-	document.getElementById("table_1_input_3").innerHTML = " $"+resources;
-	document.getElementById("table_1_input_4").innerHTML = " $"+productionCost;
-	document.getElementById("table_1_input_5").innerHTML = " $"+data.marketing;
-	document.getElementById("table_1_input_6").innerHTML = " $"+data.capital;
-	document.getElementById("table_1_input_7").innerHTML = " $"+data.researchDevelopment;
-	document.getElementById("table_1_input_8").innerHTML = " $"+expense;
-	document.getElementById("table_1_input_9").innerHTML = " $"+resources;
-	document.getElementById("table_1_input_10").innerHTML = " $"+(-expense);
-	document.getElementById("table_1_input_11").innerHTML = " $"+(resources-expense);
-	document.getElementById("table_1_input_12").innerHTML = " $"+costPerUnit;
+	document.getElementById("table_1_input_1").innerHTML = " $"+ Math.floor(cash);
+    document.getElementById("table_1_input_2").innerHTML = " $"+Math.floor(credit); 
+	document.getElementById("table_1_input_3").innerHTML = " $"+Math.floor(resources);
+	document.getElementById("table_1_input_4").innerHTML = " $"+Math.floor(productionCost);
+	document.getElementById("table_1_input_5").innerHTML = " $"+Math.floor(data.marketing);
+	document.getElementById("table_1_input_6").innerHTML = " $"+Math.floor(data.capital);
+	document.getElementById("table_1_input_7").innerHTML = " $"+Math.floor(data.researchDevelopment);
+	document.getElementById("table_1_input_8").innerHTML = " $"+Math.floor(expense);
+	document.getElementById("table_1_input_9").innerHTML = " $"+Math.floor(resources);
+	document.getElementById("table_1_input_10").innerHTML = " $"+Math.floor((-expense));
+	document.getElementById("table_1_input_11").innerHTML = " $"+Math.floor((resources-expense));
+	document.getElementById("table_1_input_12").innerHTML = " $"+Math.floor(costPerUnit);
 	document.getElementById("table_1_input_13").innerHTML = utilization + " %";
-	document.getElementById("table_1_input_14").innerHTML = " $"+data.charity;
+	document.getElementById("table_1_input_14").innerHTML = " $"+Math.floor(data.charity);
 }
 else if (CurrentPage == 4) {
 	document.getElementById('GamePageFour').style.display='block';
