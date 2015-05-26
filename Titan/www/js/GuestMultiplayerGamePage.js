@@ -1116,9 +1116,9 @@ query.first({
 //variable for a time-out
 var aTurnTime;
 
-//function for timing a turn using a timeout
+//function for timing a turn using a time-out
 function timePerTurn() {
-    aTurnTime= setTimeout(function(){ endTime(); },60000);
+    aTurnTime= setTimeout(function(){ endTime(); },3*60000);
 }
 
 //function that 
