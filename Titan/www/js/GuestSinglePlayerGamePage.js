@@ -69,7 +69,6 @@ $('.input-number').change(function() {
     }
     }
 	updatePageFour();
-	priceButtonsPressed();
     
 });
 $(".input-number").keydown(function (e) {
@@ -184,9 +183,6 @@ window.onload = function(){
 	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 	document.getElementById("tutorial_MenuButton").addEventListener("click", tutorial_MenuButtonPress);
 	document.getElementById('LoadingNotifier').style.display="none";
-	document.getElementById("priceWarning").style.display = "none"; 
-	//document.getElementById("pricePlus").addEventListener("click", priceButtonPressed);
-	//document.getElementById("priceMinus").addEventListener("click", priceButtonPressed);
 /* check if this works*/
 	if (navigator.notification) { // Override default HTML alert with native dialog
       window.alert = function (message) {
@@ -471,7 +467,7 @@ else if (CurrentPage == 4) {
 	document.getElementById('submitToServerButton').style.display='';
 	
 	updatePageFour();
-	priceButtonsPressed();
+	
 	
 	document.getElementById("productionCharacters").innerHTML = "Production(max "+maxProduction+"u):";
 }
@@ -1041,24 +1037,10 @@ function updatePageFour()
 
 		var netWorth = resources - expense;
 
-		document.getElementById("table_2_input_1").innerHTML = "$"+(cash + credit);
-		document.getElementById("table_2_input_2").innerHTML = "$"+(-expense);
-		document.getElementById("table_2_input_3").innerHTML = "$"+(netWorth);
+		document.getElementById("table_2_input_1").innerHTML = "$"+Math.floor(cash + credit);
+		document.getElementById("table_2_input_2").innerHTML = "$"+Math.floor(-expense);
+		document.getElementById("table_2_input_3").innerHTML = "$"+Math.floor(netWorth);
 	  
 	  //+++++++++++++++++++++++ b
 }
 
-// Fancy Fancy Fancy
-function priceButtonsPressed(){
-	//checks to see if the price is less then the cost per unit
-	if (document.getElementById("priceRangeInput").value <= unitCost) 
-	{
-		//displays the warning if lower then the cost per unit.
-		document.getElementById("priceWarning").style.display = ""; 
-	}
-	//if it's not lower, it will hide the warning.
-	else 
-	{
-		document.getElementById("priceWarning").style.display = "none"; 
-	}
-}
