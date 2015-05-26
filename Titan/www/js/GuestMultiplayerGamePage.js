@@ -653,7 +653,7 @@ console.log("////////////////////////////yop 2A ");
 
 var matchid=cop;
 
-var doesItExist =false;
+var doesItExist =true;
 
 /*
 var Match = Parse.Object.extend("Match");
@@ -747,10 +747,11 @@ query.find().then(function(rankings){
 alert("The winner is " + rankings[0].get("companyName") + ". Second place is : "+ rankings[1].get("companyName")  + ". Third winner is : " + rankings[2].get("companyName") + ". Fourth place is : " + rankings[3].get("companyName")  + ". Fith place is : " + rankings[4].get("companyName")  + ". Last place is : " + rankings[5].get("companyName") + "." );
 var retVal = confirm("Do you want to play again?");
    if( retVal == true ){
+   	localStorage.clear();
      window.location = " NewUserHome.html"; 
 	 
    }else{
-
+   		localStorage.clear();
       window.location= "NewUserHome.html";
 	 
 	}
@@ -927,7 +928,7 @@ document.getElementById("newspaper").innerHTML = news;
 function news3(cat){
 
 var feed1 =  cat.get("companyName") + " is terrible. " + "They only donate $" + cat.get("charity") + ". Some are calling them greedy. ";
-var feed2 = "This is unexpected " + cat.get("companyName") + " is last in market-share. " + "Their profit of $" + cat.get("stats").profit + "is awful.";
+var feed2 = "This is unexpected " + cat.get("companyName") + " is last in market-share. " + "Their profit of $" + cat.get("stats").profit + " is awful.";
 var feed3 = " Things are looking grim for " + cat.get("companyName") + ". " + " Their net worth is the lowest of all companies , with $" + cat.get("networth")+"." ;
 var feed4 = cat.get("companyName") + " clearly needs more business lessons. " + "Their popularity with adults has plummeted. ";
 var feed5 = "Do not invest in " + cat.get("companyName") + ". "+ "They are last in market-share. " + "If they don't do something drastic soon they will face bankruptcy. ";
