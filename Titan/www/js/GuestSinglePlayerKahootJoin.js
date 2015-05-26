@@ -98,6 +98,7 @@ query.find({
 		if (Match[0].get("isReady") == false)
 		{
 			console.log("is not ready yet");
+			document.getElementById("joinMatch1").innerHTML = "You have succesfully joined the match , please wait for it to start.";
 			return null;
 		
 		}
@@ -112,6 +113,8 @@ query.find({
   error: function(error) {
     alert("Error: " + error.code + " " + error.message);
     console.log("not working for the CompMatch Turns");
+    document.getElementById("joinMatch1").innerHTML = "There was an issue with your Code. Please enter it again.";
+
   }
 });
 ///
