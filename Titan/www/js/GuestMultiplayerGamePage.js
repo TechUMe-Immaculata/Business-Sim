@@ -699,7 +699,7 @@ var retVal = confirm("Do you want to play again?");
 
 
 	
-}
+
 
 };
 function testNetworth(){
