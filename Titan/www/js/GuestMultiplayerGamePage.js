@@ -818,6 +818,20 @@ marketshare.segments[i].value = marketShareValue;
 marketshare.segments[i].label = company;
 
 //companyGrossProduct.datasets[0].label = ["Comffp1","Coffmp2","Cossmp3","Comaap4","Comp5","Compdd6"];
+if(companyId === rankings[i].get("companyId"))
+{
+console.log("||___||__||__||__||__||__||");
+document.getElementById('displayProfit').innerHTML = "Profit : " + rankings[i].get("stats").profit;
+
+if(rankings[i].get("stats").profit < 0)
+document.getElementById("displayProfit").style.color = "red";
+else if (rankings[i].get("stats").profit > 0)
+document.getElementById("displayProfit").style.color = "green";
+else
+document.getElementById("displayProfit").style.color = "black";
+
+}
+
 }
 companyGrossProduct.update();
 capitalInvestment.update();
