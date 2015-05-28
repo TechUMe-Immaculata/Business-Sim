@@ -290,14 +290,14 @@ match[0].increment("ActiveTurns");
 var turns = match[0].get("turn");
 console.log("////////////////////////////yop : "+turns);
 
-if (turns>= 10){
+if (turns>= 4){
 	console.log("////////////////////////////yop 1A " + matchid);
 	gameOver(matchid);
 
 	
 
 }
-else if (turns < 10){
+else if (turns < 4){
 	console.log("not yet");
 	console.log("////////////////////////////yop 1B ");
 }
@@ -653,30 +653,9 @@ console.log("////////////////////////////yop 2A ");
 
 var matchid=cop;
 
-var doesItExist =true;
 
-/*
-var Match = Parse.Object.extend("Match");
-var Matchquery = new Parse.Query("Match");
-Matchquery.equalTo("objectId" , matchid);
-Matchquery.find({
-success : function(match){
- var doesItExist=match[0].get("gameTime");
 
-console.log("works 2A" + match.length);
-},
-error:function(error){
-console.log(error);
-doesItExist = false;
-console.log("////////////////////////////yop 2B ");
 
-}
-
-})
-
-*/
-console.log("////////////////////////////yop 2C " + doesItExist);
-if(doesItExist==true){
 
 // query to get who can in what place
 var CompMatch = Parse.Object.extend("CompMatch");
@@ -691,6 +670,7 @@ query.find().then(function(rankings){
 
 
 alert("The winner is " + rankings[0].get("companyName") + ". Second place is : "+ rankings[1].get("companyName")  + ". Third winner is : " + rankings[2].get("companyName") + ". Fourth place is : " + rankings[3].get("companyName")  + ". Fith place is : " + rankings[4].get("companyName")  + ". Last place is : " + rankings[5].get("companyName") + "." );
+localStorage.clear();
 var retVal = confirm("Do you want to play again?");
    if( retVal == true ){
      window.location = " NewUserHome.html"; 
@@ -698,70 +678,15 @@ var retVal = confirm("Do you want to play again?");
    }else{
 
       window.location= "NewUserHome.html";
-	 
+	 marco
 	}
-
-//alert("The winner is " + winner1 + " : second place"+ winner2 + " third winner is : " + winner3 + " : fourth place is " + winner4 + "fourth place is " + winner5 + "last place is :" + winner6);
-
-var Match = Parse.Object.extend("Match");
-var matchquery = new Parse.Query("Match");
-/*
-matchquery.equalTo("objectId" , matchid);
-matchquery.find({
-
-success: function(match){
-var matchname = match.id;
-match[0].destroy({
-  success: function(match) {
-    // The object was deleted from the Parse Cloud.
-    console.log("match : " + matchname + " is deleted" );
-  },
-  error: function(match, error) {
-    // The delete failed.
-    // error is a Parse.Error with an error code and message.
-  }
-});
-
-},
-error: function(error){
-    console.log("not working");
-}
-
-});
-*/
-return null
-}).then(function(result){
-
-
-})
-// if the match has already been deleted than just show the user the ranks , and than close the game.
-} else if (doesItExist == false ){
-
-
-
-query.find().then(function(rankings){
-  
-
-
-
-alert("The winner is " + rankings[0].get("companyName") + ". Second place is : "+ rankings[1].get("companyName")  + ". Third winner is : " + rankings[2].get("companyName") + ". Fourth place is : " + rankings[3].get("companyName")  + ". Fith place is : " + rankings[4].get("companyName")  + ". Last place is : " + rankings[5].get("companyName") + "." );
-var retVal = confirm("Do you want to play again?");
-   if( retVal == true ){
-   	localStorage.clear();
-     window.location = " NewUserHome.html"; 
-	 
-   }else{
-   		localStorage.clear();
-      window.location= "NewUserHome.html";
-	 
-	}
-
 
 }).then(function(result){
 
 
-})
 
+	return null;
+})
 
 
 
