@@ -821,7 +821,7 @@ marketshare.segments[i].label = company;
 if(companyId === rankings[i].get("companyId"))
 {
 console.log("||___||__||__||__||__||__||");
-document.getElementById('displayProfit').innerHTML = "Profit : " + rankings[i].get("stats").profit;
+document.getElementById('displayProfit').innerHTML = "Profit : $" + rankings[i].get("stats").profit;
 
 if(rankings[i].get("stats").profit < 0)
 document.getElementById("displayProfit").style.color = "red";
