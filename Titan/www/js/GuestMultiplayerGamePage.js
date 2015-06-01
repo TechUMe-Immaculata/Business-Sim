@@ -643,9 +643,9 @@ function getDataFromServer()
 
 	})
 }
-
+// This function is called to end the game after the user has played a certain amount of times
 function gameOver(cop){
-// game over function , saves the user reusults , and than deletes the match 
+
 
 // this can be replaced with the match query which is done at the bottom..
 console.log("////////////////////////////yop 2A ");
@@ -705,6 +705,7 @@ var retVal = confirm("Do you want to play again?");
 
 
 };
+//This function gets the top players and puts them in the leaderboard
 function testNetworth(){
 	console.log("Works")
 //get the keys to do the search
@@ -811,6 +812,8 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;                                             
 };*/
+
+// This generates a newsfeed for the players based on what position they are in
 function newsfeed(players){
 
 var player1 = players[0];
@@ -826,7 +829,7 @@ news3(player6);
 news = "";
 
 function news1(cat){
-
+// This is just a set of statements that will be put into an array , than randomly choosen.
 
 var feed1 = "The leader is " + cat.get("companyName") + ". " + "They broke records with $" + cat.get("stats").profit + " in profits.";
 var feed2 = "The new leader in the industry is " + cat.get("companyName") + ". " + "They made $" + cat.get("stats").revenue+ " in revenue. The market seems to love their price point of $" + cat.get("price")+". ";
@@ -845,7 +848,7 @@ document.getElementById("newspaper").innerHTML = news;
 }
 
 function news2(cat){
-
+// This is just a set of statements that will be put into an array , than randomly choosen.
 var feed1 = " Runner up is " + cat.get("companyName") + ". " + "They had a modest $" + cat.get("stats").profit + " in profit. ";
 var feed2 = " On the rise is " + cat.get("companyName") + ". " + "They are doing well with $" + cat.get("stats").profit + "in profit. ";
 var feed3 = " Don't sleep on " + cat.get("companyName") + ". " + "They are the rise with a net worth of $" + cat.get("networth") + ". ";
@@ -865,7 +868,7 @@ document.getElementById("newspaper").innerHTML = news;
 
 
 function news3(cat){
-
+// This is just a set of statements that will be put into an array , than randomly choosen.
 var feed1 =  cat.get("companyName") + " is terrible. " + "They only donate $" + cat.get("charity") + ". Some are calling them greedy. ";
 var feed2 = "This is unexpected " + cat.get("companyName") + " is last in market-share. " + "Their profit of $" + cat.get("stats").profit + " is awful.";
 var feed3 = " Things are looking grim for " + cat.get("companyName") + ". " + " Their net worth is the lowest of all companies , with $" + cat.get("networth")+"." ;
@@ -942,7 +945,11 @@ function updatePageFour()
 	  
 	  //+++++++++++++++++++++++ b
 }
+
+
+// This function handles the rounds. It checks if everybody has submitted , than allows you to resubmit
 setInterval(function MultiplayerTurns(){
+// This checks if the submit button is hidden , if it is than it runs the function to chekc when everybody is read
  if( document.getElementById('submitToServerButton').style.display =="none"){
 var CompMatch = Parse.Object.extend("CompMatch");
 console.log(matchId);
@@ -953,10 +960,10 @@ query.equalTo("matchId", matchId);
 query.equalTo("companyId", companyId);
 query.find({
    
-   //find the Active Turns in the match 
+   
     success: function(CompMatch) {
     	console.log(CompMatch);
-
+    	// If everybody has submitted , than it brings back the submit button
 		if (CompMatch[0].get("isSubbed") == false){
 			
 		document.getElementById('submitToServerButton').style.display='';
@@ -978,7 +985,7 @@ query.find({
   }
 });
 }
-
+			// if the submit button is already , there it does nothing
 			else if (document.getElementById('submitToServerButton').style.display ==""){
 				console.log("nothing to see here");
 				return null;
@@ -987,7 +994,7 @@ query.find({
 } , 1000);
 
 
-
+//This function checks if you are bankrupt , and closes the game if you are
 
 function bankrupt(){
 
@@ -1017,7 +1024,7 @@ query.find({
 
 
 }
-
+// This function is called when the user decides to quit a game.
 function exit(){
 
 var names= ["Floyd Inc" , "Matt Inc" , "Tom Inc" , "Marcio Inc", "Stan Lee Inc"];
@@ -1032,7 +1039,7 @@ query.equalTo("matchId", matchId);
 query.equalTo("companyId", companyId);
 query.first({
    
-   //find the Active Turns in the match 
+   //This turns the user's accounts into bots , so the match can continue.
     success: function(CompMatch) {
     	console.log(CompMatch);
     	CompMatch.set("isBot",true);

@@ -16,7 +16,7 @@ alert("You have to many open matches, please finish a current match before start
 else if ( rowCount <4)
 {
 */
-
+// This finds out what the users information is
  var currentUser = Parse.User.current();
 
  var password = document.getElementById("password").value;
@@ -28,7 +28,7 @@ running.objectId = currentUser.id;
 running.password = password;
 
 
-
+//This sends the user's data to the server , and lets them join a game
 Parse.Cloud.run('createMatch_Multi_Join', running, {
 
 	success: function(works){
@@ -63,7 +63,7 @@ nquery.equalTo("userId", userId);
 
 nquery.find({
    
-   //find the Active Turns in the match 
+  
     success: function(Company) {
     	
 
@@ -79,7 +79,7 @@ nquery.find({
 });
 
 
-// code for user to check when hes ready 
+// This checks to see if the host , has started the match yet.
 setInterval(function MultiplayerTurns(){
 
 var Match = Parse.Object.extend("Match");
@@ -91,21 +91,21 @@ query.equalTo("password", password);
 
 query.find({
    
-   //find the Active Turns in the match 
+    
     success: function(Match) {
-    	
+    	// this checks to see if the match is ready
 	console.log(Match);
 	if (ableToJoin == true)
-	{
+	{	
 		if (Match[0].get("isReady") == false)
-		{
+		{	// if the match is not ready , this displays a message saying to wait for the match to start.
 			console.log("is not ready yet");
 			document.getElementById("joinMatch1").innerHTML = "You have succesfully joined the match , please wait for it to start.";
 			return null;
 		
 		}
 		else if (Match[0].get("isReady") == true )
-		{
+		{	// when your match is ready , this takes you to the game page
 			window.location = "GuestMultiplayerGamePage.html";
 			
 		}	

@@ -551,7 +551,7 @@ function getDataFromServer()
 		}
 	});
 }
-
+// a function that ends the game , and gives the player his rank
 function gameOver(cop)
 {
 	// game over function , saves the user reusults , and than deletes the match 
@@ -741,7 +741,7 @@ function gameOver(cop)
 		return null;
 	}).then(function(result) {});
 }
-
+//This function gets your postion and puts it in the leaderboard
 function testNetworth()
 	{
 		console.log("Works");
@@ -844,9 +844,9 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;                                             
 };*/
-
+// This generates a newsfeed for the players based on what position they are in
 function newsfeed(players)
-{
+{	// this 
 	var player1 = players[0];
 	var player2 = players[1];
 	var player3 = players[2];
@@ -859,7 +859,7 @@ function newsfeed(players)
 	news = "";
 
 	function news1(cat)
-	{
+	{	// This is just a set of statements that will be put into an array , than randomly choosen.
 		var feed1 = "The leader is " + cat.get("companyName") + ". " + "They broke records with $" + cat.get("stats").profit + " in profits.";
 		var feed2 = "The new leader in the industry is " + cat.get("companyName") + ". " + "They made $" + cat.get("stats").revenue + " in revenue. The market seems to love their price point of $" + cat.get("price") + ". ";
 		var feed3 = "Wow " + cat.get("companyName") + " has just taken first place in the industry with a revenue of $" + cat.get("stats").revenue + ".";
@@ -875,7 +875,7 @@ function newsfeed(players)
 	}
 
 	function news2(cat)
-	{
+	{// This is just a set of statements that will be put into an array , than randomly choosen.
 		var feed1 = " Runner up is " + cat.get("companyName") + ". " + "They had a modest $" + cat.get("stats").profit + " in profit. ";
 		var feed2 = " On the rise is " + cat.get("companyName") + ". " + "They are doing well with $" + cat.get("stats").profit + "in profit. ";
 		var feed3 = " Don't sleep on " + cat.get("companyName") + ". " + "They are the rise with a net worth of $" + cat.get("networth") + ". ";
@@ -891,7 +891,7 @@ function newsfeed(players)
 	}
 
 	function news3(cat)
-	{
+	{// This is just a set of statements that will be put into an array , than randomly choosen.
 		var feed1 = cat.get("companyName") + " is terrible. " + "They only donate $" + cat.get("charity") + ". Some are calling them greedy. ";
 		var feed2 = "This is unexpected " + cat.get("companyName") + " is last in market-share. " + "Their profit of $" + cat.get("stats").profit + "is awful.";
 		var feed3 = " Things are looking grim for " + cat.get("companyName") + ". " + " Their net worth is the lowest of all companies , with $" + cat.get("networth") + ".";

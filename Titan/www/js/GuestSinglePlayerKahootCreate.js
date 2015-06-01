@@ -17,7 +17,7 @@ alert("You have to many open matches, please finish a current match before start
 else if ( rowCount <4)
 {
 */
-
+// This prepares the users data to be sent the server
  var currentUser = Parse.User.current();
 
 	var  running = {};
@@ -25,13 +25,13 @@ running.objectId = currentUser.id;
 running.matchTime = 5;
 running.matchName = makeMatchId();
 
-
+// This runs a Parse Cloud function , which lets the user create a match
 Parse.Cloud.run('createMatch_Multi', running, {
 
 	success: function(works){
 	
 	
-
+// this returns information from the user , which we display to the user
 	matchId = works.clientMatchId; 
 	console.log(works);
 	console.log(matchId);
@@ -39,6 +39,7 @@ Parse.Cloud.run('createMatch_Multi', running, {
 	console.log(localStorage.getItem("matchId"));
 
 	var password = works.password;
+	//This is the Match Id code , that users enter to join Multiplayer games
 	document.getElementById("password").innerHTML = "Match id : " + password;
 	},
 	error:function(error){
@@ -51,7 +52,7 @@ Parse.Cloud.run('createMatch_Multi', running, {
 
 
 };
-
+// This function is called after all the users have joined a match 
 function joinMatch()
 {
 
@@ -94,7 +95,7 @@ query.equalTo("objectId", matchId);
 
 query.find({
    
-
+	//This shows you how many players have joined your match
     success: function(Match) {
     	console.log(Match);
     	var companies = Match[0].get("companyIds").length;
