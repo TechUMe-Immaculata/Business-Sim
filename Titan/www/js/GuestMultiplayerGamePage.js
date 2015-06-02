@@ -668,7 +668,7 @@ query.find().then(function(rankings){
   
 
 
-
+// tells the user who the winnners are
 alert("The winner is " + rankings[0].get("companyName") + ". Second place is : "+ rankings[1].get("companyName")  + ". Third winner is : " + rankings[2].get("companyName") + ". Fourth place is : " + rankings[3].get("companyName")  + ". Fith place is : " + rankings[4].get("companyName")  + ". Last place is : " + rankings[5].get("companyName") + "." );
 localStorage.clear();
 var retVal = confirm("Do you want to play again?");
