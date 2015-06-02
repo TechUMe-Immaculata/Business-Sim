@@ -12,10 +12,7 @@
 
 
 <body class="nonSelect">
-    <!--
-	<button type="button" class="btn btn-success" id ="PreviousButton">Back</button>
-	<button type="button" class="btn btn-info" id ="NextButton">Next</button>
-    -->
+
     <div id="banner" style="position: fixed;">
 
         <p class="text-center" id="screenDescription">BusinessPalooza</p>
@@ -30,12 +27,14 @@
 
 
 
-    <!-- Tutorial Screen -->
+    <!-- Tutorial Screen - Teachs the user how to play the game. -->
     <div id="Tutorial">
 
         <p id="TutGreetingMessage" style="font-size: 25px" class="text-center"> Welcome to Business Palooza!</p>
 
         <div id="TutorialPageOne">
+
+            <!-- The introduction paragraph to the game -->
             <p>
                 <u><b>Goal:</b></u> This game is designed to teach you the core values behind a successful business.
             </p>
@@ -126,7 +125,7 @@
         </div>
     </div>
 
-    <!-- PAUSE SCREEN -->
+    <!-- PAUSE SCREEN - THe buttons that are present on the pause screen -->
     <div id="PauseScreen" style="display: none">
         <button type="button" class="btn btn-primary btn-block" id="resumeButton"> Resume</button>
         <button type="button" class="btn btn-primary btn-block" id="tutorial_MenuButton">Tutorial</button>
@@ -135,7 +134,7 @@
     </div>
 
 
-    <!-- Page One, the In-Game Home Page -->
+    <!-- Page One, the In-Game Home Page - The first page, has the company name a picture and the Quarter #-->
     <div id="GamePageOne">
         <img class="center-block" id="YourBuisness" src="img/Factory.svg" />
         <div>
@@ -152,7 +151,7 @@
     </div>
 
 
-    <!-- Page Two, the In-Game Newspaper -->
+    <!-- Page Two, the In-Game Newspaper - Displays the current standing on players within the game, as well as gives some insight into why some players are doing better or worse. -->
     <div id="GamePageTwo" style="background-color: #EFEFEF;">
 
         <div id="News">
@@ -169,6 +168,8 @@
                         <hr style="width:100%;border-width:1px; border-style:dashed;border-color:#3D3D29;"></hr>
                     </th>
                 </tr>
+
+                <!-- Displays the leader boards -->
                 <tr>
                     <td></td>
                     <td id="company_first">
