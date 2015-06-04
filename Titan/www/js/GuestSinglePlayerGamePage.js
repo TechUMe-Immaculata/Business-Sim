@@ -11,6 +11,7 @@ var maxProduction = 0,
 var news = "";
 // add the industry 
 var gametype;
+<<<<<<< HEAD
 $('.btn-number').click(function(e)
 {
 	e.preventDefault();
@@ -47,6 +48,41 @@ $('.btn-number').click(function(e)
 	{
 		input.val(0);
 	}
+=======
+var plot1;
+
+$('.btn-number').click(function(e){
+    e.preventDefault();
+    
+    fieldName = $(this).attr('data-field');
+    type      = $(this).attr('data-type');
+    var input = $("input[name='"+fieldName+"']");
+    var currentVal = parseInt(input.val());
+    if (!isNaN(currentVal)) {
+        if(type == 'minus') {
+            
+            if(currentVal > input.attr('min')) {
+                input.val(currentVal - 1).change();
+            } 
+            if(parseInt(input.val()) == input.attr('min')) {
+                $(this).attr('disabled', true);
+            }
+
+        } else if(type == 'plus') {
+
+
+            if(currentVal < input.attr('max')) {
+                input.val(currentVal + 1).change();
+            }
+            if(parseInt(input.val()) == input.attr('max')) {
+                $(this).attr('disabled', true);
+            }
+
+        }
+    } else {
+        input.val(0);
+    }
+>>>>>>> origin/normalMarcio
 });
 $('.input-number').focusin(function()
 {
@@ -142,6 +178,7 @@ var barChartData = {
 		labels: ["", "", "", "", "", ""],
 		datasets: [
 		{
+<<<<<<< HEAD
 			fillColor: "rgba(242,0,0,0.5)",
 			strokeColor: "rgba(242,0,0,0.8)",
 			highlightFill: "rgba(242,0,0,0.75)",
@@ -213,6 +250,144 @@ window.onload = function()
 	//}
 	//});
 	//this can be made more efficient but a lack of security
+=======
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,0.8)",
+				highlightFill: "rgba(220,220,220,0.75)",
+				highlightStroke: "rgba(220,220,220,1)",
+				data : [1,2,3,4,5,6]
+		}
+]}
+			
+//var dataObject={};
+
+//document.addEventListener('touchstart', handleTouchStart, false);        
+//document.addEventListener('touchend', handleTouchMove, false);
+
+
+
+window.onload = function(){
+
+	var options = 
+	{
+				// Boolean - Whether to animate the chart
+				animation: false,
+				responsive : false
+	};
+	console.log($(window).width());
+	var ctx = document.getElementById("chart-area_1").getContext("2d");
+	ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
+	//ctx.canvas.height = $("#table_2_").width()-5;
+	window.companyGrossProduct = new Chart(ctx).Bar(barChartData, options);
+	
+	var ctx = document.getElementById("chart-area_2").getContext("2d");
+		ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
+	window.capitalInvestment = new Chart(ctx).Bar(barChartData, options);
+	var ctx = document.getElementById("chart-area_3").getContext("2d");
+		ctx.canvas.width = $(window).width()-($(window).width())*(10/100);
+	ctx.canvas.height = $(window).width()-($(window).width())*(10/100);
+	window.marketshare = new Chart(ctx).Doughnut(doughnutData, options);
+	
+	doUpdate();
+					
+	Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
+	Parse.$ = jQuery;	
+	doUpdate();
+	getDataFromServer();
+	doUpdate();
+	ChangeThePage();
+	document.getElementById('PauseScreen').style.display='none';
+	
+	//document.getElementById("NextButton").addEventListener("click", NextButtonPress);
+	//document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
+	document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
+	document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
+	document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
+	document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
+	
+			};
+			
+function renderGraph(options,a,b,c,d,e,f) {
+	
+		if (plot1) {
+			plot1.destroy();
+		}
+		plot1 = $.jqplot('chart_1', [a,b,c,d,e,f], options);
+		console.log("plot1");
+		console.log(plot1);
+	}
+	
+	function doUpdate() {
+			$("#chart_1").width($(window).width());
+			$("#chart_1").height($(window).width());
+					var options = {
+						  title: 'Bar',
+						seriesDefaults:{
+							renderer:$.jqplot.BarRenderer,
+							rendererOptions: {fillToZero: true}
+						},
+						// Custom labels for the series are specified with the "label"
+						// option on the series option.  Here a series option object
+						// is specified for each series.
+						series:[
+							{label:'Company A'},
+							{label:'Company B'},
+							{label:'Company C'},
+							{label:'Company D'},
+							{label:'Company E'},
+							{label:'Company F'}
+						],
+						// Show the legend and put it outside the grid, but inside the
+						// plot container, shrinking the grid to accomodate the legend.
+						// A value of "outside" would not shrink the grid and allow
+						// the legend to overflow the container.
+						axes: {
+							// Use a category axis on the x axis and use our custom ticks.
+							xaxis: {
+								renderer: $.jqplot.CategoryAxisRenderer,
+								ticks: [""]
+							},
+							// Pad the y axis just a little so bars can get close to, but
+							// not touch, the grid boundaries.  1.2 is the default padding.
+							yaxis: {
+								pad: 1.05,
+								tickOptions: {formatString: '$%d'},
+								min:0
+							}
+						},
+						
+							legend: 
+						{
+							show: true,
+							placement:"outsideGrid",
+							location: 'e'
+						}
+				  }; 
+	
+				var s1 = [200], s2 = [460], s3 = [260],s4 = [260],s5 = [260],s6 = [260];
+				s1 = [500];
+				renderGraph(options,s1,s2,s3,s4,s5,s6);
+	}
+
+//Code for the info buttons.
+// Create the tooltips only when document ready
+//$(document).ready(function () {
+    
+    // This will automatically grab the 'title' attribute and replace
+    // the regular browser tooltips for all <a> elements with a title attribute!
+    //$('a[title]').qtip();
+    
+//});
+//$('#myTooltip').qtip({
+    //position: {
+        //my: 'top right',  // Position my top left...
+        //at: 'bottom left', // at the bottom right of...
+        //target: $('.Price') // my target
+    //}
+//});
+>>>>>>> origin/normalMarcio
 
 function SubmitButtonPress()
 	{
@@ -342,6 +517,7 @@ function PreviousButtonPress()
 
 function ChangeThePage()
 {
+<<<<<<< HEAD
 	console.log(CurrentPage);
 	//if (document.getElementById('Tutorial').style.display == 'block')
 	//{document.getElementById('Tutorial').style.display = 'none'
@@ -365,6 +541,68 @@ function ChangeThePage()
 		document.getElementById('GamePageFour').style.display = 'none';
 	}
 	else if (CurrentPage === 2)
+=======
+doUpdate();
+if (CurrentPage == 1) {
+	document.getElementById('GamePageOne').style.display='block';
+	document.getElementById('GamePageTwo').style.display='none';
+	document.getElementById('GamePageThree').style.display='none';
+	document.getElementById('GamePageFour').style.display='none';
+}
+else if (CurrentPage == 2) {
+	document.getElementById('GamePageTwo').style.display='block';
+	document.getElementById('GamePageOne').style.display='none';
+	document.getElementById('GamePageThree').style.display='none';
+	document.getElementById('GamePageFour').style.display='none';
+}
+else if (CurrentPage == 3) {
+	document.getElementById('GamePageThree').style.display='block';
+	document.getElementById('GamePageOne').style.display='none';
+	document.getElementById('GamePageTwo').style.display='none';
+	document.getElementById('GamePageFour').style.display='none';
+	
+	var data = {};
+		//input does not work with type number thus all these objects are null
+	  data.capital = Number(this.$("#capitalRangeInput").val());
+	  data.researchDevelopment = Number(this.$("#RAndDRangeInput").val());
+	  data.production = Number(this.$("#productionRangeInput").val());
+	  data.marketing = Number(this.$("#marketRangeInput").val());
+	  data.price = Number(this.$("#priceRangeInput").val());
+	  data.charity = Number(this.$("#charityRangeInput").val());
+	  
+	  var expense = 0, 
+	  resources = 0, 
+	  result = 0, 
+	  costPerUnit = 7, 
+	  utilization = 0, 
+	  costPerUnit = unitCost, 
+	  maxProductionlocal = maxProduction, 
+	  cash = cashAvaible, 
+	  credit = creditLine;
+	  
+
+	  //Price per unit = __________get data
+	  console.log(data.production +" ____product");
+	  var productionCost = data.production * costPerUnit;
+	  
+	  resources = cash + credit;
+	  expense = data.capital + data.researchDevelopment + productionCost + data.marketing + data.charity;
+	  result = resources - expense; 
+	  console.log(data.production);
+	  console.log(maxProductionlocal);
+	  console.log(data.production / maxProductionlocal);
+	  utilization = Math.round((data.production / maxProductionlocal)*1000)/10;
+	  
+	  //______________________________________________
+	  
+	  var afterCash= cash,
+	  afterCredit = credit;
+	//define varibles
+	const MAX_CREDIT = 50000;
+	var netWorth = resources - expense;
+	//determine users state
+	if(netWorth > MAX_CREDIT)
+>>>>>>> origin/normalMarcio
 	{
 		document.getElementById('Tutorial').style.display = 'none';
 		document.getElementById('GamePageTwo').style.display = 'block';
@@ -554,6 +792,7 @@ function getDataFromServer()
 // a function that ends the game , and gives the player his rank
 function gameOver(cop)
 {
+<<<<<<< HEAD
 	// game over function , saves the user reusults , and than deletes the match 
 	// this can be replaced with the match query which is done at the bottom..
 	var matchid = cop;
@@ -740,6 +979,45 @@ function gameOver(cop)
 		});
 		return null;
 	}).then(function(result) {});
+=======
+console.log("iteration" + i);
+networthValue = rankings[i].get("networth");
+capitalInvestmentValue = rankings[i].get("capitalTotal");
+marketShareValue = Math.round(rankings[i].get("marketShare").totalMS * 1000)/10;
+company = rankings[i].get("companyName");
+if (networthValue < 0){networthValue = 0;}else{}
+if (capitalInvestmentValue == 0 ){capitalInvestmentValue = 1;}else{}
+companyGrossProduct.datasets[0].bars[i].value = networthValue;
+companyGrossProduct.datasets[0].bars[i].label = company;
+//companyGrossProduct.datasets[0].bars[i].datasetLabel = company;
+capitalInvestment.datasets[0].bars[i].value = capitalInvestmentValue;
+capitalInvestment.datasets[0].bars[i].label = company;
+marketshare.segments[i].value = marketShareValue;
+marketshare.segments[i].label = company;
+
+//companyGrossProduct.datasets[0].label = ["Comffp1","Coffmp2","Cossmp3","Comaap4","Comp5","Compdd6"];
+}
+companyGrossProduct.update();
+capitalInvestment.update();
+marketshare.update();
+
+document.getElementById("company_first").innerHTML = rankings[0].get("companyName");
+document.getElementById("company_second").innerHTML = rankings[1].get("companyName");
+document.getElementById("company_third").innerHTML = rankings[2].get("companyName");
+document.getElementById("company_fourth").innerHTML = rankings[3].get("companyName");
+document.getElementById("company_fifth").innerHTML = rankings[4].get("companyName");
+document.getElementById("company_sixth").innerHTML = rankings[5].get("companyName"); 
+
+
+//Marco code addd rankings here 
+newsfeed(rankings);
+
+
+//doUpdate();
+return null;
+}).then(function(result){
+})
+>>>>>>> origin/normalMarcio
 }
 //This function gets your postion and puts it in the leaderboard
 function testNetworth()
