@@ -27,7 +27,7 @@
 
 
 
-    <!-- Tutorial Screen - Teachs the user how to play the game. -->
+    <!-- Tutorial Screen - Teachs the user how to play the game using pictures and text.-->
     <div id="Tutorial">
 
         <p id="TutGreetingMessage" style="font-size: 25px" class="text-center"> Welcome to Business Palooza!</p>
@@ -125,16 +125,15 @@
         </div>
     </div>
 
-    <!-- PAUSE SCREEN - THe buttons that are present on the pause screen -->
+    <!-- PAUSE SCREEN - THe buttons that are present on the pause screen, allows you to exit the game and revisit the tutorial if you please -->
     <div id="PauseScreen" style="display: none">
         <button type="button" class="btn btn-primary btn-block" id="resumeButton"> Resume</button>
         <button type="button" class="btn btn-primary btn-block" id="tutorial_MenuButton">Tutorial</button>
         <a href="NewUserHome.html" id="mainMenuButton" class="btn btn-primary btn-block"> Exit</a>
-
     </div>
 
 
-    <!-- Page One, the In-Game Home Page - The first page, has the company name a picture and the Quarter #-->
+    <!-- Page One, the In-Game Home Page - The first page, has the company name, a picture of the comapany building, the companies profit from last quarter and the Quarter #, -->
     <div id="GamePageOne">
         <img class="center-block" id="YourBuisness" src="img/Factory.svg" />
         <div>
@@ -145,9 +144,6 @@
             <p id="displayProfit">Profit : 0</p>
 
         </div>
-
-
-
     </div>
 
 
@@ -208,7 +204,6 @@
                 </tr>
             </table>
         </div>
-
     </div>
 
     <!-- Page Three, the In-Game Graphs Page -->
@@ -218,6 +213,8 @@
                 <tr>
                     <th class="text-center" colspan="2">Financial Performance Estimate </th>
                 </tr>
+
+                <!--  -->
                 <tr>
                     <th colspan="2">
                         <hr style="width:100%;border-width:1px; border-style:solid;border-color:grey;"></hr>
@@ -385,7 +382,9 @@
             </table>
         </div>
     </div>
-    <div class="text-center" id="GamePageFour">
+
+    <!-- Page Four, the values adjustment screen, this page has all of the adjustment buttons as well as the submit. -->
+    <div class="id="GamePageFour" text-center">
         <!-- Capital Slider -->
         <div class="center center-block">
 
@@ -408,19 +407,8 @@
                 </div>
             </p>
 
-
-            <!-- New code in the house
-		<p id="priceCharacters">Capital: 
-              <form id="capitalSlider" oninput="amount.value=capitalRangeInput.value">
-                <input type="number" id="capitalRangeInput" name="rangeInput" min="0" max="any">                                                       
-                
-                -->
             <!-- Price Slider -->
-
             <p id="priceCharacters">Price(max $100):
-                <!--<a id="myTooltip" title="Adjusting your price will change the price of your product." class="Price CustomInfoClass">?</a>-->
-
-
                 <div class="input-group">
                     <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
