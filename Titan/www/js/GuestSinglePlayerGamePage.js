@@ -11,43 +11,60 @@ var maxProduction = 0,
 var news = "";
 // add the industry 
 var gametype;
+
+//When input Buttons are clicked
 $('.btn-number').click(function(e)
 {
+	//PREVENTS DEFAULT
 	e.preventDefault();
+	
+	//define varibles
 	fieldName = $(this).attr('data-field');
 	type = $(this).attr('data-type');
 	var input = $("input[name='" + fieldName + "']");
 	var currentVal = parseInt(input.val());
+	
+	//if it is a value
 	if (!isNaN(currentVal))
 	{
+		//if button pressed was minus
 		if (type == 'minus')
 		{
+			//value is grater than min
 			if (currentVal > input.attr('min'))
 			{
+				//change
 				input.val(currentVal - 10).change();
 			}
+			//if equal to  the min disable
 			if (parseInt(input.val()) == input.attr('min'))
 			{
 				$(this).attr('disabled', true);
 			}
 		}
+		// if type is a plus
 		else if (type == 'plus')
 		{
+			//chack if less than max
 			if (currentVal < input.attr('max'))
 			{
+				//change value
 				input.val(currentVal + 10).change();
 			}
+			//if input is equal to max then disable
 			if (parseInt(input.val()) == input.attr('max'))
 			{
 				$(this).attr('disabled', true);
 			}
 		}
 	}
+	//value of input is zero
 	else
 	{
 		input.val(0);
 	}
 });
+
 $('.input-number').focusin(function()
 {
 	$(this).data('oldValue', $(this).val());
@@ -101,6 +118,7 @@ $(".input-number").keydown(function(e)
 		e.preventDefault();
 	}
 });
+//data structure for pie graph
 var doughnutData = [
 {
 	value: 300,
@@ -138,6 +156,7 @@ var doughnutData = [
 	highlight: "#616774",
 	label: "Comp6"
 }];
+//bar graph structure
 var barChartData = {
 		labels: ["", "", "", "", "", ""],
 		datasets: [
@@ -149,43 +168,46 @@ var barChartData = {
 			data: [1, 2, 3, 4, 5, 6]
 		}]
 	};
-	//var dataObject={};
-	//document.addEventListener('touchstart', handleTouchStart, false);        
-	//document.addEventListener('touchend', handleTouchMove, false);
+
 window.onload = function()
 	{
+		//options to the graph
 		var options = {
 			// Boolean - Whether to animate the chart
 			animation: false,
 			responsive: false
 		};
+		
+		//Graph one defines area to get rid of 7.5% of boarder
 		var ctx = document.getElementById("chart-area_1").getContext("2d");
 		ctx.canvas.width = $("#plotHolder").width() - ($("#plotHolder").width()) * (15 / 100);
 		ctx.canvas.height = $("#plotHolder").width() - ($("#plotHolder").width()) * (15 / 100);
-		//ctx.canvas.height = $("#table_2_").width()-5;
 		window.companyGrossProduct = new Chart(ctx).Bar(barChartData, options);
+		//Graph two defines area to get rid of 7.5% of boarder
 		var ctx = document.getElementById("chart-area_2").getContext("2d");
 		ctx.canvas.width = $("#plotHolder").width() - ($("#plotHolder").width()) * (15 / 100);
 		ctx.canvas.height = $("#plotHolder").width() - ($("#plotHolder").width()) * (15 / 100);
 		window.capitalInvestment = new Chart(ctx).Bar(barChartData, options);
+		//Graph three defines area to get rid of 7.5% of boarder
 		var ctx = document.getElementById("chart-area_3").getContext("2d");
 		ctx.canvas.width = $("#plotHolder").width() - ($("#plotHolder").width()) * (15 / 100);
 		ctx.canvas.height = $("#plotHolder").width() - ($("#plotHolder").width()) * (15 / 100);
 		window.marketshare = new Chart(ctx).Doughnut(doughnutData, options);
+		//initialize parse and jquery for parse
 		Parse.initialize("Z8KSlQyzuWQKn449idqkqNYbiH7HWy09US0ws0Ci", "zDzVGtrgvtFN0Sxs6YjkuOq9leznJ4UguavX6bdt");
 		Parse.$ = jQuery;
+		//get the data from the sever
 		getDataFromServer();
+		//change the page
 		ChangeThePage();
-		// These buttons have become obsolite 
-		//document.getElementById("NextButton").addEventListener("click", NextButtonPress);
-		//document.getElementById("PreviousButton").addEventListener("click", PreviousButtonPress);
+		//make event listeners for these buttons
 		document.getElementById("pauseGear").addEventListener("click", pauseGearPress);
 		document.getElementById("resumeButton").addEventListener("click", resumeButtonPress);
 		document.getElementById("mainMenuButton").addEventListener("click", mainMenuButtonPress);
 		document.getElementById("submitToServerButton").addEventListener("click", SubmitButtonPress);
 		document.getElementById("tutorial_MenuButton").addEventListener("click", tutorial_MenuButtonPress);
 		document.getElementById('LoadingNotifier').style.display = "none";
-		/* check if this works*/
+		//makes the alert for the phone look better with cordova pulgin
 		if (navigator.notification)
 		{ // Override default HTML alert with native dialog
 			window.alert = function(message)
@@ -214,12 +236,14 @@ window.onload = function()
 	//});
 	//this can be made more efficient but a lack of security
 
+//
 function SubmitButtonPress()
 	{
+		//make the submit button hide and the loading notifier show
 		document.getElementById('submitToServerButton').style.display = 'none';
 		document.getElementById('LoadingNotifier').style.display = "";
 		var dataOut = {};
-		//input does not work with type number thus all these objects are null
+		//save the variables into an object to send off to sever
 		dataOut.clientCapital = document.getElementById("capitalRangeInput").value;
 		dataOut.clientResearchDevelopment = document.getElementById("RAndDRangeInput").value;
 		dataOut.clientProduction = document.getElementById("productionRangeInput").value;
@@ -231,6 +255,7 @@ function SubmitButtonPress()
 		console.log("matchId submit");
 		console.log(matchId);
 		console.log(dataOut);
+		//Ajax call to call for submitting to solo (sends the data)
 		$.ajax(
 		{
 			type: "POST",
@@ -245,6 +270,7 @@ function SubmitButtonPress()
 			dataType: "json"
 		}).done(function(msg)
 		{
+			//Ajax call for running a turn sends the data but only match id is needed
 			$.ajax(
 			{
 				type: "POST",
@@ -266,6 +292,7 @@ function SubmitButtonPress()
 				ChangeThePage();
 			});
 		});
+		//checks if the game is over or not
 		var matchid = matchId; //localStorage.getItem("matchId");
 		var Match = Parse.Object.extend("Match");
 		var matchquery = new Parse.Query("Match");
@@ -278,6 +305,7 @@ function SubmitButtonPress()
 				console.log("yop : " + turns);
 				if (turns >= 5)
 				{
+					//runs game over function
 					gameOver(matchid);
 				}
 				else if (turns < 5)
