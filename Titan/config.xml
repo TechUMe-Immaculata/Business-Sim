@@ -8,6 +8,9 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="fullscreen" value="true" />
     <preference name="Orientation" value="portrait" />
+   <preference name=" KeyboardShrinksView" value="portrait" />
     <access origin="*" />
 </widget>
